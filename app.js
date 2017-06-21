@@ -13,7 +13,7 @@ const config = require('./config/config');
 
 
 const index = require('./routes/index');
-const users = require('./routes/users');
+const test = require('./routes/test');
 
 const app = express();
 
@@ -54,23 +54,16 @@ app.use(function (req, res, next) {
         res.send(restResult);
     };
 
-
-    const ip = req.headers['x-forwarded-for'] ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        req.connection.socket.remoteAddress; //设置ip
-    req.clientIP = ip;//将解析后的ip放入req中,一遍方便使用
-
     next();
 });
 
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/web/test', test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
