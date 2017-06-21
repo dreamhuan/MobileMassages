@@ -1,0 +1,5 @@
+.idea/
+MobileMassages.iml
+npm-debug.log
+node_modules/
+public/lib/bower_components/

@@ -1,0 +1,26 @@
+{
+  "name": "MobileMassages",
+  "authors": [
+    "dreamhuan <fu_kaiqi@qq.com>"
+  ],
+  "description": "a small project for Mobile Massages",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "angular-animate": "^1.6.4",
+    "sweetalert2": "^6.6.4",
+    "angular-cookies": "^1.6.4"
+  }
+}

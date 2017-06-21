@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MobileMassages</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./lib/font-awesome.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <!-- sweetalert -->
+    <link rel="stylesheet" type="text/css" href="./lib/bower_components/sweetalert2/dist/sweetalert2.min.css">
+
+
+    <!-- My css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<!-- apply our angular app to our site -->
+<body ng-app="app">
+<!-- navigation -->
+<!--加上navbar-fixed-top顶栏浮动-->
+<nav class="navbar navbar-inverse nav-style navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-menu">
+            <span class="sr-only">qieh</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand"><a class="header-title" href="./ppt/MobileMassages.htm" target="_blank">MobileMassages</a></span>
+    </div>
+    <div class="collapse navbar-collapse" id="target-menu">
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">aaa</a></li>
+            <li><a ui-sref="home">bbb</a></li>
+            <li><a ui-sref="home">ccc</a></li>
+            <li><a ui-sref="home">ddd</a></li>
+            <li><a ui-sref="home">eee</a></li>
+        </ul>
+    </div>
+
+</nav>
+<!--加一个没有navbar-fixed-top的防止顶栏浮动导致的内容上移-->
+<nav class="navbar navbar-inverse lightblue" role="navigation"></nav>
+
+<!-- main content -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+<!--footer content-->
+<!--<div class="text-center footer">-->
+<!--<p>@web建站小分队</p>-->
+<!--<p>View the code: <a href="https://github.com/dreamhuan/association" target="_blank">association with MEAN</a></p>-->
+<!--</div>-->
+
+<!-- JQuery, AngularJS, Angular-ui-router sweetalert -->
+<script src="./lib/bower_components/jquery/dist/jquery.js"></script>
+<script src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./lib/bower_components/angular/angular.js"></script>
+<script src="./lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="./lib/bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+
+
+<!--angular动画-->
+<script src="./lib/bower_components/angular-animate/angular-animate.js"></script>
+
+
+<!--angular操作cookie-->
+<script src="./lib/bower_components/angular-cookies/angular-cookies.js"></script>
+
+
+<!-- My JavaScript -->
+<script src="./js/router.js"></script>
+<script src="./js/controllers.js"></script>
+<script src="./js/services.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
