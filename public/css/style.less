@@ -14,39 +14,44 @@ body {
     border-radius: 0;
 }
 
-@index-nav-color: rgba(0, 0, 0, 0.89);
 .nav-style {
-    padding-left: 3%;
-    background-color: @index-nav-color;
-    border-color: @index-nav-color;
+    padding-left: 4%;
+    padding-top: 15px;
+    border-bottom: 2px solid #d1fbe8;
+    background-color: transparent;
     opacity: 0.8;
     font-size: 16px;
     font-family: 微软雅黑;
-    div:first-child {
-        span { //导航栏标题
-            color: #00FFFF !important;
-            -webkit-text-stroke: 1px #1C86EE;
-            font-size: 25px;
+
+    .nav-pages {
+        margin-left: 30%;
+    }
+
+    .nav-pages-a {
+        color: #cac7c1 !important;
+        background-color: transparent;
+        font-size: 14px;
+        &:hover {
+            color: #9a9691 !important;
+            background-color: transparent;
         }
     }
-    a {
-        color: #FFFFFF !important;
+
+    .nav-pages-singIn {
+        color: #77e2bd !important;
         &:hover {
-            color: #EE7942 !important;
+            color: #46ddb6 !important;
         }
     }
 
     .header-title {
-        color: #00FFFF !important;
-        -webkit-text-stroke: 1px #1C86EE;
-        font-size: 25px;
-        text-decoration: none;
-        &:hover {
-            color: #00FFFF !important;
-            -webkit-text-stroke: 1px #1C86EE;
-            font-size: 25px;
-            text-decoration: none;
-        }
+        color: #96e8c7 !important;
+        font-size: 20px;
+        margin-left: 10%;
+    }
+    .deep-color {
+        color: #00d4a2 !important;
+        margin-left: -20px;
     }
 }
 
