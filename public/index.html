@@ -31,7 +31,7 @@
 <body ng-app="app">
 <!-- navigation -->
 <!--加上navbar-fixed-top顶栏浮动-->
-<nav class="navbar nav-style navbar-fixed-top navbar-default" role="navigation">
+<nav class="navbar nav-style navbar-default" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-menu">
             <span class="sr-only">qieh</span>
@@ -60,10 +60,10 @@
     </div>
 </nav>
 <!--加一个没有navbar-fixed-top的防止顶栏浮动导致的内容上移-->
-<nav class="navbar" role="navigation"></nav>
+<!--<nav class="navbar" role="navigation"></nav>-->
 
 <!-- main content -->
-<div class="container">
+<div class="container-fluid">
     <div ui-view></div>
 </div>
 
