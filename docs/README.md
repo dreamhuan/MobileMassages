@@ -1,5 +1,5 @@
-确保已安装node,npm,bower  
-其中npm是后端包管理器,bower是前端包管理器  
+确保已安装node,npm,bower,gulp  
+其中npm是后端包管理器,bower是前端包管理器gulp是自动构建工具  
 若没有则先安装node  
 安装bower：
 ```text
@@ -17,7 +17,7 @@ bower install
 ```text
 npm start
 ```
-浏览器
+前端构建：
 ```text
-localhost:4000
+gulp
 ```
