@@ -83,6 +83,11 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/SignIn.html',
                 controller: 'signinCtrl',
             })
+            .state('forgetpassword', {
+                url: '/forgetpassword',
+                templateUrl: './templates/ForgetPassword.html',
+                controller: 'forgetpasswordCtrl',
+            })
             .state('successfulBooking', {
                 url: '/successfulBooking',
                 templateUrl: './templates/successfulBooking.html',
