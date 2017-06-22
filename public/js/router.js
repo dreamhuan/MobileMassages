@@ -13,7 +13,11 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/test.html',
                 controller: 'testCtrl',
             })
-
+            .state('successfulBooking', {
+                url: '/successfulBooking',
+                templateUrl: './templates/successfulBooking.html',
+                controller: 'successfulBookingCtrl',
+            })
 
         ;
     });
