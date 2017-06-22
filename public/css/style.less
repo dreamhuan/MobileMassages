@@ -24,7 +24,8 @@ body {
     font-family: 微软雅黑;
 
     .nav-pages {
-        margin-left: 30%;
+        float: right;
+        margin-right: 5%;
     }
 
     .nav-pages-a {
@@ -37,7 +38,7 @@ body {
         }
     }
 
-    .nav-pages-singIn {
+    .nav-pages-signIn {
         color: #77e2bd !important;
         &:hover {
             color: #46ddb6 !important;
@@ -48,7 +49,17 @@ body {
         color: #96e8c7 !important;
         font-size: 20px;
         margin-left: 10%;
+        &:hover {
+            text-decoration: none;
+        }
     }
+
+    @media all and (max-width: 768px) {
+        .nav-headTitle {
+            text-align: center;
+        }
+    }
+
     .deep-color {
         color: #00d4a2 !important;
         margin-left: -20px;
@@ -56,5 +67,40 @@ body {
 }
 
 .footer {
+    height: 300px;
     color: white;
+    background-color: #00ac87;
+    text-align: center;
+
+    .footer-title {
+        padding-top: 7%;
+        font-size: 18px;
+    }
+
+    .title-firstWord {
+        color: #9ee8d1;
+        opacity: 0.6;
+    }
+
+    .footer-message {
+        font-size: 12px;
+    }
+
+    .first-line {
+        margin-top: 1%;
+    }
 }
+
+/* 平板 */
+@media all and (max-width: 1024px) {
+    .footer {
+        height: 250px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .footer {
+        height: 200px;
+    }
+}
+
