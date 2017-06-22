@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="../css/bookIng.css">
+<div class="booking">
+    <div class="option">
+        <div ng-repeat="i in option"
+             class="number"
+             ng-class="{'number-active':i.cls}"
+             ng-click="changeOption(i)">
+            {{i.opt}}
+        </div>
+    </div>
+    <div class="content">
+        <ui-view></ui-view>
+    </div>
+</div>
