@@ -21,10 +21,10 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/BookIng.html',
                 controller: 'bookingCtrl',
             })
-            .state('signUp', {
-                url: '/signUp',
-                templateUrl: './templates/SignUp.html',
-                controller: 'signUpCtrl',
+            .state('signup', {
+                url: '/signup',
+                templateUrl: './templates/signUp.html',
+                controller: 'signupCtrl',
             })
 
             .state('booking.step1', {
