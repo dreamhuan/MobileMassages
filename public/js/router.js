@@ -13,6 +13,11 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/test.html',
                 controller: 'testCtrl',
             })
+            .state('signUp', {
+                url: '/signUp',
+                templateUrl: './templates/SignUp.html',
+                controller: 'signUpCtrl',
+            })
 
 
         ;
