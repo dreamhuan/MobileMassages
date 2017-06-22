@@ -68,9 +68,66 @@ angular.module('app.controllers', [])
         }
     })
 
-    //-------------------------------------- 主页 登录 注册 home login register----------------------------------------
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore) {
         $cookieStore.put('currentState', 'home');
+    })
+
+    .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+        //option1234对应四个选项的class是否为true
+        $scope.option = [
+            {opt: 1, cls: 1},
+            {opt: 2, cls: 0},
+            {opt: 3, cls: 0},
+            {opt: 4, cls: 0},
+        ];
+        $scope.changeOption = function (item) {
+            for (let i of $scope.option) {
+                i.cls = 0;
+            }
+            $scope.option[item.opt - 1].cls = 1;
+            // console.log($scope.option);
+            $state.go('booking.step' + item.opt);
+        }
+    })
+
+    .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+
+    })
+
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+
     })
 
 ;
