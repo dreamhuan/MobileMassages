@@ -5,15 +5,14 @@ angular.module('app.routes', ['ui.router'])
         $stateProvider
             .state('home', {
                 url: '/home',
-                templateUrl: './templates/main/home.html',
+                templateUrl: './templates/Home.html',
                 controller: 'homeCtrl',
             })
             .state('test', {
-                url: '/home',
-                templateUrl: './templates/main/home.html',
-                controller: 'homeCtrl',
+                url: '/test',
+                templateUrl: './templates/test.html',
+                controller: 'testCtrl',
             })
-
 
 
         ;

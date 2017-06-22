@@ -13,3 +13,11 @@ npm install
 ```text
 bower install
 ```
+运行：项目根目录下
+```text
+npm start
+```
+浏览器
+```text
+localhost:4000
+```
