@@ -88,6 +88,11 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/successfulBooking.html',
                 controller: 'successfulBookingCtrl',
             })
+            .state('massageTherapist', {
+                url: '/massageTherapist',
+                templateUrl: './templates/massageTherapist.html',
+                controller: 'massageTherapistCtrl',
+            })
 
         ;
     });
