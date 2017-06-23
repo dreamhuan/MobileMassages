@@ -4,12 +4,12 @@
     <div class="datetime">
         <div class="date">
             <span>Choose a date</span>
-            <div><input type="date"></div>
+            <div><input type="text" id="datepicker" value="" placeholder="Today"></div>
         </div>
         <div class="time">
             <span>Time</span>
-            <div><input type="time"></div>
+            <div><input type="text" id="timepicker" value=""></div>
         </div>
     </div>
-    <div class="btn-continue">CONTINUE</div>
+    <div class="btn-continue" ng-click="continue()">CONTINUE</div>
 </div>
