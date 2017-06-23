@@ -21,6 +21,7 @@
     "angular-ui-router": "^1.0.3",
     "angular-animate": "^1.6.4",
     "sweetalert2": "^6.6.4",
-    "angular-cookies": "^1.6.4"
+    "angular-cookies": "^1.6.4",
+    "wickedpicker": "^0.4.1"
   }
 }
