@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./css/styleType.css">
+<div class="massage-type">
+    <div class="type-title">CHOOSE YOUR MASSAGE TYPE</div>
+    <div class="type-content">
+        <div ng-repeat="item in datas" class="content-repeat">
+            <div class="image"><img ng-src="{{item.img}}"></div>
+            <div class="description">
+                <div class="title">{{item.title}}</div>
+                <div class="content">{{item.content}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="center-location">
+        <button class="booking-btn">BOOK NOW</button>
+    </div>
+</div>
