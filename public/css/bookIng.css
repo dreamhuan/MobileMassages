@@ -1,14 +1,15 @@
 .booking {
-  width: 500px;
-  margin: auto;
+  width: 100%;
   margin-top: 50px;
 }
 .booking .option {
+  width: 500px;
   height: 100px;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
   border-top: 2px solid #d8fae9;
   border-bottom: 2px solid #d8fae9;
-  padding-left: 20%;
-  padding-right: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
