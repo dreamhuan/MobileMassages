@@ -25,7 +25,7 @@ body {
 .nav-style {
   padding-left: 4%;
   padding-top: 15px;
-  border-bottom: 2px solid #d1fbe8;
+  border-bottom: 1px solid #d1fbe8;
   background-color: transparent;
   opacity: 0.8;
   font-size: 16px;
@@ -55,7 +55,9 @@ body {
   font-size: 20px;
   margin-left: 10%;
 }
-.nav-style .header-title:hover {
+.nav-style .header-title:hover,
+.nav-style .header-title:focus,
+.nav-style .header-title:visited {
   text-decoration: none;
 }
 @media all and (max-width: 768px) {
