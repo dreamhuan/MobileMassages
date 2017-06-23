@@ -12,6 +12,10 @@
   height: 200px;
   margin: auto;
 }
+.step1 .datetime span {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+}
 .step1 .datetime input {
   height: 45px;
   width: 100%;
@@ -28,6 +32,7 @@
   text-align: center;
   line-height: 50px;
   font-size: 20px;
+  font-weight: bold;
   background-color: #64d2a3;
   color: white;
 }
