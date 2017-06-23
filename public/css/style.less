@@ -5,7 +5,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+@font-face{
+    font-family: "xt-gothamLight";
+    src:url("../fonts/myfont/Gotham-Light.ttf");
+}
+.font-gotham-title{//标题字体 注意带有这个类的div里面只能存文字
+    font-family: "xt-gothamLight";
+    transform: scale(1, 0.9);
+}
 ::-webkit-scrollbar { //取消滚动条
     width: 0;
 }
@@ -36,6 +43,7 @@ body {
         color: #cac7c1 !important;
         background-color: transparent;
         font-size: 14px;
+
         &:hover {
             color: #9a9691 !important;
             background-color: transparent;
@@ -44,6 +52,7 @@ body {
 
     .nav-pages-signIn {
         color: #77e2bd !important;
+
         &:hover {
             color: #46ddb6 !important;
         }
@@ -53,9 +62,14 @@ body {
         color: #96e8c7 !important;
         font-size: 20px;
         margin-left: 10%;
+
         &:hover {
             text-decoration: none;
         }
+
+        //&:visited {
+        //    text-decoration: none;
+        //}
     }
 
     @media all and (max-width: 768px) {
