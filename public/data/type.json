@@ -1,0 +1,42 @@
+[
+  {
+    "img": "../img/icons/1.ico",
+    "title": "Swedish",
+    "content": "A gentle technique,with long strokes,kneading,and circular movements to relax and energize."
+  },
+  {
+    "img": "../img/icons/2.svg",
+    "title": "Deep tissue",
+    "content": "Utilizes show,more forceful strokes to target deep muscle layers and connective tissue."
+  },
+  {
+    "img": "../img/icons/3.svg",
+    "title": "Sports",
+    "content": "Targets muscle-tendon junctions to boost flexibility and endurance,while reducing muscle fatigue."
+  },
+  {
+    "img": "../img/icons/4.svg",
+    "title": "Pre-natal",
+    "content": "Lessens pregnancy discomfort,helping alleviate backaches,stiffness,leg cramps,headaches,and swelling."
+  },
+  {
+    "img": "../img/icons/5.svg",
+    "title": "Couples Massage",
+    "content": "All modalities can be performed as couples massage.Order one therapist for back to back or two for simultaneous massage."
+  },
+  {
+    "img": "../img/icons/6.svg",
+    "title": "Thai Massage",
+    "content": "It is an ancient healing sysytem that combines broad and targeted acupreesure,stimulation and manipulation of energy lines called sen,and assisted yoga postures."
+  },
+  {
+    "img": "../img/icons/7.svg",
+    "title": "Relaxing ",
+    "content": "Helps de-stress and loosen up your body and is great for those who have had a hard working week or feel like treating themselves to some TLC!"
+  },
+  {
+    "img": "../img/icons/8.svg",
+    "title": "At work",
+    "content": "Decrease stress,improve productivity,and build employee morale with in-office chair massage."
+  }
+]

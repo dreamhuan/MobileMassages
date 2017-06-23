@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="./css/home.css">
 <div class="home">
 
     <div class="home-title">
-        <img>
+        <img src="./img/hometitle.jpg">
     </div>
 
     <div class="date-booking">
@@ -10,7 +10,7 @@
         <div class="secondtitle">Book a spa quality massage to your door</div>
         <div class="date-choose">
             <input type="date" placeholder="Today">
-            <input  class="choose-time" type="time">
+            <input class="choose-time" type="time">
         </div>
         <button class="booking-btn">BOOK A MASSAGE</button>
     </div>
@@ -41,12 +41,18 @@
         <button class="booking-btn">BOOK MY MASSAGE</button>
     </div>
 
-    <div class="massage-typebgc">
-        <div class="massage-type">
-            <div class="type-title">CHOOSE YOUR MASSAGE TYPE</div>
-            <div>
-
+    <div class="massage-type">
+        <div class="type-title">CHOOSE YOUR MASSAGE TYPE</div>
+        <div class="type-content">
+            <div ng-repeat="item in datas" class="content-repeat">
+                <div class="image"><img ng-src="{{item.img}}"></div>
+                <div class="description">
+                    <div class="title">{{item.title}}</div>
+                    <div class="content">{{item.content}}</div>
+                </div>
             </div>
+        </div>
+        <div class="center-location">
             <button class="booking-btn">BOOK NOW</button>
         </div>
     </div>
@@ -75,6 +81,12 @@
 
     <div class="faq">
         <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
+        <div class="faq-content">
+            <div ng-repeat="item in items">
+                <div class="title">{{item.title}}</div>
+                <div class="content">{{item.content}}</div>
+            </div>
+        </div>
     </div>
 
     <div class="contact">
