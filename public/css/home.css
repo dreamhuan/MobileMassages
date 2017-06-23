@@ -15,6 +15,7 @@
   border: none;
   border-radius: 3px;
   margin-top: 60px;
+  outline: none;
 }
 .home .date-booking {
   width: 400px;
@@ -96,9 +97,22 @@
   color: #6de5c4;
   font-size: 28px;
 }
+.home .date-therapists .therapists-img {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.home .date-therapists .therapists-img img {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d2fae8;
+  border-radius: 120px;
+  margin: 20px;
+}
 .home .massage-type {
   width: 100%;
-  height: 1000px;
+  height: 1100px;
   background-color: #f0fdf7;
 }
 .home .massage-type .type-title {
