@@ -12,11 +12,11 @@
         width: 300px;
         height: 200px;
         margin: auto;
-        span{
+        span {
             font-weight: bold;
-            color: rgba(0,0,0,0.4);
+            color: rgba(0, 0, 0, 0.4);
         }
-        input{
+        input {
             height: 45px;
             width: 100%;
             outline: none;
@@ -65,7 +65,161 @@
 }
 
 .step3 {
+    color: #9a9691;
+    min-height: 500px;
+    .row {
+        margin: 0px;
+    }
+    //________________________________________禁止bootstrap row的负margin______________
+    .flex {
+        display: flex;
+    }
 
+    .flex-grow {
+        flex-grow: 1;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .flex-rightend {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+    }
+    .flex-verticalAlign {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+    //________________________________________flex设置______________
+    .title {
+        position: relative;
+        margin: auto;
+        margin-top: 20px;
+        font-family: gotham;
+        font-weight: lighter;
+        font-size: 50px;
+        /* W3C */
+    }
+
+    .content {
+        max-width: 400px;
+        margin: auto;
+        margin-bottom: 50px;
+        .radioInputGroup {
+            margin-top: 30px;
+            position: relative;
+            .radioInputItem {
+                padding-left: 30px;
+                font-size: 20px;
+                height: 50px;
+                input {
+                    cursor: pointer;
+                    margin: 0px;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    background: #d9fbea;
+                }
+                input[type=checkbox] {
+                    position: absolute;
+                    left: 38px;
+                    opacity: 0;
+                    width: .9em;
+                    height: .9em;
+                }
+                input[type=checkbox] + *:before {
+                    content: "";
+                    display: inline-block;
+                    margin: 0 0.4em;
+                    /* Make some horizontal space. */
+                    width: .8em;
+                    height: .8em;
+                    border-radius: 0.6em;
+                    box-shadow: 0px 0px 0px .5px #888;
+                    /* An outer circle. */
+                    /* No inner circle. */
+                    background-color: #ffffff;
+                    /* Inner color. */
+                }
+                input[type=checkbox]:checked + *:before {
+                    box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
+                    /* An inner circle with above inner color.*/
+
+                    background-color: #a1a1a1;
+                    /* The dot color */
+                }
+            }
+        }
+        .inputGroup {
+
+            .inputItem {
+                padding: 0px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                .describe {
+                    font-size: 17px;
+                }
+                input {
+                    padding-left: 5px;
+                    width: 100%;
+                    font-size: 30px;
+                    height: 50px;
+                    border: solid #9a9691 1px;
+                }
+            }
+        }
+        .divide{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .describe{
+                font-size:20px;
+                margin: 10px;
+            }
+        }
+        .faceBookBtn {
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            height: 30px;
+            background: #3d5a94;
+            color: white;
+            font-family: "xt-gothamLight";
+            border-radius: 10px;
+            span {
+                margin-right: 10px;
+            }
+            .fa-facebook {
+                font-size: 17px;
+            }
+        }
+        .hint {
+            width: 100%;
+            height: 60px;
+            font-family: "xt-gothamLight";
+            font-weight: bold;
+            .text {
+                cursor: pointer;
+            }
+
+        }
+        .forgetPasswordBtn {
+            margin-top: 30px;
+            cursor: pointer;
+            color: white;
+            width: 100%;
+            height: 50px;
+            background: #64d2a3;
+            font-size: 17px;
+            font-weight: bold;
+        }
+    }
 }
 
 .step4 {
