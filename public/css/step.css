@@ -1,1 +1,38 @@
-.step1 .title{text-align:center;font-size:45px;color:rgba(0,0,0,0.4);height:100px;line-height:100px;font-family:xt-gothamLight;transform:scale(.8, .9)}.step1 .datetime{width:300px;height:200px;margin:auto}.step1 .datetime input{height:45px;width:100%;outline:none;border:2px solid #e9e9e9}.step1 .datetime .time{margin-top:20px}.step1 .btn-continue{width:250px;height:50px;margin:auto;text-align:center;line-height:50px;font-size:20px;background-color:#64d2a3;color:white}.step3{color:#9a9691;min-height:500px}.step3 .row{margin:0}.step3 .flex{display:flex}.step3 .flex-grow{flex-grow:1}.step3 .flex-center{display:flex;justify-content:center;align-content:center;align-items:center}.step3 .flex-rightend{display:flex;justify-content:flex-end;align-content:center}.step3 .title{position:relative;margin:auto;margin-top:20px;font-family:gotham;font-weight:lighter;font-size:50px}.step3 .content{max-width:400px;margin:auto;margin-bottom:50px}.step3 .content .inputGroup .inputItem{padding:0;flex-wrap:wrap;margin-top:20px}.step3 .content .inputGroup .inputItem .describe{font-size:17px}.step3 .content .inputGroup .inputItem input{padding-left:5px;width:100%;font-size:30px;height:50px;border:solid #9a9691 1px}.step3 .content .faceBookBtn{cursor:pointer;width:100%;margin-top:20px;height:30px;background:#3d5a94;color:white;font-family:"xt-gothamLight";border-radius:10px}.step3 .content .faceBookBtn span{margin-right:10px}.step3 .content .faceBookBtn .fa-facebook{font-size:17px}.step3 .content .hint{width:100%;height:60px;font-family:"xt-gothamLight";font-weight:bold}.step3 .content .hint .text{cursor:pointer}.step3 .content .forgetPasswordBtn{margin-top:30px;cursor:pointer;color:white;width:100%;height:50px;background:#64d2a3;font-size:17px;font-weight:bold}
+.step1 .title {
+  text-align: center;
+  font-size: 45px;
+  color: rgba(0, 0, 0, 0.4);
+  height: 100px;
+  line-height: 100px;
+  font-family: xt-gothamLight;
+  transform: scale(0.8, 0.9);
+}
+.step1 .datetime {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+}
+.step1 .datetime span {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+}
+.step1 .datetime input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border: 2px solid #e9e9e9;
+}
+.step1 .datetime .time {
+  margin-top: 20px;
+}
+.step1 .btn-continue {
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #64d2a3;
+  color: white;
+}
