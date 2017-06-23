@@ -31,7 +31,7 @@
 }
 .massageTherapist .intro .item .picBox .pic {
   height: 188px;
-  width: 154px;
+  width: 150px;
   border: solid 1px black;
 }
 .massageTherapist .intro .item .content {
@@ -69,6 +69,9 @@
 .massageTherapist .font-bold {
   font-weight: 200;
 }
+.massageTherapist .font-bolder {
+  font-weight: 400;
+}
 .massageTherapist .centerContent {
   text-align: center;
 }
@@ -84,6 +87,9 @@
 .massageTherapist .mar-xxtop {
   margin-top: 20px;
 }
-.massageTherapist fontLg {
-  font-size: 30px;
+.massageTherapist .fontLg {
+  font-size: 20px;
+}
+.massageTherapist .fontSm {
+  font-size: 10px;
 }
