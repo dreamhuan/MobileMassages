@@ -1,5 +1,15 @@
 .home {
 
+    width: 100%;
+
+    .home-title {
+        margin-top: -21px;
+        img{
+            width: 100%;
+        }
+
+    }
+
     .booking-btn {
         width: 200px;
         height: 35px;
@@ -7,7 +17,7 @@
         color: #ffffff;
         border: none;
         border-radius: 3px;
-        margin-top: 15%;
+        margin-top: 60px;
     }
 
     .date-booking {
@@ -86,32 +96,60 @@
         }
     }
 
-    .massage-typebgc {
+    .massage-type {
         width: 100%;
-        height: 750px;
+        height: 1000px;
         background-color: #f0fdf7;
 
-        .massage-type {
-            width: 500px;
-            height: 750px;
+        .type-title {
+            padding-top: 70px;
+            width: 80%;
+            margin: auto;
+            color: #6de5c4;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .type-content {
+            width: 900px;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
 
-            .type-title {
-                padding-top: 10%;
-                color: #6de5c4;
-                font-size: 28px;
-            }
+            .content-repeat {
+                margin-top: 100px;
+                width: 400px;
+                display: flex;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
 
+                .description {
+                    width: 300px;
+                    margin-left: 20px;
+                    .title {
+                        color: #63d2a3;
+                        font-size: 18px;
+                    }
+
+                    .content {
+                        color: #aaacab;
+                    }
+                }
+            }
         }
 
+        .center-location {
+            width: 200px;
+            margin: auto;
+        }
     }
 
     .simple-pricing {
         width: 300px;
-        height: 350px;
+        height: 450px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -164,18 +202,33 @@
 
     .faq {
         width: 100%;
-        height: 800px;
+        height: 1700px;
         background-color: #f0fdf7;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-
         .faq-title {
-            padding-top: 10%;
-            width: 400px;
+            padding-top: 70px;
+            width: 30%;
+            margin: auto;
             color: #6de5c4;
             font-size: 28px;
+            text-align: center;
         }
+
+        .faq-content {
+            margin: auto;
+            margin-top: 80px;
+            width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            .title {
+                color: #64d2a4;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            .content {
+                margin-top: 10px;
+            }
+        }
+
     }
 
     .contact {
