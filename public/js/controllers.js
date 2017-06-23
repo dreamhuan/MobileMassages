@@ -68,8 +68,18 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
         $cookieStore.put('currentState', 'home');
+        $http.get('../data/faq.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.items = resdata.data;
+            })
+        $http.get('../data/type.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.datas = resdata.data;
+            })
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
@@ -110,16 +120,24 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore) {
-
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+        $http.get('../data/type.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.datas = resdata.data;
+            })
     })
 
     .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
 
     })
 
-    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore) {
-
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+        $http.get('../data/faq.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.items = resdata.data;
+            })
     })
 
     .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore) {
