@@ -1,0 +1,52 @@
+.massage-type {
+  width: 100%;
+  height: 1100px;
+}
+.massage-type .type-title {
+  padding-top: 70px;
+  width: 80%;
+  margin: auto;
+  color: #6de5c4;
+  font-size: 28px;
+  text-align: center;
+}
+.massage-type .type-content {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.massage-type .type-content .content-repeat {
+  margin-top: 100px;
+  width: 400px;
+  display: flex;
+}
+.massage-type .type-content .content-repeat img {
+  width: 50px;
+  height: 50px;
+}
+.massage-type .type-content .content-repeat .description {
+  width: 300px;
+  margin-left: 20px;
+}
+.massage-type .type-content .content-repeat .description .title {
+  color: #63d2a3;
+  font-size: 18px;
+}
+.massage-type .type-content .content-repeat .description .content {
+  color: #aaacab;
+}
+.massage-type .center-location {
+  width: 200px;
+  margin: auto;
+}
+.massage-type .booking-btn {
+  width: 200px;
+  height: 35px;
+  background-color: #00d6a0;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  margin-top: 60px;
+}
