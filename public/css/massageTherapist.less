@@ -1,9 +1,54 @@
 .massageTherapist{
     .font{
         display: flex;
-        width: 80%;
+        width: 89%;
         margin: auto;
         flex-direction: column;
+        .theme{
+            width:100%;
+            height:200px;
+            flex-direction: column;
+            .font-sx{
+                font-size: 20px;
+            }
+            .font-lx{
+                font-size: 40px;
+            }
+        }
+    }
+    .intro{
+        display: flex;
+        width:100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .item{
+            height: 195px;
+            width:560px;
+
+            .picBox{
+                height:190px;
+                width:160px;
+                .pic{
+                    height: 188px;
+                    width: 154px;
+                    border: solid 1px black;
+                }
+            }
+            .content{
+                height:190px;
+                width:270px;
+
+            }
+        }
+        .bgBlack{
+            background-color: #0f0f0f;
+        }
+        .bgWhite{
+            background-color: #9acfea;
+        }
+    }
+    .centerBox{
+        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -16,19 +61,35 @@
         letter-spacing: -0.02em;
         text-align: center;
     }
+    .flexRow{
+        display: flex;
+        flex-direction: row;
+    }
+    .flexResRow{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     .font-bold{
         font-weight: 200;
     }
-    .center{
+    .centerContent{
         text-align: center;
     }
     .grey{
         color: #999;
     }
+    .green{
+        color: #63d2a3;
+    }
     .height{
         height: 540px;
     }
-    .font-lx{
+    .mar-xxtop{
+        margin-top: 20px;
+    }
+    fontLg{
         font-size: 30px;
     }
+
+
 }
