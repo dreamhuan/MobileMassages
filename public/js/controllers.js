@@ -91,7 +91,29 @@ angular.module('app.controllers', [])
     })
 
     .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
-
+        $scope.datetime = {
+            date: new Date(),
+            time: new Date().toLocaleTimeString()
+        };
+        $('#datepicker').datetimepicker({
+            format: 'yyyy-mm-dd',
+            language: 'en',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+        $('#timepicker').wickedpicker();
+        $scope.continue = function () {
+            let date = $('#datepicker').val();
+            if (!date) date = new Date().Format("yyyy-MM-dd");
+            let time = $('#timepicker').val();
+            console.log(date);
+            console.log(time);
+        };
     })
 
     .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore) {

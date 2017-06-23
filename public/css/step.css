@@ -21,6 +21,21 @@
   width: 100%;
   outline: none;
   border: 2px solid #e9e9e9;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+.step1 .datetime input::-webkit-input-placeholder,
+.step1 .datetime textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.step1 .datetime input::-moz-placeholder,
+.step1 .datetime textarea::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.step1 .datetime input:-ms-input-placeholder,
+.step1 .datetime textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
 }
 .step1 .datetime .time {
   margin-top: 20px;
@@ -35,4 +50,5 @@
   font-weight: bold;
   background-color: #64d2a3;
   color: white;
+  cursor: pointer;
 }
