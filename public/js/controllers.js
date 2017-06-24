@@ -74,22 +74,33 @@ angular.module('app.controllers', [])
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.items = resdata.data;
-            })
-        $http.get('../data/type.json')
+            });
+        $http.get('../data/home-massage-type.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;
             })
     })
 
-    .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
-        //option1234对应四个选项的class是否为true
-        $scope.option = [
-            {opt: 1, cls: 1},
-            {opt: 2, cls: 0},
-            {opt: 3, cls: 0},
-            {opt: 4, cls: 0},
-        ];
+    .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+
+        //延迟0表示加到任务队列末尾，确保渲染完页面才执行，防止得到上一个url而出错
+        $timeout(function () {
+            // console.log(document.URL);
+            // console.log(document.getCurrentState());
+            let active = document.URL.substr(document.URL.length - 1, 1); //获取url最后一个数字，就是step1234中的一个
+            // console.log(active);
+            //option1234对应四个选项的class是否为true
+            $scope.option = [
+                {opt: 1, cls: 0},
+                {opt: 2, cls: 0},
+                {opt: 3, cls: 0},
+                {opt: 4, cls: 0},
+            ];
+            $scope.option[active - 1].cls = 1;
+
+        }, 0);
+
         $scope.changeOption = function (item) {
             for (let i of $scope.option) {
                 i.cls = 0;
@@ -126,8 +137,31 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
-
+    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+        $http.get('../data/bookingstep2.json')
+            .then(function (resdata) {
+                // console.log(resdata);
+                $scope.chooses = resdata.data;
+                for (let i = 0; i < $scope.chooses.length; i++) {
+                    $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+                }
+            });
+        $scope.changeChoose = function (choose, option) {
+            choose.chooseoption = option;
+            // console.log(choose);
+            // console.log(option);
+        };
+        $scope.continue = function () {
+            let choise = [];
+            for (let i = 0; i < $scope.chooses.length; i++) {
+                let item = {
+                    type:$scope.chooses[i].type,
+                    option:$scope.chooses[i].chooseoption,
+                };
+                choise.push(item);
+            }
+            console.log(choise);
+        }
     })
 
     .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
@@ -142,7 +176,7 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
         $http.get('../data/type.json')
             .then(function (resdata) {
                 console.log(resdata);
@@ -154,7 +188,7 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
         $http.get('../data/faq.json')
             .then(function (resdata) {
                 console.log(resdata);

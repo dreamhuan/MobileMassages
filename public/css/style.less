@@ -5,14 +5,18 @@ body {
     margin: 0;
     padding: 0;
 }
-@font-face{
+
+@font-face {
     font-family: "xt-gothamLight";
-    src:url("../fonts/myfont/Gotham-Light.ttf");
+    src: url("../fonts/myfont/Gotham-Light.ttf");
 }
-.font-gotham-title{//标题字体 注意带有这个类的div里面只能存文字
+
+//标题字体 注意带有这个类的div里面只能存文字
+.font-gotham-title {
     font-family: "xt-gothamLight";
     transform: scale(1, 0.9);
 }
+
 ::-webkit-scrollbar { //取消滚动条
     width: 0;
 }
@@ -26,35 +30,22 @@ body {
 }
 
 .nav-style {
-    padding-left: 4%;
-    padding-top: 15px;
+    height: 65px;
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 3%;
     border-bottom: 1px solid #d1fbe8;
     background-color: transparent;
-    opacity: 0.8;
     font-size: 16px;
     font-family: 微软雅黑;
 
-    .nav-pages {
-        float: right;
-        margin-right: 5%;
+    .nav-headTitle {
+        margin-top: -5px;
     }
 
-    .nav-pages-a {
-        color: #cac7c1 !important;
-        background-color: transparent;
-        font-size: 14px;
-
-        &:hover {
-            color: #9a9691 !important;
-            background-color: transparent;
-        }
-    }
-
-    .nav-pages-signIn {
-        color: #77e2bd !important;
-
-        &:hover {
-            color: #46ddb6 !important;
+    @media all and (max-width: 768px) {
+        .nav-headTitle {
+            text-align: center;
         }
     }
 
@@ -70,17 +61,38 @@ body {
         }
 
     }
-
-    @media all and (max-width: 768px) {
-        .nav-headTitle {
-            text-align: center;
-        }
-    }
-
     .deep-color {
         color: #00d4a2 !important;
         margin-left: -20px;
+        font-weight: bolder;
     }
+    .nav-pages {
+        float: right;
+        margin-right: 5%;
+
+        a {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #cac7c1 !important;
+            background-color: transparent;
+            font-size: 14px;
+
+            &:hover {
+                color: #9a9691 !important;
+                background-color: transparent;
+                //font-weight: bold;
+            }
+        }
+    }
+
+    .nav-pages-signIn {
+        color: #77e2bd !important;
+
+        &:hover {
+            color: #46ddb6 !important;
+        }
+    }
+
 }
 
 .footer {
