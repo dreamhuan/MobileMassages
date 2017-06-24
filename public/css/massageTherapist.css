@@ -9,7 +9,7 @@
   .massageTherapist .intro .item .picBox .pic {
     height: 160px;
     width: 130px;
-    border: solid 1px black;
+    border: solid 1px gainsboro;
   }
   .massageTherapist .intro .item .contentBox {
     width: 200px;
@@ -18,7 +18,7 @@
     font-size: 16px;
   }
   .massageTherapist .fontSm {
-    font-size: 2px;
+    font-size: 3px;
   }
 }
 @media screen and (min-width: 400px) and (max-width: 500px) {
@@ -32,7 +32,7 @@
   .massageTherapist .intro .item .picBox .pic {
     height: 150px;
     width: 130px;
-    border: solid 1px black;
+    border: solid 1px gainsboro;
   }
   .massageTherapist .intro .item .contentBox {
     width: 230px;
@@ -46,7 +46,7 @@
 }
 @media screen and (min-width: 500px) {
   .massageTherapist .intro .item {
-    width: 560px;
+    width: 530px;
   }
   .massageTherapist .intro .item .picBox {
     height: 190px;
@@ -55,7 +55,7 @@
   .massageTherapist .intro .item .picBox .pic {
     height: 170px;
     width: 150px;
-    border: solid 1px black;
+    border: solid 1px gainsboro;
   }
   .massageTherapist .intro .item .contentBox {
     width: 270px;
@@ -69,7 +69,7 @@
 }
 .massageTherapist .font {
   display: flex;
-  width: 89%;
+  width: 95%;
   margin: auto;
   flex-direction: column;
 }
@@ -100,6 +100,7 @@
   padding: 5px;
   height: 100%;
   width: 100%;
+  line-height: 11.5px;
   word-wrap: break-word;
   text-align: justify;
   text-justify: distribute;
@@ -141,6 +142,9 @@
 .massageTherapist .font-bolderest {
   font-weight: 500;
 }
+.massageTherapist .font-xxbolderest {
+  font-weight: 700;
+}
 .massageTherapist .centerContent {
   text-align: center;
 }
@@ -158,4 +162,20 @@
 }
 .massageTherapist .marXXBottom {
   margin-bottom: 10px;
+}
+.massageTherapist .booking-btn {
+  width: 250px;
+  height: 50px;
+  background-color: #00d6a0;
+  color: #ffffff;
+  border: none;
+  margin-top: 60px;
+  font-size: 16px;
+}
+.massageTherapist .button {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.massageTherapist .inline {
+  line-height: 40px;
 }
