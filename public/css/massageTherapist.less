@@ -1,4 +1,79 @@
 .massageTherapist{
+    @media screen and (max-width: 400px){
+        .intro{
+            .item{
+                width: 360px;
+                .picBox{
+                    height:170px;
+                    width:140px;
+                    .pic{
+                        height: 160px;
+                        width: 130px;
+                        border: solid 1px black;
+                    }
+                }
+                .contentBox{
+                    width: 200px;
+                }
+            }
+        }
+        .fontLg{
+            font-size: 16px;
+        }
+        .fontSm{
+            font-size: 2px;
+        }
+    }
+    @media screen and (min-width: 400px) and (max-width: 500px) {
+        .intro{
+            .item{
+                width: 520px;
+                .picBox{
+                    height:170px;
+                    width:140px;
+                    .pic{
+                        height: 150px;
+                        width: 130px;
+                        border: solid 1px black;
+                    }
+                }
+                .contentBox{
+                    width: 230px;
+                }
+            }
+        }
+        .fontLg{
+            font-size: 16px;
+        }
+        .fontSm{
+            font-size: 6px;
+        }
+    }
+    @media screen and (min-width: 500px) {
+        .intro{
+            .item{
+                width: 560px;
+                .picBox{
+                    height:190px;
+                    width:160px;
+                    .pic{
+                        height: 170px;
+                        width: 150px;
+                        border: solid 1px black;
+                    }
+                }
+                .contentBox{
+                    width: 270px;
+                }
+            }
+        }
+        .fontLg{
+            font-size: 20px;
+        }
+        .fontSm{
+            font-size: 11px;
+        }
+    }
     .font{
         display: flex;
         width: 89%;
@@ -23,21 +98,17 @@
         flex-wrap: wrap;
         .item{
             height: 195px;
-            width:560px;
-
-            .picBox{
+            .contentBox{
                 height:190px;
-                width:160px;
-                .pic{
-                    height: 188px;
-                    width: 150px;
-                    border: solid 1px black;
+
+                .content{
+                    padding:5px;
+                    height:100%;
+                    width:100%;
+                    word-wrap: break-word;
+                    text-align:justify;
+                    text-justify: distribute;
                 }
-            }
-            .content{
-                height:190px;
-                width:270px;
-
             }
         }
         .bgBlack{
@@ -75,6 +146,9 @@
     .font-bolder{
         font-weight: 400;
     }
+    .font-bolderest{
+        font-weight: 500;
+    }
     .centerContent{
         text-align: center;
     }
@@ -90,10 +164,7 @@
     .mar-xxtop{
         margin-top: 20px;
     }
-    .fontLg{
-        font-size: 20px;
-    }
-    .fontSm{
-        font-size: 10px;
+    .marXXBottom{
+        margin-bottom: 10px;
     }
 }
