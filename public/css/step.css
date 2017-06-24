@@ -19,6 +19,7 @@
   background-color: #64d2a3;
   color: white;
   outline: none;
+  border: none;
 }
 .step-tips {
   font-weight: bold;
@@ -123,11 +124,11 @@
   margin-top: 20px;
   font-family: gotham;
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 30px;
   /* W3C */
 }
 .step3 .content {
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
   margin-bottom: 50px;
 }
@@ -148,14 +149,14 @@
 .step3 .content .radioInputGroup .radioInputItem:hover {
   background: #d9fbea;
 }
-.step3 .content .radioInputGroup .radioInputItem input[type=checkbox] {
+.step3 .content .radioInputGroup .radioInputItem input[type=radio] {
   position: absolute;
   left: 38px;
   opacity: 0;
   width: .9em;
   height: .9em;
 }
-.step3 .content .radioInputGroup .radioInputItem input[type=checkbox] + *:before {
+.step3 .content .radioInputGroup .radioInputItem input[type=radio] + *:before {
   content: "";
   display: inline-block;
   margin: 0 0.4em;
@@ -169,7 +170,7 @@
   background-color: #ffffff;
   /* Inner color. */
 }
-.step3 .content .radioInputGroup .radioInputItem input[type=checkbox]:checked + *:before {
+.step3 .content .radioInputGroup .radioInputItem input[type=radio]:checked + *:before {
   box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
   /* An inner circle with above inner color.*/
   background-color: #a1a1a1;
@@ -192,7 +193,6 @@
 }
 .step3 .content .divide {
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .step3 .content .divide .describe {
   font-size: 20px;
@@ -232,4 +232,22 @@
   background: #64d2a3;
   font-size: 17px;
   font-weight: bold;
+}
+.step3 .content .itemAgreement {
+  font-size: 10px;
+}
+.step3 .content .step-btn {
+  width: 240px;
+}
+.step3 .content .signUp {
+  margin-top: 60px;
+}
+@media only screen and (max-width: 500px) {
+  .step3 {
+    overflow: hidden;
+    max-width: 250px;
+  }
+  .step3 .title {
+    font-size: 15px;
+  }
 }

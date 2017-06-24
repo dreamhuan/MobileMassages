@@ -21,6 +21,7 @@
     background-color: #64d2a3;
     color: white;
     outline: none;
+    border: none;
 }
 
 .step-tips {
@@ -155,12 +156,12 @@
         margin-top: 20px;
         font-family: gotham;
         font-weight: lighter;
-        font-size: 50px;
+        font-size: 30px;
         /* W3C */
     }
 
     .content {
-        max-width: 400px;
+        max-width: 300px;
         margin: auto;
         margin-bottom: 50px;
         .radioInputGroup {
@@ -178,14 +179,14 @@
                 &:hover {
                     background: #d9fbea;
                 }
-                input[type=checkbox] {
+                input[type=radio] {
                     position: absolute;
                     left: 38px;
                     opacity: 0;
                     width: .9em;
                     height: .9em;
                 }
-                input[type=checkbox] + *:before {
+                input[type=radio] + *:before {
                     content: "";
                     display: inline-block;
                     margin: 0 0.4em;
@@ -199,7 +200,7 @@
                     background-color: #ffffff;
                     /* Inner color. */
                 }
-                input[type=checkbox]:checked + *:before {
+                input[type=radio]:checked + *:before {
                     box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
                     /* An inner circle with above inner color.*/
 
@@ -228,7 +229,6 @@
         }
         .divide {
             margin-top: 20px;
-            margin-bottom: 20px;
             .describe {
                 font-size: 20px;
                 margin: 10px;
@@ -258,7 +258,6 @@
             .text {
                 cursor: pointer;
             }
-
         }
         .forgetPasswordBtn {
             margin-top: 30px;
@@ -270,9 +269,28 @@
             font-size: 17px;
             font-weight: bold;
         }
+        .itemAgreement{
+            font-size: 10px;
+        }
+        .step-btn{
+            width: 240px;
+        }
+        .signUp{
+            margin-top: 60px;
+        }
     }
 }
+@media only screen and (max-width: 500px){
 
+    .step3{
+        overflow: hidden;
+        max-width: 250px;
+        .title{
+            font-size: 15px;
+        }
+    }
+
+}
 .step4 {
 
 }
