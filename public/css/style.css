@@ -23,32 +23,22 @@ body {
   border-radius: 0;
 }
 .nav-style {
-  padding-left: 4%;
-  padding-top: 15px;
+  height: 65px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 3%;
   border-bottom: 1px solid #d1fbe8;
   background-color: transparent;
-  opacity: 0.8;
   font-size: 16px;
   font-family: 微软雅黑;
 }
-.nav-style .nav-pages {
-  float: right;
-  margin-right: 5%;
+.nav-style .nav-headTitle {
+  margin-top: -5px;
 }
-.nav-style .nav-pages-a {
-  color: #cac7c1 !important;
-  background-color: transparent;
-  font-size: 14px;
-}
-.nav-style .nav-pages-a:hover {
-  color: #9a9691 !important;
-  background-color: transparent;
-}
-.nav-style .nav-pages-signIn {
-  color: #77e2bd !important;
-}
-.nav-style .nav-pages-signIn:hover {
-  color: #46ddb6 !important;
+@media all and (max-width: 768px) {
+  .nav-style .nav-headTitle {
+    text-align: center;
+  }
 }
 .nav-style .header-title {
   color: #96e8c7 !important;
@@ -60,14 +50,31 @@ body {
 .nav-style .header-title:visited {
   text-decoration: none;
 }
-@media all and (max-width: 768px) {
-  .nav-style .nav-headTitle {
-    text-align: center;
-  }
-}
 .nav-style .deep-color {
   color: #00d4a2 !important;
   margin-left: -20px;
+  font-weight: bolder;
+}
+.nav-style .nav-pages {
+  float: right;
+  margin-right: 5%;
+}
+.nav-style .nav-pages a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #cac7c1 !important;
+  background-color: transparent;
+  font-size: 14px;
+}
+.nav-style .nav-pages a:hover {
+  color: #9a9691 !important;
+  background-color: transparent;
+}
+.nav-style .nav-pages-signIn {
+  color: #77e2bd !important;
+}
+.nav-style .nav-pages-signIn:hover {
+  color: #46ddb6 !important;
 }
 .footer {
   height: 300px;

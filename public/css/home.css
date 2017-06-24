@@ -2,7 +2,8 @@
   width: 100%;
 }
 .home .home-title {
-  margin-top: -21px;
+  margin-top: -1px;
+  position: relative;
 }
 .home .home-title img {
   width: 100%;

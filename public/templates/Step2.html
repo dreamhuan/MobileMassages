@@ -1,4 +1,106 @@
 <link rel="stylesheet" href="./css/step.css">
 <div class="step2">
-    <div>Customize my massage</div>
+    <div class="step-title">Customize my massage</div>
+    <div class="choose">
+
+        <div ng-repeat="choose in chooses">
+            <span class="step-tips">{{choose.type}}</span>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle choose-select"
+                        type="button" id="{{choose.id}}"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                    <span class="choose-item">
+                        <span id="chooseLength">{{choose.chooseoption}}</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </span>
+                </button>
+                <ul class="dropdown-menu choose-option" aria-labelledby="{{choose.id}}">
+                    <li ng-repeat="option in choose.options" ng-click="changeChoose(choose,option)">
+                        <a href="">{{option}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--<div class="session">-->
+        <!--<span class="step-tips">Choose a session</span>-->
+        <!--<div class="dropdown">-->
+        <!--<button class="btn btn-default dropdown-toggle choose-select"-->
+        <!--type="button" id="chooseSessionMenu"-->
+        <!--data-toggle="dropdown"-->
+        <!--aria-haspopup="true" aria-expanded="true">-->
+        <!--<span class="choose-item">-->
+        <!--<span id="chooseSession">Single -1 therapist</span>-->
+        <!--<i class="fa fa-chevron-down"></i>-->
+        <!--</span>-->
+        <!--</button>-->
+        <!--<ul class="dropdown-menu choose-option" aria-labelledby="chooseSessionMenu">-->
+        <!--<li><a href="">Single -1 therapist</a></li>-->
+        <!--<li><a href="">normal -2 therapists</a></li>-->
+        <!--<li><a href="">wonderful -3 therapists</a></li>-->
+        <!--<li><a href="">fantastic -4 therapists</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="length">-->
+        <!--<span class="step-tips">Massage length</span>-->
+        <!--<div class="dropdown">-->
+        <!--<button class="btn btn-default dropdown-toggle choose-select"-->
+        <!--type="button" id="chooseLengthMenu"-->
+        <!--data-toggle="dropdown"-->
+        <!--aria-haspopup="true" aria-expanded="true">-->
+        <!--<span class="choose-item">-->
+        <!--<span id="chooseLength">60 minutes - £99</span>-->
+        <!--<i class="fa fa-chevron-down"></i>-->
+        <!--</span>-->
+        <!--</button>-->
+        <!--<ul class="dropdown-menu choose-option" aria-labelledby="chooseLengthMenu">-->
+        <!--<li><a href="">60 minutes - £99</a></li>-->
+        <!--<li><a href="">90 minutes - £120</a></li>-->
+        <!--<li><a href="">120 minutes - £150</a></li>-->
+        <!--<li><a href="">180 minutes - £240</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="type">-->
+        <!--<span class="step-tips">Massage type</span>-->
+        <!--<div class="dropdown">-->
+        <!--<button class="btn btn-default dropdown-toggle choose-select"-->
+        <!--type="button" id="chooseTypeMenu"-->
+        <!--data-toggle="dropdown"-->
+        <!--aria-haspopup="true" aria-expanded="true">-->
+        <!--<span class="choose-item">-->
+        <!--<span id="chooseType">Swedish Massage</span>-->
+        <!--<i class="fa fa-chevron-down"></i>-->
+        <!--</span>-->
+        <!--</button>-->
+        <!--<ul class="dropdown-menu choose-option" aria-labelledby="chooseTypeMenu">-->
+        <!--<li><a href="">Swedish Massage</a></li>-->
+        <!--<li><a href="">Deep Tissue Massage</a></li>-->
+        <!--<li><a href="">Hot Stone Massage</a></li>-->
+        <!--<li><a href="">Ayurvedic Massage</a></li>-->
+        <!--<li><a href="">Thai Massage</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+    </div>
+    <div class="therapist">
+        <div class="title">Choose your therapist</div>
+        <div class="available">Available:</div>
+        <div class="people">
+
+        </div>
+        <div class="intro">
+
+        </div>
+    </div>
+    <button class="step-btn" ng-click="continue()">CONTINUE</button>
+    <div class="tip"></div>
+    <div class="back"></div>
 </div>
+
+
