@@ -204,4 +204,13 @@ angular.module('app.controllers', [])
 
     })
 
+    .controller('massageTherapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+        $http.get('../data/massage-therapists.json')
+            .then(function (resdata) {
+                // console.log(resdata.data);
+                $scope.chooses = resdata.data;
+
+            });
+
+    })
 ;
