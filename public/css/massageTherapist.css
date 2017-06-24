@@ -3,19 +3,19 @@
     width: 360px;
   }
   .massageTherapist .intro .item .picBox {
-    height: 150px;
-    width: 100px;
+    height: 170px;
+    width: 140px;
   }
   .massageTherapist .intro .item .picBox .pic {
-    height: 135px;
-    width: 90px;
+    height: 160px;
+    width: 130px;
     border: solid 1px black;
   }
   .massageTherapist .intro .item .contentBox {
     width: 200px;
   }
   .massageTherapist .fontLg {
-    font-size: 14px;
+    font-size: 16px;
   }
   .massageTherapist .fontSm {
     font-size: 2px;
@@ -64,7 +64,7 @@
     font-size: 20px;
   }
   .massageTherapist .fontSm {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 .massageTherapist .font {
@@ -101,7 +101,8 @@
   height: 100%;
   width: 100%;
   word-wrap: break-word;
-  text-align: left;
+  text-align: justify;
+  text-justify: distribute;
 }
 .massageTherapist .intro .bgBlack {
   background-color: #0f0f0f;
@@ -137,6 +138,9 @@
 .massageTherapist .font-bolder {
   font-weight: 400;
 }
+.massageTherapist .font-bolderest {
+  font-weight: 500;
+}
 .massageTherapist .centerContent {
   text-align: center;
 }
@@ -151,4 +155,7 @@
 }
 .massageTherapist .mar-xxtop {
   margin-top: 20px;
+}
+.massageTherapist .marXXBottom {
+  margin-bottom: 10px;
 }
