@@ -4,15 +4,14 @@
     <div class="row title flex-center">to your existing account to continue</div>
     <div class="content">
         <div class="radioInputGroup  row">
-            <div class="row flex-verticalAlign radioInputItem">
-                <input type="checkbox" >
-                <div>I'm a new customer</div>
-            </div>
-            <div class="row flex-verticalAlign radioInputItem">
-                <input type="checkbox">
-                <div>I have an account</div>
-            </div>
-            <div class="row"></div>
+                <div class="row flex-verticalAlign radioInputItem" ng-init="showType=0">
+                    <input type="radio" ng-model="showType" ng-value="0">
+                    <div>I'm a new customer</div>
+                </div>
+                <div class="row flex-verticalAlign radioInputItem">
+                    <input type="radio" ng-model="showType" ng-value="1">
+                    <div>I have an account</div>
+                </div>
         </div>
         <div class="faceBookBtn flex-center">
             <span class="fa fa-facebook"></span>
@@ -22,6 +21,49 @@
             <div class="line">—————————————</div>
             <div class="describe">or</div>
             <div class="line">—————————————</div>
+        </div>
+        <div ng-show="showType===0" >
+            <div class="row inputGroup center-block">
+                <div class="inputItem col-xs-12">
+                    <div class="describe">First name</div>
+                    <input type="text">
+                </div>
+                <div class="inputItem col-xs-12">
+                    <div class="describe">Last name</div>
+                    <input type="text">
+                </div>
+                <div class="inputItem col-xs-12">
+                    <div class="describe">Email address</div>
+                    <input type="text">
+                </div>
+                <div class="inputItem col-xs-12">
+                    <div class="describe">Mobile number</div>
+                    <input type="text">
+                </div>
+                <div class="inputItem col-xs-12">
+                    <div class="describe">Choose a password</div>
+                    <input type="text">
+                </div>
+            </div>
+            <button class="step-btn signUp flex-center">CONTINUE</button>
+            <div class="flex-center itemAgreement">By clicking "continue" above, you are agreeing to </div>
+            <div class="flex-center itemAgreement">  our terms of service agreement. </div>
+        </div>
+        <div ng-show="showType==1">
+            <div class="row inputGroup center-block">
+                <div class="inputItem col-xs-12">
+                    <div class="describe">Email address</div>
+                    <input type="text">
+                </div>
+                <div class="inputItem col-xs-12">
+                    <div class="describe">Password</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="hint flex-center">
+                <div class="text">Forget Password?</div>
+            </div>
+            <button class="step-btn flex-center">CONTINUE</button>
         </div>
     </div>
 </div>
