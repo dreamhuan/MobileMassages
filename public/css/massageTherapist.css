@@ -1,3 +1,72 @@
+@media screen and (max-width: 400px) {
+  .massageTherapist .intro .item {
+    width: 360px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 150px;
+    width: 100px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 135px;
+    width: 90px;
+    border: solid 1px black;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 200px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 14px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 2px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .massageTherapist .intro .item {
+    width: 520px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 170px;
+    width: 140px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 150px;
+    width: 130px;
+    border: solid 1px black;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 230px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 16px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 6px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .massageTherapist .intro .item {
+    width: 560px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 190px;
+    width: 160px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 170px;
+    width: 150px;
+    border: solid 1px black;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 270px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 20px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 10px;
+  }
+}
 .massageTherapist .font {
   display: flex;
   width: 89%;
@@ -23,20 +92,16 @@
 }
 .massageTherapist .intro .item {
   height: 195px;
-  width: 560px;
 }
-.massageTherapist .intro .item .picBox {
+.massageTherapist .intro .item .contentBox {
   height: 190px;
-  width: 160px;
 }
-.massageTherapist .intro .item .picBox .pic {
-  height: 188px;
-  width: 150px;
-  border: solid 1px black;
-}
-.massageTherapist .intro .item .content {
-  height: 190px;
-  width: 270px;
+.massageTherapist .intro .item .contentBox .content {
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  text-align: left;
 }
 .massageTherapist .intro .bgBlack {
   background-color: #0f0f0f;
@@ -86,10 +151,4 @@
 }
 .massageTherapist .mar-xxtop {
   margin-top: 20px;
-}
-.massageTherapist .fontLg {
-  font-size: 20px;
-}
-.massageTherapist .fontSm {
-  font-size: 10px;
 }
