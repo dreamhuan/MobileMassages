@@ -117,12 +117,12 @@ angular.module('app.controllers', [])
             let active = document.URL.substr(document.URL.length - 1, 1); //获取url最后一个数字，就是step1234中的一个
             // console.log(active);
             //option1234对应四个选项的class是否为true
-            $scope.option = [
-                {opt: 1, cls: 0},
-                {opt: 2, cls: 0},
-                {opt: 3, cls: 0},
-                {opt: 4, cls: 0},
-            ];
+            // $scope.option = [
+            //     {opt: 1, cls: 0},
+            //     {opt: 2, cls: 0},
+            //     {opt: 3, cls: 0},
+            //     {opt: 4, cls: 0},
+            // ];
             $scope.option[active - 1].cls = 1;
 
         }, 0);
@@ -138,6 +138,11 @@ angular.module('app.controllers', [])
     })
 
     .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+        $scope.option[0].cls = 1;
+        $scope.option[1].cls = 0;
+        $scope.option[2].cls = 0;
+        $scope.option[3].cls = 0;
+
         $scope.datetime = {
             date: new Date(),
             time: new Date().toLocaleTimeString()
