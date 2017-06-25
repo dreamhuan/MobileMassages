@@ -116,32 +116,32 @@ angular.module('app.controllers', [])
             // console.log(document.getCurrentState());
             let active = document.URL.substr(document.URL.length - 1, 1); //获取url最后一个数字，就是step1234中的一个
             // console.log(active);
-            //option1234对应四个选项的class是否为true
-            // $scope.option = [
+            //bookingStepOption1234对应四个选项的class是否为true
+            // $scope.bookingStepOption = [
             //     {opt: 1, cls: 0},
             //     {opt: 2, cls: 0},
             //     {opt: 3, cls: 0},
             //     {opt: 4, cls: 0},
             // ];
-            $scope.option[active - 1].cls = 1;
+            $scope.bookingStepOption[active - 1].cls = 1;
 
         }, 0);
 
         $scope.changeOption = function (item) {
-            for (let i of $scope.option) {
+            for (let i of $scope.bookingStepOption) {
                 i.cls = 0;
             }
-            $scope.option[item.opt - 1].cls = 1;
-            // console.log($scope.option);
+            $scope.bookingStepOption[item.opt - 1].cls = 1;
+            // console.log($scope.bookingStepOption);
             $state.go('booking.step' + item.opt);
         }
     })
 
     .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
-        $scope.option[0].cls = 1;
-        $scope.option[1].cls = 0;
-        $scope.option[2].cls = 0;
-        $scope.option[3].cls = 0;
+        $scope.bookingStepOption[0].cls = 1;
+        $scope.bookingStepOption[1].cls = 0;
+        $scope.bookingStepOption[2].cls = 0;
+        $scope.bookingStepOption[3].cls = 0;
 
         $scope.datetime = {
             date: new Date(),
