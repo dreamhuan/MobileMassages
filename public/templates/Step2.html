@@ -27,17 +27,24 @@
         <div class="available">Available:</div>
         <div class="people">
             <div ng-repeat="therapist in therapists">
-                <img class="img" ng-src="{{therapist.img}}" alt="{{therapist.name+'\'s image'}}">
+                <img class="img" ng-src="{{therapist.img}}" alt="{{therapist.name+'\'s image'}}"
+                     ng-click="toggleTherapist(therapist)" id="{{therapist.name}}">
                 <div class="name">{{therapist.name}}</div>
             </div>
         </div>
-        <div class="intro">
-
+        <div class="intro" ng-repeat="therapist in chooseTherapist">
+            <div class="intro-name">{{therapist.name}}</div>
+            <div class="intro-content">{{therapist.intro}}</div>
         </div>
     </div>
     <button class="step-btn" ng-click="continue()">CONTINUE</button>
-    <div class="tip"></div>
-    <div class="back"></div>
+    <div class="tip">
+        By clicking "Continue" above, you are agreeing to our Terms of Service agreement.
+    </div>
+    <div class="back">
+        <i class="fa fa-angle-left left-icon"></i>
+        <span class="right-font">Back</span>
+    </div>
 </div>
 
 

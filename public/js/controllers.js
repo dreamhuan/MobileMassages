@@ -137,36 +137,95 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore, $http, AlertService) {
+        $scope.chooses = [];
+        $scope.therapists = [];
+        $scope.chooseTherapist = [];
+
+        //count是当前已选的计数，$scope.count是选项中的人数
+        let count = $scope.count = 0;
         $http.get('../data/bookingstep2.json')
             .then(function (resdata) {
                 // console.log(resdata);
                 $scope.chooses = resdata.data;
+
+                //每个选项的默认选项是第一个
                 for (let i = 0; i < $scope.chooses.length; i++) {
                     $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
                 }
+
+                //选中的人数是第一个选择的内容
+                let str = $scope.chooses[0].chooseoption;
+                //选中'-'后面的数字
+                $scope.count = str.substr(str.indexOf('-') + 1, 1);
             });
-        $http.get('../data/massage-therapists.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.therapists = resdata.data;
-            });
+
         $scope.changeChoose = function (choose, option) {
             choose.chooseoption = option;
-            // console.log(choose);
-            // console.log(option);
+
+            //每次修改第一个的选项后重置下面人物选择部分内容
+            if (choose === $scope.chooses[0]) {
+                count = 0;
+                let str = $scope.chooses[0].chooseoption;
+                $scope.count = str.substr(str.indexOf('-') + 1, 1);
+                $scope.chooseTherapist = [];
+                for (let i = 0; i < $scope.therapists.length; i++) {
+                    angular.element('#' + $scope.therapists[i].name).removeClass('img-active');
+                }
+            }
         };
+
+        $http.get('../data/massage-therapists.json')
+            .then(function (resdata) {
+                // console.log(resdata);
+                $scope.therapists = resdata.data;
+            });
+
+        $scope.toggleTherapist = function (therapist) {
+            let flag = 0;
+            //以下代码吧这个元素从数组中删除，并不改变原顺序。复杂度O(n^2)
+            //找到该元素，并把后面元素依次往前移动，最后pop掉最后元素
+            for (let i = 0; i < $scope.chooseTherapist.length; i++) {
+                if (therapist === $scope.chooseTherapist[i]) {
+                    flag = 1;
+                    count--;
+                    for (let j = i; j < $scope.chooseTherapist.length - 1; j++) {
+                        $scope.chooseTherapist[j] = $scope.chooseTherapist[j + 1];
+                    }
+                    $scope.chooseTherapist.pop();
+                    break;
+                }
+            }
+            if (!flag) {
+                count++;
+                console.log(count);
+                console.log($scope.count);
+                console.log(count > $scope.count);
+                if (count > $scope.count) {
+                    AlertService.error('人数已满！');
+                    count--;
+                    return;
+                }
+                $scope.chooseTherapist.push(therapist);
+            }
+            angular.element('#' + therapist.name).toggleClass('img-active');
+        };
+
         $scope.continue = function () {
             let choise = [];
             for (let i = 0; i < $scope.chooses.length; i++) {
                 let item = {
-                    type:$scope.chooses[i].type,
-                    option:$scope.chooses[i].chooseoption,
+                    type: $scope.chooses[i].type,
+                    option: $scope.chooses[i].chooseoption,
                 };
                 choise.push(item);
             }
+            choise.push({
+                type: 'chooseTherapist',
+                option: $scope.chooseTherapist
+            });
             console.log(choise);
-        }
+        };
     })
 
     .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
@@ -182,7 +241,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
-        $http.get('../data/type.json')
+        $http.get('../data/home-massage-type.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;

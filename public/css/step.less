@@ -23,7 +23,9 @@
     outline: none;
     border: none;
 }
-
+.step-btn:active {
+    border: 1px solid #999999;
+}
 .step-tips {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.4);
@@ -94,6 +96,7 @@
 
         }
     }
+
     .therapist {
 
         .title,
@@ -120,13 +123,19 @@
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
 
             .img {
                 margin: 10px;
                 margin-bottom: 0;
                 width: 100px;
+                height: 120px;
                 border: 1px solid #c2c2c2;
                 cursor: pointer;
+            }
+            .img-active {
+                border: 5px solid #64d2a5;
             }
 
             .name {
@@ -137,7 +146,54 @@
         }
 
         .intro {
+            width: 500px;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 20px 30px 40px 30px;
+            background-color: #f2fdf7;
 
+            .intro-name {
+                font-size: 20px;
+                font-weight: bold;
+                color: #28ab8b;
+            }
+            .intro-content {
+                font-size: 16px;
+                word-break: break-all;
+                hyphens: auto;
+            }
+        }
+    }
+
+    .tip {
+        width: 300px;
+        margin: auto;
+        margin-top: 30px;
+        text-align: center;
+        color: #999999;
+    }
+
+    .back {
+        width: 65px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        background-color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.4);
+        .left-icon {
+            font-size: 30px;
+            font-weight: 100;
+        }
+
+        .right-font {
+            font-size: 18px;
+            line-height:35px;
+            font-weight: 700;
         }
     }
 }
