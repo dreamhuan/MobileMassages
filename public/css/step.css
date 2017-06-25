@@ -241,18 +241,26 @@
   /* An outer circle. */
   /* No inner circle. */
   background-color: #ffffff;
+  margin-top: 6px;
+  margin-right: 15px;
   /* Inner color. */
 }
 .step3 .content .radioInputGroup .radioInputItem input[type=radio]:checked + *:before {
-  box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
+  box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 4px #fff;
   /* An inner circle with above inner color.*/
   background-color: #a1a1a1;
   /* The dot color */
+}
+.step3 .content .radioInputGroup .radioInputItem label {
+  font-weight: normal;
+  cursor: pointer;
 }
 .step3 .content .inputGroup .inputItem {
   padding: 0px;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
 }
 .step3 .content .inputGroup .inputItem .describe {
   font-size: 17px;
@@ -261,7 +269,7 @@
   padding-left: 5px;
   width: 100%;
   font-size: 30px;
-  height: 50px;
+  height: 40px;
   border: solid #9a9691 1px;
 }
 .step3 .content .divide {
@@ -310,7 +318,8 @@
   font-size: 10px;
 }
 .step3 .content .step-btn {
-  width: 240px;
+  width: 260px;
+  margin-bottom: 10px;
 }
 .step3 .content .signUp {
   margin-top: 60px;
