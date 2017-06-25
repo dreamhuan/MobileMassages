@@ -70,10 +70,10 @@ body {
   color: #9a9691 !important;
   background-color: transparent;
 }
-.nav-style .nav-pages-signIn {
+.nav-style a.nav-pages-signIn {
   color: #77e2bd !important;
 }
-.nav-style .nav-pages-signIn:hover {
+.nav-style a.nav-pages-signIn:hover {
   color: #46ddb6 !important;
 }
 .footer {
