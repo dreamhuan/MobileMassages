@@ -182,7 +182,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
-        $http.get('../data/type.json')
+        $http.get('../data/home-massage-type.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;

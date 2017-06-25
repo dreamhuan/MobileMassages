@@ -11,6 +11,7 @@
 .home .booking-btn {
   width: 200px;
   height: 35px;
+  margin: auto;
   background-color: #00d6a0;
   color: #ffffff;
   border: none;
@@ -19,8 +20,7 @@
   outline: none;
 }
 .home .date-booking {
-  width: 400px;
-  height: 300px;
+  width: 40%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +37,8 @@
   margin-top: -8px;
 }
 .home .date-booking .date-choose {
-  width: 300px;
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,6 +52,11 @@
 }
 .home .date-booking .date-choose .choose-time {
   margin-top: 10px;
+}
+@media only screen and (max-width: 312px) {
+  .home .date-booking .firsttitle {
+    font-size: 16px;
+  }
 }
 .home .date-message {
   width: 100%;
@@ -105,10 +111,10 @@
   justify-content: center;
 }
 .home .date-therapists .therapists-img img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border: 1px solid #d2fae8;
-  border-radius: 120px;
+  border-radius: 100px;
   margin: 20px;
 }
 .home .massage-type {
