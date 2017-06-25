@@ -146,6 +146,11 @@ angular.module('app.controllers', [])
                     $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
                 }
             });
+        $http.get('../data/massage-therapists.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.therapists = resdata.data;
+            });
         $scope.changeChoose = function (choose, option) {
             choose.chooseoption = option;
             // console.log(choose);

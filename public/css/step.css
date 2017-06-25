@@ -87,6 +87,23 @@
   font-weight: bold;
   color: rgba(0, 0, 0, 0.6);
 }
+.step2 .therapist .people {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.step2 .therapist .people .img {
+  margin: 10px;
+  margin-bottom: 0;
+  width: 100px;
+  border: 1px solid #c2c2c2;
+}
+.step2 .therapist .people .name {
+  text-align: center;
+  color: #67d2a4;
+  font-weight: bold;
+}
 .step3 {
   color: #9a9691;
   min-height: 500px;
