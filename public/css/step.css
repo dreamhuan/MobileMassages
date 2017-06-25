@@ -88,6 +88,23 @@
   font-weight: bold;
   color: rgba(0, 0, 0, 0.6);
 }
+.step2 .therapist .people {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.step2 .therapist .people .img {
+  margin: 10px;
+  margin-bottom: 0;
+  width: 100px;
+  border: 1px solid #c2c2c2;
+}
+.step2 .therapist .people .name {
+  text-align: center;
+  color: #67d2a4;
+  font-weight: bold;
+}
 .step3 {
   color: #9a9691;
   min-height: 500px;
@@ -124,11 +141,11 @@
   margin-top: 20px;
   font-family: gotham;
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 50px;
   /* W3C */
 }
 .step3 .content {
-  max-width: 300px;
+  max-width: 400px;
   margin: auto;
   margin-bottom: 50px;
 }
@@ -149,14 +166,14 @@
 .step3 .content .radioInputGroup .radioInputItem:hover {
   background: #d9fbea;
 }
-.step3 .content .radioInputGroup .radioInputItem input[type=radio] {
+.step3 .content .radioInputGroup .radioInputItem input[type=checkbox] {
   position: absolute;
   left: 38px;
   opacity: 0;
   width: .9em;
   height: .9em;
 }
-.step3 .content .radioInputGroup .radioInputItem input[type=radio] + *:before {
+.step3 .content .radioInputGroup .radioInputItem input[type=checkbox] + *:before {
   content: "";
   display: inline-block;
   margin: 0 0.4em;
@@ -170,7 +187,7 @@
   background-color: #ffffff;
   /* Inner color. */
 }
-.step3 .content .radioInputGroup .radioInputItem input[type=radio]:checked + *:before {
+.step3 .content .radioInputGroup .radioInputItem input[type=checkbox]:checked + *:before {
   box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
   /* An inner circle with above inner color.*/
   background-color: #a1a1a1;
@@ -193,6 +210,7 @@
 }
 .step3 .content .divide {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .step3 .content .divide .describe {
   font-size: 20px;
@@ -233,13 +251,145 @@
   font-size: 17px;
   font-weight: bold;
 }
-.step3 .content .itemAgreement {
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.flex-rightend {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+.flex-verticalAlign {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.title {
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  font-family: gotham;
+  font-weight: lighter;
+  font-size: 30px;
+  /* W3C */
+}
+.content {
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.content .radioInputGroup {
+  margin-top: 30px;
+  position: relative;
+}
+.content .radioInputGroup .radioInputItem {
+  padding-left: 30px;
+  font-size: 20px;
+  height: 50px;
+}
+.content .radioInputGroup .radioInputItem input {
+  cursor: pointer;
+  margin: 0px;
+  margin-right: 10px;
+}
+.content .radioInputGroup .radioInputItem:hover {
+  background: #d9fbea;
+}
+.content .radioInputGroup .radioInputItem input[type=radio] {
+  position: absolute;
+  left: 38px;
+  opacity: 0;
+  width: .9em;
+  height: .9em;
+}
+.content .radioInputGroup .radioInputItem input[type=radio] + *:before {
+  content: "";
+  display: inline-block;
+  margin: 0 0.4em;
+  /* Make some horizontal space. */
+  width: .8em;
+  height: .8em;
+  border-radius: 0.6em;
+  box-shadow: 0px 0px 0px .5px #888;
+  /* An outer circle. */
+  /* No inner circle. */
+  background-color: #ffffff;
+  /* Inner color. */
+}
+.content .radioInputGroup .radioInputItem input[type=radio]:checked + *:before {
+  box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
+  /* An inner circle with above inner color.*/
+  background-color: #a1a1a1;
+  /* The dot color */
+}
+.content .inputGroup .inputItem {
+  padding: 0px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.content .inputGroup .inputItem .describe {
+  font-size: 17px;
+}
+.content .inputGroup .inputItem input {
+  padding-left: 5px;
+  width: 100%;
+  font-size: 30px;
+  height: 50px;
+  border: solid #9a9691 1px;
+}
+.content .divide {
+  margin-top: 20px;
+}
+.content .divide .describe {
+  font-size: 20px;
+  margin: 10px;
+}
+.content .faceBookBtn {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  height: 30px;
+  background: #3d5a94;
+  color: white;
+  font-family: "xt-gothamLight";
+  border-radius: 10px;
+}
+.content .faceBookBtn span {
+  margin-right: 10px;
+}
+.content .faceBookBtn .fa-facebook {
+  font-size: 17px;
+}
+.content .hint {
+  width: 100%;
+  height: 60px;
+  font-family: "xt-gothamLight";
+  font-weight: bold;
+}
+.content .hint .text {
+  cursor: pointer;
+}
+.content .forgetPasswordBtn {
+  margin-top: 30px;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  height: 50px;
+  background: #64d2a3;
+  font-size: 17px;
+  font-weight: bold;
+}
+.content .itemAgreement {
   font-size: 10px;
 }
-.step3 .content .step-btn {
+.content .step-btn {
   width: 240px;
 }
-.step3 .content .signUp {
+.content .signUp {
   margin-top: 60px;
 }
 @media only screen and (max-width: 500px) {
