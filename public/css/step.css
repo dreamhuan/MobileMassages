@@ -19,6 +19,7 @@
   background-color: #64d2a3;
   color: white;
   outline: none;
+  border: none;
 }
 .step-tips {
   font-weight: bold;
@@ -249,4 +250,154 @@
   background: #64d2a3;
   font-size: 17px;
   font-weight: bold;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.flex-rightend {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+.flex-verticalAlign {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.title {
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  font-family: gotham;
+  font-weight: lighter;
+  font-size: 30px;
+  /* W3C */
+}
+.content {
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.content .radioInputGroup {
+  margin-top: 30px;
+  position: relative;
+}
+.content .radioInputGroup .radioInputItem {
+  padding-left: 30px;
+  font-size: 20px;
+  height: 50px;
+}
+.content .radioInputGroup .radioInputItem input {
+  cursor: pointer;
+  margin: 0px;
+  margin-right: 10px;
+}
+.content .radioInputGroup .radioInputItem:hover {
+  background: #d9fbea;
+}
+.content .radioInputGroup .radioInputItem input[type=radio] {
+  position: absolute;
+  left: 38px;
+  opacity: 0;
+  width: .9em;
+  height: .9em;
+}
+.content .radioInputGroup .radioInputItem input[type=radio] + *:before {
+  content: "";
+  display: inline-block;
+  margin: 0 0.4em;
+  /* Make some horizontal space. */
+  width: .8em;
+  height: .8em;
+  border-radius: 0.6em;
+  box-shadow: 0px 0px 0px .5px #888;
+  /* An outer circle. */
+  /* No inner circle. */
+  background-color: #ffffff;
+  /* Inner color. */
+}
+.content .radioInputGroup .radioInputItem input[type=radio]:checked + *:before {
+  box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
+  /* An inner circle with above inner color.*/
+  background-color: #a1a1a1;
+  /* The dot color */
+}
+.content .inputGroup .inputItem {
+  padding: 0px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.content .inputGroup .inputItem .describe {
+  font-size: 17px;
+}
+.content .inputGroup .inputItem input {
+  padding-left: 5px;
+  width: 100%;
+  font-size: 30px;
+  height: 50px;
+  border: solid #9a9691 1px;
+}
+.content .divide {
+  margin-top: 20px;
+}
+.content .divide .describe {
+  font-size: 20px;
+  margin: 10px;
+}
+.content .faceBookBtn {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  height: 30px;
+  background: #3d5a94;
+  color: white;
+  font-family: "xt-gothamLight";
+  border-radius: 10px;
+}
+.content .faceBookBtn span {
+  margin-right: 10px;
+}
+.content .faceBookBtn .fa-facebook {
+  font-size: 17px;
+}
+.content .hint {
+  width: 100%;
+  height: 60px;
+  font-family: "xt-gothamLight";
+  font-weight: bold;
+}
+.content .hint .text {
+  cursor: pointer;
+}
+.content .forgetPasswordBtn {
+  margin-top: 30px;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  height: 50px;
+  background: #64d2a3;
+  font-size: 17px;
+  font-weight: bold;
+}
+.content .itemAgreement {
+  font-size: 10px;
+}
+.content .step-btn {
+  width: 240px;
+}
+.content .signUp {
+  margin-top: 60px;
+}
+@media only screen and (max-width: 500px) {
+  .step3 {
+    overflow: hidden;
+    max-width: 250px;
+  }
+  .step3 .title {
+    font-size: 15px;
+  }
 }
