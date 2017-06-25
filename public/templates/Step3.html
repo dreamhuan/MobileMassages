@@ -5,12 +5,12 @@
     <div class="content">
         <div class="radioInputGroup  row">
                 <div class="row flex-verticalAlign radioInputItem" ng-init="showType=0">
-                    <input type="radio" ng-model="showType" ng-value="0">
-                    <div>I'm a new customer</div>
+                    <input type="radio" ng-model="showType" ng-value="0" id="new">
+                    <label for="new">I'm a new customer</label>
                 </div>
                 <div class="row flex-verticalAlign radioInputItem">
-                    <input type="radio" ng-model="showType" ng-value="1">
-                    <div>I have an account</div>
+                    <input type="radio" ng-model="showType" ng-value="1" id="registered">
+                    <label for="registered">I have an account</label>
                 </div>
         </div>
         <div class="faceBookBtn flex-center">

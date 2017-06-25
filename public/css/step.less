@@ -283,14 +283,20 @@
                     /* An outer circle. */
                     /* No inner circle. */
                     background-color: #ffffff;
+                    margin-top: 6px;
+                    margin-right: 15px;
                     /* Inner color. */
                 }
                 input[type=radio]:checked + *:before {
-                    box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 3px #fff;
+                    box-shadow: 0px 0px 0px .5px #888, inset 0px 0px 0px 4px #fff;
                     /* An inner circle with above inner color.*/
 
                     background-color: #a1a1a1;
                     /* The dot color */
+                }
+                label{
+                    font-weight: normal;
+                    cursor: pointer;
                 }
             }
         }
@@ -300,6 +306,8 @@
                 padding: 0px;
                 flex-wrap: wrap;
                 margin-top: 20px;
+                margin-left: 10px;
+                width: 280px;
                 .describe {
                     font-size: 17px;
                 }
@@ -307,7 +315,7 @@
                     padding-left: 5px;
                     width: 100%;
                     font-size: 30px;
-                    height: 50px;
+                    height: 40px;
                     border: solid #9a9691 1px;
                 }
             }
@@ -355,10 +363,12 @@
             font-weight: bold;
         }
         .itemAgreement {
+
             font-size: 10px;
         }
         .step-btn {
-            width: 240px;
+            width: 260px;
+            margin-bottom: 10px;
         }
         .signUp {
             margin-top: 60px;
