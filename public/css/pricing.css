@@ -18,20 +18,20 @@
   }
   .pricing .content .item .text {
     height: 100%;
-    width: 320px;
+    width: 300px;
     border-bottom: solid 1px #63d2a3;
     font-size: 26px;
   }
 }
 @media screen and (min-width: 500px) {
   .pricing .title {
-    height: 180px;
+    height: 260px;
   }
   .pricing .font-lx {
-    font-size: 32px;
+    font-size: 40px;
   }
   .pricing .content .tit {
-    font-size: 28px;
+    font-size: 32px;
   }
   .pricing .content .item {
     height: 120px;
@@ -42,9 +42,9 @@
   }
   .pricing .content .item .text {
     height: 100%;
-    width: 400px;
-    border-bottom: solid 1px #63d2a3;
-    font-size: 24px;
+    width: 500px;
+    border-bottom: solid 1px #d9faeb;
+    font-size: 30px;
   }
 }
 .pricing .button {
@@ -54,7 +54,7 @@
 .pricing .button .booking-btn {
   width: 250px;
   height: 50px;
-  background-color: #00d4a2;
+  background-color: #00d6a0;
   color: #ffffff;
   border: none;
   margin-top: 60px;
@@ -69,7 +69,7 @@
   font-weight: 200;
 }
 .pricing .font-bolder {
-  font-weight: 300;
+  font-weight: 350;
 }
 .pricing .font-bolderest {
   font-weight: 500;
