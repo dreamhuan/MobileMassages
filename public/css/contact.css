@@ -7,11 +7,15 @@
   justify-content: center;
 }
 .contact .contact-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
   padding-top: 10%;
-  color: #6de5c4;
+  color: #6fd5a9;
   font-size: 28px;
 }
 .contact .contact-message {
+  font-family: Gotham Rounded Book;
+  color: #838383;
   width: 400px;
   margin-top: -10px;
   display: flex;
@@ -34,6 +38,16 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 400px;
+}
+.contact .contact-form input::-webkit-input-placeholder {
+  color: #d4d4d4;
+  font-style: italic;
+  padding-left: 10px;
+}
+.contact .contact-form textarea::-webkit-input-placeholder {
+  color: #d4d4d4;
+  font-style: italic;
+  padding-left: 10px;
 }
 .contact .contact-form .form-name,
 .contact .contact-form .form-email {
