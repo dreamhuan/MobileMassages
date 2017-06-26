@@ -5,12 +5,12 @@
     <div class="content">
         <div class="radioInputGroup  row">
                 <div class="row flex-verticalAlign radioInputItem" ng-init="showType=0">
-                    <input type="radio" ng-model="showType" ng-value="0">
-                    <div>I'm a new customer</div>
+                    <input type="radio" ng-model="showType" ng-value="0" id="new">
+                    <label for="new">I'm a new customer</label>
                 </div>
                 <div class="row flex-verticalAlign radioInputItem">
-                    <input type="radio" ng-model="showType" ng-value="1">
-                    <div>I have an account</div>
+                    <input type="radio" ng-model="showType" ng-value="1" id="registered">
+                    <label for="registered">I have an account</label>
                 </div>
         </div>
         <div class="faceBookBtn flex-center">
@@ -49,7 +49,7 @@
             <div class="flex-center itemAgreement">By clicking "continue" above, you are agreeing to </div>
             <div class="flex-center itemAgreement">  our terms of service agreement. </div>
         </div>
-        <div ng-show="showType==1">
+        <div ng-show="showType===1">
             <div class="row inputGroup center-block">
                 <div class="inputItem col-xs-12">
                     <div class="describe">Email address</div>
@@ -65,5 +65,10 @@
             </div>
             <button class="step-btn flex-center">CONTINUE</button>
         </div>
+        <div class="step-back">
+            <i class="fa fa-angle-left left-icon"></i>
+            <span class="right-font">Back</span>
+        </div>
     </div>
+
 </div>
