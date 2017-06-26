@@ -218,13 +218,12 @@
   padding-top: 10px;
 }
 .home .simple-pricing .eg-pricingList .eg-pricing .eg-time {
+  width: 50px;
+  text-align: right;
   color: #00d6a1;
   font-size: 18px;
   font-weight: bolder;
   margin-left: 15%;
-}
-.home .simple-pricing .eg-pricingList .eg-pricing .mg-left {
-  margin-left: 12%;
 }
 .home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt {
   color: #cccac8;

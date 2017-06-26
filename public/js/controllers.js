@@ -80,6 +80,12 @@ angular.module('app.controllers', [])
                 console.log(resdata);
                 $scope.datas = resdata.data;
             });
+        $http.get('../data/price.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.prices = resdata.data[0].priceList;
+
+            });
 
 
         $scope.datetime = {

@@ -60,20 +60,10 @@
     <div class="simple-pricing">
         <div class="eg-title">SIMPLE PRICING</div>
         <div class="eg-pricingList">
-            <div class="eg-pricing">
-                <div class="eg-time">60</div>
+            <div ng-repeat="item in prices" class="eg-pricing">
+                <div class="eg-time">{{item.time}}</div>
                 <div class="eg-mnt">minutes</div>
-                <div class="eg-price">£65</div>
-            </div>
-            <div class="eg-pricing">
-                <div class="eg-time">90</div>
-                <div class="eg-mnt">minutes</div>
-                <div class="eg-price">£75</div>
-            </div>
-            <div class="eg-pricing">
-                <div class="eg-time mg-left">120</div>
-                <div class="eg-mnt">minutes</div>
-                <div class="eg-price">£95</div>
+                <div class="eg-price">￡{{item.price}}</div>
             </div>
         </div>
         <button class="booking-btn">BOOK NOW</button>
