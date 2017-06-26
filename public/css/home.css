@@ -36,7 +36,6 @@
   font-family: Gotham Rounded Book;
   color: #424242;
   font-size: 18px;
-  margin-top: -5px;
 }
 .home .date-booking .date-choose {
   width: 80%;
@@ -62,20 +61,28 @@
 .home .date-booking .date-choose .choose-time {
   margin-top: 10px;
 }
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1046px) {
   .home .date-booking .firsttitle {
-    font-size: 24px;
+    font-size: 28px;
   }
   .home .date-booking .secondtitle {
     font-size: 16px;
   }
 }
-@media only screen and (max-width: 817px) {
+@media only screen and (max-width: 900px) {
   .home .date-booking .firsttitle {
-    font-size: 20px;
+    font-size: 24px;
   }
   .home .date-booking .secondtitle {
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 757px) {
+  .home .date-booking .firsttitle {
+    font-size: 21px;
+  }
+  .home .date-booking .secondtitle {
+    font-size: 12px;
   }
 }
 .home .date-message {
@@ -139,6 +146,11 @@
   border-radius: 50%;
   margin: 20px;
 }
+@media only screen and (max-width: 892px) {
+  .home .date-therapists .title {
+    font-size: 30px;
+  }
+}
 @media only screen and (max-width: 832px) {
   .home .date-therapists .title {
     font-size: 26px;
@@ -167,11 +179,11 @@
   width: 60%;
   margin: auto;
   color: #6fd5a9;
-  font-size: 28px;
+  font-size: 32px;
   text-align: center;
 }
 .home .massage-type .type-content {
-  width: 700px;
+  width: 650px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -202,6 +214,21 @@
 .home .massage-type .center-location {
   width: 200px;
   margin: auto;
+}
+@media only screen and (max-width: 788px) {
+  .home .massage-type .type-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 731px) {
+  .home .massage-type .type-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 679px) {
+  .home .massage-type .type-title {
+    font-size: 26px;
+  }
 }
 .home .simple-pricing {
   width: 300px;
@@ -298,6 +325,14 @@
   }
   .home .faq .faq-content {
     width: 600px;
+  }
+}
+@media only screen and (max-width: 692px) {
+  .home .faq {
+    height: 2000px;
+  }
+  .home .faq .faq-title {
+    font-size: 20px;
   }
 }
 .home .contact {
