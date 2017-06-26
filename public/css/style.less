@@ -17,6 +17,17 @@ body {
     transform: scale(1, 0.9);
 }
 
+@font-face {
+    font-family: "GothamNarrow-Bold";
+    src: url("../fonts/myfont/GothamNarrow-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Gotham Rounded Book";
+    src: url("../fonts/myfont/GothamRounded-Book.otf");
+}
+
+
 ::-webkit-scrollbar { //取消滚动条
     width: 0;
 }
@@ -53,6 +64,7 @@ body {
         color: #96e8c7 !important;
         font-size: 20px;
         margin-left: 10%;
+        font-family: Gotham Rounded Book;
 
         &:hover,
         &:focus,
@@ -61,11 +73,13 @@ body {
         }
 
     }
+
     .deep-color {
         color: #00d4a2 !important;
         margin-left: -20px;
         font-weight: bolder;
     }
+
     .nav-pages {
         float: right;
         margin-right: 5%;
