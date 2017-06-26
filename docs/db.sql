@@ -3,140 +3,126 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 DROP DATABASE mobilemassages;
-SET @OLD_UNIQUE_CHECKS = @@UNIQUE_CHECKS, UNIQUE_CHECKS = 0;
-SET @OLD_FOREIGN_KEY_CHECKS = @@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS = 0;
-SET @OLD_SQL_MODE = @@SQL_MODE, SQL_MODE = 'TRADITIONAL,ALLOW_INVALID_DATES';
-
--- -----------------------------------------------------
--- Schema mobilemassages's user
--- -----------------------------------------------------
-GRANT ALL ON mobilemassages.* TO 'mm'@'localhost'
-IDENTIFIED BY '123456';
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
 -- Schema mobilemassages
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mobilemassages`
-  DEFAULT CHARACTER SET utf8;
-USE `mobilemassages`;
 
 -- -----------------------------------------------------
--- Table `mobilemassages`.`todo`
--- test table
+-- Schema mobilemassages
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mobilemassages`.`todo`;
-
-CREATE TABLE todo (
-  `id`      INT         NOT NULL AUTO_INCREMENT,
-  `content` VARCHAR(30) NOT NULL,
-  PRIMARY KEY (`id`)
-)
-  ENGINE = InnoDB;
-INSERT INTO mobilemassages.todo VALUES (1, 'aaa'), (2, 'bbb'), (3, 'ccc');
+CREATE SCHEMA IF NOT EXISTS `mobilemassages` DEFAULT CHARACTER SET utf8 ;
+USE `mobilemassages` ;
 
 -- -----------------------------------------------------
 -- Table `mobilemassages`.`therapist`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mobilemassages`.`therapist`;
+DROP TABLE IF EXISTS `mobilemassages`.`therapist` ;
 
 CREATE TABLE IF NOT EXISTS `mobilemassages`.`therapist` (
-  `id`           INT          NOT NULL AUTO_INCREMENT,
-  `name`         VARCHAR(255) NOT NULL,
-  `introduction` TEXT         NOT NULL,
-  PRIMARY KEY (`id`)
-)
-  ENGINE = InnoDB;
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `introduction` TEXT NOT NULL,
+  `headImage` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC))
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `mobilemassages`.`user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mobilemassages`.`user`;
+DROP TABLE IF EXISTS `mobilemassages`.`user` ;
 
 CREATE TABLE IF NOT EXISTS `mobilemassages`.`user` (
-  `id`            INT          NOT NULL AUTO_INCREMENT,
-  `firstName`     VARCHAR(45)  NOT NULL,
-  `lastName`      VARCHAR(45)  NOT NULL,
-  `emaillAddress` VARCHAR(45)  NOT NULL,
-  `mobileNumber`  VARCHAR(45)  NOT NULL,
-  `passWord`      VARCHAR(100) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `firstName` VARCHAR(45) NOT NULL,
+  `lastName` VARCHAR(45) NOT NULL,
+  `emaillAddress` VARCHAR(45) NOT NULL,
+  `mobileNumber` VARCHAR(45) NOT NULL,
+  `passWord` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `emaillAddress_UNIQUE` (`emaillAddress` ASC)
-)
-  ENGINE = InnoDB;
+  UNIQUE INDEX `emaillAddress_UNIQUE` (`emaillAddress` ASC))
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `mobilemassages`.`address`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mobilemassages`.`address`;
+DROP TABLE IF EXISTS `mobilemassages`.`address` ;
 
 CREATE TABLE IF NOT EXISTS `mobilemassages`.`address` (
-  `userId`              INT         NOT NULL AUTO_INCREMENT,
-  `streetAddress`       CHAR(255)   NOT NULL,
-  `province`            VARCHAR(45) NOT NULL,
-  `postCode`            VARCHAR(45) NOT NULL,
-  `parkingInstructions` TEXT        NULL,
+  `userId` INT NOT NULL AUTO_INCREMENT,
+  `streetAddress` CHAR(255) NOT NULL,
+  `province` VARCHAR(45) NOT NULL,
+  `postCode` VARCHAR(45) NOT NULL,
+  `parkingInstructions` TEXT NULL,
+  `addresscol` VARCHAR(45) NULL,
   INDEX `fk_address_user_idx` (`userId` ASC),
   PRIMARY KEY (`userId`, `streetAddress`),
   CONSTRAINT `fk_address_user`
-  FOREIGN KEY (`userId`)
-  REFERENCES `mobilemassages`.`user` (`id`)
+    FOREIGN KEY (`userId`)
+    REFERENCES `mobilemassages`.`user` (`id`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT
-)
-  ENGINE = InnoDB
-  KEY_BLOCK_SIZE = 2;
+    ON UPDATE RESTRICT)
+ENGINE = InnoDB
+KEY_BLOCK_SIZE = 2;
+
 
 -- -----------------------------------------------------
 -- Table `mobilemassages`.`creditCard`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mobilemassages`.`creditCard`;
+DROP TABLE IF EXISTS `mobilemassages`.`creditCard` ;
 
 CREATE TABLE IF NOT EXISTS `mobilemassages`.`creditCard` (
-  `userId`           INT          NOT NULL AUTO_INCREMENT,
-  `nameOnCard`       VARCHAR(45)  NOT NULL,
+  `userId` INT NOT NULL AUTO_INCREMENT,
+  `nameOnCard` VARCHAR(45) NOT NULL,
   `creditCardNumber` VARCHAR(255) NOT NULL,
-  `expirationDate`   VARCHAR(45)  NOT NULL,
-  `securityCode`     VARCHAR(45)  NOT NULL,
+  `expirationDate` VARCHAR(45) NOT NULL,
+  `securityCode` VARCHAR(45) NOT NULL,
   INDEX `fk_table1_user1_idx` (`userId` ASC),
   PRIMARY KEY (`userId`, `creditCardNumber`),
   CONSTRAINT `fk_table1_user1`
-  FOREIGN KEY (`userId`)
-  REFERENCES `mobilemassages`.`user` (`id`)
+    FOREIGN KEY (`userId`)
+    REFERENCES `mobilemassages`.`user` (`id`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT
-)
-  ENGINE = InnoDB;
+    ON UPDATE RESTRICT)
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `mobilemassages`.`order`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mobilemassages`.`order`;
+DROP TABLE IF EXISTS `mobilemassages`.`order` ;
 
 CREATE TABLE IF NOT EXISTS `mobilemassages`.`order` (
-  `user_id`          INT          NOT NULL,
-  `therapist_id`     INT          NOT NULL,
-  `time`             DATE         NOT NULL,
-  `style`            VARCHAR(45)  NOT NULL,
-  `massageLength`    VARCHAR(45)  NOT NULL,
-  `address`          VARCHAR(255) NULL,
+  `userId` INT NOT NULL,
+  `therapistId` INT NOT NULL,
+  `time` DATE NOT NULL,
+  `style` VARCHAR(45) NOT NULL,
+  `massageLength` VARCHAR(45) NOT NULL,
+  `address` VARCHAR(255) NULL,
   `creditCardNumber` VARCHAR(255) NULL,
-  INDEX `fk_order_user1_idx` (`user_id` ASC),
-  INDEX `fk_order_therapist1_idx` (`therapist_id` ASC),
-  PRIMARY KEY (`user_id`, `therapist_id`, `time`),
+  `price` DECIMAL(5,2) NULL,
+  INDEX `fk_order_user1_idx` (`userId` ASC),
+  INDEX `fk_order_therapist1_idx` (`therapistId` ASC),
+  PRIMARY KEY (`userId`, `therapistId`, `time`),
   CONSTRAINT `fk_order_user1`
-  FOREIGN KEY (`user_id`)
-  REFERENCES `mobilemassages`.`user` (`id`)
+    FOREIGN KEY (`userId`)
+    REFERENCES `mobilemassages`.`user` (`id`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT,
   CONSTRAINT `fk_order_therapist1`
-  FOREIGN KEY (`therapist_id`)
-  REFERENCES `mobilemassages`.`therapist` (`id`)
+    FOREIGN KEY (`therapistId`)
+    REFERENCES `mobilemassages`.`therapist` (`id`)
     ON DELETE RESTRICT
-    ON UPDATE RESTRICT
-)
-  ENGINE = InnoDB;
+    ON UPDATE RESTRICT)
+ENGINE = InnoDB;
 
 
-SET SQL_MODE = @OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS = @OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS = @OLD_UNIQUE_CHECKS;
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
