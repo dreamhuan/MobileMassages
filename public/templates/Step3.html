@@ -25,27 +25,27 @@
         <div ng-show="showType===0" >
             <div class="row inputGroup center-block">
                 <div class="inputItem col-xs-12">
-                    <div class="describe">First name</div>
-                    <input type="text">
+                    <div class="describe" >First name</div>
+                    <input type="text" ng-model="firstName">
                 </div>
                 <div class="inputItem col-xs-12">
                     <div class="describe">Last name</div>
-                    <input type="text">
+                    <input type="text" ng-model="lastName">
                 </div>
                 <div class="inputItem col-xs-12">
                     <div class="describe">Email address</div>
-                    <input type="text">
+                    <input type="text" ng-model="emailAddress">
                 </div>
                 <div class="inputItem col-xs-12">
                     <div class="describe">Mobile number</div>
-                    <input type="text">
+                    <input type="text" ng-model="mobileNumber">
                 </div>
                 <div class="inputItem col-xs-12">
                     <div class="describe">Choose a password</div>
-                    <input type="text">
+                    <input type="text" ng-model="passWord">
                 </div>
             </div>
-            <button class="step-btn signUp flex-center">CONTINUE</button>
+            <button class="step-btn signUp flex-center" ng-click="continue()">CONTINUE</button>
             <div class="flex-center itemAgreement">By clicking "continue" above, you are agreeing to </div>
             <div class="flex-center itemAgreement">  our terms of service agreement. </div>
         </div>
@@ -53,21 +53,21 @@
             <div class="row inputGroup center-block">
                 <div class="inputItem col-xs-12">
                     <div class="describe">Email address</div>
-                    <input type="text">
+                    <input type="text" ng-model="emailAddress">
                 </div>
                 <div class="inputItem col-xs-12">
                     <div class="describe">Password</div>
-                    <input type="text">
+                    <input type="text" ng-model="passWord">
                 </div>
             </div>
             <div class="hint flex-center">
                 <div class="text">Forget Password?</div>
             </div>
-            <button class="step-btn flex-center">CONTINUE</button>
+            <button class="step-btn flex-center" ng-click="continue()">CONTINUE</button>
         </div>
         <div class="step-back">
             <i class="fa fa-angle-left left-icon"></i>
-            <span class="right-font">Back</span>
+            <span class="right-font" ng-click="back()">Back</span>
         </div>
     </div>
 

@@ -145,10 +145,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
-        $scope.bookingStepOption[0].cls = 1;
-        $scope.bookingStepOption[1].cls = 0;
-        $scope.bookingStepOption[2].cls = 0;
-        $scope.bookingStepOption[3].cls = 0;
+        $scope.setCurrentBookingStep(1);
 
         $scope.datetime = {
             date: new Date(),
@@ -172,10 +169,18 @@ angular.module('app.controllers', [])
             let time = $('#timepicker').val();
             console.log(date);
             console.log(time);
+            let order = {
+                date: date,
+                time: time
+            };
+            $cookieStore.put('order', order);
+            $state.go('booking.step2');
         };
     })
 
     .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore, $http, AlertService) {
+        $scope.setCurrentBookingStep(2);
+
         $scope.chooses = [];
         $scope.therapists = [];
         $scope.chooseTherapist = [];
@@ -236,9 +241,9 @@ angular.module('app.controllers', [])
             }
             if (!flag) {
                 count++;
-                console.log(count);
-                console.log($scope.count);
-                console.log(count > $scope.count);
+                // console.log(count);
+                // console.log($scope.count);
+                // console.log(count > $scope.count);
                 if (count > $scope.count) {
                     AlertService.error('人数已满！');
                     count--;
@@ -249,7 +254,15 @@ angular.module('app.controllers', [])
             angular.element('#' + therapist.name).toggleClass('img-active');
         };
 
+        let order;
         $scope.continue = function () {
+            if (count != $scope.count) {
+                // console.log(count);
+                // console.log($scope.count);
+                // console.log(count != $scope.count);
+                AlertService.error('请选择Therapist！');
+                return;
+            }
             let choise = [];
             for (let i = 0; i < $scope.chooses.length; i++) {
                 let item = {
@@ -263,15 +276,39 @@ angular.module('app.controllers', [])
                 option: $scope.chooseTherapist
             });
             console.log(choise);
+            order = $cookieStore.get('order');
+            order.choise = choise;
+            $cookieStore.put('order', order);
+            $state.go('booking.step3');
+        };
+
+        $scope.back = function () {
+            $cookieStore.put('order', order);
+            $state.go('booking.step1');
         };
     })
 
     .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+        $scope.setCurrentBookingStep(3);
 
+        let order;
+        $scope.continue = function () {
+
+            order = $cookieStore.get('order');
+
+
+            $cookieStore.put('order', order);
+            $state.go('booking.step4');
+        };
+        $scope.back = function () {
+            $cookieStore.put('order', order);
+            $state.go('booking.step2');
+        };
     })
 
     .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
-
+        $scope.setCurrentBookingStep(4);
+        
         $('#datepicker').datetimepicker({
             format: 'yyyy-mm-dd',
             language: 'en',
@@ -287,13 +324,26 @@ angular.module('app.controllers', [])
         $scope.apply = function () {
             console.log('apply')
         };
+
+        let order;
         $scope.book = function () {
-            $scope.step4 = 1;
-            console.log('book')
+            if ($scope.step4 === 0) {
+                $scope.step4 = 1;
+                return;
+            }
+            order = $cookieStore.get('order');
+
+            $cookieStore.put('order', order);
         };
+
         $scope.back = function () {
-            console.log('back')
-        }
+            if ($scope.step4 === 1) {
+                $scope.step4 = 0;
+                return;
+            }
+            $cookieStore.put('order', order);
+            $state.go('booking.step3');
+        };
     })
 
     .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
@@ -314,7 +364,7 @@ angular.module('app.controllers', [])
             })
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
         $http.get('../data/price.json')
             .then(function (resdata) {
                 console.log(resdata);
