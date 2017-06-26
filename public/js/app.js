@@ -28,6 +28,15 @@ angular.module('app', [
             {opt: 4, cls: 0},
         ];
 
+        //设置当前booking的state
+        $rootScope.setCurrentBookingStep = function (num) {
+            $rootScope.bookingStepOption[0].cls = 0;
+            $rootScope.bookingStepOption[1].cls = 0;
+            $rootScope.bookingStepOption[2].cls = 0;
+            $rootScope.bookingStepOption[3].cls = 0;
+            $rootScope.bookingStepOption[num - 1].cls = 1;
+        };
+
         // 对Date的扩展，将 Date 转化为指定格式的String
         // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
         // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)

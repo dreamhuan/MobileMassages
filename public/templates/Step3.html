@@ -45,7 +45,7 @@
                     <input type="text">
                 </div>
             </div>
-            <button class="step-btn signUp flex-center">CONTINUE</button>
+            <button class="step-btn signUp flex-center" ng-click="continue()">CONTINUE</button>
             <div class="flex-center itemAgreement">By clicking "continue" above, you are agreeing to </div>
             <div class="flex-center itemAgreement">  our terms of service agreement. </div>
         </div>
@@ -63,11 +63,11 @@
             <div class="hint flex-center">
                 <div class="text">Forget Password?</div>
             </div>
-            <button class="step-btn flex-center">CONTINUE</button>
+            <button class="step-btn flex-center" ng-click="continue()">CONTINUE</button>
         </div>
         <div class="step-back">
             <i class="fa fa-angle-left left-icon"></i>
-            <span class="right-font">Back</span>
+            <span class="right-font" ng-click="back()">Back</span>
         </div>
     </div>
 
