@@ -2,7 +2,7 @@
 -- 06/25/17 17:12:36
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
-
+DROP DATABASE mobilemassages;
 SET @OLD_UNIQUE_CHECKS = @@UNIQUE_CHECKS, UNIQUE_CHECKS = 0;
 SET @OLD_FOREIGN_KEY_CHECKS = @@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS = 0;
 SET @OLD_SQL_MODE = @@SQL_MODE, SQL_MODE = 'TRADITIONAL,ALLOW_INVALID_DATES';
@@ -27,12 +27,12 @@ USE `mobilemassages`;
 DROP TABLE IF EXISTS `mobilemassages`.`todo`;
 
 CREATE TABLE todo (
-  'id'      INT         NOT NULL AUTO_INCREMENT,
-  'content' VARCHAR(30) NOT NULL,
+  `id`      INT         NOT NULL AUTO_INCREMENT,
+  `content` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`id`)
 )
   ENGINE = InnoDB;
-INSERT INTO todo VALUES (1, 'aaa'), (2, 'bbb'), (3, 'ccc');
+INSERT INTO mobilemassages.todo VALUES (1, 'aaa'), (2, 'bbb'), (3, 'ccc');
 
 -- -----------------------------------------------------
 -- Table `mobilemassages`.`therapist`
