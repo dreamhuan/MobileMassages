@@ -41,11 +41,11 @@ CREATE TABLE IF NOT EXISTS `mobilemassages`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
-  `emaillAddress` VARCHAR(45) NOT NULL,
+  `emailAddress` VARCHAR(45) NOT NULL,
   `mobileNumber` VARCHAR(45) NOT NULL,
   `passWord` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `emaillAddress_UNIQUE` (`emaillAddress` ASC))
+  UNIQUE INDEX `emailAddress_UNIQUE` (`emailAddress` ASC))
 ENGINE = InnoDB;
 
 
