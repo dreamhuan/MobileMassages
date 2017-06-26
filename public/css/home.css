@@ -24,14 +24,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 5%;
+  padding-top: 50px;
 }
 .home .date-booking .firsttitle {
-  color: #6de5c4;
-  font-size: 28px;
+  font-family: Gotham Rounded Book;
+  color: #6fd5a9;
+  font-size: 32px;
+  letter-spacing: -2px;
 }
 .home .date-booking .secondtitle {
-  color: #6f6f6c;
+  font-family: Gotham Rounded Book;
+  color: #424242;
   font-size: 18px;
   margin-top: -5px;
 }
@@ -117,8 +120,10 @@
   justify-content: center;
 }
 .home .date-therapists .title {
-  color: #6de5c4;
-  font-size: 28px;
+  font-family: Gotham Rounded Book;
+  color: #6fd5a9;
+  font-size: 32px;
+  letter-spacing: -2px;
 }
 .home .date-therapists .therapists-img {
   width: 100%;
@@ -144,17 +149,24 @@
     font-size: 25px;
   }
 }
+@media only screen and (max-width: 745px) {
+  .home .date-therapists .title {
+    font-size: 24px;
+  }
+}
 .home .massage-type {
   width: 100%;
-  height: 1100px;
+  height: 1200px;
   margin-top: 50px;
   background-color: #f0fdf7;
 }
 .home .massage-type .type-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
   padding-top: 50px;
   width: 60%;
   margin: auto;
-  color: #6de5c4;
+  color: #6fd5a9;
   font-size: 28px;
   text-align: center;
 }
@@ -176,6 +188,7 @@
   margin-left: 20px;
 }
 .home .massage-type .type-content .content-repeat .description {
+  font-family: Gotham Rounded Book;
   width: 250px;
   margin-left: 20px;
 }
@@ -199,8 +212,10 @@
   justify-content: center;
 }
 .home .simple-pricing .eg-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
   padding-top: 10%;
-  color: #6de5c4;
+  color: #6fd5a9;
   font-size: 28px;
 }
 .home .simple-pricing .eg-pricingList {
@@ -223,7 +238,7 @@
   color: #00d6a1;
   font-size: 18px;
   font-weight: bolder;
-  margin-left: 15%;
+  margin-left: 5%;
 }
 .home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt {
   color: #cccac8;
@@ -241,14 +256,18 @@
   background-color: #f0fdf7;
 }
 .home .faq .faq-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
   padding-top: 70px;
   width: 30%;
   margin: auto;
-  color: #6de5c4;
+  color: #6fd5a9;
   font-size: 28px;
   text-align: center;
 }
 .home .faq .faq-content {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -1px;
   margin: auto;
   margin-top: 80px;
   width: 750px;
@@ -258,9 +277,11 @@
 .home .faq .faq-content .title {
   color: #64d2a4;
   font-size: 20px;
+  font-weight: 500;
   margin-top: 10px;
 }
 .home .faq .faq-content .content {
+  color: #898a8a;
   margin-top: 10px;
 }
 @media only screen and (max-width: 963px) {
@@ -288,11 +309,15 @@
   justify-content: center;
 }
 .home .contact .contact-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
   padding-top: 10%;
-  color: #6de5c4;
+  color: #6fd5a9;
   font-size: 28px;
 }
 .home .contact .contact-message {
+  font-family: Gotham Rounded Book;
+  color: #838383;
   width: 400px;
   margin-top: -10px;
   display: flex;
@@ -315,6 +340,16 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 400px;
+}
+.home .contact .contact-form input::-webkit-input-placeholder {
+  color: #d4d4d4;
+  font-style: italic;
+  padding-left: 10px;
+}
+.home .contact .contact-form textarea::-webkit-input-placeholder {
+  color: #d4d4d4;
+  font-style: italic;
+  padding-left: 10px;
 }
 .home .contact .contact-form .form-name,
 .home .contact .contact-form .form-email {
