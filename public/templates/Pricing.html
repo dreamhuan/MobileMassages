@@ -7,37 +7,17 @@
         <div class="tit centerBox">
             <div class="font-boldererst font-gothem grey tite">1 Therapist</div>
         </div>
-        <div class="item centerBox">
+        <div ng-repeat="item in prices1" class="item centerBox">
             <div class="text font-gothem grey centerBox">
-                <div><span class="frontNum">60</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£65</div>
-            </div>
-        </div>
-        <div class="item centerBox">
-            <div class="text font-gothem grey centerBox">
-                <div><span class="frontNum">90</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£75</div>
-            </div>
-        </div>
-        <div class="item centerBox">
-            <div class="text font-gothem grey centerBox">
-                <div><span class="frontNum">120</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£95</div>
+                <div><span class="frontNum">{{item.time}}</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£{{item.price}}</div>
             </div>
         </div>
         <div class="tit centerBox mar-xxtop">
             <div class="font-boldererst font-gothem grey tite">2 Therapist</div>
         </div>
-        <div class="item centerBox">
+        <div ng-repeat="item2 in prices2" class="item centerBox">
             <div class="text font-gothem grey centerBox">
-                <div><span class="frontNum">60</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£130</div>
-            </div>
-        </div>
-        <div class="item centerBox">
-            <div class="text font-gothem grey centerBox">
-                <div><span class="frontNum">90</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£150</div>
-            </div>
-        </div>
-        <div class="item centerBox">
-            <div class="text font-gothem grey centerBox">
-                <div><span class="frontNum">120</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£190</div>
+                <div><span class="frontNum">{{item2.time}}</span>minute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp£{{item2.price}}</div>
             </div>
         </div>
         <div class="button centerBox">

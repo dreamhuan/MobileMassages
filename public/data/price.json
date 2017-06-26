@@ -1,0 +1,36 @@
+[
+  {
+    "therapistNumber": 1,
+    "priceList": [
+      {
+        "time": 60,
+        "price": 65
+      },
+      {
+        "time": 90,
+        "price": 75
+      },
+      {
+        "time": 120,
+        "price": 95
+      }
+    ]
+  },
+  {
+    "therapistNumber": 2,
+    "priceList": [
+      {
+        "time": 60,
+        "price": 130
+      },
+      {
+        "time": 90,
+        "price": 150
+      },
+      {
+        "time": 120,
+        "price": 190
+      }
+    ]
+  }
+]

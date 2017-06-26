@@ -80,6 +80,12 @@ angular.module('app.controllers', [])
                 console.log(resdata);
                 $scope.datas = resdata.data;
             });
+        $http.get('../data/price.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.prices = resdata.data[0].priceList;
+
+            });
 
 
         $scope.datetime = {
@@ -290,7 +296,13 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+        $http.get('../data/massage-therapists.json')
+            .then(function (resdata) {
+                // console.log(resdata.data);
+                $scope.chooses = resdata.data;
+
+            });
 
     })
 
@@ -302,7 +314,14 @@ angular.module('app.controllers', [])
             })
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+        $http.get('../data/price.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.prices1 = resdata.data[0].priceList;
+                $scope.prices2 = resdata.data[1].priceList;
+
+            });
 
     })
 
@@ -322,13 +341,4 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('massageTherapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
-        $http.get('../data/massage-therapists.json')
-            .then(function (resdata) {
-                // console.log(resdata.data);
-                $scope.chooses = resdata.data;
-
-            });
-
-    })
 ;
