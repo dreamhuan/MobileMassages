@@ -122,7 +122,8 @@ angular.module('app.controllers', [])
             // console.log(document.getCurrentState());
             let active = document.URL.substr(document.URL.length - 1, 1); //获取url最后一个数字，就是step1234中的一个
             // console.log(active);
-            //bookingStepOption1234对应四个选项的class是否为true
+            // bookingStepOption1234对应四个选项的class是否为true
+            // 为了解决同二级路由跳转状态不改变的已放进$rootScope
             // $scope.bookingStepOption = [
             //     {opt: 1, cls: 0},
             //     {opt: 2, cls: 0},
@@ -295,7 +296,13 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+        $http.get('../data/massage-therapists.json')
+            .then(function (resdata) {
+                // console.log(resdata.data);
+                $scope.chooses = resdata.data;
+
+            });
 
     })
 
@@ -307,7 +314,14 @@ angular.module('app.controllers', [])
             })
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore,$http) {
+        $http.get('../data/price.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.prices1 = resdata.data[0].priceList;
+                $scope.prices2 = resdata.data[1].priceList;
+
+            });
 
     })
 
@@ -327,13 +341,4 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('massageTherapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
-        $http.get('../data/massage-therapists.json')
-            .then(function (resdata) {
-                // console.log(resdata.data);
-                $scope.chooses = resdata.data;
-
-            });
-
-    })
 ;
