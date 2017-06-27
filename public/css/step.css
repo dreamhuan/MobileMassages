@@ -7,6 +7,11 @@
   font-family: xt-gothamLight;
   transform: scale(0.8, 0.9);
 }
+@media screen and (max-width: 420px) {
+  .step-title {
+    font-size: 26px;
+  }
+}
 .step-btn {
   display: block;
   width: 220px;
@@ -153,6 +158,34 @@
   font-size: 16px;
   word-break: break-all;
   hyphens: auto;
+}
+@media screen and (max-width: 380px) {
+  .step2 .therapist .people {
+    width: 100%;
+  }
+  .step2 .therapist .people .img {
+    margin: 10px;
+    margin-bottom: 0;
+    width: 60px;
+    height: 72px;
+  }
+  .step2 .therapist .intro {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 380px) and (max-width: 420px) {
+  .step2 .therapist .people {
+    width: 100%;
+  }
+  .step2 .therapist .people .img {
+    margin: 10px;
+    margin-bottom: 0;
+    width: 70px;
+    height: 84px;
+  }
+  .step2 .therapist .intro {
+    width: 100%;
+  }
 }
 .step2 .tip {
   width: 300px;
