@@ -348,6 +348,9 @@
   font-weight: bold;
 }
 .step3 .content .itemAgreement {
+  width: 260px;
+  margin: auto;
+  text-align: center;
   font-size: 10px;
 }
 .step3 .content .step-btn {
@@ -458,5 +461,9 @@
   }
   .step3 .title {
     font-size: 15px;
+  }
+  .step3 .content .inputGroup .inputItem {
+    margin-left: 5px;
+    width: 240px;
   }
 }
