@@ -13,7 +13,7 @@
   text-align: center;
 }
 .massage-type .type-content {
-  width: 700px;
+  width: 650px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -53,4 +53,19 @@
   border: none;
   border-radius: 3px;
   margin-top: 70px;
+}
+@media only screen and (max-width: 788px) {
+  .massage-type .type-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 731px) {
+  .massage-type .type-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 679px) {
+  .massage-type .type-title {
+    font-size: 26px;
+  }
 }
