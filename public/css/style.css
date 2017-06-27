@@ -79,6 +79,9 @@ body {
   color: #9a9691 !important;
   background-color: transparent;
 }
+.nav-style .nav-pages a:focus {
+  font-weight: bold;
+}
 .nav-style a.nav-pages-signIn {
   color: #77e2bd !important;
 }

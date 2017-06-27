@@ -34,7 +34,7 @@
 <body ng-app="app">
 <!-- navigation -->
 <!--加上navbar-fixed-top顶栏浮动-->
-<nav class="navbar navbar-default nav-style" role="navigation">
+<nav class="navbar navbar-default nav-style" role="navigation" ng-controller="navbarCtrl">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-menu">
             <span class="sr-only">qieh</span>
@@ -54,7 +54,7 @@
     <div class="collapse navbar-collapse" id="target-menu">
         <div class="nav-pages">
             <ul class="nav navbar-nav">
-                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="home" id="defaultBtn">Home</a></li>
                 <li><a ui-sref="booking.step1">Booking</a></li>
                 <li><a ui-sref="therapist">Therapist</a></li>
                 <li><a ui-sref="styles">Styles</a></li>
