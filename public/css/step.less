@@ -9,6 +9,12 @@
     transform: scale(0.8, 0.9);
 }
 
+@media screen and (max-width: 420px) {
+    .step-title {
+        font-size: 26px;
+    }
+}
+
 .step-btn {
     display: block;
     width: 220px;
@@ -170,7 +176,6 @@
                 font-weight: bold;
             }
         }
-
         .intro {
             width: 500px;
             margin: auto;
@@ -187,6 +192,40 @@
                 font-size: 16px;
                 word-break: break-all;
                 hyphens: auto;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            .people {
+                width: 100%;
+
+                .img {
+                    margin: 10px;
+                    margin-bottom: 0;
+                    width: 60px;
+                    height: 72px;
+                }
+            }
+
+            .intro {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 380px)and(max-width: 420px) {
+            .people {
+                width: 100%;
+
+                .img {
+                    margin: 10px;
+                    margin-bottom: 0;
+                    width: 70px;
+                    height: 84px;
+                }
+            }
+
+            .intro {
+                width: 100%;
             }
         }
     }
@@ -294,7 +333,7 @@
                     background-color: #a1a1a1;
                     /* The dot color */
                 }
-                label{
+                label {
                     font-weight: normal;
                     cursor: pointer;
                 }
