@@ -4,14 +4,14 @@
     <div class="row title flex-center">to your existing account to continue</div>
     <div class="content">
         <div class="radioInputGroup  row">
-                <div class="row flex-verticalAlign radioInputItem" ng-init="showType=0">
-                    <input type="radio" ng-model="showType" ng-value="0" id="new">
-                    <label for="new">I'm a new customer</label>
-                </div>
-                <div class="row flex-verticalAlign radioInputItem">
-                    <input type="radio" ng-model="showType" ng-value="1" id="registered">
-                    <label for="registered">I have an account</label>
-                </div>
+            <div class="row flex-verticalAlign radioInputItem" ng-init="showType=0">
+                <input type="radio" ng-model="showType" ng-value="0" id="new">
+                <label for="new">I'm a new customer</label>
+            </div>
+            <div class="row flex-verticalAlign radioInputItem">
+                <input type="radio" ng-model="showType" ng-value="1" id="registered">
+                <label for="registered">I have an account</label>
+            </div>
         </div>
         <div class="faceBookBtn flex-center">
             <span class="fa fa-facebook"></span>
@@ -22,10 +22,10 @@
             <div class="describe">or</div>
             <div class="line">—————————————</div>
         </div>
-        <div ng-show="showType===0" >
+        <div ng-show="showType===0">
             <div class="row inputGroup center-block">
                 <div class="inputItem col-xs-12">
-                    <div class="describe" >First name</div>
+                    <div class="describe">First name</div>
                     <input type="text" ng-model="firstName">
                 </div>
                 <div class="inputItem col-xs-12">
@@ -46,8 +46,9 @@
                 </div>
             </div>
             <button class="step-btn signUp flex-center" ng-click="continue()">CONTINUE</button>
-            <div class="flex-center itemAgreement">By clicking "continue" above, you are agreeing to </div>
-            <div class="flex-center itemAgreement">  our terms of service agreement. </div>
+            <div class="flex-center itemAgreement">
+                By clicking "continue" above, you are agreeing to our terms of service agreement.
+            </div>
         </div>
         <div ng-show="showType===1">
             <div class="row inputGroup center-block">
