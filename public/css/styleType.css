@@ -1,6 +1,5 @@
 .massage-type {
   width: 100%;
-  height: 1200px;
 }
 .massage-type .type-title {
   font-family: Gotham Rounded Book;
@@ -56,6 +55,7 @@
   border: none;
   border-radius: 3px;
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 @media only screen and (max-width: 788px) {
   .massage-type .type-title {
@@ -81,6 +81,25 @@
     color: #cdcac8;
     font-size: 22px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 40px;
+  }
+  .massage-type .type-content {
+    width: 100%;
+  }
+  .massage-type .type-content .content-repeat {
+    margin-top: 80px;
+  }
+  .massage-type .type-content .content-repeat img {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+  }
+  .massage-type .type-content .content-repeat .description {
+    margin-top: -20px;
+  }
+  .massage-type .type-content .content-repeat .description .title {
+    color: #00d5a0;
+    font-size: 22px;
+    font-weight: bolder;
   }
 }
