@@ -2,41 +2,49 @@
   {
     "img": "../img/home-massage-type-icons/Swedish.ico",
     "title": "Swedish",
+    "titleAbbreviation":"Swedish",
     "content": "A gentle technique,with long strokes,kneading,and circular movements to relax and energize."
   },
   {
     "img": "../img/home-massage-type-icons/Deep-tissue.svg",
     "title": "Deep tissue",
+    "titleAbbreviation":"Deep tissue",
     "content": "Utilizes show,more forceful strokes to target deep muscle layers and connective tissue."
   },
   {
     "img": "../img/home-massage-type-icons/Sports.svg",
     "title": "Sports",
+    "titleAbbreviation":"Sports",
     "content": "Targets muscle-tendon junctions to boost flexibility and endurance,while reducing muscle fatigue."
   },
   {
     "img": "../img/home-massage-type-icons/Pre-natal.svg",
     "title": "Pre-natal",
+    "titleAbbreviation":"Pre-natal",
     "content": "Lessens pregnancy discomfort,helping alleviate backaches,stiffness,leg cramps,headaches,and swelling."
   },
   {
     "img": "../img/home-massage-type-icons/Couples-Massage.svg",
     "title": "Couples Massage",
+    "titleAbbreviation":"Couples",
     "content": "All modalities can be performed as couples massage.Order one therapist for back to back or two for simultaneous massage."
   },
   {
     "img": "../img/home-massage-type-icons/Thai-Massage.svg",
     "title": "Thai Massage",
+    "titleAbbreviation": "Thai",
     "content": "It is an ancient healing sysytem that combines broad and targeted acupreesure,stimulation and manipulation of energy lines called sen,and assisted yoga postures."
   },
   {
     "img": "../img/home-massage-type-icons/Relaxing.svg",
     "title": "Relaxing",
+    "titleAbbreviation": "Relaxing",
     "content": "Helps de-stress and loosen up your body and is great for those who have had a hard working week or feel like treating themselves to some TLC!"
   },
   {
     "img": "../img/home-massage-type-icons/At-work.svg",
     "title": "At work",
+    "titleAbbreviation": "At work",
     "content": "Decrease stress,improve productivity,and build employee morale with in-office chair massage."
   }
 ]

@@ -1,6 +1,5 @@
 .contact {
   width: 400px;
-  height: 900px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +8,7 @@
 .contact .contact-title {
   font-family: Gotham Rounded Book;
   letter-spacing: -2px;
-  padding-top: 10%;
+  padding-top: 70px;
   color: #6fd5a9;
   font-size: 28px;
 }
@@ -17,16 +16,17 @@
   font-family: Gotham Rounded Book;
   color: #838383;
   width: 400px;
-  margin-top: -10px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   font-size: 16px;
 }
 .contact .contact-message .message2 {
-  margin-top: -20px;
+  margin-top: 0;
 }
 .contact .phonenum {
+  margin-top: 30px;
   display: flex;
   font-size: 14px;
 }
@@ -34,10 +34,10 @@
   font-weight: bolder;
 }
 .contact .contact-form {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 400px;
 }
 .contact .contact-form input::-webkit-input-placeholder {
   color: #d4d4d4;
@@ -53,6 +53,7 @@
 .contact .contact-form .form-email {
   width: 350px;
   height: 30px;
+  margin-bottom: 10px;
   color: #e7e5e2;
   border: 1px solid #e5e4e3;
 }
@@ -69,4 +70,39 @@
   border: none;
   border-radius: 3px;
   margin-top: 60px;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 414px) {
+  .contact {
+    width: 300px;
+    margin: auto;
+  }
+  .contact .contact-title {
+    padding-top: 10px;
+  }
+  .contact .contact-message {
+    font-size: 14px;
+    letter-spacing: -1px;
+    margin-top: 20px;
+  }
+  .contact .phonenum {
+    color: #6a6964;
+    font-size: 16px;
+    letter-spacing: -1px;
+  }
+  .contact .contact-form {
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .contact .contact-form .form-name,
+  .contact .contact-form .form-email {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+  .contact .contact-form .form-content {
+    height: 250px;
+  }
 }

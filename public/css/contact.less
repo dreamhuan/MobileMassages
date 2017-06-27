@@ -1,6 +1,5 @@
 .contact {
     width: 400px;
-    height: 900px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -9,7 +8,7 @@
     .contact-title {
         font-family: Gotham Rounded Book;
         letter-spacing: -2px;
-        padding-top: 10%;
+        padding-top: 70px;
         color: #6fd5a9;
         font-size: 28px;
     }
@@ -18,17 +17,18 @@
         font-family: Gotham Rounded Book;
         color: #838383;
         width: 400px;
-        margin-top: -10px;
+        margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         font-size: 16px;
         .message2 {
-            margin-top: -20px;
+            margin-top: 0;
         }
     }
 
     .phonenum {
+        margin-top: 30px;
         display: flex;
         font-size: 14px;
         .phonenum-deepcolor {
@@ -37,10 +37,11 @@
     }
 
     .contact-form {
+        //width: 400px;
+        margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 400px;
 
         input::-webkit-input-placeholder {
             color: #d4d4d4;
@@ -57,6 +58,7 @@
         .form-name, .form-email {
             width: 350px;
             height: 30px;
+            margin-bottom: 10px;
             color: #e7e5e2;
             border: 1px solid #e5e4e3;
         }
@@ -76,5 +78,46 @@
         border: none;
         border-radius: 3px;
         margin-top: 60px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .contact {
+        width: 300px;
+        margin: auto;
+        .contact-title {
+            padding-top: 10px;
+        }
+
+        .contact-message {
+            font-size: 14px;
+            letter-spacing: -1px;
+            margin-top: 20px;
+            .message2 {
+            }
+        }
+
+        .phonenum {
+            color: #6a6964;
+            font-size: 16px;
+            letter-spacing: -1px;
+        }
+
+        .contact-form {
+            width: 300px;
+            margin: auto;
+            margin-top: 20px;
+            .form-name, .form-email {
+                width: 300px;
+                margin: auto;
+                margin-bottom: 10px;
+                height: 50px;
+            }
+
+            .form-content {
+                height: 250px;
+            }
+        }
     }
 }
