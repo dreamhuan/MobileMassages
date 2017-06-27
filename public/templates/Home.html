@@ -30,6 +30,21 @@
         </div>
     </div>
 
+    <div class="date-message-mobile">
+        <div class="location">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <div class="information">MASSAGE DELIVERED TO YOUR HOME,OFFICE,OR HOTEL</div>
+        </div>
+        <div class="available">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <div class="information">AVAILAVLE 7 DAYS A WEEK.8AM TO MIDNIGHT.INCLUDING HOLIDAYS</div>
+        </div>
+        <div class="time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <div class="information">WE CAN BE THERE IN 1 HOUR OR SCEDULE IN ADVANCE</div>
+        </div>
+    </div>
+
     <div class="date-therapists">
         <div class="title">PROFESSIONAL MOBILE MASSAGE THERAPISTS</div>
         <div class="therapists-img">
@@ -57,6 +72,16 @@
         </div>
     </div>
 
+    <div class="massage-type-mobile">
+        <div class="type-title">CHOOSE YOUR MASSAGE TYPE</div>
+        <div class="type-content">
+            <div ng-repeat="item in datas" class="content-repeat">
+                <div class="image"><img ng-src="{{item.img}}"></div>
+                <div class="title">{{item.titleAbbreviation}}</div>
+            </div>
+        </div>
+    </div>
+
     <div class="simple-pricing">
         <div class="eg-title">SIMPLE PRICING</div>
         <div class="eg-pricingList">
@@ -75,6 +100,20 @@
             <div ng-repeat="item in items">
                 <div class="title">{{item.title}}</div>
                 <div class="content">{{item.content}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-mobile">
+        <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
+        <div class="faq-content">
+            <div ng-repeat="item in items" class="faq-questions">
+                <div class="faq-circle">
+                    <div class="faq-bigcircle">
+                        <div class="faq-smallcircle"></div>
+                    </div>
+                </div>
+                <div class="title">{{item.title}}</div>
             </div>
         </div>
     </div>

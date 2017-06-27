@@ -23,6 +23,12 @@
         outline: none;
     }
 
+    @media only screen and (max-width: 414px) {
+        .booking-btn {
+            margin-top: 30px;
+        }
+    }
+
     .date-booking {
         width: 40%;
         margin: auto;
@@ -41,7 +47,6 @@
             font-family: Gotham Rounded Book;
             color: #424242;
             font-size: 18px;
-            //margin-top: -5px;
         }
 
         .date-choose {
@@ -59,7 +64,7 @@
                 margin-top: -5px;
                 border: 1px solid #e5e4e3;
                 padding-left: 15px;
-                &::placeholder {
+                &::-webkit-input-placeholder {
                     color: rgba(0, 0, 0, 0.2);
                     font-weight: bold;
                 }
@@ -74,7 +79,7 @@
     @media only screen and (max-width: 1046px) {
         .date-booking {
             .firsttitle {
-                font-size:28px;
+                font-size: 28px;
             }
             .secondtitle {
                 font-size: 16px;
@@ -104,6 +109,19 @@
         }
     }
 
+    @media only screen and (max-width: 414px) {
+        .date-booking {
+            width: 100%;
+            .firsttitle {
+                font-size: 20px;
+                letter-spacing: -1px;
+            }
+            .secondtitle {
+                font-size: 12px;
+            }
+        }
+    }
+
     .date-message {
         width: 100%;
         height: 150px;
@@ -126,6 +144,39 @@
             }
         }
 
+    }
+
+    .date-message-mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width: 414px) {
+        .date-message {
+            display: none;
+        }
+
+        .date-message-mobile {
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+
+            .location, .available, .time {
+                width: 250px;
+                display: flex;
+                align-items: center;
+                margin: auto;
+                .fa-home, .fa-calendar, .fa-clock-o {
+                    color: #00d5a1;
+                    font-size: 40px !important;
+                }
+                .information {
+                    font-size: 12px;
+                    color: #b1aeaa;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 
     .date-therapists {
@@ -190,6 +241,41 @@
         }
     }
 
+    @media only screen and (max-width: 414px) {
+        .date-therapists {
+            width: 100%;
+            height: 500px;
+            background-color: #f0fdf7;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .title {
+                width: 70%;
+                margin: auto;
+                margin-top: 30px;
+                text-align: center;
+                font-family: Gotham Rounded Book;
+                color: #6fd5a9;
+                font-size: 20px;
+                letter-spacing: -2px;
+            }
+
+            .therapists-img {
+                width: 90%;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: -40px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border: 1px solid #d2fae8;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
     .massage-type {
         width: 100%;
         height: 1200px;
@@ -246,6 +332,10 @@
         }
     }
 
+    .massage-type-mobile {
+        display: none;
+    }
+
     @media only screen and (max-width: 788px) {
         .massage-type {
             .type-title {
@@ -270,6 +360,96 @@
         }
     }
 
+    @media only screen and (max-width: 414px) {
+        .massage-type {
+            display: none;
+        }
+
+        .massage-type-mobile {
+            display: block;
+
+            .type-title {
+                font-family: Gotham Rounded Book;
+                letter-spacing: -2px;
+                padding-top: 50px;
+                width: 60%;
+                margin: auto;
+                color: #6fd5a9;
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .type-content {
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: auto;
+                margin-top: 50px;
+
+                .content-repeat {
+                    width: 180px;
+                    height: 180px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    &:nth-child(1),
+                    &:nth-child(4),
+                    &:nth-child(5),
+                    &:nth-child(8) {
+                        background-color: #d2fcea;
+                        color: #00d6a0;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(6),
+                    &:nth-child(7) {
+                        background-color: #00d6a0;
+                        color: #d2fcea;
+                    }
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        margin: auto;
+                    }
+
+                    .title {
+                        font-family: Gotham Rounded Book;
+                        font-size: 22px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        .massage-type-mobile {
+            .type-content {
+                .content-repeat {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .massage-type-mobile {
+            .type-content {
+                .content-repeat {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+
     .simple-pricing {
         width: 300px;
         height: 450px;
@@ -281,7 +461,7 @@
         .eg-title {
             font-family: Gotham Rounded Book;
             letter-spacing: -2px;
-            padding-top: 10%;
+            padding-top: 70px;
             color: #6fd5a9;
             font-size: 28px;
         }
@@ -323,6 +503,33 @@
         }
     }
 
+    @media only screen and (max-width: 414px) {
+        .simple-pricing {
+            width: 100%;
+
+            .eg-pricingList {
+                width: 100%;
+
+                .eg-pricing {
+                    width: 100%;
+                    height: 40px;
+                    margin-bottom: 15px;
+                    background-color: #d2fcea;
+
+                    .eg-time, .eg-mnt {
+                        color: #9a9691;
+                        font-weight: bolder;
+                    }
+
+                    .eg-price {
+                        color: #a8b1a8;
+                        margin-left: 30%;
+                    }
+                }
+            }
+        }
+    }
+
     .faq {
         width: 100%;
         height: 1750px;
@@ -357,7 +564,10 @@
                 margin-top: 10px;
             }
         }
+    }
 
+    .faq-mobile {
+        display: none;
     }
 
     @media only screen and (max-width: 963px) {
@@ -388,6 +598,67 @@
             }
         }
     }
+
+    @media only screen and (max-width: 414px) {
+        .faq {
+            display: none;
+        }
+
+        .faq-mobile {
+            display: block;
+
+            .faq-title {
+                font-family: Gotham Rounded Book;
+                letter-spacing: -2px;
+                padding-top: 40px;
+                margin: auto;
+                color: #6fd5a9;
+                text-align: center;
+                width: 80%;
+                font-size: 24px;
+            }
+
+            .faq-content {
+                width: 90%;
+                margin: auto;
+                margin-top: 20px;
+                .faq-questions {
+                    width: 90%;
+                    display: flex;
+                    margin: auto;
+                    margin-top: 10px;
+                    .faq-circle {
+                        width: 18px;
+                        height: 18px;
+                        .faq-bigcircle {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            border: 1px solid #00d6a0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .faq-smallcircle {
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: #00d6a0;
+
+                            }
+                        }
+                    }
+                    .title {
+                        font-family: Gotham Rounded Book;
+                        font-size: 16px;
+                        color: #9a9590;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
     .contact {
         width: 400px;
         height: 900px;
@@ -455,6 +726,63 @@
                 width: 350px;
                 height: 400px;
                 border: 1px solid #e5e4e3;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 414px) {
+        .contact {
+            margin-top: 50px;
+            width: 100%;
+            height: 900px;
+            background-color: #f0fdf7;
+            .contact-title {
+                font-size: 24px;
+            }
+
+            .contact-message {
+                margin-top: -40px;
+                font-size: 14px;
+                letter-spacing: -1px;
+                .message2 {
+                    margin-top: -40px;
+                }
+            }
+
+            .phonenum {
+                color: #6a6964;
+                font-size: 16px;
+                letter-spacing: -1px;
+                margin-top: -20px;
+            }
+
+            .contact-form {
+                .form-name, .form-email {
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .contact {
+            .contact-title {
+                font-size: 22px;
+            }
+
+            .contact-message {
+                font-size: 12px;
+            }
+
+            .contact-form {
+                .form-name, .form-email {
+                    width: 280px;
+                    height: 40px;
+                }
+
+                .form-content {
+                    width: 280px;
+                }
             }
         }
     }
