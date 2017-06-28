@@ -364,7 +364,12 @@ angular.module('app.services', [])
     })
 
     .service('BookingService', function ($q, $http, SystemService) {
-
+        this.booking = function () {
+            let param = {
+                id: id
+            };
+            return SystemService.post('web/test/delete', param);
+        }
 
     })
 
