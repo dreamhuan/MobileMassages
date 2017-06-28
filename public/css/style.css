@@ -79,11 +79,100 @@ body {
   color: #9a9691 !important;
   background-color: transparent;
 }
+.nav-style .nav-pages a:focus {
+  font-weight: bold;
+}
 .nav-style a.nav-pages-signIn {
   color: #77e2bd !important;
 }
 .nav-style a.nav-pages-signIn:hover {
   color: #46ddb6 !important;
+}
+.rightSlideMenu {
+  display: none;
+}
+.rightSlideMenu .filter {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.rightSlideMenu .menu {
+  position: absolute;
+  z-index: 1001;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  background-color: white;
+}
+.rightSlideMenu .menu .headline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #f6f5f5;
+  font-family: "xt-gothamLight";
+}
+.rightSlideMenu .menu .headline .titleMenu {
+  color: #d7d5d3;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+}
+.rightSlideMenu .menu .headline .titleName {
+  display: flex;
+  color: #00d4a2;
+  margin-top: 2px;
+}
+.rightSlideMenu .menu .headline .titleName div:first-child {
+  margin: 10px;
+  margin-right: 3px;
+  margin-left: 0px;
+}
+.rightSlideMenu .menu .headline .titleName div:nth-child(2) {
+  margin: 10px;
+  margin-left: 0px;
+  font-weight: bolder;
+  font-family: normal;
+}
+.rightSlideMenu .menu .headline .closeBtn {
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: solid 1px #cbc9c6;
+  color: #cbc9c6;
+  margin: 10px;
+}
+.rightSlideMenu .menu .navGroup {
+  width: 100%;
+}
+.rightSlideMenu .menu .navGroup .navItem {
+  width: 100%;
+  border-bottom: solid 1px #f6f5f5;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.rightSlideMenu .menu .navGroup .navItem a {
+  margin: 20px;
+  color: #9a9691;
+  width: 100%;
+}
+.rightSlideMenu .menu .navGroup .navItem a:active {
+  text-decoration: none;
+}
+.rightSlideMenu .menu .navGroup .nav-pages-signIn {
+  color: #77e2bd;
 }
 .footer {
   height: 300px;
@@ -136,106 +225,4 @@ body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.icomoon-circle,
-.icomoon-com,
-.icomoon-face,
-.icomoon-fatman,
-.icomoon-flower,
-.icomoon-massa,
-.icomoon-sport,
-.icomoon-water {
-  font-size: 50px;
-}
-.icomoon-circle:before {
-  content: "\e900";
-  color: #6ac09a;
-}
-.icomoon-com:before {
-  content: "\e901";
-  color: #6ac09a;
-}
-.icomoon-face .path1:before {
-  content: "\e902";
-  color: #6ac09a;
-}
-.icomoon-face .path2:before {
-  content: "\e903";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path3:before {
-  content: "\e904";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path4:before {
-  content: "\e905";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path5:before {
-  content: "\e906";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path6:before {
-  content: "\e907";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path7:before {
-  content: "\e908";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path8:before {
-  content: "\e909";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path9:before {
-  content: "\e90a";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-face .path10:before {
-  content: "\e90b";
-  margin-left: -0.74804687em;
-  color: #6ac09a;
-}
-.icomoon-fatman:before {
-  content: "\e90c";
-  color: #6ac09a;
-}
-.icomoon-flower:before {
-  content: "\e90d";
-  color: #6ac09a;
-}
-.icomoon-massa:before {
-  content: "\e90e";
-  color: #6ac09a;
-}
-.icomoon-sport .path1:before {
-  content: "\e90f";
-  color: #6ac09a;
-}
-.icomoon-sport .path2:before {
-  content: "\e910";
-  margin-left: -0.69335937em;
-  color: #6ac09a;
-}
-.icomoon-sport .path3:before {
-  content: "\e911";
-  margin-left: -0.69335937em;
-  color: #6ac09a;
-}
-.icomoon-water .path1:before {
-  content: "\e912";
-  color: #6ac09a;
-}
-.icomoon-water .path2:before {
-  content: "\e913";
-  margin-left: -0.57226562em;
-  color: #6ac09a;
 }

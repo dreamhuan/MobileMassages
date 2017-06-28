@@ -67,8 +67,24 @@ angular.module('app.controllers', [])
             });
         }
     })
+    .controller('navbarCtrl', function ($document, $scope, $state, $cookieStore, $http, $timeout) {
+        console.log("test");
+        $scope.closeMenu = function () {
+            $(".rightSlideMenu").css('display', 'none');
+        };
+        $scope.openMenu = function () {
+            $(".rightSlideMenu").css('display', 'block');
+        };
+        $timeout(function () {
+            console.log( $(".rightSlideMenu .filter"));
+            $(".rightSlideMenu .filter").bind('click', function () {
+                $(".rightSlideMenu").css('display', 'none');
+            }
+        )}, 0);
 
-    .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+
+    })
+    .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $cookieStore.put('currentState', 'home');
         $http.get('../data/faq.json')
             .then(function (resdata) {
@@ -112,6 +128,9 @@ angular.module('app.controllers', [])
             console.log(time);
         };
 
+        $timeout(function () {
+            document.navInit(0)
+        }, 0);
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -131,7 +150,7 @@ angular.module('app.controllers', [])
             //     {opt: 4, cls: 0},
             // ];
             $scope.bookingStepOption[active - 1].cls = 1;
-
+            document.navInit(1);
         }, 0);
 
         $scope.changeOption = function (item) {
@@ -364,25 +383,31 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/massage-therapists.json')
             .then(function (resdata) {
                 // console.log(resdata.data);
                 $scope.chooses = resdata.data;
 
             });
+        $timeout(function () {
+            document.navInit(2)
+        }, 0);
 
     })
 
-    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/home-massage-type.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;
             })
+        $timeout(function () {
+            document.navInit(3)
+        }, 0);
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/price.json')
             .then(function (resdata) {
                 console.log(resdata);
@@ -390,23 +415,36 @@ angular.module('app.controllers', [])
                 $scope.prices2 = resdata.data[1].priceList;
 
             });
+        $timeout(function () {
+            document.navInit(4)
+        }, 0);
+
 
     })
 
-    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http) {
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/faq.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.items = resdata.data;
             })
+        $timeout(function () {
+            document.navInit(5)
+        }, 0);
+
     })
 
-    .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+        $timeout(function () {
+            document.navInit(6)
+        }, 0);
 
     })
 
-    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore) {
-
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+        $timeout(function () {
+            document.navInit(7)
+        }, 0);
     })
 
 ;

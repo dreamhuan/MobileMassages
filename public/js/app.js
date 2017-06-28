@@ -71,4 +71,18 @@ angular.module('app', [
             let state = url.substring(statePos, url.length);
             return state.replace('/', '.');
         };
+
+        //放在每个主要页面的controller开头
+        //用于将对应的页面粗体化
+        //使用：$timeout(function(){document.navInit(whatYouWant)},0);
+        Document.prototype.navInit = function (target) {
+            if(!$rootScope.target)$rootScope.target=0;
+            angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'normal');
+            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'normal');
+
+            $rootScope.target=target;
+            angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'bold');
+            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'bold');
+
+        };
     });
