@@ -76,11 +76,12 @@ angular.module('app.controllers', [])
             $(".rightSlideMenu").css('display', 'block');
         };
         $timeout(function () {
-            console.log( $(".rightSlideMenu .filter"));
+            console.log($(".rightSlideMenu .filter"));
             $(".rightSlideMenu .filter").bind('click', function () {
-                $(".rightSlideMenu").css('display', 'none');
-            }
-        )}, 0);
+                    $(".rightSlideMenu").css('display', 'none');
+                }
+            )
+        }, 0);
 
 
     })
@@ -334,7 +335,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
         $scope.setCurrentBookingStep(4);
 
         $('#datepicker').datetimepicker({
@@ -372,6 +373,15 @@ angular.module('app.controllers', [])
             step4.cardSecurityCode = $scope.cardSecurityCode;
             step4.billingPostalCode = $scope.billingPostalCode;
             step4.giftCode = $scope.giftCode;
+
+            let promise = BookingService.booking();
+            promise.then(function (data) {
+                AlertService.success('提交订单成功！');
+            }, function (data) {
+                AlertService.error(data);
+            }).catch(function (err) {
+                console.log(err);
+            });
         };
 
         $scope.back = function () {
