@@ -69,6 +69,19 @@ angular.module('app.controllers', [])
     })
     .controller('navbarCtrl', function ($document, $scope, $state, $cookieStore, $http, $timeout) {
         console.log("test");
+        $scope.closeMenu = function () {
+            $(".rightSlideMenu").css('display', 'none');
+        };
+        $scope.openMenu = function () {
+            $(".rightSlideMenu").css('display', 'block');
+        };
+        $timeout(function () {
+            console.log( $(".rightSlideMenu .filter"));
+            $(".rightSlideMenu .filter").bind('click', function () {
+                $(".rightSlideMenu").css('display', 'none');
+            }
+        )}, 0);
+
 
     })
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
@@ -115,7 +128,9 @@ angular.module('app.controllers', [])
             console.log(time);
         };
 
-        $timeout(function(){document.navInit(0)},0);
+        $timeout(function () {
+            document.navInit(0)
+        }, 0);
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -338,27 +353,31 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/massage-therapists.json')
             .then(function (resdata) {
                 // console.log(resdata.data);
                 $scope.chooses = resdata.data;
 
             });
-        $timeout(function(){document.navInit(2)},0);
+        $timeout(function () {
+            document.navInit(2)
+        }, 0);
 
     })
 
-    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/home-massage-type.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;
             })
-        $timeout(function(){document.navInit(3)},0);
+        $timeout(function () {
+            document.navInit(3)
+        }, 0);
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/price.json')
             .then(function (resdata) {
                 console.log(resdata);
@@ -366,28 +385,36 @@ angular.module('app.controllers', [])
                 $scope.prices2 = resdata.data[1].priceList;
 
             });
-        $timeout(function(){document.navInit(4)},0);
+        $timeout(function () {
+            document.navInit(4)
+        }, 0);
 
 
     })
 
-    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
         $http.get('../data/faq.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.items = resdata.data;
             })
-        $timeout(function(){document.navInit(5)},0);
+        $timeout(function () {
+            document.navInit(5)
+        }, 0);
 
     })
 
     .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
-        $timeout(function(){document.navInit(6)},0);
+        $timeout(function () {
+            document.navInit(6)
+        }, 0);
 
     })
 
     .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
-        $timeout(function(){document.navInit(7)},0);
+        $timeout(function () {
+            document.navInit(7)
+        }, 0);
     })
 
 ;

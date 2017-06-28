@@ -27,7 +27,6 @@ body {
     src: url("../fonts/myfont/GothamRounded-Book.otf");
 }
 
-
 ::-webkit-scrollbar { //取消滚动条
     width: 0;
 }
@@ -96,7 +95,7 @@ body {
                 background-color: transparent;
                 //font-weight: bold;
             }
-            &:focus{
+            &:focus {
                 font-weight: bold;
             }
         }
@@ -150,25 +149,10 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/myfont/icomoon.eot?gb9g6q');
-    src:  url('../fonts/myfont/icomoon.eot?gb9g6q#iefix') format('embedded-opentype'),
+    src: url('../fonts/myfont/icomoon.eot?gb9g6q');
+    src: url('../fonts/myfont/icomoon.eot?gb9g6q#iefix') format('embedded-opentype'),
     url('../fonts/myfont/icomoon.ttf?gb9g6q') format('truetype'),
     url('../fonts/myfont/icomoon.woff?gb9g6q') format('woff'),
     url('../fonts/myfont/icomoon.svg?gb9g6q#icomoon') format('svg');
@@ -191,14 +175,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@icomoon-circle-color:#6ac09a;
-@icomoon-com-color:#6ac09a;
-@icomoon-face-color:rgb(106, 192, 154);
-@icomoon-fatman-color:#6ac09a;
-@icomoon-flower-color:#6ac09a;
-@icomoon-massa-color:#6ac09a;
-@icomoon-sport-color:rgb(106, 192, 154);
-@icomoon-water-color:rgb(106, 192, 154);
+@icomoon-circle-color: #6ac09a;
+@icomoon-com-color: #6ac09a;
+@icomoon-face-color: rgb(106, 192, 154);
+@icomoon-fatman-color: #6ac09a;
+@icomoon-flower-color: #6ac09a;
+@icomoon-massa-color: #6ac09a;
+@icomoon-sport-color: rgb(106, 192, 154);
+@icomoon-water-color: rgb(106, 192, 154);
 .icomoon-circle,
 .icomoon-com,
 .icomoon-face,
@@ -206,7 +190,7 @@ body {
 .icomoon-flower,
 .icomoon-massa,
 .icomoon-sport,
-.icomoon-water{
+.icomoon-water {
     font-size: 50px;
 }
 
@@ -214,91 +198,202 @@ body {
     content: "\e900";
     color: @icomoon-circle-color;
 }
+
 .icomoon-com:before {
     content: "\e901";
     color: @icomoon-com-color;
 }
+
 .icomoon-face .path1:before {
     content: "\e902";
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path2:before {
     content: "\e903";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path3:before {
     content: "\e904";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path4:before {
     content: "\e905";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path5:before {
     content: "\e906";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path6:before {
     content: "\e907";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path7:before {
     content: "\e908";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path8:before {
     content: "\e909";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path9:before {
     content: "\e90a";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-face .path10:before {
     content: "\e90b";
     margin-left: -0.748046875em;
     color: @icomoon-face-color;
 }
+
 .icomoon-fatman:before {
     content: "\e90c";
     color: @icomoon-fatman-color;
 }
+
 .icomoon-flower:before {
     content: "\e90d";
     color: @icomoon-flower-color;
 }
+
 .icomoon-massa:before {
     content: "\e90e";
     color: @icomoon-massa-color;
 }
+
 .icomoon-sport .path1:before {
     content: "\e90f";
     color: @icomoon-sport-color;
 }
+
 .icomoon-sport .path2:before {
     content: "\e910";
     margin-left: -0.693359375em;
     color: @icomoon-sport-color;
 }
+
 .icomoon-sport .path3:before {
     content: "\e911";
     margin-left: -0.693359375em;
     color: @icomoon-sport-color;
 }
+
 .icomoon-water .path1:before {
     content: "\e912";
     color: @icomoon-water-color;
 }
+
 .icomoon-water .path2:before {
     content: "\e913";
     margin-left: -0.572265625em;
     color: @icomoon-water-color;
+}
+
+//右侧滑动菜单
+.rightSlideMenu {
+    display: none;;
+    .filter {
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        opacity: 0.6;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+    }
+    .menu {
+        position: absolute;
+        z-index: 1001;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 80%;
+        background-color: white;
+        .headline {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: solid 1px lighten(#9a9691, 37.5%);
+            font-family: "xt-gothamLight";
+            .titleMenu {
+                color: lighten(#9a9691, 25%);
+                font-weight: bold;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .titleName {
+                display: flex;
+                color: #00d4a2;
+                margin-top: 2px;
+                div:first-child {
+                    margin: 10px;
+                    margin-right: 3px;
+                    margin-left: 0px;
+                }
+                div:nth-child(2) {
+                    margin: 10px;
+                    margin-left: 0px;
+                    font-weight: bolder;
+                    font-family: normal;
+
+                }
+            }
+            .closeBtn {
+                cursor: pointer;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: bold;
+                text-align: center;
+                border: solid 1px lighten(#9a9691, 20%);
+                color: lighten(#9a9691, 20%);
+                margin: 10px;
+            }
+        }
+        .navGroup {
+            width: 100%;
+            .navItem {
+                width: 100%;
+                border-bottom: solid 1px lighten(#9a9691, 37.5%);
+                height: 30px;
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin: 20px;
+                    color: #9a9691;
+                    width: 100%;
+                    &:active {
+                        text-decoration: none;
+                    }
+                }
+
+            }
+            .nav-pages-signIn {
+                color: #77e2bd;
+            }
+
+        }
+    }
 }
