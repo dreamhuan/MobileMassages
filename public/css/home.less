@@ -101,7 +101,19 @@
     @media only screen and (max-width: 757px) {
         .date-booking {
             .firsttitle {
-                font-size: 21px;
+                font-size: 20px;
+            }
+            .secondtitle {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 568px) {
+        .date-booking {
+            width: 80%;
+            .firsttitle {
+                font-size: 18px;
             }
             .secondtitle {
                 font-size: 12px;
@@ -148,6 +160,37 @@
 
     .date-message-mobile {
         display: none;
+    }
+
+    @media only screen and (max-width: 667px) {
+        .date-message {
+            .location, .available, .time {
+                .fa-home, .fa-calendar, .fa-clock-o {
+                    color: #00d5a1;
+                    font-size: 36px !important;
+                }
+
+                .information {
+                    width: 170px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 568px) {
+        .date-message {
+            .location, .available, .time {
+                .fa-home, .fa-calendar, .fa-clock-o {
+                    color: #00d5a1;
+                    font-size: 36px !important;
+                }
+
+                .information {
+                    width: 130px;
+                    word-break: break-all;
+                }
+            }
+        }
     }
 
     @media only screen and (max-width: 414px) {
@@ -237,6 +280,21 @@
         .date-therapists {
             .title {
                 font-size: 24px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 667px) {
+        .date-therapists {
+            .title {
+                font-size: 21px;
+            }
+
+            .therapists-img {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
             }
         }
     }
@@ -360,6 +418,51 @@
         }
     }
 
+    @media only screen and (max-width: 640px) {
+        .massage-type {
+            .type-content {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 568px) {
+        .massage-type {
+            width: 100%;
+            .type-title {
+                font-size: 24px;
+            }
+
+            .type-content {
+                width: 100%;
+                .content-repeat {
+                    margin-top: 100px;
+                    width: 280px;
+                    display: flex;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 20px;
+                    }
+
+                    .description {
+                        font-family: Gotham Rounded Book;
+                        width: 200px;
+                        margin-left: 10px;
+                        .title {
+                            color: #63d2a3;
+                            font-size: 18px;
+                        }
+
+                        .content {
+                            color: #aaacab;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: 414px) {
         .massage-type {
             display: none;
@@ -413,9 +516,18 @@
                     }
 
                     img {
-                        width: 100px;
-                        height: 100px;
+                        width: 90px;
+                        height: 90px;
                         margin: auto;
+                    }
+
+                    .type-icon {
+                        width: 180px;
+                        text-align: center;
+                    }
+
+                    .different-height {
+                        height: 80px;
                     }
 
                     .title {
@@ -434,6 +546,20 @@
                 .content-repeat {
                     width: 160px;
                     height: 160px;
+                    .type-icon {
+                        width: 160px;
+                        text-align: center;
+                        .icomoon-circle,
+                        .icomoon-com,
+                        .icomoon-face,
+                        .icomoon-fatman,
+                        .icomoon-flower,
+                        .icomoon-massa,
+                        .icomoon-sport,
+                        .icomoon-water {
+                            font-size: 90px;
+                        }
+                    }
                 }
             }
         }
@@ -445,6 +571,20 @@
                 .content-repeat {
                     width: 140px;
                     height: 140px;
+                    .type-icon {
+                        width: 140px;
+                        text-align: center;
+                        .icomoon-circle,
+                        .icomoon-com,
+                        .icomoon-face,
+                        .icomoon-fatman,
+                        .icomoon-flower,
+                        .icomoon-massa,
+                        .icomoon-sport,
+                        .icomoon-water {
+                            font-size: 90px;
+                        }
+                    }
                 }
             }
         }
@@ -595,6 +735,18 @@
             height: 2000px;
             .faq-title {
                 font-size: 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .faq {
+            .faq-title {
+                font-size: 18px;
+            }
+
+            .faq-content{
+                width: 90%;
             }
         }
     }
@@ -786,4 +938,139 @@
             }
         }
     }
+}
+
+@icomoon-circle-color: #00ac87;
+@icomoon-com-color: #00ac87;
+@icomoon-face-color: #d2fcea;
+@icomoon-facebg-color: #00d6a0;
+@icomoon-fatman-color: #d2fcea;
+@icomoon-flower-color: #d2fcea;
+@icomoon-massa-color: #00ac87;
+@icomoon-sport-color: #00ac87;
+@icomoon-sportbg-color: #d2fcea;
+@icomoon-water-color: #d2fcea;
+@icomoon-waterbg-color: #00d6a0;
+
+.icomoon-circle,
+.icomoon-com,
+.icomoon-face,
+.icomoon-fatman,
+.icomoon-flower,
+.icomoon-massa,
+.icomoon-sport,
+.icomoon-water {
+    font-size: 140px;
+}
+
+.icomoon-circle:before {
+    content: "\e900";
+    color: @icomoon-circle-color;
+}
+
+.icomoon-com:before {
+    content: "\e901";
+    color: @icomoon-com-color;
+}
+
+.icomoon-face .path1:before {
+    content: "\e902";
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path2:before {
+    content: "\e903";
+    margin-left: -0.748046875em;
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path3:before {
+    content: "\e904";
+    margin-left: -0.748046875em;
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path4:before {
+    content: "\e905";
+    margin-left: -0.748046875em;
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path5:before {
+    content: "\e906";
+    margin-left: -0.748046875em;
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path6:before {
+    content: "\e907";
+    margin-left: -0.748046875em;
+    color: @icomoon-facebg-color;
+}
+
+.icomoon-face .path7:before {
+    content: "\e908";
+    margin-left: -0.748046875em;
+    color: @icomoon-facebg-color;
+}
+
+.icomoon-face .path8:before {
+    content: "\e909";
+    margin-left: -0.748046875em;
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path9:before {
+    content: "\e90a";
+    margin-left: -0.748046875em;
+    color: @icomoon-face-color;
+}
+
+.icomoon-face .path10:before {
+    content: "\e90b";
+    margin-left: -0.748046875em;
+    color: @icomoon-facebg-color;
+}
+
+.icomoon-fatman:before {
+    content: "\e90c";
+    color: @icomoon-fatman-color;
+}
+
+.icomoon-flower:before {
+    content: "\e90d";
+    color: @icomoon-flower-color;
+}
+
+.icomoon-massa:before {
+    content: "\e90e";
+    color: @icomoon-massa-color;
+}
+
+.icomoon-sport .path1:before {
+    content: "\e90f";
+    color: @icomoon-sport-color;
+}
+
+.icomoon-sport .path2:before {
+    content: "\e910";
+    margin-left: -0.693359375em;
+    color: @icomoon-sport-color;
+}
+
+.icomoon-sport .path3:before {
+    content: "\e911";
+    margin-left: -0.693359375em;
+    color: @icomoon-sportbg-color;
+}
+
+.icomoon-water .path1:before {
+    content: "\e912";
+    color: @icomoon-water-color;
+}
+
+.icomoon-water .path2:before {
+    content: "\e913";
+    margin-left: -0.572265625em;
+    color: @icomoon-waterbg-color;
 }

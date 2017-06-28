@@ -72,6 +72,44 @@
     font-size: 26px;
   }
 }
+@media only screen and (max-width: 640px) {
+  .massage-type .type-content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .massage-type {
+    width: 100%;
+  }
+  .massage-type .type-title {
+    font-size: 24px;
+  }
+  .massage-type .type-content {
+    width: 100%;
+  }
+  .massage-type .type-content .content-repeat {
+    margin-top: 100px;
+    width: 280px;
+    display: flex;
+  }
+  .massage-type .type-content .content-repeat img {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+  }
+  .massage-type .type-content .content-repeat .description {
+    font-family: Gotham Rounded Book;
+    width: 200px;
+    margin-left: 10px;
+  }
+  .massage-type .type-content .content-repeat .description .title {
+    color: #63d2a3;
+    font-size: 18px;
+  }
+  .massage-type .type-content .content-repeat .description .content {
+    color: #aaacab;
+  }
+}
 @media only screen and (max-width: 414px) {
   .massage-type .type-title {
     display: none;
