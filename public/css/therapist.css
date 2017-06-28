@@ -1,4 +1,10 @@
 @media screen and (max-width: 400px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 12px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 26px;
+  }
   .massageTherapist .intro .item {
     width: 310px;
   }
@@ -27,6 +33,12 @@
   }
 }
 @media screen and (min-width: 400px) and (max-width: 700px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 12px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 26px;
+  }
   .massageTherapist .intro .item {
     width: 520px;
   }
@@ -54,6 +66,12 @@
   }
 }
 @media screen and (min-width: 700px) and (max-width: 900px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 15px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 30px;
+  }
   .massageTherapist .intro .item {
     width: 360px;
   }
@@ -75,13 +93,19 @@
     padding-top: 20px;
   }
   .massageTherapist .fontLg {
-    font-size: 20px;
+    font-size: 18px;
   }
   .massageTherapist .fontSm {
     font-size: 4px;
   }
 }
 @media screen and (min-width: 900px) and (max-width: 1100px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 20px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 40px;
+  }
   .massageTherapist .intro .item {
     width: 480px;
   }
@@ -110,6 +134,12 @@
   }
 }
 @media screen and (min-width: 1100px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 20px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 40px;
+  }
   .massageTherapist .intro .item {
     width: 530px;
   }
@@ -138,7 +168,7 @@
 }
 .massageTherapist .font {
   display: flex;
-  width: 100%;
+  width: 95%;
   margin: auto;
   flex-direction: column;
 }
@@ -146,12 +176,6 @@
   width: 100%;
   height: 200px;
   flex-direction: column;
-}
-.massageTherapist .font .theme .font-sx {
-  font-size: 20px;
-}
-.massageTherapist .font .theme .font-lx {
-  font-size: 40px;
 }
 .massageTherapist .intro {
   display: flex;
