@@ -1,18 +1,23 @@
 @media screen and (max-width: 400px) {
   .massageTherapist .intro .item {
-    width: 360px;
+    width: 310px;
   }
   .massageTherapist .intro .item .picBox {
-    height: 170px;
-    width: 140px;
+    height: 130px;
+    width: 90px;
   }
   .massageTherapist .intro .item .picBox .pic {
-    height: 160px;
-    width: 130px;
+    height: 115px;
+    width: 85px;
     border: solid 1px gainsboro;
   }
   .massageTherapist .intro .item .contentBox {
-    width: 200px;
+    width: 215px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    line-height: 10px;
+    padding: 5px;
+    padding-top: 25px;
   }
   .massageTherapist .fontLg {
     font-size: 16px;
@@ -21,7 +26,7 @@
     font-size: 3px;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 500px) {
+@media screen and (min-width: 400px) and (max-width: 700px) {
   .massageTherapist .intro .item {
     width: 520px;
   }
@@ -37,6 +42,10 @@
   .massageTherapist .intro .item .contentBox {
     width: 230px;
   }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 13px;
+  }
   .massageTherapist .fontLg {
     font-size: 16px;
   }
@@ -44,7 +53,63 @@
     font-size: 6px;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .massageTherapist .intro .item {
+    width: 360px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 120px;
+    width: 105px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 140px;
+    width: 120px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 240px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 11px;
+    padding-top: 20px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 20px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 4px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .massageTherapist .intro .item {
+    width: 480px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 120px;
+    width: 105px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 140px;
+    width: 120px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 240px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 12px;
+    padding-top: 20px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 20px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 4px;
+  }
+}
+@media screen and (min-width: 1100px) {
   .massageTherapist .intro .item {
     width: 530px;
   }
@@ -60,6 +125,10 @@
   .massageTherapist .intro .item .contentBox {
     width: 270px;
   }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 13px;
+  }
   .massageTherapist .fontLg {
     font-size: 20px;
   }
@@ -69,7 +138,7 @@
 }
 .massageTherapist .font {
   display: flex;
-  width: 95%;
+  width: 100%;
   margin: auto;
   flex-direction: column;
 }
@@ -97,10 +166,8 @@
   height: 190px;
 }
 .massageTherapist .intro .item .contentBox .content {
-  padding: 5px;
   height: 100%;
   width: 100%;
-  line-height: 13px;
   word-wrap: break-word;
   text-align: justify;
   text-justify: distribute;
