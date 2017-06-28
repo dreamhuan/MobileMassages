@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `mobilemassages`.`user` (
   `lastName` VARCHAR(45) NOT NULL,
   `emailAddress` VARCHAR(45) NOT NULL,
   `mobileNumber` VARCHAR(45) NOT NULL,
-  `passWord` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `emailAddress_UNIQUE` (`emailAddress` ASC))
 ENGINE = InnoDB;

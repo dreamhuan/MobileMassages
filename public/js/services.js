@@ -363,4 +363,9 @@ angular.module('app.services', [])
 
     })
 
+    .service('BookingService', function ($q, $http, SystemService) {
+
+
+    })
+
 ;

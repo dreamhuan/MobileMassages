@@ -287,9 +287,27 @@ angular.module('app.controllers', [])
         $scope.setCurrentBookingStep(3);
 
         $scope.continue = function () {
-            if ($scope.showType === 0)
+            let step3;
+            if ($scope.showType === 0) {
+                step3 = {
+                    showType: 0,
+                    firstName: $scope.firstName,
+                    lastName: $scope.lastName,
+                    emailAddress: $scope.emailAddress,
+                    mobileNumber: $scope.mobileNumber,
+                    passWord: $scope.password
+                }
 
-                $state.go('booking.step4');
+            }
+            else {
+                step3 = {
+                    showType: 1,
+                    emailAddress: $scope.emailAddress,
+                    passWord: $scope.password
+                }
+            }
+            $cookieStore.put('step3', step3);
+            $state.go('booking.step4');
         };
 
         $scope.back = function () {
@@ -316,13 +334,25 @@ angular.module('app.controllers', [])
             console.log('apply')
         };
 
-
         $scope.book = function () {
+            let step4 = {};
             if ($scope.step4 === 0) {
+                step4 = {
+                    streetAddress: $scope.streetAddress,
+                    streetAddress2: $scope.streetAddress2,
+                    stateProvince: $scope.stateProvince,
+                    postCode: $scope.postCode,
+                    parkingInstructions: $scope.parkingInstructions
+                };
                 $scope.step4 = 1;
                 return;
             }
-            let step4 = {};
+            step4.cardName = $scope.cardName;
+            step4.cardNumber = $scope.cardNumber;
+            step4.cardExpirationDate = $scope.cardExpirationDate;
+            step4.cardSecurityCode = $scope.cardSecurityCode;
+            step4.billingPostalCode = $scope.billingPostalCode;
+            step4.giftCode = $scope.giftCode;
         };
 
         $scope.back = function () {
