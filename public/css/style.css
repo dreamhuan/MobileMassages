@@ -27,6 +27,22 @@ body {
 .container-fluid {
   padding: 0;
 }
+@keyframes slideIn {
+  0% {
+    right: -80%;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -80%;
+  }
+}
 .navbar {
   border-radius: 0;
 }
@@ -103,6 +119,8 @@ body {
 }
 .rightSlideMenu .menu {
   position: absolute;
+  -webkit-animation: slideIn 1s;
+  transition: 0.3s;
   z-index: 1001;
   right: 0;
   top: 0;
@@ -198,6 +216,13 @@ body {
 @media all and (max-width: 1024px) {
   .footer {
     height: 250px;
+  }
+  .nav-style {
+    padding-left: 0px;
+  }
+  .nav-style .nav-pages a {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 @media all and (max-width: 768px) {

@@ -70,17 +70,33 @@ angular.module('app.controllers', [])
     .controller('navbarCtrl', function ($document, $scope, $state, $cookieStore, $http, $timeout) {
         console.log("test");
         $scope.closeMenu = function () {
-            $(".rightSlideMenu").css('display', 'none');
+            console.log("test");
+            $(".menu").animate({right: '-100%'}, 300,function () {
+
+                $(".filter").animate({opacity: '0'}, 300,function () {
+                    $(".rightSlideMenu").css('display', 'none');
+                    $("body").css({
+                        overflow:"scroll"
+                    });
+                    $(".filter").css('opacity','0.6');
+                    $(".menu").css('right','0');
+
+                });
+            });
         };
         $scope.openMenu = function () {
             $(".rightSlideMenu").css('display', 'block');
+            $("body").css({
+                overflow:"hidden"
+            });
         };
         $timeout(function () {
-            console.log( $(".rightSlideMenu .filter"));
+            console.log($(".rightSlideMenu .filter"));
             $(".rightSlideMenu .filter").bind('click', function () {
-                $(".rightSlideMenu").css('display', 'none');
-            }
-        )}, 0);
+                    $scope.closeMenu();
+                }
+            )
+        }, 0);
 
 
     })
