@@ -152,13 +152,6 @@ angular.module('app.controllers', [])
             $state.go('booking.step1');
         };
 
-        $scope.json2list = function (content, index) {
-            // console.log(content);
-            if (typeof content === 'object'){
-                $('.content').eq(index).html('').append(json2list(content));
-            }
-        };
-
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -491,13 +484,6 @@ angular.module('app.controllers', [])
         $timeout(function () {
             document.navInit(5)
         }, 0);
-
-        $scope.json2list = function (content, index) {
-            // console.log(content);
-            if (typeof content === 'object'){
-                $('.content').eq(index).html('').append(json2list(content));
-            }
-        };
 
     })
 

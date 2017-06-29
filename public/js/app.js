@@ -8,6 +8,12 @@ angular.module('app', [
     .constant('hostip', 'http://localhost:4000/')  //本地开发环境地址
     //.constant('hostip', 'http://123.206.111.244:4000/')  //正式环境地址
 
+    .filter('to_trusted', ['$sce', function ($sce) {
+        return function (text) {
+            return $sce.trustAsHtml(text);
+        }
+    }])
+
     .filter("myDateTime", function () { //ISODate格式到本地时间转换
         return function (input) {
             return new Date(input).Format("yyyy-MM-dd hh:mm:ss");

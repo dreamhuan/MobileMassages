@@ -142,7 +142,7 @@
         <div class="faq-content">
             <div ng-repeat="item in items">
                 <div class="title">{{item.title}}</div>
-                <div class="content" ng-init="json2list(item.content, $index)">{{item.content}}</div>
+                <div class="content" ng-bind-html="item.content | to_trusted"></div>
             </div>
         </div>
     </div>

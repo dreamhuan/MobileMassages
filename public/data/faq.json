@@ -33,14 +33,8 @@
   },
   {
     "title": "What is Mobile Massage's cancellation policy?",
-    "content": [
-      "You may cancel or reschedule your appointment up to 1 hour before the appointment time with no penalty",
-      "If you reschedule with less than 1 hour's notice,you will be charged a $35/￡25 fee*",
-      "If you reschedule with less than 30 minutes'notice,you will be charged a $50/￡35 fee*",
-      "If you cancel with less than 1 hour's notice,you will be charged a $50/￡35 fee*",
-      "If you cancel with less than 30 minutes,you will be charged the full amount of the massage*",
-      "If a therapist has not yet been assigned to your appointment you will not be charged."
-    ]
+    "content":"You may cancel or reschedule your appointment up to 1 hour before the appointment time with no penalty<ul><li>If you reschedule with less than 1 hour's notice,you will be charged a $35/￡25 fee*</li><li>If you reschedule with less than 30 minutes'notice,you will be charged a $50/￡35 fee*</li><li>If you cancel with less than 1 hour's notice,you will be charged a $50/￡35 fee*</li><li>If you cancel with less than 30 minutes,you will be charged the full amount of the massage*</li><li>If a therapist has not yet been assigned to your appointment you will not be charged.</li></ul>"
+
   },
   {
     "title": "Does Mobile Massages accept insurance?",
