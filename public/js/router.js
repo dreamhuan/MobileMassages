@@ -23,7 +23,7 @@ angular.module('app.routes', ['ui.router'])
             })
             .state('signup', {
                 url: '/signup',
-                templateUrl: './templates/signUp.html',
+                templateUrl: './templates/SignUp.html',
                 controller: 'signupCtrl',
             })
 
@@ -83,14 +83,16 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/SignIn.html',
                 controller: 'signinCtrl',
             })
+
             .state('forgetpassword', {
                 url: '/forgetpassword',
                 templateUrl: './templates/ForgetPassword.html',
                 controller: 'forgetpasswordCtrl',
             })
+
             .state('successfulBooking', {
                 url: '/successfulBooking',
-                templateUrl: './templates/successfulBooking.html',
+                templateUrl: './templates/SuccessfulBooking.html',
                 controller: 'successfulBookingCtrl',
             })
         ;
