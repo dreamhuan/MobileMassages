@@ -78,14 +78,10 @@ angular.module('app', [
         Document.prototype.navInit = function (target) {
             if(!$rootScope.target)$rootScope.target=0;
             angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'normal');
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('color', '#cac7c1');
-
             angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'normal');
             
             $rootScope.target=target;
             angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'bold');
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('color', '#8f897c');
-
             angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'bold');
 
         };

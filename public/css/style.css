@@ -1,1 +1,252 @@
-html,body{width:100%;height:100%;margin:0;padding:0}@font-face{font-family:"xt-gothamLight";src:url("../fonts/myfont/Gotham-Light.ttf")}.font-gotham-title{font-family:"xt-gothamLight";transform:scale(1, .9)}@font-face{font-family:"GothamNarrow-Bold";src:url("../fonts/myfont/GothamNarrow-Bold.ttf")}@font-face{font-family:"Gotham Rounded Book";src:url("../fonts/myfont/GothamRounded-Book.otf")}::-webkit-scrollbar{width:0}.container-fluid{padding:0}@keyframes slideIn{0%{right:-80%}100%{right:0}}@keyframes slideOut{0%{right:0}100%{right:-80%}}.navbar{border-radius:0}.nav-style{height:65px;margin:0;padding-top:5px;padding-left:3%;border-bottom:1px solid #d1fbe8;background-color:transparent;font-size:16px;font-family:微软雅黑}@media all and (max-width:736px){.nav-style .nav-headTitle{display:flex;justify-content:center;align-items:center}}.nav-style .header-title{color:#96e8c7 !important;font-size:20px;margin-left:10%;font-family:Gotham Rounded Book}.nav-style .header-title:hover,.nav-style .header-title:focus,.nav-style .header-title:visited{text-decoration:none}.nav-style .deep-color{color:#00d4a2 !important;margin-left:-20px;font-weight:bolder}.nav-style .nav-pages{float:right;margin-right:5%}.nav-style .nav-pages a{padding-left:10px;padding-right:10px;color:#cac7c1;background-color:transparent;font-size:14px}.nav-style .nav-pages a:hover{color:#9a9691 !important;background-color:transparent}.nav-style .nav-pages a:focus{font-weight:bold;background-color:transparent}.nav-style a.nav-pages-signIn{color:#77e2bd !important}.nav-style a.nav-pages-signIn:hover{color:#46ddb6 !important}.rightSlideMenu{display:none}.rightSlideMenu .filter{position:absolute;z-index:1000;left:0;top:0;opacity:.6;background-color:black;width:100%;height:100%}.rightSlideMenu .menu{position:absolute;-webkit-animation:slideIn 1s;transition:.3s;z-index:1001;right:0;top:0;height:100%;width:80%;background-color:white}.rightSlideMenu .menu .headline{width:100%;display:flex;justify-content:space-between;align-items:center;border-bottom:solid 1px #f6f5f5;font-family:"xt-gothamLight"}.rightSlideMenu .menu .headline .titleMenu{color:#d7d5d3;font-weight:bold;font-size:20px;margin:10px}.rightSlideMenu .menu .headline .titleName{display:flex;color:#00d4a2;margin-top:2px}.rightSlideMenu .menu .headline .titleName div:first-child{margin:10px;margin-right:3px;margin-left:0}.rightSlideMenu .menu .headline .titleName div:nth-child(2){margin:10px;margin-left:0;font-weight:bolder;font-family:normal}.rightSlideMenu .menu .headline .closeBtn{cursor:pointer;width:23px;height:23px;border-radius:50%;font-size:16px;line-height:18px;font-weight:bold;text-align:center;border:solid 1px #cbc9c6;color:#cbc9c6;margin:10px}.rightSlideMenu .menu .navGroup{width:100%}.rightSlideMenu .menu .navGroup .navItem{width:100%;border-bottom:solid 1px #f6f5f5;height:30px;display:flex;align-items:center}.rightSlideMenu .menu .navGroup .navItem a{margin:20px;color:#9a9691;width:100%}.rightSlideMenu .menu .navGroup .navItem a:active{text-decoration:none}.rightSlideMenu .menu .navGroup .nav-pages-signIn{color:#77e2bd}.footer{height:300px;color:white;background-color:#00ac87;text-align:center}.footer .footer-title{padding-top:7%;font-size:18px}.footer .title-firstWord{color:#9ee8d1;opacity:.6}.footer .footer-message{font-size:12px}.footer .first-line{margin-top:1%}@media all and (max-width:1024px){.footer{height:250px}.nav-style{padding-left:0}.nav-style .nav-pages a{padding-left:5px;padding-right:5px}}@media all and (max-width:768px){.footer{height:200px}}@font-face{font-family:'icomoon';src:url('../fonts/myfont/icomoon.eot?gb9g6q');src:url('../fonts/myfont/icomoon.eot?gb9g6q#iefix') format('embedded-opentype'),url('../fonts/myfont/icomoon.ttf?gb9g6q') format('truetype'),url('../fonts/myfont/icomoon.woff?gb9g6q') format('woff'),url('../fonts/myfont/icomoon.svg?gb9g6q#icomoon') format('svg');font-weight:normal;font-style:normal}[class^="icomoon-"],[class*=" icomoon-"]{font-family:'icomoon' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "xt-gothamLight";
+  src: url("../fonts/myfont/Gotham-Light.ttf");
+}
+.font-gotham-title {
+  font-family: "xt-gothamLight";
+  transform: scale(1, 0.9);
+}
+@font-face {
+  font-family: "GothamNarrow-Bold";
+  src: url("../fonts/myfont/GothamNarrow-Bold.ttf");
+}
+@font-face {
+  font-family: "Gotham Rounded Book";
+  src: url("../fonts/myfont/GothamRounded-Book.otf");
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.container-fluid {
+  padding: 0;
+}
+@keyframes slideIn {
+  0% {
+    right: -80%;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -80%;
+  }
+}
+.navbar {
+  border-radius: 0;
+}
+.nav-style {
+  height: 65px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 3%;
+  border-bottom: 1px solid #d1fbe8;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 微软雅黑;
+}
+@media all and (max-width: 736px) {
+  .nav-style .nav-headTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.nav-style .header-title {
+  color: #96e8c7 !important;
+  font-size: 20px;
+  margin-left: 10%;
+  font-family: Gotham Rounded Book;
+}
+.nav-style .header-title:hover,
+.nav-style .header-title:focus,
+.nav-style .header-title:visited {
+  text-decoration: none;
+}
+.nav-style .deep-color {
+  color: #00d4a2 !important;
+  margin-left: -20px;
+  font-weight: bolder;
+}
+.nav-style .nav-pages {
+  float: right;
+  margin-right: 5%;
+}
+.nav-style .nav-pages a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #cac7c1 !important;
+  background-color: transparent;
+  font-size: 14px;
+}
+.nav-style .nav-pages a:hover {
+  color: #9a9691 !important;
+  background-color: transparent;
+}
+.nav-style .nav-pages a:focus {
+  font-weight: bold;
+}
+.nav-style a.nav-pages-signIn {
+  color: #77e2bd !important;
+}
+.nav-style a.nav-pages-signIn:hover {
+  color: #46ddb6 !important;
+}
+.rightSlideMenu {
+  display: none;
+}
+.rightSlideMenu .filter {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.rightSlideMenu .menu {
+  position: absolute;
+  -webkit-animation: slideIn 1s;
+  transition: 0.3s;
+  z-index: 1001;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  background-color: white;
+}
+.rightSlideMenu .menu .headline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #f6f5f5;
+  font-family: "xt-gothamLight";
+}
+.rightSlideMenu .menu .headline .titleMenu {
+  color: #d7d5d3;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+}
+.rightSlideMenu .menu .headline .titleName {
+  display: flex;
+  color: #00d4a2;
+  margin-top: 2px;
+}
+.rightSlideMenu .menu .headline .titleName div:first-child {
+  margin: 10px;
+  margin-right: 3px;
+  margin-left: 0px;
+}
+.rightSlideMenu .menu .headline .titleName div:nth-child(2) {
+  margin: 10px;
+  margin-left: 0px;
+  font-weight: bolder;
+  font-family: normal;
+}
+.rightSlideMenu .menu .headline .closeBtn {
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: solid 1px #cbc9c6;
+  color: #cbc9c6;
+  margin: 10px;
+}
+.rightSlideMenu .menu .navGroup {
+  width: 100%;
+}
+.rightSlideMenu .menu .navGroup .navItem {
+  width: 100%;
+  border-bottom: solid 1px #f6f5f5;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.rightSlideMenu .menu .navGroup .navItem a {
+  margin: 20px;
+  color: #9a9691;
+  width: 100%;
+}
+.rightSlideMenu .menu .navGroup .navItem a:active {
+  text-decoration: none;
+}
+.rightSlideMenu .menu .navGroup .nav-pages-signIn {
+  color: #77e2bd;
+}
+.footer {
+  height: 300px;
+  color: white;
+  background-color: #00ac87;
+  text-align: center;
+}
+.footer .footer-title {
+  padding-top: 7%;
+  font-size: 18px;
+}
+.footer .title-firstWord {
+  color: #9ee8d1;
+  opacity: 0.6;
+}
+.footer .footer-message {
+  font-size: 12px;
+}
+.footer .first-line {
+  margin-top: 1%;
+}
+/* 平板 */
+@media all and (max-width: 1024px) {
+  .footer {
+    height: 250px;
+  }
+  .nav-style {
+    padding-left: 0px;
+  }
+  .nav-style .nav-pages a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media all and (max-width: 768px) {
+  .footer {
+    height: 200px;
+  }
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/myfont/icomoon.eot?gb9g6q');
+  src: url('../fonts/myfont/icomoon.eot?gb9g6q#iefix') format('embedded-opentype'), url('../fonts/myfont/icomoon.ttf?gb9g6q') format('truetype'), url('../fonts/myfont/icomoon.woff?gb9g6q') format('woff'), url('../fonts/myfont/icomoon.svg?gb9g6q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icomoon-"],
+[class*=" icomoon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
