@@ -364,21 +364,37 @@ angular.module('app.services', [])
     })
 
     .service('BookingService', function ($q, $http, SystemService) {
-        this.register=function (firstName,lastName,emailAddress,mobileNumber,password) {
+        this.register = function (content) {
             let param = {
-                firstName:firstName,
-                lastName:lastName,
-                emailAddress:emailAddress,
-                mobileNumber:mobileNumber,
-                password:password
-        };
+                firstName: content.firstName,
+                lastName: content.lastName,
+                emailAddress: content.emailAddress,
+                mobileNumber: content.mobileNumber,
+                password: content.password
+            };
+            console.log(param);
             return SystemService.post('web/booking/register', param);
         };
-        this.booking = function () {
+        this.login = function (content) {
             let param = {
-                id: id
+                emailAddress: content.emailAddress,
+                password: content.password
             };
-            // return SystemService.post('web/booking/add', param);
+            console.log(param);
+            return SystemService.post('web/booking/login', param);
+        };
+        this.booking = function (content) {
+            let param = {
+                userId:content.userId,
+                therapists:content.therapists,
+                date:content.date,
+                time:content.time,
+                style:content.style,
+                massageLength:content.massageLength,
+                address:content.address,
+                creditCardNumber:content.creditCardNumber,
+            };
+            return SystemService.post('web/booking/booking', param);
         }
 
     })

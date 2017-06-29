@@ -6,7 +6,7 @@ const bookingSQL = require('../sql/bookingSQL');
 
 
 /**
- * 添加 Todo:照抄过来的，待完善
+ * 注册
  */
 router.post('/register', function (req, res, next) {
     // 从连接池获取连接
@@ -17,26 +17,109 @@ router.post('/register', function (req, res, next) {
         let param = req.body; //post请求
         console.log(param);
         // 建立连接 增加一个用户信息
-        connection.query(bookingSQL.register, [param.content], function (err, doc) {
+        connection.query(bookingSQL.findUserByEmailName, [param.emailAddress], function (err, doc) {
             if (err) {
                 console.log(err);
                 res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
                 return;
             }
-            if (doc) {
-                console.log(doc);
+            if (doc.length > 0) {
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "邮箱已被使用");
+                return;
+            }
+            console.log("test");
+            connection.query(bookingSQL.register, [param.firstName, param.lastName, param.emailAddress, param.mobileNumber, param.password]);
+            connection.query(bookingSQL.findUserByEmailName, [param.emailAddress],function (err,doc) {
+                if (err) {
+                    console.log(err);
+                    res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
+                    return;
+                }
                 let result = {
-                    id: doc.insertId,
-                    content: param.content
+                    id: doc[0].id,
+                    content: doc[0]
                 };
                 res.success(result);
-            }
+            });
 
-            // 释放连接
-            connection.release();
-        });
+        })
+    });
+});
+
+/**
+ * 登录
+ */
+router.post('/login', function (req, res, next) {
+    // 从连接池获取连接
+    pool.getConnection(function (err, connection) {
+
+        // 获取前台页面传过来的参数
+        // let param = req.query || req.params; //get请求用这句
+        let param = req.body; //post请求
+        console.log(param);
+        // 建立连接 增加一个用户信息
+        connection.query(bookingSQL.findUserByEmailName, [param.emailAddress], function (err, doc) {
+            if (err) {
+                console.log(err);
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
+                return;
+            }
+            if (doc.length === 0) {
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "用户不存在!");
+                return;
+            }
+            console.log(doc[0]);
+            if(doc[0].password!==param.password)
+            {
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "密码错误!");
+                return;
+            }
+            let result = {
+                id: doc[0].id,
+                content: doc[0]
+            };
+            res.success(result);
+
+        })
     });
 });
 
 
+/**
+ * 订单
+ */
+router.post('/booking', function (req, res, next) {
+    // 从连接池获取连接
+    pool.getConnection(function (err, connection) {
+
+        // 获取前台页面传过来的参数
+        // let param = req.query || req.params; //get请求用这句
+        let param = req.body; //post请求
+        console.log(param);
+        // 建立连接 增加一个用户信息
+       for(let i in param.therapists)
+       {
+           connection.query(bookingSQL.findTherapistByName,param.therapists[i].name,function (err,doc) {
+               if (err) {
+                   console.log(err);
+                   res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
+                   return;
+               }
+               let therapistId=doc[0].id;
+               connection.query(bookingSQL.addOrder,[param.userId,therapistId,param.date,param.time,param.style,param.massageLength,param.address,param.creditCardNumber],function (err,doc) {
+                   if (err) {
+                       console.log(err);
+                       res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
+                       return;
+                   }
+                   let result = {
+                       content:param
+                   };
+                   res.success(result);
+
+               })
+           })
+       }
+    });
+});
 module.exports = router;

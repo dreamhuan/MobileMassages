@@ -1,10 +1,10 @@
 const bookingSQL = {
     /**
      * param:
-     *   firstName,lastName, emailAddress, mobileNumber, passWord
+     *   firstName,lastName, emailAddress, mobileNumber, password
      *
      */
-    register: 'INSERT INTO mobilemassages.user (firstName, lastName, emailAddress, mobileNumber, passWord) VALUES (?, ?, ?, ?, ?)',//用户的所有除id以外的数据
+    register: "INSERT INTO mobilemassages.user(firstName, lastName, emailAddress, mobileNumber, password) VALUES (?,?,?,?,?)",//用户的所有除id以外的数据
 
     /**
      * param:
@@ -46,14 +46,21 @@ const bookingSQL = {
      *
      *
      */
-    findAllRapist:'',//无输入，直接返回结果
+    findAllTherapist:'',//无输入，直接返回结果
+
+    /**
+     * param:
+     *  Therapist's name
+     *
+     */
+    findTherapistByName:'select * from mobilemassages.therapist where name=? ',
 
     /**
      * param:
      *
      *
      */
-    addOrder:'',//输入用户id,按摩师id,时间，
+    addOrder:'INSERT  INTO  mobilemassages.`order` (userId, therapistId, date, time, style, massageLength, address, creditCardNumber) VALUES (?,?,?,?,?,?,?,?)',//输入用户id,按摩师id,时间，
 
     /**
      * param:

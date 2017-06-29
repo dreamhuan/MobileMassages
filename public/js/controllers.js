@@ -71,15 +71,15 @@ angular.module('app.controllers', [])
         console.log("test");
         $scope.closeMenu = function () {
             console.log("test");
-            $(".menu").animate({right: '-100%'}, 300,function () {
+            $(".menu").animate({right: '-100%'}, 300, function () {
 
-                $(".filter").animate({opacity: '0'}, 300,function () {
+                $(".filter").animate({opacity: '0'}, 300, function () {
                     $(".rightSlideMenu").css('display', 'none');
                     $("body").css({
-                        overflow:"scroll"
+                        overflow: "scroll"
                     });
-                    $(".filter").css('opacity','0.6');
-                    $(".menu").css('right','0');
+                    $(".filter").css('opacity', '0.6');
+                    $(".menu").css('right', '0');
 
                 });
             });
@@ -87,7 +87,7 @@ angular.module('app.controllers', [])
         $scope.openMenu = function () {
             $(".rightSlideMenu").css('display', 'block');
             $("body").css({
-                overflow:"hidden"
+                overflow: "hidden"
             });
         };
         $timeout(function () {
@@ -207,7 +207,7 @@ angular.module('app.controllers', [])
             if (!date) date = new Date().Format("yyyy-MM-dd");
             let time = $('#timepicker').val();
             console.log(date);
-            console.log(time);
+            console.log(time.length);
             let step1 = {
                 date: date,
                 time: time
@@ -234,7 +234,7 @@ angular.module('app.controllers', [])
 
                 //每个选项的默认选项是第一个
                 for (let i = 0; i < $scope.chooses.length; i++) {
-                    $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+                    $scope.chooses[i].option = $scope.chooses[i].options[0];
                 }
 
                 //选中的人数是第一个选择的内容
@@ -322,11 +322,11 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
         $scope.setCurrentBookingStep(3);
 
         $scope.continue = function () {
-            let step3;
+            let step3, flag = 1;
             if ($scope.showType === 0) {
                 step3 = {
                     showType: 0,
@@ -334,7 +334,7 @@ angular.module('app.controllers', [])
                     lastName: $scope.lastName,
                     emailAddress: $scope.emailAddress,
                     mobileNumber: $scope.mobileNumber,
-                    passWord: $scope.password
+                    password: $scope.password
                 }
 
             }
@@ -342,11 +342,42 @@ angular.module('app.controllers', [])
                 step3 = {
                     showType: 1,
                     emailAddress: $scope.emailAddress,
-                    passWord: $scope.password
+                    password: $scope.password
                 }
             }
+
             $cookieStore.put('step3', step3);
-            $state.go('booking.step4');
+            if (step3.showType === 0) {
+                let promise = BookingService.register(step3);
+                promise.then(function (data) {
+                    console.log(data);
+                    AlertService.success("注册成功!");
+                    console.log(data);
+                    $cookieStore.put('currentAccount', data.id);
+
+                    $state.go('booking.step4');
+                }, function (reason) {
+                    console.log(reason);
+                    flag = 0;
+                    if (reason === "邮箱已被使用") AlertService.error("相同用户名已存在");
+                    else AlertService.error("系统异常，请重试");
+                })
+            }
+            else {
+                let promise = BookingService.login(step3);
+                promise.then(function (data) {
+                    console.log(data);
+                    AlertService.success("登录成功!");
+                    console.log(data);
+                    $cookieStore.put('currentAccount', data.id);
+                    $state.go('booking.step4');
+                }, function (reason) {
+                    console.log(reason);
+                    flag = 0;
+                    AlertService.error(reason);
+                })
+            }
+            console.log(step3.showType);
         };
 
         $scope.back = function () {
@@ -373,8 +404,10 @@ angular.module('app.controllers', [])
             console.log('apply')
         };
 
+        let step4 = {};
+        console.log($scope.step4);
         $scope.book = function () {
-            let step4 = {};
+
             if ($scope.step4 === 0) {
                 step4 = {
                     streetAddress: $scope.streetAddress,
@@ -402,7 +435,19 @@ angular.module('app.controllers', [])
                 AlertService.error('请完成前面步骤！');
                 return;
             }
-            let promise = BookingService.booking();
+
+            let data = {
+                userId: $cookieStore.get('currentAccount'),
+                therapists: step2[3].option,
+                date: step1.date,
+                time: step1.time,
+                style: step2[2].option,
+                massageLength: step2[1].option,
+                address: (step4.streetAddress + step4.streetAddress2),
+                creditCardNumber: step4.cardNumber,
+            };
+            console.log(data);
+            let promise = BookingService.booking(data);
             promise.then(function (data) {
                 AlertService.success('提交订单成功！');
                 $cookieStore.remove('step1');

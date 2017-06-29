@@ -118,7 +118,8 @@ DROP TABLE IF EXISTS `mobilemassages`.`order`;
 CREATE TABLE IF NOT EXISTS `mobilemassages`.`order` (
   `userId`           INT           NOT NULL,
   `therapistId`      INT           NOT NULL,
-  `time`             DATE          NOT NULL,
+  `date`             varchar(10)   NOT NULL,
+  `time`             varchar(10)   NOT NULL,
   `style`            VARCHAR(45)   NOT NULL,
   `massageLength`    VARCHAR(45)   NOT NULL,
   `address`          VARCHAR(255)  NULL,
@@ -126,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `mobilemassages`.`order` (
   `price`            DECIMAL(5, 2) NULL,
   INDEX `fk_order_user1_idx` (`userId` ASC),
   INDEX `fk_order_therapist1_idx` (`therapistId` ASC),
-  PRIMARY KEY (`userId`, `therapistId`, `time`),
+  PRIMARY KEY (`userId`, `therapistId`,`date`),
   CONSTRAINT `fk_order_user1`
   FOREIGN KEY (`userId`)
   REFERENCES `mobilemassages`.`user` (`id`)
