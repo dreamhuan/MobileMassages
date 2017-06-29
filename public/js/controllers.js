@@ -389,9 +389,22 @@ angular.module('app.controllers', [])
             step4.billingPostalCode = $scope.billingPostalCode;
             step4.giftCode = $scope.giftCode;
 
+            $cookieStore.put('step4', step4);
+
+            let step1 = $cookieStore.get('step1');
+            let step2 = $cookieStore.get('step2');
+            let step3 = $cookieStore.get('step3');
+            if (!(step1 && step2 && step3 && step4)) {
+                AlertService.error('请完成前面步骤！');
+                return;
+            }
             let promise = BookingService.booking();
             promise.then(function (data) {
                 AlertService.success('提交订单成功！');
+                $cookieStore.remove('step1');
+                $cookieStore.remove('step2');
+                $cookieStore.remove('step3');
+                $cookieStore.remove('step4');
             }, function (data) {
                 AlertService.error(data);
             }).catch(function (err) {
@@ -426,7 +439,7 @@ angular.module('app.controllers', [])
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;
-            })
+            });
         $timeout(function () {
             document.navInit(3)
         }, 0);
@@ -452,7 +465,7 @@ angular.module('app.controllers', [])
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.items = resdata.data;
-            })
+            });
         $timeout(function () {
             document.navInit(5)
         }, 0);

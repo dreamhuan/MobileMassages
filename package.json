@@ -14,7 +14,8 @@
     "less-middleware": "~2.2.0",
     "morgan": "~1.8.1",
     "mysql": "^2.13.0",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "async": "latest"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",

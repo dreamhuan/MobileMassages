@@ -368,7 +368,7 @@ angular.module('app.services', [])
             let param = {
                 id: id
             };
-            return SystemService.post('web/test/delete', param);
+            // return SystemService.post('web/booking/add', param);
         }
 
     })
