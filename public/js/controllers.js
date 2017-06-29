@@ -147,6 +147,10 @@ angular.module('app.controllers', [])
         $timeout(function () {
             document.navInit(0)
         }, 0);
+
+        $scope.booking = function () {
+            $state.go('booking.step1');
+        }
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -432,6 +436,9 @@ angular.module('app.controllers', [])
             document.navInit(2)
         }, 0);
 
+        $scope.booking = function () {
+            $state.go('booking.step1');
+        }
     })
 
     .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
@@ -443,6 +450,10 @@ angular.module('app.controllers', [])
         $timeout(function () {
             document.navInit(3)
         }, 0);
+
+        $scope.booking = function () {
+            $state.go('booking.step1');
+        }
     })
 
     .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
@@ -457,6 +468,9 @@ angular.module('app.controllers', [])
             document.navInit(4)
         }, 0);
 
+        $scope.booking = function () {
+            $state.go('booking.step1');
+        }
 
     })
 
