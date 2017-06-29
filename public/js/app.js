@@ -8,6 +8,12 @@ angular.module('app', [
     .constant('hostip', 'http://localhost:4000/')  //本地开发环境地址
     //.constant('hostip', 'http://123.206.111.244:4000/')  //正式环境地址
 
+    .filter('to_trusted', ['$sce', function ($sce) {
+        return function (text) {
+            return $sce.trustAsHtml(text);
+        }
+    }])
+
     .filter("myDateTime", function () { //ISODate格式到本地时间转换
         return function (input) {
             return new Date(input).Format("yyyy-MM-dd hh:mm:ss");
@@ -76,17 +82,16 @@ angular.module('app', [
         //用于将对应的页面粗体化
         //使用：$timeout(function(){document.navInit(whatYouWant)},0);
         Document.prototype.navInit = function (target) {
-            if(!$rootScope.target)$rootScope.target=0;
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'normal');
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('color', '#cac7c1');
+            if (!$rootScope.target) $rootScope.target = 0;
+            angular.element('.navbar-nav li a').eq($rootScope.target).attr('style', '');
+            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).attr('style', '');
 
-            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'normal');
-            
-            $rootScope.target=target;
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'bold');
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('color', '#8f897c');
+            $rootScope.target = target;
+            angular.element('.navbar-nav li a').eq($rootScope.target).attr('style', 'font-weight:bold;color:#9a9691!important;');
+            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).attr('style', 'font-weight:bold;color:#9a9691!important;');
 
-            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'bold');
-
+            if (target === 7) { //PC的signIn不能改颜色所以再替换掉
+                angular.element('.navbar-nav li a').eq($rootScope.target).attr('style', 'font-weight:bold;');
+            }
         };
     });

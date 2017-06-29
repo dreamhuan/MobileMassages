@@ -1,35 +1,47 @@
 <link rel="stylesheet" href="./css/signUp.css">
 <div class="signUp container center-block">
-    <div class="row flex-center title font-gotham-title">Sign up</div>
-    <div class="row inputGroup center-block">
-        <div class="inputItem col-xs-12">
-            <div class="describe">First name</div>
-            <input type="text">
+    <form name="signUpForm" ng-submit="signup(signUpForm.$valid)" novalidate>
+        <div class="row flex-center title font-gotham-title">Sign up</div>
+        <div class="row inputGroup center-block">
+            <div class="inputItem col-xs-12">
+                <div class="describe">First name</div>
+                <input type="text" name="firstName" ng-model="firstName" required>
+                <p ng-show="signUpForm.firstName.$invalid" class="help-block">You first name is required.</p>
+            </div>
+            <div class="inputItem col-xs-12">
+                <div class="describe">Last name</div>
+                <input type="text" name="lsatName" ng-model="lsatName" required>
+                <p ng-show="signUpForm.lsatName.$invalid" class="help-block">You last name is required.</p>
+            </div>
+            <div class="inputItem col-xs-12">
+                <div class="describe">Email address</div>
+                <input type="email" name="emailAddress" ng-model="emailAddress" required>
+                <p ng-show="signUpForm.emailAddress.$invalid && signUpForm.emailAddress.$pristine" class="help-block">
+                    You email address is required.</p>
+                <p ng-show="signUpForm.emailAddress.$invalid && !signUpForm.emailAddress.$pristine" class="help-block">
+                    Please input a valid email address.</p>
+            </div>
+            <div class="inputItem col-xs-12">
+                <div class="describe">Mobile number</div>
+                <input type="text" name="mobileNumber" ng-model="mobileNumber" required>
+                <p ng-show="signUpForm.mobileNumber.$invalid" class="help-block">You mobile number is required.</p>
+            </div>
+            <div class="inputItem col-xs-12">
+                <div class="describe">Choose a password</div>
+                <input type="password" name="password" ng-model="password" required>
+                <p ng-show="signUpForm.password.$invalid" class="help-block">You password is required.</p>
+            </div>
         </div>
-        <div class="inputItem col-xs-12">
-            <div class="describe">Last name</div>
-            <input type="text">
+        <div class="faceBookBtn flex-center">
+            <span class="fa fa-facebook"></span>
+            Sign up with Facebook
         </div>
-        <div class="inputItem col-xs-12">
-            <div class="describe">Email address</div>
-            <input type="text">
-        </div>
-        <div class="inputItem col-xs-12">
-            <div class="describe">Mobile number</div>
-            <input type="text">
-        </div>
-        <div class="inputItem col-xs-12">
-            <div class="describe">Choose a password</div>
-            <input type="text">
-        </div>
-    </div>
-    <div class="faceBookBtn flex-center">
-        <span class="fa fa-facebook"></span>
-        Sign up with Facebook
-    </div>
-    <div class="signUpBtn flex-center">SIGN UP</div>
-    <div class="flex-center itemAgreement">By signing up, I agree to mobile massages' </div>
-    <div class="flex-center itemAgreement"> terms of use, privacy policy. </div>
-
-
+        <button type="submit"
+                class="signUpBtn flex-center"
+                ng-class="{'button-disable':signUpForm.$invalid}"
+                ng-disabled="signUpForm.$invalid">SIGN UP
+        </button>
+        <div class="flex-center itemAgreement">By signing up, I agree to mobile massages'</div>
+        <div class="flex-center itemAgreement"> terms of use, privacy policy.</div>
+    </form>
 </div>

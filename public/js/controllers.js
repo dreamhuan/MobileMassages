@@ -150,7 +150,8 @@ angular.module('app.controllers', [])
 
         $scope.booking = function () {
             $state.go('booking.step1');
-        }
+        };
+
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -544,4 +545,34 @@ angular.module('app.controllers', [])
         }, 0);
     })
 
+    .controller('signupCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, AlertService, UserService) {
+
+        $scope.signup = function (isValid) {
+
+            console.log(isValid);
+            // check to make sure the form is completely valid
+            if (isValid) {
+                let signupdata = {
+                    firstName: $scope.firstName,
+                    lsatName: $scope.lsatName,
+                    emailAddress: $scope.emailAddress,
+                    mobileNumber: $scope.mobileNumber,
+                    password: $scope.password
+                };
+                console.log(signupdata);
+                // let promise = UserService.signup(signupdata);
+                // promise.then(function (data) {
+                //     AlertService.success('success!');
+                // }, function (data) {
+                //     AlertService.error(data);
+                // }).catch(function (err) {
+                //     console.log(err);
+                // });
+
+            } else {
+                AlertService.error('error!');
+            }
+
+        }
+    })
 ;
