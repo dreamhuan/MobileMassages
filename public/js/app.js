@@ -76,13 +76,16 @@ angular.module('app', [
         //用于将对应的页面粗体化
         //使用：$timeout(function(){document.navInit(whatYouWant)},0);
         Document.prototype.navInit = function (target) {
-            if(!$rootScope.target)$rootScope.target=0;
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'normal');
-            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'normal');
+            if (!$rootScope.target) $rootScope.target = 0;
+            angular.element('.navbar-nav li a').eq($rootScope.target).attr('style', '');
+            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).attr('style', '');
 
-            $rootScope.target=target;
-            angular.element('.navbar-nav li a').eq($rootScope.target).css('font-weight', 'bold');
-            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).css('font-weight', 'bold');
+            $rootScope.target = target;
+            angular.element('.navbar-nav li a').eq($rootScope.target).attr('style', 'font-weight:bold;color:#9a9691!important;');
+            angular.element(".rightSlideMenu .menu .navGroup .navItem").eq($rootScope.target).attr('style', 'font-weight:bold;color:#9a9691!important;');
 
+            if (target === 7) { //PC的signIn不能改颜色所以再替换掉
+                angular.element('.navbar-nav li a').eq($rootScope.target).attr('style', 'font-weight:bold;');
+            }
         };
     });

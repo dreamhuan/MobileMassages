@@ -470,6 +470,10 @@ angular.module('app.controllers', [])
             document.navInit(5)
         }, 0);
 
+        $scope.render = function (item) {
+            // $('.content').append(json2list(item));
+        };
+
     })
 
     .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
