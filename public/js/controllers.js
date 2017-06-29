@@ -71,15 +71,15 @@ angular.module('app.controllers', [])
         console.log("test");
         $scope.closeMenu = function () {
             console.log("test");
-            $(".menu").animate({right: '-100%'}, 300,function () {
+            $(".menu").animate({right: '-100%'}, 300, function () {
 
-                $(".filter").animate({opacity: '0'}, 300,function () {
+                $(".filter").animate({opacity: '0'}, 300, function () {
                     $(".rightSlideMenu").css('display', 'none');
                     $("body").css({
-                        overflow:"scroll"
+                        overflow: "scroll"
                     });
-                    $(".filter").css('opacity','0.6');
-                    $(".menu").css('right','0');
+                    $(".filter").css('opacity', '0.6');
+                    $(".menu").css('right', '0');
 
                 });
             });
@@ -87,7 +87,7 @@ angular.module('app.controllers', [])
         $scope.openMenu = function () {
             $(".rightSlideMenu").css('display', 'block');
             $("body").css({
-                overflow:"hidden"
+                overflow: "hidden"
             });
         };
         $timeout(function () {
@@ -150,7 +150,15 @@ angular.module('app.controllers', [])
 
         $scope.booking = function () {
             $state.go('booking.step1');
-        }
+        };
+
+        $scope.json2list = function (content, index) {
+            // console.log(content);
+            if (typeof content === 'object'){
+                $('.content').eq(index).html('').append(json2list(content));
+            }
+        };
+
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -484,8 +492,11 @@ angular.module('app.controllers', [])
             document.navInit(5)
         }, 0);
 
-        $scope.render = function (item) {
-            // $('.content').append(json2list(item));
+        $scope.json2list = function (content, index) {
+            // console.log(content);
+            if (typeof content === 'object'){
+                $('.content').eq(index).html('').append(json2list(content));
+            }
         };
 
     })
