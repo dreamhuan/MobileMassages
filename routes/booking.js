@@ -17,7 +17,7 @@ router.post('/register', function (req, res, next) {
         let param = req.body; //post请求
         console.log(param);
         // 建立连接 增加一个用户信息
-        connection.query(bookingSQL.insert, [param.content], function (err, doc) {
+        connection.query(bookingSQL.register, [param.content], function (err, doc) {
             if (err) {
                 console.log(err);
                 res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);

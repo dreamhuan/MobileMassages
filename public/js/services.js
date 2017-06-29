@@ -364,6 +364,16 @@ angular.module('app.services', [])
     })
 
     .service('BookingService', function ($q, $http, SystemService) {
+        this.register=function (firstName,lastName,emailAddress,mobileNumber,password) {
+            let param = {
+                firstName:firstName,
+                lastName:lastName,
+                emailAddress:emailAddress,
+                mobileNumber:mobileNumber,
+                password:password
+        };
+            return SystemService.post('web/booking/register', param);
+        };
         this.booking = function () {
             let param = {
                 id: id
