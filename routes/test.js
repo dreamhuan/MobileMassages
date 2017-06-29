@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const RestResult = require('../RestResult');
 const pool = require('../config/config');
-const testSQL = require('../sql/testsql');
+const testSQL = require('../sql/testSQL');
 
 
 /**

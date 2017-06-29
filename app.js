@@ -14,6 +14,8 @@ const config = require('./config/config');
 
 const index = require('./routes/index');
 const test = require('./routes/test');
+const user = require('./routes/user');
+const booking = require('./routes/booking');
 
 const app = express();
 
@@ -22,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -60,6 +62,8 @@ app.use(function (req, res, next) {
 
 app.use('/', index);
 app.use('/web/test', test);
+app.use('/web/user', user);
+app.use('/web/booking', booking);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
