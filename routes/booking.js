@@ -8,7 +8,7 @@ const bookingSQL = require('../sql/bookingSQL');
 /**
  * 添加 Todo:照抄过来的，待完善
  */
-router.post('/add', function (req, res, next) {
+router.post('/register', function (req, res, next) {
     // 从连接池获取连接
     pool.getConnection(function (err, connection) {
 
@@ -17,7 +17,7 @@ router.post('/add', function (req, res, next) {
         let param = req.body; //post请求
         console.log(param);
         // 建立连接 增加一个用户信息
-        connection.query(bookingSQL.insert, [param.content], function (err, doc) {
+        connection.query(bookingSQL.register, [param.content], function (err, doc) {
             if (err) {
                 console.log(err);
                 res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
