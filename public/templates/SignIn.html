@@ -4,11 +4,11 @@
     <div class="row inputGroup center-block">
         <div class="inputItem col-xs-12">
             <div class="describe">Email address</div>
-            <input type="text">
+            <input type="text" ng-model="emailAddress">
         </div>
         <div class="inputItem col-xs-12">
             <div class="describe">Password</div>
-            <input type="text">
+            <input type="text" ng-model="password">
         </div>
     </div>
     <div class="faceBookBtn flex-center">
@@ -18,5 +18,5 @@
     <div class="hint flex-center">
         <div class="text">Forget Password?</div>
     </div>
-    <div class="signInBtn flex-center">SIGN IN</div>
+    <div class="signInBtn flex-center" ng-click="login()">SIGN IN</div>
 </div>

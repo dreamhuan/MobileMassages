@@ -539,10 +539,28 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout,BookingService,AlertService) {
         $timeout(function () {
             document.navInit(7)
         }, 0);
+        //TODO:登陆登出判断
+        $scope.login=function () {
+            let content={
+                emailAddress:$scope.emailAddress,
+                password:$scope.password
+            };
+            let promise = BookingService.login(content);
+            promise.then(function (data) {
+                console.log(data);
+                AlertService.success("登录成功!");
+                console.log(data);
+                $cookieStore.put('currentAccount', data.id);
+                $state.go('home');
+            }, function (reason) {
+                console.log(reason);
+                AlertService.error(reason);
+            })
+        }
     })
 
     .controller('signupCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, AlertService, UserService) {
