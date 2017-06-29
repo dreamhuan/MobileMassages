@@ -8,7 +8,7 @@ const bookingSQL = require('../sql/bookingSQL');
 /**
  * 添加 Todo:照抄过来的，待完善
  */
-router.post('/add', function (req, res, next) {
+router.post('/register', function (req, res, next) {
     // 从连接池获取连接
     pool.getConnection(function (err, connection) {
 
