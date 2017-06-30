@@ -69,35 +69,6 @@ angular.module('app.controllers', [])
     })
     .controller('navbarCtrl', function ($document, $scope, $state, $cookieStore, $http, $timeout) {
         console.log("test");
-        $scope.closeMenu = function () {
-            console.log("test");
-            $(".menu").animate({right: '-100%'}, 300, function () {
-
-                $(".filter").animate({opacity: '0'}, 300, function () {
-                    $(".rightSlideMenu").css('display', 'none');
-                    $("body").css({
-                        overflow: "scroll"
-                    });
-                    $(".filter").css('opacity', '0.6');
-                    $(".menu").css('right', '0');
-
-                });
-            });
-        };
-        $scope.openMenu = function () {
-            $(".rightSlideMenu").css('display', 'block');
-            $("body").css({
-                overflow: "hidden"
-            });
-        };
-        $timeout(function () {
-            console.log($(".rightSlideMenu .filter"));
-            $(".rightSlideMenu .filter").bind('click', function () {
-                    $scope.closeMenu();
-                }
-            )
-        }, 0);
-
 
     })
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
@@ -144,14 +115,7 @@ angular.module('app.controllers', [])
             console.log(time);
         };
 
-        $timeout(function () {
-            document.navInit(0)
-        }, 0);
-
-        $scope.booking = function () {
-            $state.go('booking.step1');
-        };
-
+        $timeout(function(){document.navInit(0)},0);
     })
 
     .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
@@ -208,7 +172,7 @@ angular.module('app.controllers', [])
             if (!date) date = new Date().Format("yyyy-MM-dd");
             let time = $('#timepicker').val();
             console.log(date);
-            console.log(time.length);
+            console.log(time);
             let step1 = {
                 date: date,
                 time: time
@@ -235,7 +199,7 @@ angular.module('app.controllers', [])
 
                 //每个选项的默认选项是第一个
                 for (let i = 0; i < $scope.chooses.length; i++) {
-                    $scope.chooses[i].option = $scope.chooses[i].options[0];
+                    $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
                 }
 
                 //选中的人数是第一个选择的内容
@@ -323,62 +287,13 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
+    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
         $scope.setCurrentBookingStep(3);
 
         $scope.continue = function () {
-            let step3, flag = 1;
-            if ($scope.showType === 0) {
-                step3 = {
-                    showType: 0,
-                    firstName: $scope.firstName,
-                    lastName: $scope.lastName,
-                    emailAddress: $scope.emailAddress,
-                    mobileNumber: $scope.mobileNumber,
-                    password: $scope.password
-                }
+            if ($scope.showType === 0)
 
-            }
-            else {
-                step3 = {
-                    showType: 1,
-                    emailAddress: $scope.emailAddress,
-                    password: $scope.password
-                }
-            }
-
-            $cookieStore.put('step3', step3);
-            if (step3.showType === 0) {
-                let promise = BookingService.register(step3);
-                promise.then(function (data) {
-                    console.log(data);
-                    AlertService.success("注册成功!");
-                    console.log(data);
-                    $cookieStore.put('currentAccount', data.id);
-
-                    $state.go('booking.step4');
-                }, function (reason) {
-                    console.log(reason);
-                    flag = 0;
-                    if (reason === "邮箱已被使用") AlertService.error("相同用户名已存在");
-                    else AlertService.error("系统异常，请重试");
-                })
-            }
-            else {
-                let promise = BookingService.login(step3);
-                promise.then(function (data) {
-                    console.log(data);
-                    AlertService.success("登录成功!");
-                    console.log(data);
-                    $cookieStore.put('currentAccount', data.id);
-                    $state.go('booking.step4');
-                }, function (reason) {
-                    console.log(reason);
-                    flag = 0;
-                    AlertService.error(reason);
-                })
-            }
-            console.log(step3.showType);
+                $state.go('booking.step4');
         };
 
         $scope.back = function () {
@@ -386,7 +301,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
+    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
         $scope.setCurrentBookingStep(4);
 
         $('#datepicker').datetimepicker({
@@ -405,61 +320,13 @@ angular.module('app.controllers', [])
             console.log('apply')
         };
 
-        let step4 = {};
-        console.log($scope.step4);
-        $scope.book = function () {
 
+        $scope.book = function () {
             if ($scope.step4 === 0) {
-                step4 = {
-                    streetAddress: $scope.streetAddress,
-                    streetAddress2: $scope.streetAddress2,
-                    stateProvince: $scope.stateProvince,
-                    postCode: $scope.postCode,
-                    parkingInstructions: $scope.parkingInstructions
-                };
                 $scope.step4 = 1;
                 return;
             }
-            step4.cardName = $scope.cardName;
-            step4.cardNumber = $scope.cardNumber;
-            step4.cardExpirationDate = $scope.cardExpirationDate;
-            step4.cardSecurityCode = $scope.cardSecurityCode;
-            step4.billingPostalCode = $scope.billingPostalCode;
-            step4.giftCode = $scope.giftCode;
-
-            $cookieStore.put('step4', step4);
-
-            let step1 = $cookieStore.get('step1');
-            let step2 = $cookieStore.get('step2');
-            let step3 = $cookieStore.get('step3');
-            if (!(step1 && step2 && step3 && step4)) {
-                AlertService.error('请完成前面步骤！');
-                return;
-            }
-
-            let data = {
-                userId: $cookieStore.get('currentAccount'),
-                therapists: step2[3].option,
-                date: step1.date,
-                time: step1.time,
-                style: step2[2].option,
-                massageLength: step2[1].option,
-                address: (step4.streetAddress + step4.streetAddress2),
-                creditCardNumber: step4.cardNumber,
-            };
-            console.log(data);
-            let promise = BookingService.booking(data);
-            promise.then(function (data) {
-                AlertService.success('提交订单成功！');
-                $cookieStore.remove('step1');
-                $cookieStore.remove('step2');
-                $cookieStore.remove('step3');
-                $cookieStore.remove('step4');
-            }, function (data) {
-                AlertService.error(data);
-            }).catch(function (err) {
-                console.log(err);
-            });
+            let step4 = {};
         };
 
         $scope.back = function () {
@@ -471,38 +338,27 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
         $http.get('../data/massage-therapists.json')
             .then(function (resdata) {
                 // console.log(resdata.data);
                 $scope.chooses = resdata.data;
 
             });
-        $timeout(function () {
-            document.navInit(2)
-        }, 0);
+        $timeout(function(){document.navInit(2)},0);
 
-        $scope.booking = function () {
-            $state.go('booking.step1');
-        }
     })
 
-    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
         $http.get('../data/home-massage-type.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.datas = resdata.data;
-            });
-        $timeout(function () {
-            document.navInit(3)
-        }, 0);
-
-        $scope.booking = function () {
-            $state.go('booking.step1');
-        }
+            })
+        $timeout(function(){document.navInit(3)},0);
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
         $http.get('../data/price.json')
             .then(function (resdata) {
                 console.log(resdata);
@@ -510,87 +366,28 @@ angular.module('app.controllers', [])
                 $scope.prices2 = resdata.data[1].priceList;
 
             });
-        $timeout(function () {
-            document.navInit(4)
-        }, 0);
+        $timeout(function(){document.navInit(4)},0);
 
-        $scope.booking = function () {
-            $state.go('booking.step1');
-        }
 
     })
 
-    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http,$timeout) {
         $http.get('../data/faq.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.items = resdata.data;
-            });
-        $timeout(function () {
-            document.navInit(5)
-        }, 0);
+            })
+        $timeout(function(){document.navInit(5)},0);
 
     })
 
     .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
-        $timeout(function () {
-            document.navInit(6)
-        }, 0);
+        $timeout(function(){document.navInit(6)},0);
 
     })
 
-    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout,BookingService,AlertService) {
-        $timeout(function () {
-            document.navInit(7)
-        }, 0);
-        //TODO:登陆登出判断
-        $scope.login=function () {
-            let content={
-                emailAddress:$scope.emailAddress,
-                password:$scope.password
-            };
-            let promise = BookingService.login(content);
-            promise.then(function (data) {
-                console.log(data);
-                AlertService.success("登录成功!");
-                console.log(data);
-                $cookieStore.put('currentAccount', data.id);
-                $state.go('home');
-            }, function (reason) {
-                console.log(reason);
-                AlertService.error(reason);
-            })
-        }
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+        $timeout(function(){document.navInit(7)},0);
     })
 
-    .controller('signupCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, AlertService, UserService) {
-
-        $scope.signup = function (isValid) {
-
-            console.log(isValid);
-            // check to make sure the form is completely valid
-            if (isValid) {
-                let signupdata = {
-                    firstName: $scope.firstName,
-                    lsatName: $scope.lsatName,
-                    emailAddress: $scope.emailAddress,
-                    mobileNumber: $scope.mobileNumber,
-                    password: $scope.password
-                };
-                console.log(signupdata);
-                // let promise = UserService.signup(signupdata);
-                // promise.then(function (data) {
-                //     AlertService.success('success!');
-                // }, function (data) {
-                //     AlertService.error(data);
-                // }).catch(function (err) {
-                //     console.log(err);
-                // });
-
-            } else {
-                AlertService.error('error!');
-            }
-
-        }
-    })
 ;
