@@ -327,6 +327,9 @@ angular.module('app.controllers', [])
     .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
         $scope.setCurrentBookingStep(3);
 
+        $scope.forgetPwd = function () {
+            $state.go('forgetpassword');
+        };
         $scope.continue = function () {
             let step3, flag = 1;
             if ($scope.showType === 0) {
@@ -542,6 +545,10 @@ angular.module('app.controllers', [])
         $timeout(function () {
             document.navInit(7)
         }, 0);
+
+        $scope.forgetPwd = function () {
+            $state.go('forgetpassword');
+        };
         //TODO:登陆登出判断
         $scope.login=function () {
             let content={

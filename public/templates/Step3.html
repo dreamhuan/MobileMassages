@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="./css/step.css">
 <div class="step3 container-fluid center-block">
+
     <div class="row title flex-center">Create your account or sign in</div>
     <div class="row title flex-center">to your existing account to continue</div>
     <div class="content">
@@ -23,52 +24,61 @@
             <div class="line">—————————————</div>
         </div>
         <div ng-show="showType===0">
-            <form name="signUpForm" ng-submit="signup(signUpForm.$valid)" novalidate>
+            <form name="signUpForm" ng-submit="continue(signUpForm.$valid)" novalidate>
                 <div class="row inputGroup center-block">
                     <div class="inputItem col-xs-12">
                         <div class="describe">First name</div>
-                        <input type="text" name="firstName" ng-model="firstName" required>
-                        <p ng-show="signUpForm.firstName.$invalid" class="help-block">You first name is required.</p>
+                        <input type="text" ng-model="firstName" required>
                     </div>
                     <div class="inputItem col-xs-12">
                         <div class="describe">Last name</div>
-                        <input type="text" ng-model="lastName">
+                        <input type="text" ng-model="lastName" required>
                     </div>
                     <div class="inputItem col-xs-12">
                         <div class="describe">Email address</div>
-                        <input type="text" ng-model="emailAddress">
+                        <input type="text" ng-model="emailAddress" required>
                     </div>
                     <div class="inputItem col-xs-12">
                         <div class="describe">Mobile number</div>
-                        <input type="text" ng-model="mobileNumber">
+                        <input type="text" ng-model="mobileNumber" required>
                     </div>
                     <div class="inputItem col-xs-12">
                         <div class="describe">Choose a password</div>
-                        <input type="text" ng-model="password">
+                        <input type="text" ng-model="password" required>
                     </div>
 
                 </div>
-                <button class="step-btn signUp flex-center" ng-click="continue()">CONTINUE</button>
+                <button type="submit"
+                        class="step-btn signUp flex-center"
+                        ng-class="{'button-disable':signUpForm.$invalid}"
+                        ng-disabled="signUpForm.$invalid">CONTINUE
+                </button>
                 <div class="flex-center itemAgreement">
                     By clicking "continue" above, you are agreeing to our terms of service agreement.
                 </div>
             </form>
         </div>
         <div ng-show="showType===1">
-            <div class="row inputGroup center-block">
-                <div class="inputItem col-xs-12">
-                    <div class="describe">Email address</div>
-                    <input type="text" ng-model="emailAddress">
+            <form name="signInForm" ng-submit="continue(signInForm.$valid)" novalidate>
+                <div class="row inputGroup center-block">
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">Email address</div>
+                        <input type="text" ng-model="emailAddress" required>
+                    </div>
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">Password</div>
+                        <input type="text" ng-model="password" required>
+                    </div>
                 </div>
-                <div class="inputItem col-xs-12">
-                    <div class="describe">Password</div>
-                    <input type="text" ng-model="password">
+                <div class="hint flex-center">
+                    <div class="text" ng-click="forgetPwd()">Forget Password?</div>
                 </div>
-            </div>
-            <div class="hint flex-center">
-                <div class="text">Forget Password?</div>
-            </div>
-            <button class="step-btn flex-center" ng-click="continue()">CONTINUE</button>
+                <button type="submit"
+                        class="step-btn flex-center"
+                        ng-class="{'button-disable':signInForm.$invalid}"
+                        ng-disabled="signInForm.$invalid">CONTINUE
+                </button>
+            </form>
         </div>
         <div class="step-back">
             <i class="fa fa-angle-left left-icon"></i>
