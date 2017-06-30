@@ -23,32 +23,36 @@
             <div class="line">—————————————</div>
         </div>
         <div ng-show="showType===0">
-            <div class="row inputGroup center-block">
-                <div class="inputItem col-xs-12">
-                    <div class="describe">First name</div>
-                    <input type="text" ng-model="firstName">
+            <form name="signUpForm" ng-submit="signup(signUpForm.$valid)" novalidate>
+                <div class="row inputGroup center-block">
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">First name</div>
+                        <input type="text" name="firstName" ng-model="firstName" required>
+                        <p ng-show="signUpForm.firstName.$invalid" class="help-block">You first name is required.</p>
+                    </div>
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">Last name</div>
+                        <input type="text" ng-model="lastName">
+                    </div>
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">Email address</div>
+                        <input type="text" ng-model="emailAddress">
+                    </div>
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">Mobile number</div>
+                        <input type="text" ng-model="mobileNumber">
+                    </div>
+                    <div class="inputItem col-xs-12">
+                        <div class="describe">Choose a password</div>
+                        <input type="text" ng-model="password">
+                    </div>
+
                 </div>
-                <div class="inputItem col-xs-12">
-                    <div class="describe">Last name</div>
-                    <input type="text" ng-model="lastName">
+                <button class="step-btn signUp flex-center" ng-click="continue()">CONTINUE</button>
+                <div class="flex-center itemAgreement">
+                    By clicking "continue" above, you are agreeing to our terms of service agreement.
                 </div>
-                <div class="inputItem col-xs-12">
-                    <div class="describe">Email address</div>
-                    <input type="text" ng-model="emailAddress">
-                </div>
-                <div class="inputItem col-xs-12">
-                    <div class="describe">Mobile number</div>
-                    <input type="text" ng-model="mobileNumber">
-                </div>
-                <div class="inputItem col-xs-12">
-                    <div class="describe">Choose a password</div>
-                    <input type="text" ng-model="password">
-                </div>
-            </div>
-            <button class="step-btn signUp flex-center" ng-click="continue()">CONTINUE</button>
-            <div class="flex-center itemAgreement">
-                By clicking "continue" above, you are agreeing to our terms of service agreement.
-            </div>
+            </form>
         </div>
         <div ng-show="showType===1">
             <div class="row inputGroup center-block">

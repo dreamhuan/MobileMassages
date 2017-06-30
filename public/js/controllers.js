@@ -208,6 +208,7 @@ angular.module('app.controllers', [])
             if (!date) date = new Date().Format("yyyy-MM-dd");
             let time = $('#timepicker').val();
             console.log(date);
+            console.log(time);
             console.log(time.length);
             let step1 = {
                 date: date,
@@ -235,7 +236,7 @@ angular.module('app.controllers', [])
 
                 //每个选项的默认选项是第一个
                 for (let i = 0; i < $scope.chooses.length; i++) {
-                    $scope.chooses[i].option = $scope.chooses[i].options[0];
+                    $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
                 }
 
                 //选中的人数是第一个选择的内容
@@ -406,9 +407,7 @@ angular.module('app.controllers', [])
         };
 
         let step4 = {};
-        console.log($scope.step4);
         $scope.book = function () {
-
             if ($scope.step4 === 0) {
                 step4 = {
                     streetAddress: $scope.streetAddress,
