@@ -95,5 +95,11 @@ angular.module('app.routes', ['ui.router'])
                 templateUrl: './templates/SuccessfulBooking.html',
                 controller: 'successfulBookingCtrl',
             })
+
+            .state('administration', {
+                url: '/administration',
+                templateUrl: './templates/administration.html',
+                controller: 'administrationCtrl',
+            })
         ;
     });

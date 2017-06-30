@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../css/administration.css">
+<div class="administration">
+    <div class="title">Order Management</div>
+    <div class="content">
+        <table class="order-table" border="1">
+            <tr class="title">
+                <td class="orderNum">订单号</td>
+                <td class="user">用户</td>
+                <td class="date">日期</td>
+                <td class="cardNum">银行卡号</td>
+                <td class="style">服务类型</td>
+                <td class="serviceID">服务人员ID</td>
+                <td class="time">时长（分）</td>
+                <td class="address">地址</td>
+            </tr>
+            <tr ng-repeat="item in items">
+                <td class="orderNum">{{item.orderNum}}</td>
+                <td class="user">{{item.user}}</td>
+                <td class="date">{{item.date}}</td>
+                <td class="cardNum">{{item.cardNum}}</td>
+                <td class="style">{{item.style}}</td>
+                <td class="serviceID">{{item.serviceID}}</td>
+                <td class="time">{{item.time}}</td>
+                <td class="address">{{item.address}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

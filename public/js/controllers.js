@@ -593,4 +593,11 @@ angular.module('app.controllers', [])
 
         }
     })
+    .controller('administrationCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout,$http) {
+        $http.get('../data/order.json')
+            .then(function (resdata) {
+                console.log(resdata);
+                $scope.items = resdata.data;
+            });
+    })
 ;

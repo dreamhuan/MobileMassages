@@ -1,1 +1,935 @@
-.home{width:100%}.home .home-title{margin-top:-1px}.home .home-title img{width:100%}.home .booking-btn{width:200px;height:40px;margin:auto;background-color:#00d6a0;color:#ffffff;border:none;border-radius:3px;margin-top:60px;outline:none}@media only screen and (max-width:414px){.home .booking-btn{margin-top:30px}}.home .date-booking{width:40%;margin:auto;display:flex;flex-wrap:wrap;justify-content:center;padding-top:50px}.home .date-booking .firsttitle{font-family:Gotham Rounded Book;color:#6fd5a9;font-size:32px;letter-spacing:-2px}.home .date-booking .secondtitle{font-family:Gotham Rounded Book;color:#424242;font-size:18px}.home .date-booking .date-choose{width:80%;margin:auto;display:flex;flex-wrap:wrap;justify-content:center;margin-top:10%;color:rgba(0,0,0,0.2);font-weight:bold}.home .date-booking .date-choose input{width:250px;height:35px;margin-top:-5px;border:1px solid #e5e4e3;padding-left:15px}.home .date-booking .date-choose input::-webkit-input-placeholder{color:rgba(0,0,0,0.2);font-weight:bold}.home .date-booking .date-choose .choose-time{margin-top:10px}@media only screen and (max-width:1046px){.home .date-booking .firsttitle{font-size:28px}.home .date-booking .secondtitle{font-size:16px}}@media only screen and (max-width:900px){.home .date-booking .firsttitle{font-size:24px}.home .date-booking .secondtitle{font-size:14px}}@media only screen and (max-width:757px){.home .date-booking .firsttitle{font-size:20px}.home .date-booking .secondtitle{font-size:12px}}@media only screen and (max-width:568px){.home .date-booking{width:80%}.home .date-booking .firsttitle{font-size:18px}.home .date-booking .secondtitle{font-size:12px}}@media only screen and (max-width:414px){.home .date-booking{width:100%}.home .date-booking .firsttitle{font-size:20px;letter-spacing:-1px}.home .date-booking .secondtitle{font-size:12px}}.home .date-message{width:100%;height:150px;margin-top:50px;background-color:#d2fcea;display:flex;justify-content:space-around}.home .date-message .location,.home .date-message .available,.home .date-message .time{display:flex;align-items:center}.home .date-message .location .fa-home,.home .date-message .available .fa-home,.home .date-message .time .fa-home,.home .date-message .location .fa-calendar,.home .date-message .available .fa-calendar,.home .date-message .time .fa-calendar,.home .date-message .location .fa-clock-o,.home .date-message .available .fa-clock-o,.home .date-message .time .fa-clock-o{color:#00d5a1;font-size:50px !important}.home .date-message .location .information,.home .date-message .available .information,.home .date-message .time .information{width:170px;margin-left:10px;margin-top:10px}.home .date-message-mobile{display:none}@media only screen and (max-width:667px){.home .date-message .location .fa-home,.home .date-message .available .fa-home,.home .date-message .time .fa-home,.home .date-message .location .fa-calendar,.home .date-message .available .fa-calendar,.home .date-message .time .fa-calendar,.home .date-message .location .fa-clock-o,.home .date-message .available .fa-clock-o,.home .date-message .time .fa-clock-o{color:#00d5a1;font-size:36px !important}.home .date-message .location .information,.home .date-message .available .information,.home .date-message .time .information{width:170px}}@media only screen and (max-width:568px){.home .date-message .location .fa-home,.home .date-message .available .fa-home,.home .date-message .time .fa-home,.home .date-message .location .fa-calendar,.home .date-message .available .fa-calendar,.home .date-message .time .fa-calendar,.home .date-message .location .fa-clock-o,.home .date-message .available .fa-clock-o,.home .date-message .time .fa-clock-o{color:#00d5a1;font-size:36px !important}.home .date-message .location .information,.home .date-message .available .information,.home .date-message .time .information{width:130px;word-break:break-all}}@media only screen and (max-width:414px){.home .date-message{display:none}.home .date-message-mobile{display:block;width:100%;margin-top:50px}.home .date-message-mobile .location,.home .date-message-mobile .available,.home .date-message-mobile .time{width:250px;display:flex;align-items:center;margin:auto}.home .date-message-mobile .location .fa-home,.home .date-message-mobile .available .fa-home,.home .date-message-mobile .time .fa-home,.home .date-message-mobile .location .fa-calendar,.home .date-message-mobile .available .fa-calendar,.home .date-message-mobile .time .fa-calendar,.home .date-message-mobile .location .fa-clock-o,.home .date-message-mobile .available .fa-clock-o,.home .date-message-mobile .time .fa-clock-o{color:#00d5a1;font-size:40px !important}.home .date-message-mobile .location .information,.home .date-message-mobile .available .information,.home .date-message-mobile .time .information{font-size:12px;color:#b1aeaa;margin-left:10px;margin-top:10px}}.home .date-therapists{width:80%;margin:auto;margin-top:50px;display:flex;flex-wrap:wrap;justify-content:center}.home .date-therapists .title{font-family:Gotham Rounded Book;color:#6fd5a9;font-size:32px;letter-spacing:-2px}.home .date-therapists .therapists-img{width:100%;margin:auto;margin-top:50px;display:flex;justify-content:center}.home .date-therapists .therapists-img img{width:130px;height:130px;border:1px solid #d2fae8;border-radius:50%;margin:20px}@media only screen and (max-width:892px){.home .date-therapists .title{font-size:30px}}@media only screen and (max-width:832px){.home .date-therapists .title{font-size:26px}}@media only screen and (max-width:774px){.home .date-therapists .title{font-size:25px}}@media only screen and (max-width:745px){.home .date-therapists .title{font-size:24px}}@media only screen and (max-width:667px){.home .date-therapists .title{font-size:21px}.home .date-therapists .therapists-img img{width:100px;height:100px}}@media only screen and (max-width:414px){.home .date-therapists{width:100%;height:500px;background-color:#f0fdf7;display:flex;flex-wrap:wrap;justify-content:center}.home .date-therapists .title{width:70%;margin:auto;margin-top:30px;text-align:center;font-family:Gotham Rounded Book;color:#6fd5a9;font-size:20px;letter-spacing:-2px}.home .date-therapists .therapists-img{width:90%;margin:auto;display:flex;flex-wrap:wrap;margin-top:-40px}.home .date-therapists .therapists-img img{width:100px;height:100px;border:1px solid #d2fae8;border-radius:50%}}.home .massage-type{width:100%;height:1200px;margin-top:50px;background-color:#f0fdf7}.home .massage-type .type-title{font-family:Gotham Rounded Book;letter-spacing:-2px;padding-top:50px;width:60%;margin:auto;color:#6fd5a9;font-size:32px;text-align:center}.home .massage-type .type-content{width:650px;margin:auto;display:flex;flex-wrap:wrap;justify-content:center}.home .massage-type .type-content .content-repeat{margin-top:100px;width:300px;display:flex}.home .massage-type .type-content .content-repeat img{width:50px;height:50px;margin-left:20px}.home .massage-type .type-content .content-repeat .description{font-family:Gotham Rounded Book;width:250px;margin-left:20px}.home .massage-type .type-content .content-repeat .description .title{color:#63d2a3;font-size:18px}.home .massage-type .type-content .content-repeat .description .content{color:#aaacab}.home .massage-type .center-location{width:200px;margin:auto}.home .massage-type-mobile{display:none}@media only screen and (max-width:788px){.home .massage-type .type-title{font-size:30px}}@media only screen and (max-width:731px){.home .massage-type .type-title{font-size:28px}}@media only screen and (max-width:679px){.home .massage-type .type-title{font-size:26px}}@media only screen and (max-width:640px){.home .massage-type .type-content{width:100%}}@media only screen and (max-width:568px){.home .massage-type{width:100%}.home .massage-type .type-title{font-size:24px}.home .massage-type .type-content{width:100%}.home .massage-type .type-content .content-repeat{margin-top:100px;width:280px;display:flex}.home .massage-type .type-content .content-repeat img{width:60px;height:60px;margin-left:20px}.home .massage-type .type-content .content-repeat .description{font-family:Gotham Rounded Book;width:200px;margin-left:10px}.home .massage-type .type-content .content-repeat .description .title{color:#63d2a3;font-size:18px}.home .massage-type .type-content .content-repeat .description .content{color:#aaacab}}@media only screen and (max-width:414px){.home .massage-type{display:none}.home .massage-type-mobile{display:block}.home .massage-type-mobile .type-title{font-family:Gotham Rounded Book;letter-spacing:-2px;padding-top:50px;width:60%;margin:auto;color:#6fd5a9;font-size:22px;text-align:center}.home .massage-type-mobile .type-content{width:90%;display:flex;flex-wrap:wrap;justify-content:space-between;margin:auto;margin-top:50px}.home .massage-type-mobile .type-content .content-repeat{width:180px;height:180px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:10px}.home .massage-type-mobile .type-content .content-repeat:nth-child(1),.home .massage-type-mobile .type-content .content-repeat:nth-child(4),.home .massage-type-mobile .type-content .content-repeat:nth-child(5),.home .massage-type-mobile .type-content .content-repeat:nth-child(8){background-color:#d2fcea;color:#00d6a0}.home .massage-type-mobile .type-content .content-repeat:nth-child(2),.home .massage-type-mobile .type-content .content-repeat:nth-child(3),.home .massage-type-mobile .type-content .content-repeat:nth-child(6),.home .massage-type-mobile .type-content .content-repeat:nth-child(7){background-color:#00d6a0;color:#d2fcea}.home .massage-type-mobile .type-content .content-repeat img{width:90px;height:90px;margin:auto}.home .massage-type-mobile .type-content .content-repeat .type-icon{width:180px;text-align:center}.home .massage-type-mobile .type-content .content-repeat .different-height{height:80px}.home .massage-type-mobile .type-content .content-repeat .title{font-family:Gotham Rounded Book;font-size:22px}}@media only screen and (max-width:375px){.home .massage-type-mobile .type-content .content-repeat{width:160px;height:160px}.home .massage-type-mobile .type-content .content-repeat .type-icon{width:160px;text-align:center}.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-circle,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-com,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-face,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-fatman,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-flower,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-massa,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-sport,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-water{font-size:90px}}@media only screen and (max-width:320px){.home .massage-type-mobile .type-content .content-repeat{width:140px;height:140px}.home .massage-type-mobile .type-content .content-repeat .type-icon{width:140px;text-align:center}.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-circle,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-com,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-face,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-fatman,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-flower,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-massa,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-sport,.home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-water{font-size:90px}}.home .simple-pricing{width:300px;height:450px;margin:auto;display:flex;flex-wrap:wrap;justify-content:center}.home .simple-pricing .eg-title{font-family:Gotham Rounded Book;letter-spacing:-2px;padding-top:70px;color:#6fd5a9;font-size:28px}.home .simple-pricing .eg-pricingList{width:350px;height:130px;display:flex;flex-wrap:wrap;margin-top:10%}.home .simple-pricing .eg-pricingList .eg-pricing{display:flex;width:350px;height:40px;border-bottom:1px solid #d2fcea;padding-top:10px}.home .simple-pricing .eg-pricingList .eg-pricing .eg-time{width:50px;text-align:right;color:#00d6a1;font-size:18px;font-weight:bolder;margin-left:5%}.home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt{color:#cccac8;font-size:16px;margin-left:5px}.home .simple-pricing .eg-pricingList .eg-pricing .eg-price{color:#cccac8;font-size:18px;margin-left:40%}@media only screen and (max-width:414px){.home .simple-pricing{width:100%}.home .simple-pricing .eg-pricingList{width:100%}.home .simple-pricing .eg-pricingList .eg-pricing{width:100%;height:40px;margin-bottom:15px;background-color:#d2fcea}.home .simple-pricing .eg-pricingList .eg-pricing .eg-time,.home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt{color:#9a9691;font-weight:bolder}.home .simple-pricing .eg-pricingList .eg-pricing .eg-price{color:#a8b1a8;margin-left:30%}}.home .faq{width:100%;height:1750px;background-color:#f0fdf7}.home .faq .faq-title{font-family:Gotham Rounded Book;letter-spacing:-2px;padding-top:70px;width:30%;margin:auto;color:#6fd5a9;font-size:28px;text-align:center}.home .faq .faq-content{font-family:Gotham Rounded Book;letter-spacing:-1px;margin:auto;margin-top:80px;width:750px;display:flex;flex-wrap:wrap}.home .faq .faq-content .title{color:#64d2a4;font-size:20px;font-weight:500;margin-top:10px}.home .faq .faq-content .content{color:#898a8a;margin-top:10px}.home .faq-mobile{display:none}@media only screen and (max-width:963px){.home .faq .faq-title{font-size:24px}}@media only screen and (max-width:825px){.home .faq{height:2000px}.home .faq .faq-title{font-size:22px}.home .faq .faq-content{width:600px}}@media only screen and (max-width:692px){.home .faq{height:2000px}.home .faq .faq-title{font-size:20px}}@media only screen and (max-width:640px){.home .faq .faq-title{font-size:18px}.home .faq .faq-content{width:90%}}@media only screen and (max-width:414px){.home .faq{display:none}.home .faq-mobile{display:block}.home .faq-mobile .faq-title{font-family:Gotham Rounded Book;letter-spacing:-2px;padding-top:40px;margin:auto;color:#6fd5a9;text-align:center;width:80%;font-size:24px}.home .faq-mobile .faq-content{width:90%;margin:auto;margin-top:20px}.home .faq-mobile .faq-content .faq-questions{width:90%;display:flex;margin:auto;margin-top:10px}.home .faq-mobile .faq-content .faq-questions .faq-circle{width:18px;height:18px}.home .faq-mobile .faq-content .faq-questions .faq-circle .faq-bigcircle{width:15px;height:15px;border-radius:50%;border:1px solid #00d6a0;display:flex;justify-content:center;align-items:center}.home .faq-mobile .faq-content .faq-questions .faq-circle .faq-bigcircle .faq-smallcircle{width:5px;height:5px;border-radius:50%;background-color:#00d6a0}.home .faq-mobile .faq-content .faq-questions .title{font-family:Gotham Rounded Book;font-size:16px;color:#9a9590;margin-left:8px}}.home .contact{width:400px;height:900px;margin:auto;display:flex;flex-wrap:wrap;justify-content:center}.home .contact .contact-title{font-family:Gotham Rounded Book;letter-spacing:-2px;padding-top:10%;color:#6fd5a9;font-size:28px}.home .contact .contact-message{font-family:Gotham Rounded Book;color:#838383;width:400px;margin-top:-10px;display:flex;flex-wrap:wrap;justify-content:center;font-size:16px}.home .contact .contact-message .message2{margin-top:-20px}.home .contact .phonenum{display:flex;font-size:14px}.home .contact .phonenum .phonenum-deepcolor{font-weight:bolder}.home .contact .contact-form{display:flex;flex-wrap:wrap;justify-content:center;width:400px}.home .contact .contact-form input::-webkit-input-placeholder{color:#d4d4d4;font-style:italic;padding-left:10px}.home .contact .contact-form textarea::-webkit-input-placeholder{color:#d4d4d4;font-style:italic;padding-left:10px}.home .contact .contact-form .form-name,.home .contact .contact-form .form-email{width:350px;height:30px;color:#e7e5e2;border:1px solid #e5e4e3}.home .contact .contact-form .form-content{width:350px;height:400px;border:1px solid #e5e4e3}@media only screen and (max-width:414px){.home .contact{margin-top:50px;width:100%;height:900px;background-color:#f0fdf7}.home .contact .contact-title{font-size:24px}.home .contact .contact-message{margin-top:-40px;font-size:14px;letter-spacing:-1px}.home .contact .contact-message .message2{margin-top:-40px}.home .contact .phonenum{color:#6a6964;font-size:16px;letter-spacing:-1px;margin-top:-20px}.home .contact .contact-form .form-name,.home .contact .contact-form .form-email{height:50px}}@media only screen and (max-width:320px){.home .contact .contact-title{font-size:22px}.home .contact .contact-message{font-size:12px}.home .contact .contact-form .form-name,.home .contact .contact-form .form-email{width:280px;height:40px}.home .contact .contact-form .form-content{width:280px}}.icomoon-circle,.icomoon-com,.icomoon-face,.icomoon-fatman,.icomoon-flower,.icomoon-massa,.icomoon-sport,.icomoon-water{font-size:140px}.icomoon-circle:before{content:"\e900";color:#00ac87}.icomoon-com:before{content:"\e901";color:#00ac87}.icomoon-face .path1:before{content:"\e902";color:#d2fcea}.icomoon-face .path2:before{content:"\e903";margin-left:-0.74804687em;color:#d2fcea}.icomoon-face .path3:before{content:"\e904";margin-left:-0.74804687em;color:#d2fcea}.icomoon-face .path4:before{content:"\e905";margin-left:-0.74804687em;color:#d2fcea}.icomoon-face .path5:before{content:"\e906";margin-left:-0.74804687em;color:#d2fcea}.icomoon-face .path6:before{content:"\e907";margin-left:-0.74804687em;color:#00d6a0}.icomoon-face .path7:before{content:"\e908";margin-left:-0.74804687em;color:#00d6a0}.icomoon-face .path8:before{content:"\e909";margin-left:-0.74804687em;color:#d2fcea}.icomoon-face .path9:before{content:"\e90a";margin-left:-0.74804687em;color:#d2fcea}.icomoon-face .path10:before{content:"\e90b";margin-left:-0.74804687em;color:#00d6a0}.icomoon-fatman:before{content:"\e90c";color:#d2fcea}.icomoon-flower:before{content:"\e90d";color:#d2fcea}.icomoon-massa:before{content:"\e90e";color:#00ac87}.icomoon-sport .path1:before{content:"\e90f";color:#00ac87}.icomoon-sport .path2:before{content:"\e910";margin-left:-0.69335937em;color:#00ac87}.icomoon-sport .path3:before{content:"\e911";margin-left:-0.69335937em;color:#d2fcea}.icomoon-water .path1:before{content:"\e912";color:#d2fcea}.icomoon-water .path2:before{content:"\e913";margin-left:-0.57226562em;color:#00d6a0}
+.home {
+  width: 100%;
+}
+.home .home-title {
+  margin-top: -1px;
+}
+.home .home-title img {
+  width: 100%;
+}
+.home .booking-btn {
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  background-color: #00d6a0;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  margin-top: 60px;
+  outline: none;
+}
+@media only screen and (max-width: 414px) {
+  .home .booking-btn {
+    margin-top: 30px;
+  }
+}
+.home .date-booking {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+.home .date-booking .firsttitle {
+  font-family: Gotham Rounded Book;
+  color: #6fd5a9;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+.home .date-booking .secondtitle {
+  font-family: Gotham Rounded Book;
+  color: #424242;
+  font-size: 18px;
+}
+.home .date-booking .date-choose {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+.home .date-booking .date-choose input {
+  width: 250px;
+  height: 35px;
+  margin-top: -5px;
+  border: 1px solid #e5e4e3;
+  padding-left: 15px;
+}
+.home .date-booking .date-choose input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+.home .date-booking .date-choose .choose-time {
+  margin-top: 10px;
+}
+@media only screen and (max-width: 1046px) {
+  .home .date-booking .firsttitle {
+    font-size: 28px;
+  }
+  .home .date-booking .secondtitle {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .home .date-booking .firsttitle {
+    font-size: 24px;
+  }
+  .home .date-booking .secondtitle {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 757px) {
+  .home .date-booking .firsttitle {
+    font-size: 20px;
+  }
+  .home .date-booking .secondtitle {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .home .date-booking {
+    width: 80%;
+  }
+  .home .date-booking .firsttitle {
+    font-size: 18px;
+  }
+  .home .date-booking .secondtitle {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .home .date-booking {
+    width: 100%;
+  }
+  .home .date-booking .firsttitle {
+    font-size: 20px;
+    letter-spacing: -1px;
+  }
+  .home .date-booking .secondtitle {
+    font-size: 12px;
+  }
+}
+.home .date-message {
+  width: 100%;
+  height: 150px;
+  margin-top: 50px;
+  background-color: #d2fcea;
+  display: flex;
+  justify-content: space-around;
+}
+.home .date-message .location,
+.home .date-message .available,
+.home .date-message .time {
+  display: flex;
+  align-items: center;
+}
+.home .date-message .location .fa-home,
+.home .date-message .available .fa-home,
+.home .date-message .time .fa-home,
+.home .date-message .location .fa-calendar,
+.home .date-message .available .fa-calendar,
+.home .date-message .time .fa-calendar,
+.home .date-message .location .fa-clock-o,
+.home .date-message .available .fa-clock-o,
+.home .date-message .time .fa-clock-o {
+  color: #00d5a1;
+  font-size: 50px !important;
+}
+.home .date-message .location .information,
+.home .date-message .available .information,
+.home .date-message .time .information {
+  width: 170px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.home .date-message-mobile {
+  display: none;
+}
+@media only screen and (max-width: 667px) {
+  .home .date-message .location .fa-home,
+  .home .date-message .available .fa-home,
+  .home .date-message .time .fa-home,
+  .home .date-message .location .fa-calendar,
+  .home .date-message .available .fa-calendar,
+  .home .date-message .time .fa-calendar,
+  .home .date-message .location .fa-clock-o,
+  .home .date-message .available .fa-clock-o,
+  .home .date-message .time .fa-clock-o {
+    color: #00d5a1;
+    font-size: 36px !important;
+  }
+  .home .date-message .location .information,
+  .home .date-message .available .information,
+  .home .date-message .time .information {
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .home .date-message .location .fa-home,
+  .home .date-message .available .fa-home,
+  .home .date-message .time .fa-home,
+  .home .date-message .location .fa-calendar,
+  .home .date-message .available .fa-calendar,
+  .home .date-message .time .fa-calendar,
+  .home .date-message .location .fa-clock-o,
+  .home .date-message .available .fa-clock-o,
+  .home .date-message .time .fa-clock-o {
+    color: #00d5a1;
+    font-size: 36px !important;
+  }
+  .home .date-message .location .information,
+  .home .date-message .available .information,
+  .home .date-message .time .information {
+    width: 130px;
+    word-break: break-all;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .home .date-message {
+    display: none;
+  }
+  .home .date-message-mobile {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .home .date-message-mobile .location,
+  .home .date-message-mobile .available,
+  .home .date-message-mobile .time {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  .home .date-message-mobile .location .fa-home,
+  .home .date-message-mobile .available .fa-home,
+  .home .date-message-mobile .time .fa-home,
+  .home .date-message-mobile .location .fa-calendar,
+  .home .date-message-mobile .available .fa-calendar,
+  .home .date-message-mobile .time .fa-calendar,
+  .home .date-message-mobile .location .fa-clock-o,
+  .home .date-message-mobile .available .fa-clock-o,
+  .home .date-message-mobile .time .fa-clock-o {
+    color: #00d5a1;
+    font-size: 40px !important;
+  }
+  .home .date-message-mobile .location .information,
+  .home .date-message-mobile .available .information,
+  .home .date-message-mobile .time .information {
+    font-size: 12px;
+    color: #b1aeaa;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+.home .date-therapists {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home .date-therapists .title {
+  font-family: Gotham Rounded Book;
+  color: #6fd5a9;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+.home .date-therapists .therapists-img {
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.home .date-therapists .therapists-img img {
+  width: 130px;
+  height: 130px;
+  border: 1px solid #d2fae8;
+  border-radius: 50%;
+  margin: 20px;
+}
+@media only screen and (max-width: 892px) {
+  .home .date-therapists .title {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 832px) {
+  .home .date-therapists .title {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 774px) {
+  .home .date-therapists .title {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 745px) {
+  .home .date-therapists .title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .home .date-therapists .title {
+    font-size: 21px;
+  }
+  .home .date-therapists .therapists-img img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .home .date-therapists {
+    width: 100%;
+    height: 500px;
+    background-color: #f0fdf7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .home .date-therapists .title {
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-family: Gotham Rounded Book;
+    color: #6fd5a9;
+    font-size: 20px;
+    letter-spacing: -2px;
+  }
+  .home .date-therapists .therapists-img {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -40px;
+  }
+  .home .date-therapists .therapists-img img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #d2fae8;
+    border-radius: 50%;
+  }
+}
+.home .massage-type {
+  width: 100%;
+  height: 1200px;
+  margin-top: 50px;
+  background-color: #f0fdf7;
+}
+.home .massage-type .type-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
+  padding-top: 50px;
+  width: 60%;
+  margin: auto;
+  color: #6fd5a9;
+  font-size: 32px;
+  text-align: center;
+}
+.home .massage-type .type-content {
+  width: 650px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home .massage-type .type-content .content-repeat {
+  margin-top: 100px;
+  width: 300px;
+  display: flex;
+}
+.home .massage-type .type-content .content-repeat img {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+.home .massage-type .type-content .content-repeat .description {
+  font-family: Gotham Rounded Book;
+  width: 250px;
+  margin-left: 20px;
+}
+.home .massage-type .type-content .content-repeat .description .title {
+  color: #63d2a3;
+  font-size: 18px;
+}
+.home .massage-type .type-content .content-repeat .description .content {
+  color: #aaacab;
+}
+.home .massage-type .center-location {
+  width: 200px;
+  margin: auto;
+}
+.home .massage-type-mobile {
+  display: none;
+}
+@media only screen and (max-width: 788px) {
+  .home .massage-type .type-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 731px) {
+  .home .massage-type .type-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 679px) {
+  .home .massage-type .type-title {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .home .massage-type .type-content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .home .massage-type {
+    width: 100%;
+  }
+  .home .massage-type .type-title {
+    font-size: 24px;
+  }
+  .home .massage-type .type-content {
+    width: 100%;
+  }
+  .home .massage-type .type-content .content-repeat {
+    margin-top: 100px;
+    width: 280px;
+    display: flex;
+  }
+  .home .massage-type .type-content .content-repeat img {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+  }
+  .home .massage-type .type-content .content-repeat .description {
+    font-family: Gotham Rounded Book;
+    width: 200px;
+    margin-left: 10px;
+  }
+  .home .massage-type .type-content .content-repeat .description .title {
+    color: #63d2a3;
+    font-size: 18px;
+  }
+  .home .massage-type .type-content .content-repeat .description .content {
+    color: #aaacab;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .home .massage-type {
+    display: none;
+  }
+  .home .massage-type-mobile {
+    display: block;
+  }
+  .home .massage-type-mobile .type-title {
+    font-family: Gotham Rounded Book;
+    letter-spacing: -2px;
+    padding-top: 50px;
+    width: 60%;
+    margin: auto;
+    color: #6fd5a9;
+    font-size: 22px;
+    text-align: center;
+  }
+  .home .massage-type-mobile .type-content {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .home .massage-type-mobile .type-content .content-repeat {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(1),
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(4),
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(5),
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(8) {
+    background-color: #d2fcea;
+    color: #00d6a0;
+  }
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(2),
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(3),
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(6),
+  .home .massage-type-mobile .type-content .content-repeat:nth-child(7) {
+    background-color: #00d6a0;
+    color: #d2fcea;
+  }
+  .home .massage-type-mobile .type-content .content-repeat img {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .type-icon {
+    width: 180px;
+    text-align: center;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .different-height {
+    height: 80px;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .title {
+    font-family: Gotham Rounded Book;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .home .massage-type-mobile .type-content .content-repeat {
+    width: 160px;
+    height: 160px;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .type-icon {
+    width: 160px;
+    text-align: center;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-circle,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-com,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-face,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-fatman,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-flower,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-massa,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-sport,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-water {
+    font-size: 90px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .home .massage-type-mobile .type-content .content-repeat {
+    width: 140px;
+    height: 140px;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .type-icon {
+    width: 140px;
+    text-align: center;
+  }
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-circle,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-com,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-face,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-fatman,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-flower,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-massa,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-sport,
+  .home .massage-type-mobile .type-content .content-repeat .type-icon .icomoon-water {
+    font-size: 90px;
+  }
+}
+.home .simple-pricing {
+  width: 300px;
+  height: 450px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home .simple-pricing .eg-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
+  padding-top: 70px;
+  color: #6fd5a9;
+  font-size: 28px;
+}
+.home .simple-pricing .eg-pricingList {
+  width: 350px;
+  height: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10%;
+}
+.home .simple-pricing .eg-pricingList .eg-pricing {
+  display: flex;
+  width: 350px;
+  height: 40px;
+  border-bottom: 1px solid #d2fcea;
+  padding-top: 10px;
+}
+.home .simple-pricing .eg-pricingList .eg-pricing .eg-time {
+  width: 50px;
+  text-align: right;
+  color: #00d6a1;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 5%;
+}
+.home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt {
+  color: #cccac8;
+  font-size: 16px;
+  margin-left: 5px;
+}
+.home .simple-pricing .eg-pricingList .eg-pricing .eg-price {
+  color: #cccac8;
+  font-size: 18px;
+  margin-left: 40%;
+}
+@media only screen and (max-width: 414px) {
+  .home .simple-pricing {
+    width: 100%;
+  }
+  .home .simple-pricing .eg-pricingList {
+    width: 100%;
+  }
+  .home .simple-pricing .eg-pricingList .eg-pricing {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    background-color: #d2fcea;
+  }
+  .home .simple-pricing .eg-pricingList .eg-pricing .eg-time,
+  .home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt {
+    color: #9a9691;
+    font-weight: bolder;
+  }
+  .home .simple-pricing .eg-pricingList .eg-pricing .eg-price {
+    color: #a8b1a8;
+    margin-left: 30%;
+  }
+}
+.home .faq {
+  width: 100%;
+  height: 1750px;
+  background-color: #f0fdf7;
+}
+.home .faq .faq-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
+  padding-top: 70px;
+  width: 30%;
+  margin: auto;
+  color: #6fd5a9;
+  font-size: 28px;
+  text-align: center;
+}
+.home .faq .faq-content {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -1px;
+  margin: auto;
+  margin-top: 80px;
+  width: 750px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home .faq .faq-content .title {
+  color: #64d2a4;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.home .faq .faq-content .content {
+  color: #898a8a;
+  margin-top: 10px;
+}
+.home .faq-mobile {
+  display: none;
+}
+@media only screen and (max-width: 963px) {
+  .home .faq .faq-title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 825px) {
+  .home .faq {
+    height: 2000px;
+  }
+  .home .faq .faq-title {
+    font-size: 22px;
+  }
+  .home .faq .faq-content {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 692px) {
+  .home .faq {
+    height: 2000px;
+  }
+  .home .faq .faq-title {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .home .faq .faq-title {
+    font-size: 18px;
+  }
+  .home .faq .faq-content {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .home .faq {
+    display: none;
+  }
+  .home .faq-mobile {
+    display: block;
+  }
+  .home .faq-mobile .faq-title {
+    font-family: Gotham Rounded Book;
+    letter-spacing: -2px;
+    padding-top: 40px;
+    margin: auto;
+    color: #6fd5a9;
+    text-align: center;
+    width: 80%;
+    font-size: 24px;
+  }
+  .home .faq-mobile .faq-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .home .faq-mobile .faq-content .faq-questions {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .home .faq-mobile .faq-content .faq-questions .faq-circle {
+    width: 18px;
+    height: 18px;
+  }
+  .home .faq-mobile .faq-content .faq-questions .faq-circle .faq-bigcircle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #00d6a0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .faq-mobile .faq-content .faq-questions .faq-circle .faq-bigcircle .faq-smallcircle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #00d6a0;
+  }
+  .home .faq-mobile .faq-content .faq-questions .title {
+    font-family: Gotham Rounded Book;
+    font-size: 16px;
+    color: #9a9590;
+    margin-left: 8px;
+  }
+}
+.home .contact {
+  width: 400px;
+  height: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home .contact .contact-title {
+  font-family: Gotham Rounded Book;
+  letter-spacing: -2px;
+  padding-top: 10%;
+  color: #6fd5a9;
+  font-size: 28px;
+}
+.home .contact .contact-message {
+  font-family: Gotham Rounded Book;
+  color: #838383;
+  width: 400px;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 16px;
+}
+.home .contact .contact-message .message2 {
+  margin-top: -20px;
+}
+.home .contact .phonenum {
+  display: flex;
+  font-size: 14px;
+}
+.home .contact .phonenum .phonenum-deepcolor {
+  font-weight: bolder;
+}
+.home .contact .contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+}
+.home .contact .contact-form input::-webkit-input-placeholder {
+  color: #d4d4d4;
+  font-style: italic;
+  padding-left: 10px;
+}
+.home .contact .contact-form textarea::-webkit-input-placeholder {
+  color: #d4d4d4;
+  font-style: italic;
+  padding-left: 10px;
+}
+.home .contact .contact-form .form-name,
+.home .contact .contact-form .form-email {
+  width: 350px;
+  height: 30px;
+  color: #e7e5e2;
+  border: 1px solid #e5e4e3;
+}
+.home .contact .contact-form .form-content {
+  width: 350px;
+  height: 400px;
+  border: 1px solid #e5e4e3;
+}
+@media only screen and (max-width: 414px) {
+  .home .contact {
+    margin-top: 50px;
+    width: 100%;
+    height: 900px;
+    background-color: #f0fdf7;
+  }
+  .home .contact .contact-title {
+    font-size: 24px;
+  }
+  .home .contact .contact-message {
+    margin-top: -40px;
+    font-size: 14px;
+    letter-spacing: -1px;
+  }
+  .home .contact .contact-message .message2 {
+    margin-top: -40px;
+  }
+  .home .contact .phonenum {
+    color: #6a6964;
+    font-size: 16px;
+    letter-spacing: -1px;
+    margin-top: -20px;
+  }
+  .home .contact .contact-form .form-name,
+  .home .contact .contact-form .form-email {
+    width: 300px;
+    height: 50px;
+  }
+  .home .contact .contact-form .form-content {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .home .contact .contact-title {
+    font-size: 22px;
+  }
+  .home .contact .contact-message {
+    font-size: 12px;
+  }
+  .home .contact .contact-form .form-name,
+  .home .contact .contact-form .form-email {
+    width: 280px;
+    height: 40px;
+  }
+  .home .contact .contact-form .form-content {
+    width: 280px;
+  }
+}
+.icomoon-circle,
+.icomoon-com,
+.icomoon-face,
+.icomoon-fatman,
+.icomoon-flower,
+.icomoon-massa,
+.icomoon-sport,
+.icomoon-water {
+  font-size: 140px;
+}
+.icomoon-circle:before {
+  content: "\e900";
+  color: #00ac87;
+}
+.icomoon-com:before {
+  content: "\e901";
+  color: #00ac87;
+}
+.icomoon-face .path1:before {
+  content: "\e902";
+  color: #d2fcea;
+}
+.icomoon-face .path2:before {
+  content: "\e903";
+  margin-left: -0.74804687em;
+  color: #d2fcea;
+}
+.icomoon-face .path3:before {
+  content: "\e904";
+  margin-left: -0.74804687em;
+  color: #d2fcea;
+}
+.icomoon-face .path4:before {
+  content: "\e905";
+  margin-left: -0.74804687em;
+  color: #d2fcea;
+}
+.icomoon-face .path5:before {
+  content: "\e906";
+  margin-left: -0.74804687em;
+  color: #d2fcea;
+}
+.icomoon-face .path6:before {
+  content: "\e907";
+  margin-left: -0.74804687em;
+  color: #00d6a0;
+}
+.icomoon-face .path7:before {
+  content: "\e908";
+  margin-left: -0.74804687em;
+  color: #00d6a0;
+}
+.icomoon-face .path8:before {
+  content: "\e909";
+  margin-left: -0.74804687em;
+  color: #d2fcea;
+}
+.icomoon-face .path9:before {
+  content: "\e90a";
+  margin-left: -0.74804687em;
+  color: #d2fcea;
+}
+.icomoon-face .path10:before {
+  content: "\e90b";
+  margin-left: -0.74804687em;
+  color: #00d6a0;
+}
+.icomoon-fatman:before {
+  content: "\e90c";
+  color: #d2fcea;
+}
+.icomoon-flower:before {
+  content: "\e90d";
+  color: #d2fcea;
+}
+.icomoon-massa:before {
+  content: "\e90e";
+  color: #00ac87;
+}
+.icomoon-sport .path1:before {
+  content: "\e90f";
+  color: #00ac87;
+}
+.icomoon-sport .path2:before {
+  content: "\e910";
+  margin-left: -0.69335937em;
+  color: #00ac87;
+}
+.icomoon-sport .path3:before {
+  content: "\e911";
+  margin-left: -0.69335937em;
+  color: #d2fcea;
+}
+.icomoon-water .path1:before {
+  content: "\e912";
+  color: #d2fcea;
+}
+.icomoon-water .path2:before {
+  content: "\e913";
+  margin-left: -0.57226562em;
+  color: #00d6a0;
+}
