@@ -101,22 +101,58 @@ angular.module('app.controllers', [])
 
     })
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
-        $cookieStore.put('currentState', 'home');
-        $http.get('../data/faq.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.items = resdata.data;
-            });
-        $http.get('../data/home-massage-type.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.datas = resdata.data;
-            });
-        $http.get('../data/price.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.prices = resdata.data[0].priceList;
 
+        // $http.get('../data/faq.json')
+        //     .then(function (resdata) {
+        //         console.log(resdata);
+        //         $scope.items = resdata.data;
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/faq')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.items = data.returnValue;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
+            });
+        // $http.get('../data/home-massage-type.json')
+        //     .then(function (resdata) {
+        //         console.log(resdata);
+        //         $scope.datas = resdata.data;
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/home-massage-type')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.datas = data.returnValue;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
+            });
+        // $http.get('../data/price.json')
+        //     .then(function (resdata) {
+        //         console.log(resdata);
+        //         $scope.prices = resdata.data[0].priceList;
+        //
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/price')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.prices = data.returnValue[0].priceList;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
 
 
@@ -229,20 +265,42 @@ angular.module('app.controllers', [])
         //count是当前已选的计数，$scope.count是选项中的人数
         let count = $scope.count = 0;
 
-        $http.get('../data/bookingstep2.json')
-            .then(function (resdata) {
-                // console.log(resdata);
-                $scope.chooses = resdata.data;
+        // $http.get('../data/bookingstep2.json')
+        //     .then(function (resdata) {
+        //         // console.log(resdata);
+        //         $scope.chooses = resdata.data;
+        //
+        //         //每个选项的默认选项是第一个
+        //         for (let i = 0; i < $scope.chooses.length; i++) {
+        //             $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+        //         }
+        //
+        //         //选中的人数是第一个选择的内容
+        //         let str = $scope.chooses[0].chooseoption;
+        //         //选中'-'后面的数字
+        //         $scope.count = str.substr(str.indexOf('-') + 1, 1);
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/bookingstep2')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.chooses = data.returnValue;
 
-                //每个选项的默认选项是第一个
-                for (let i = 0; i < $scope.chooses.length; i++) {
-                    $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+                    //每个选项的默认选项是第一个
+                    for (let i = 0; i < $scope.chooses.length; i++) {
+                        $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+                    }
+
+                    //选中的人数是第一个选择的内容
+                    let str = $scope.chooses[0].chooseoption;
+                    //选中'-'后面的数字
+                    $scope.count = str.substr(str.indexOf('-') + 1, 1);
+                } else {
+                    console.log(data.errorReason);
                 }
-
-                //选中的人数是第一个选择的内容
-                let str = $scope.chooses[0].chooseoption;
-                //选中'-'后面的数字
-                $scope.count = str.substr(str.indexOf('-') + 1, 1);
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
 
         $scope.changeChoose = function (choose, option) {
@@ -260,10 +318,22 @@ angular.module('app.controllers', [])
             }
         };
 
-        $http.get('../data/massage-therapists.json')
-            .then(function (resdata) {
-                // console.log(resdata);
-                $scope.therapists = resdata.data;
+        // $http.get('../data/massage-therapists.json')
+        //     .then(function (resdata) {
+        //         // console.log(resdata);
+        //         $scope.therapists = resdata.data;
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/massage-therapists')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.therapists = data.returnValue;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
 
         $scope.toggleTherapist = function (therapist) {
@@ -474,11 +544,23 @@ angular.module('app.controllers', [])
     })
 
     .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
-        $http.get('../data/massage-therapists.json')
-            .then(function (resdata) {
-                // console.log(resdata.data);
-                $scope.chooses = resdata.data;
-
+        // $http.get('../data/massage-therapists.json')
+        //     .then(function (resdata) {
+        //         // console.log(resdata.data);
+        //         $scope.chooses = resdata.data;
+        //
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/massage-therapists')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.chooses = data.returnValue;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
         $timeout(function () {
             document.navInit(2)
@@ -490,10 +572,22 @@ angular.module('app.controllers', [])
     })
 
     .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
-        $http.get('../data/home-massage-type.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.datas = resdata.data;
+        // $http.get('../data/home-massage-type.json')
+        //     .then(function (resdata) {
+        //         console.log(resdata);
+        //         $scope.datas = resdata.data;
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/home-massage-type')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.datas = data.returnValue;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
         $timeout(function () {
             document.navInit(3)
@@ -505,12 +599,24 @@ angular.module('app.controllers', [])
     })
 
     .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
-        $http.get('../data/price.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.prices1 = resdata.data[0].priceList;
-                $scope.prices2 = resdata.data[1].priceList;
-
+        // $http.get('../data/price.json')
+        //     .then(function (resdata) {
+        //         console.log(resdata);
+        //         $scope.prices1 = resdata.data[0].priceList;
+        //         $scope.prices2 = resdata.data[1].priceList;
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/price')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.$scope.prices1 = data.returnValue[0].priceList;
+                    $scope.$scope.prices2 = data.returnValue[1].priceList;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
         $timeout(function () {
             document.navInit(4)
@@ -523,10 +629,22 @@ angular.module('app.controllers', [])
     })
 
     .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
-        $http.get('../data/faq.json')
-            .then(function (resdata) {
-                console.log(resdata);
-                $scope.items = resdata.data;
+        // $http.get('../data/faq.json')
+        //     .then(function (resdata) {
+        //         console.log(resdata);
+        //         $scope.items = resdata.data;
+        //     });
+        $http.post('http://localhost:4000/web/FrontEndData/faq')
+            .then(function (restResult, status, headers, config) {
+                let data = restResult.data;
+                if (data.code == 0) {
+                    $scope.items = data.returnValue;
+                } else {
+                    console.log(data.errorReason);
+                }
+            })
+            .catch(function (restResult, status, headers, config) {
+                console.log(restResult.data.errorReason);
             });
         $timeout(function () {
             document.navInit(5)
