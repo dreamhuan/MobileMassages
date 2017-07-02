@@ -434,8 +434,7 @@ angular.module('app.controllers', [])
                 }, function (reason) {
                     console.log(reason);
                     flag = 0;
-                    if (reason === "邮箱已被使用") AlertService.error("相同用户名已存在");
-                    else AlertService.error("系统异常，请重试");
+                    AlertService.error(reason);
                 })
             }
             else {
@@ -476,12 +475,24 @@ angular.module('app.controllers', [])
         });
 
         $scope.apply = function () {
-            console.log('apply')
+            if ($scope.cardName
+                && $scope.cardNumber
+                && $scope.cardExpirationDate
+                && $scope.cardSecurityCode
+                && $scope.billingPostalCode) {
+                AlertService.success('验证成功!');
+            } else {
+                AlertService.error('请填写前面的内容!');
+            }
         };
 
         let step4 = {};
         $scope.book = function () {
             if ($scope.step4 === 0) {
+                if ($scope.streetAddress !== $scope.streetAddress2) {
+                    AlertService.error('地址不一致!');
+                    return
+                }
                 step4 = {
                     streetAddress: $scope.streetAddress,
                     streetAddress2: $scope.streetAddress2,
@@ -609,8 +620,10 @@ angular.module('app.controllers', [])
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
-                    $scope.$scope.prices1 = data.returnValue[0].priceList;
-                    $scope.$scope.prices2 = data.returnValue[1].priceList;
+                    console.log(data.returnValue);
+                    $scope.prices = data.returnValue;
+                    $scope.prices1 = data.returnValue[0].priceList;
+                    $scope.prices2 = data.returnValue[1].priceList;
                 } else {
                     console.log(data.errorReason);
                 }
@@ -659,7 +672,7 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout,BookingService,AlertService) {
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, BookingService, AlertService) {
         $timeout(function () {
             document.navInit(7)
         }, 0);
@@ -668,10 +681,10 @@ angular.module('app.controllers', [])
             $state.go('forgetpassword');
         };
         //TODO:登陆登出判断
-        $scope.login=function () {
-            let content={
-                emailAddress:$scope.emailAddress,
-                password:$scope.password
+        $scope.login = function () {
+            let content = {
+                emailAddress: $scope.emailAddress,
+                password: $scope.password
             };
             let promise = BookingService.login(content);
             promise.then(function (data) {
@@ -717,7 +730,7 @@ angular.module('app.controllers', [])
 
         }
     })
-    .controller('administrationCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout,$http) {
+    .controller('administrationCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
         $http.get('../data/order.json')
             .then(function (resdata) {
                 console.log(resdata);

@@ -2,80 +2,95 @@
 <div class="step4" ng-init="step4 = 0">
     <!--理论上下面的代码应该用ng-if但是datetimepicker插件会失效，所以改用了ng-show-->
     <div ng-show="step4 === 0" class="location">
-        <div class="step-title">Location</div>
-        <div class="address">
-            <span class="step-tips">Street address</span>
-            <input type="text" ng-model="streetAddress">
-        </div>
-        <div class="address2">
-            <span class="step-tips">Street address 2</span>
-            <input type="text" placeholder="Apt/Floor/Sulte"  ng-model="streetAddress2">
-        </div>
-        <div class="state-zip">
-            <div class="state">
-                <span class="step-tips">State/Province</span>
-                <input type="text" ng-model="stateProvince">
+        <form name="locationForm" novalidate>
+            <div class="step-title">Location</div>
+            <div class="address">
+                <span class="step-tips">Street address</span>
+                <input type="text" ng-model="streetAddress" required>
             </div>
-            <div class="zip">
-                <span class="step-tips">Zip/Post code</span>
-                <input type="text" ng-model="postCode">
+            <div class="address2">
+                <span class="step-tips">Street address 2</span>
+                <input type="text" placeholder="Apt/Floor/Sulte" ng-model="streetAddress2" required>
             </div>
-        </div>
-        <div class="address2">
-            <span class="step-tips">Parking instructions</span>
-            <textarea ng-model="parkingInstructions"></textarea>
-        </div>
+            <div class="state-zip">
+                <div class="state">
+                    <span class="step-tips">State/Province</span>
+                    <input type="text" ng-model="stateProvince" required>
+                </div>
+                <div class="zip">
+                    <span class="step-tips">Zip/Post code</span>
+                    <input type="text" ng-model="postCode" required>
+                </div>
+            </div>
+            <div class="address2">
+                <span class="step-tips">Parking instructions</span>
+                <textarea ng-model="parkingInstructions"></textarea>
+            </div>
+        </form>
     </div>
 
     <div ng-show="step4 === 1" class="check-out">
-        <div class="step-title">Check out</div>
-        <div class="card-name">
-            <span class="step-tips">Name on card</span>
-            <input type="text" ng-model="cardName">
-        </div>
-        <div class="card-number">
-            <span class="step-tips">Credit card number</span>
-            <!--<input type="text" placeholder="Apt/Floor/Sulte">-->
-            <input type="text" ng-model="cardNumber">
-        </div>
-        <div class="date-code">
-            <div class="expiration-date">
-                <span class="step-tips">Expiration date</span>
-                <!--<input type="text" id="datepicker" value="" placeholder="MM/YY">-->
-                <input type="text" id="datepicker" value="" placeholder="YYYY-MM-DD" ng-model="cardExpirationDate">
+        <form name="checkOutForm" novalidate>
+            <div class="step-title">Check out</div>
+            <div class="card-name">
+                <span class="step-tips">Name on card</span>
+                <input type="text" ng-model="cardName" required>
             </div>
-            <div class="security-code">
-                <span class="step-tips">Security code</span>
-                <input type="text" ng-model="cardSecurityCode">
+            <div class="card-number">
+                <span class="step-tips">Credit card number</span>
+                <!--<input type="text" placeholder="Apt/Floor/Sulte">-->
+                <input type="text" ng-model="cardNumber" required>
             </div>
-        </div>
-        <div class="billing">
-            <span class="step-tips">Billing Zip/Postal code</span>
-            <input type="text" ng-model="billingPostalCode">
-        </div>
-        <div class="gift-apply">
-            <div class="gift">
-                <span class="step-tips">Gift/Promo code</span>
-                <input type="text" ng-model="giftCode">
-            </div>
-            <button class="apply" ng-click="apply()">APPLY</button>
-        </div>
-        <div class="order-summary">
-            <span class="step-tips">Order Summary</span>
-            <div class="summary">
-                <div class="order">05/29/2017 5:15 PM </div>
-                <div class="order">Single Session</div>
-                <div class="order">Swedish/ 60min /Either Therapist</div>
-                <div class="order">Xytftd street, 20066</div>
-                <div class="total">
-                    <span>Total</span>
-                    <span>£99</span>
+            <div class="date-code">
+                <div class="expiration-date">
+                    <span class="step-tips">Expiration date</span>
+                    <!--<input type="text" id="datepicker" value="" placeholder="MM/YY">-->
+                    <input type="text" id="datepicker" value="" placeholder="YYYY-MM-DD" ng-model="cardExpirationDate">
+                </div>
+                <div class="security-code">
+                    <span class="step-tips">Security code</span>
+                    <input type="text" ng-model="cardSecurityCode" required>
                 </div>
             </div>
-        </div>
+            <div class="billing">
+                <span class="step-tips">Billing Zip/Postal code</span>
+                <input type="text" ng-model="billingPostalCode" required>
+            </div>
+            <div class="gift-apply">
+                <div class="gift">
+                    <span class="step-tips">Gift/Promo code</span>
+                    <input type="text" ng-model="giftCode">
+                </div>
+                <button class="apply" ng-click="apply()">APPLY</button>
+            </div>
+            <div class="order-summary">
+                <span class="step-tips">Order Summary</span>
+                <div class="summary">
+                    <div class="order">05/29/2017 5:15 PM</div>
+                    <div class="order">Single Session</div>
+                    <div class="order">Swedish/ 60min /Either Therapist</div>
+                    <div class="order">Xytftd street, 20066</div>
+                    <div class="total">
+                        <span>Total</span>
+                        <span>£99</span>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 
-    <button class="step-btn" ng-click="book()">BOOK MY MASSAGE</button>
+    <button ng-if="step4===0"
+            ng-click="book()"
+            class="step-btn"
+            ng-class="{'button-disable':locationForm.$invalid}"
+            ng-disabled="locationForm.$invalid">BOOK MY MASSAGE
+    </button>
+    <button ng-if="step4===1"
+            ng-click="book()"
+            class="step-btn"
+            ng-class="{'button-disable':checkOutForm.$invalid}"
+            ng-disabled="checkOutForm.$invalid">BOOK MY MASSAGE
+    </button>
     <div class="step-back">
         <i class="fa fa-angle-left left-icon"></i>
         <span class="right-font" ng-click="back()">Back</span>
