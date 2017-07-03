@@ -564,21 +564,21 @@
   color: #6fd5a9;
   font-size: 28px;
 }
-.home .simple-pricing .eg-pricingList {
+.home .simple-pricing .eg-pricing-list {
   width: 350px;
   height: 130px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 10%;
 }
-.home .simple-pricing .eg-pricingList .eg-pricing {
+.home .simple-pricing .eg-pricing-list .eg-pricing {
   display: flex;
   width: 350px;
   height: 40px;
   border-bottom: 1px solid #d2fcea;
   padding-top: 10px;
 }
-.home .simple-pricing .eg-pricingList .eg-pricing .eg-time {
+.home .simple-pricing .eg-pricing-list .eg-pricing .eg-time {
   width: 50px;
   text-align: right;
   color: #00d6a1;
@@ -586,12 +586,12 @@
   font-weight: bolder;
   margin-left: 5%;
 }
-.home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt {
+.home .simple-pricing .eg-pricing-list .eg-pricing .eg-mnt {
   color: #9a9691;
   font-size: 16px;
   margin-left: 5px;
 }
-.home .simple-pricing .eg-pricingList .eg-pricing .eg-price {
+.home .simple-pricing .eg-pricing-list .eg-pricing .eg-price {
   color: #9a9691;
   font-size: 18px;
   margin-left: 40%;
@@ -600,21 +600,21 @@
   .home .simple-pricing {
     width: 100%;
   }
-  .home .simple-pricing .eg-pricingList {
+  .home .simple-pricing .eg-pricing-list {
     width: 100%;
   }
-  .home .simple-pricing .eg-pricingList .eg-pricing {
+  .home .simple-pricing .eg-pricing-list .eg-pricing {
     width: 100%;
     height: 40px;
     margin-bottom: 15px;
     background-color: #d2fcea;
   }
-  .home .simple-pricing .eg-pricingList .eg-pricing .eg-time,
-  .home .simple-pricing .eg-pricingList .eg-pricing .eg-mnt {
+  .home .simple-pricing .eg-pricing-list .eg-pricing .eg-time,
+  .home .simple-pricing .eg-pricing-list .eg-pricing .eg-mnt {
     color: #9a9691;
     font-weight: bolder;
   }
-  .home .simple-pricing .eg-pricingList .eg-pricing .eg-price {
+  .home .simple-pricing .eg-pricing-list .eg-pricing .eg-price {
     color: #a8b1a8;
     margin-left: 30%;
   }
