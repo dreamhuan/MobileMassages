@@ -27,7 +27,7 @@ files: /css/style.css
 
 [slide]
 # 架构图
-![](/img/jiagou.jpg)
+![](./img/架构.jpg)
 
 
 [slide]
@@ -47,7 +47,7 @@ files: /css/style.css
 * 吕靖之
     - 剩下页面（price、massage therapists）
 [slide data-transition="zoomin"]
-![](/img/jiagou.jpg)
+![](./img/分工.jpg)
 
 
 [slide]
@@ -57,27 +57,31 @@ files: /css/style.css
 [slide data-transition="zoomin"]
 ## 组件化
 用Angularjs的路由控制模块进行视图的绑定，就可以分模块开发，  
-并都塞入一个页面中，从而实现单页面应用。  
+并都塞入一个页面中，从而实现单页面应用  
 举个栗子：
 [slide data-transition="zoomin"]
 index.html  
-![](/img/1.1.png)  
+![](./img/1.1.png)  
 test.html  
-![](/img/1.2.png)
+![](./img/1.2.png)
 [slide data-transition="zoomin"]
-![](/img/1.3.png)
+![](./img/1.3.png)
 [slide data-transition="zoomin"]
 ## 代码模板
+用Angularjs的模板语法，可以实现页面和数据的分离，并简化代码编写  
+Angularjs会根据获取的数据内容动态生成html代码  
+再举个栗子：
+[slide data-transition="zoomin"]
 faq.html  
-![](/img/2.1.png)  
+![](./img/2.1.png)  
 faq对应的controller(js)  
-![](/img/2.2.png)  
+![](./img/2.2.png)  
 [slide data-transition="zoomin"]
 数据库的数据  
-![](/img/2.3.png)  
+![](./img/2.3.png)  
 [slide data-transition="zoomin"]
 Angularjs渲染后的结果  
-![](/img/2.4.png)
+![](./img/2.4.png)
 
 
 [slide]
