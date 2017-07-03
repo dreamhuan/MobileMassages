@@ -102,7 +102,7 @@ angular.module('app.controllers', [])
     })
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
 
-        $('#myCarousel').carousel({interval:3500});//每隔5秒自动轮播
+        $('#myCarousel').carousel({interval: 3500});//每隔5秒自动轮播
 
         //TODO 逻辑二选一
         // $http.get('../data/faq.json')
@@ -237,8 +237,17 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore) {
+    .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
         $scope.setCurrentBookingStep(1);
+
+        //页面渲染完后设置min-height让step1的footer贴底
+        $timeout(function () {
+            console.log($(document.body).height());
+            console.log($('.content').offset().top);
+            console.log($('.footer').height());
+            let minHeight = $(document.body).height() - ($('.footer').height() + $('.content').offset().top);
+            $('.content').css('min-height', minHeight);
+        }, 0);
 
         $scope.datetime = {
             date: new Date(),
@@ -467,16 +476,21 @@ angular.module('app.controllers', [])
 
         $scope.continue = function () {
             //一个是string一个是number,+string是吧string转为number
+            console.log(count);
+            console.log($scope.count);
             if (count !== +$scope.count) {
-                AlertService.question('未选择Therapist', '任意Therapist?', function () {
-                    $scope.chooseTherapist = [{
-                        name: 'Either Therapist'
-                    }];
-                    nextstep();
-                });
+                AlertService.question('未选择Therapist', '任意Therapist?',
+                    function () {
+                        $scope.chooseTherapist = [{
+                            name: 'Either Therapist'
+                        }];
+                        nextstep();
+                    });
+            }else{
+                nextstep();
             }
-            nextstep();
         };
+
         function nextstep() {
             let choise = [];
             for (let i = 0; i < $scope.chooses.length; i++) {
@@ -641,7 +655,7 @@ angular.module('app.controllers', [])
                 let money = step2[1].option.substring(step2[1].option.indexOf('-') + 3, step2[1].option.length);
                 console.log(money);
 
-                if (step1 && step2 && step3) {
+                if (step1 && step2) {
                     $scope.orderSummary = {
                         datetime: datetime,
                         session: session + ' Session',
@@ -896,12 +910,12 @@ angular.module('app.controllers', [])
                 $scope.items = resdata.data;
             });
     })
-    .controller('forgetpasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http,UserService,AlertService) {
-        $scope.resetPassword=function () {
-            let param={
-                emailAddress:$scope.emailAddress
+    .controller('forgetpasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http, UserService, AlertService) {
+        $scope.resetPassword = function () {
+            let param = {
+                emailAddress: $scope.emailAddress
             };
-            let promise =UserService.resetPassword(param);
+            let promise = UserService.resetPassword(param);
             promise.then(function (data) {
                 AlertService.success("邮件已发送到您的邮箱");
                 $state.go('home');

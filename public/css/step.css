@@ -26,6 +26,11 @@
   outline: none;
   border: none;
 }
+@media screen and (max-width: 420px) {
+  .step-btn {
+    width: 280px;
+  }
+}
 .step-btn:active {
   border: 1px solid #999999;
 }
@@ -59,9 +64,12 @@
 .button-disable {
   background-color: rgba(0, 0, 0, 0.5);
 }
+.step1 {
+  padding-bottom: 115px;
+}
 .step1 .datetime {
   width: 280px;
-  height: 200px;
+  height: 180px;
   margin: auto;
 }
 .step1 .datetime input {

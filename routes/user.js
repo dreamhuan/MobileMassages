@@ -45,8 +45,8 @@ router.post('/register', function (req, res, next) {
                 }
                 // console.log(doc);
                 let result = {
-                    id: doc.id,
-                    content: doc
+                    id: doc[0].id,
+                    content: doc[0]
                 };
                 res.success(result);
             });
