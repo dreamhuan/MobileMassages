@@ -311,7 +311,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -40px;
+    margin-top: 20px;
   }
   .home .date-therapists .therapists-img img {
     width: 100px;
@@ -387,6 +387,9 @@
 @media only screen and (max-width: 679px) {
   .home .massage-type .type-title {
     font-size: 26px;
+  }
+  .home .massage-type .type-content {
+    width: 600px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -646,9 +649,6 @@
   }
 }
 @media only screen and (max-width: 825px) {
-  .home .faq {
-    height: 2000px;
-  }
   .home .faq .faq-title {
     font-size: 22px;
   }
@@ -657,9 +657,6 @@
   }
 }
 @media only screen and (max-width: 692px) {
-  .home .faq {
-    height: 2000px;
-  }
   .home .faq .faq-title {
     font-size: 20px;
   }

@@ -72,6 +72,9 @@
   .massage-type .type-title {
     font-size: 26px;
   }
+  .massage-type .type-content {
+    width: 600px;
+  }
 }
 @media only screen and (max-width: 640px) {
   .massage-type .type-content {
@@ -123,7 +126,8 @@
     margin-top: 40px;
   }
   .massage-type .type-content {
-    width: 100%;
+    width: 75%;
+    margin: auto;
   }
   .massage-type .type-content .content-repeat {
     margin-top: 80px;
