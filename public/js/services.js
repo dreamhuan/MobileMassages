@@ -185,185 +185,6 @@ angular.module('app.services', [])
     })
 
     .service('UserService', function ($q, $http, SystemService) {
-        this.login = function (user) {
-            // console.log('service');
-            // console.log(user);
-            const deferred = $q.defer();
-            const param = {
-                user: user,
-            };
-            $http.post(SystemService.getHostIP() + 'web/user/login', param)
-                .then(function (restResult, status, headers, config) {
-                    console.log(restResult);
-                    let data = restResult.data;
-                    if (data.code == 0) {
-                        console.log('login!')
-                        let user = data.returnValue.user;
-                        localStorage.user = JSON.stringify(data.returnValue.user);
-                        SystemService.setUser(data.returnValue.user);
-                        let loginToken = data.returnValue.loginToken;
-                        localStorage.loginToken = data.returnValue.loginToken;
-
-                        SystemService.setLoginToken(data.returnValue.loginToken);
-                        let uid = data.returnValue.user._id;
-                        localStorage.uid = data.returnValue.user._id;
-                        SystemService.setUID(data.returnValue.user._id);
-
-                        deferred.resolve(data.returnValue);
-                    } else {
-                        console.log('loginErr!')
-                        deferred.reject(data.errorReason);
-                    }
-                })
-                .catch(function (restResult, status, headers, config) {
-                    deferred.reject(restResult.data.errorReason);
-                });
-            return deferred.promise;
-        };
-
-        this.logout = function () {
-            // console.log('service');
-            // console.log(user);
-
-            console.log('logout!');
-            let user = null;
-            localStorage.user = JSON.stringify(user);
-            SystemService.setUser(user);
-            let loginToken = null;
-            localStorage.loginToken = loginToken;
-
-            SystemService.setLoginToken(loginToken);
-            let uid = null;
-            localStorage.uid = uid;
-            SystemService.setUID(uid);
-        };
-
-        this.register = function (user) {
-            // console.log(user);
-            const deferred = $q.defer();
-            const param = {
-                user: user
-            };
-            $http.post(SystemService.getHostIP() + 'web/user/register', param)
-                .then(function (restResult, status, headers, config) {
-                    console.log(restResult);
-                    let data = restResult.data;
-                    console.log(data);
-                    if (data.code == 0) {
-                        console.log(data.returnValue);
-
-                        let user = data.returnValue.user;
-                        localStorage.user = JSON.stringify(data.returnValue.user);
-                        SystemService.setUser(data.returnValue.user);
-                        let loginToken = data.returnValue.loginToken;
-                        localStorage.loginToken = data.returnValue.loginToken;
-
-                        SystemService.setLoginToken(data.returnValue.loginToken);
-                        let uid = data.returnValue.user._id;
-                        localStorage.uid = data.returnValue.user._id;
-                        SystemService.setUID(data.returnValue.user._id);
-
-                        deferred.resolve(data.returnValue);
-                    } else {
-                        deferred.reject(data.errorReason);
-                    }
-                })
-                .catch(function (restResult, status, headers, config) {
-                    deferred.reject(restResult.data.errorReason);
-                });
-            return deferred.promise;
-        };
-
-        this.resetPwd = function (studentID, email) {
-            // console.log('service');
-            // console.log(user);
-            const deferred = $q.defer();
-            const param = {
-                studentID: studentID,
-                email: email
-            };
-            // console.log(SystemService.getHostIP());
-            $http.defaults.headers.common['Token'] = SystemService.getLoginToken();
-            $http.post(SystemService.getHostIP() + 'web/user/resetPwd', param)
-                .then(function (restResult, status, headers, config) {
-                    console.log(restResult);
-                    let data = restResult.data;
-                    console.log(data);
-                    if (data.code == 0) {
-                        console.log(data.returnValue);
-                        deferred.resolve(data.returnValue);
-                    } else {
-                        deferred.reject(data.errorReason);
-                    }
-                })
-                .catch(function (restResult, status, headers, config) {
-                    deferred.reject(restResult.data.errorReason);
-                });
-            return deferred.promise;
-        };
-        this.getLatestInformation = function (userId) {
-            const deferred = $q.defer();
-            const param = {
-                userId: userId,
-            };
-            $http.defaults.headers.common['Token'] = SystemService.getLoginToken();
-            $http.post(SystemService.getHostIP() + 'web/user/getLatestInformation', param)
-                .then(function (restResult, status, headers, config) {
-                    let data = restResult.data;
-                    if (data.code == 0) {
-                        deferred.resolve(data.returnValue);
-                    } else {
-                        deferred.reject(data.errorReason);
-                    }
-                })
-                .catch(function (restResult, status, headers, config) {
-                    deferred.reject(restResult.data.errorReason);
-                });
-            return deferred.promise;
-
-        };
-        this.showAllUser = function () {
-            const deferred = $q.defer();
-            $http.defaults.headers.common['Token'] = SystemService.getLoginToken();
-            $http.post(SystemService.getHostIP() + 'web/user/showAllUser')
-                .then(function (restResult, status, headers, config) {
-                    let data = restResult.data;
-                    console.log(data);
-                    if (data.code == 0) {
-                        deferred.resolve(data.returnValue);
-                    } else {
-                        deferred.reject(data.errorReason);
-                    }
-                })
-                .catch(function (restResult, status, headers, config) {
-                    deferred.reject(restResult.data.errorReason);
-                });
-            return deferred.promise;
-        };
-        this.editUser = function (user) {
-            const deferred = $q.defer();
-            const param = {
-                user: user,
-            };
-            $http.defaults.headers.common['Token'] = SystemService.getLoginToken();
-            $http.post(SystemService.getHostIP() + 'web/user/editUser', param)
-                .then(function (restResult, status, headers, config) {
-                    let data = restResult.data;
-                    if (data.code == 0) {
-                        deferred.resolve(data.returnValue);
-                    } else {
-                        deferred.reject(data.errorReason);
-                    }
-                })
-                .catch(function (restResult, status, headers, config) {
-                    deferred.reject(restResult.data.errorReason);
-                });
-            return deferred.promise;
-        };
-
-    })
-
-    .service('BookingService', function ($q, $http, SystemService) {
         this.register = function (content) {
             let param = {
                 firstName: content.firstName,
@@ -373,7 +194,7 @@ angular.module('app.services', [])
                 password: content.password
             };
             console.log(param);
-            return SystemService.post('web/booking/register', param);
+            return SystemService.post('web/user/register', param);
         };
         this.login = function (content) {
             let param = {
@@ -381,8 +202,11 @@ angular.module('app.services', [])
                 password: content.password
             };
             console.log(param);
-            return SystemService.post('web/booking/login', param);
+            return SystemService.post('web/user/login', param);
         };
+    })
+
+    .service('BookingService', function ($q, $http, SystemService) {
         this.booking = function (content) {
             let param = {
                 userId:content.userId,
