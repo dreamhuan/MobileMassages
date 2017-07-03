@@ -31,14 +31,14 @@ router.post('/register', function (req, res, next) {
                 res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "邮箱已被使用");
                 return;
             }
-            connection.query(userSQL.register, [param.firstName, param.lastName, param.emailAddress, param.mobileNumber, desUtils.encrypt(param.password)],function (err,doc) {
+            connection.query(userSQL.register, [param.firstName, param.lastName, param.emailAddress, param.mobileNumber, desUtils.encrypt(param.password)], function (err, doc) {
                 if (err) {
                     console.log(err);
                     res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
                     return;
                 }
             });
-            connection.query(userSQL.findUserByEmailName, [param.emailAddress],function (err,doc) {
+            connection.query(userSQL.findUserByEmailName, [param.emailAddress], function (err, doc) {
                 if (err) {
                     console.log(err);
                     res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
@@ -79,8 +79,7 @@ router.post('/login', function (req, res, next) {
                 return;
             }
             console.log(doc[0]);
-            if(doc[0].password!==desUtils.encrypt(param.password))
-            {
+            if (doc[0].password !== desUtils.encrypt(param.password)) {
                 res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "密码错误!");
                 return;
             }
@@ -94,5 +93,31 @@ router.post('/login', function (req, res, next) {
     });
 });
 
+/**
+ * 重置密码
+ */
+router.post('/resetPassword', function (req, res, next) {
+    // 从连接池获取连接
+    pool.getConnection(function (err, connection) {
+        let random = parseInt(Math.random() * 1000000) + ''; //6位随机数
+        let pwd = desUtils.encrypt(random);  //三重DES加密作为密码
+        let param = req.body; //post请求
+        connection.query(userSQL.alterPasswordByEmaill, [pwd, param.emailAddress], function (err, doc) {
+            if (err) {
+                console.log(err);
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "恭喜 数据库炸了 boom");
+                return;
+            }
+            if (!doc.changedRows) {
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "邮箱不存在!");
+                return;
+            }
+            sendmail(param.emailAddress, "To confirm your password reset in mobile massages", "Dear customer: " + param.emailAddress + "\n" + "We have received your request of resetting your password,and here is your new password:" + random);
+            res.success("发送成功");
+        });
+
+
+    });
+});
 
 module.exports = router;
