@@ -70,7 +70,7 @@
     font-size: 15px;
   }
   .massageTherapist .font .theme .font-lx {
-    font-size: 30px;
+    font-size: 34px;
   }
   .massageTherapist .intro .item {
     width: 360px;
@@ -104,7 +104,7 @@
     font-size: 20px;
   }
   .massageTherapist .font .theme .font-lx {
-    font-size: 40px;
+    font-size: 34px;
   }
   .massageTherapist .intro .item {
     width: 480px;
@@ -212,10 +212,13 @@
   font-style: italic;
 }
 .massageTherapist .font-gothem {
-  font-family: gothem;
-  transform: scale(1, 0.88);
+  font-family: Gotham Rounded Book;
+  transform: scale(1, 1);
   letter-spacing: -0.02em;
   text-align: center;
+}
+.massageTherapist .font-thin {
+  font-weight: lighter;
 }
 .massageTherapist .flexRow {
   display: flex;

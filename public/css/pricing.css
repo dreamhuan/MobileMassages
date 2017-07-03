@@ -110,8 +110,8 @@
   font-size: 20px;
 }
 .pricing .font-gothem {
-  font-family: gothem;
-  transform: scale(1, 0.88);
+  font-family: Gotham Rounded Book;
+  transform: scale(1, 1);
   letter-spacing: -0.04em;
   text-align: center;
 }

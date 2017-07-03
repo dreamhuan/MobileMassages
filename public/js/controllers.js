@@ -102,6 +102,8 @@ angular.module('app.controllers', [])
     })
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
 
+        $('#myCarousel').carousel({interval:3500});//每隔5秒自动轮播
+
         // $http.get('../data/faq.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
@@ -187,6 +189,7 @@ angular.module('app.controllers', [])
         $scope.booking = function () {
             $state.go('booking.step1');
         };
+
 
     })
 
