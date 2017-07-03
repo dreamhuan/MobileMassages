@@ -193,6 +193,9 @@ button {
 .rightSlideMenu .menu .navGroup .navItem a:active {
   text-decoration: none;
 }
+.rightSlideMenu .menu .navGroup .navItem a:hover {
+  text-decoration: none;
+}
 .rightSlideMenu .menu .navGroup .nav-pages-signIn {
   color: #77e2bd;
 }
