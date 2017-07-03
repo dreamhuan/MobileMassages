@@ -1,0 +1,197 @@
+<!--
+    Powered By nodePPT - This is probably the best web presentation tool so far!
+    version: 1.4.2
+    site: https://github.com/ksky521/nodePPT
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile massages - By </title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.dark.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Mobile massages</h1>
+<h3>傅凯琪 徐韬 岑焕亚 吕靖之</h3>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="zoomIn">
+<h1>项目简介</h1>
+<ul>
+<li>根据图片内容完成一个网站的前端页面和部分后端业务逻辑。<ul>
+<li>前端页面PC，pad，手机横屏竖屏自适应。</li>
+<li>后端完成了简单的数据获取，登录注册，重置密码，订单提交等。</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h1>项目架构&amp;技术简介</h1>
+
+</hgroup><article>
+
+<ul class="moveIn">
+<li>Angularjs 前端MVC框架</li>
+<li>Nodejs/Express 后端框架</li>
+<li>MySQL 关系型数据库</li>
+<li>MongoDB 文档型数据库</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>架构图</h1>
+<img src="./img/jiagou.jpg" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="bounceIn">
+<h1>项目演示</h1>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>任务分配</h1>
+<h3>其中每个人都负责一部分的页面并做好四平台自适应</h3>
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<ul>
+<li>傅凯琪<ul>
+<li>Booking页面step124</li>
+</ul>
+</li>
+<li>徐韬<ul>
+<li>Booking页面step3和登录注册</li>
+</ul>
+</li>
+<li>岑焕亚<ul>
+<li>主页和主页内容一样的几个页面（contact us、FAQ、massage type）</li>
+</ul>
+</li>
+<li>吕靖之<ul>
+<li>剩下页面（price、massage therapists）</li>
+</ul>
+</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<img src="./img/jiagou.jpg" alt="">
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h1>开发过程简述</h1>
+<h3>开发过程中基本没遇到什么大问题，这里提几个技术细节</h3>
+
+</hgroup><article>
+
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<h2>组件化</h2>
+<p>用Angularjs的路由控制模块进行视图的绑定，就可以分模块开发，<br>并都塞入一个页面中，从而实现单页面应用。<br>举个栗子：</p>
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<p>index.html<br><img src="./img/1.1.png" alt=""><br>test.html<br><img src="./img/1.2.png" alt=""></p>
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<img src="./img/1.3.png" alt="">
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<h2>代码模板</h2>
+<p>faq.html<br><img src="./img/2.1.png" alt=""><br>faq对应的controller(js)<br><img src="./img/2.2.png" alt=""></p>
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<p>数据库的数据<br><img src="./img/2.3.png" alt=""></p>
+
+</article></section></slide>
+<slide class="slide" data-transition="zoomin"><section class="slide-wrapper"><article>
+<p>Angularjs渲染后的结果<br><img src="./img/2.4.png" alt=""></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="zoomIn">
+<h1>THE END</h1>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodePPT v1.4.2</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide3',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+<link rel="stylesheet" href="./css/style.css">
+
+<!--placeholder-->
+</body>
+</html>

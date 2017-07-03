@@ -5,5 +5,5 @@ nodeppt start -p 8080 -d ./ -H 127.0.0.1
 ```
 静态html生成
 ```text
-nodeppt generate ./AssociationAdmin.md -a
+nodeppt generate ./MobileMassages.md -a
 ```
