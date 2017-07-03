@@ -394,7 +394,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
+    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, UserService, AlertService) {
         $scope.setCurrentBookingStep(3);
 
         $scope.forgetPwd = function () {
@@ -423,7 +423,7 @@ angular.module('app.controllers', [])
 
             $cookieStore.put('step3', step3);
             if (step3.showType === 0) {
-                let promise = BookingService.register(step3);
+                let promise = UserService.register(step3);
                 promise.then(function (data) {
                     console.log(data);
                     AlertService.success("注册成功!");
@@ -438,7 +438,7 @@ angular.module('app.controllers', [])
                 })
             }
             else {
-                let promise = BookingService.login(step3);
+                let promise = UserService.login(step3);
                 promise.then(function (data) {
                     console.log(data);
                     AlertService.success("登录成功!");
@@ -672,7 +672,7 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, BookingService, AlertService) {
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, BookingService, UserService, AlertService) {
         $timeout(function () {
             document.navInit(7)
         }, 0);
@@ -686,7 +686,7 @@ angular.module('app.controllers', [])
                 emailAddress: $scope.emailAddress,
                 password: $scope.password
             };
-            let promise = BookingService.login(content);
+            let promise = UserService.login(content);
             promise.then(function (data) {
                 console.log(data);
                 AlertService.success("登录成功!");
@@ -709,21 +709,24 @@ angular.module('app.controllers', [])
             if (isValid) {
                 let signupdata = {
                     firstName: $scope.firstName,
-                    lsatName: $scope.lsatName,
+                    lastName: $scope.lastName,
                     emailAddress: $scope.emailAddress,
                     mobileNumber: $scope.mobileNumber,
                     password: $scope.password
                 };
-                console.log(signupdata);
-                // let promise = UserService.signup(signupdata);
-                // promise.then(function (data) {
-                //     AlertService.success('success!');
-                // }, function (data) {
-                //     AlertService.error(data);
-                // }).catch(function (err) {
-                //     console.log(err);
-                // });
+                let promise = UserService.register(signupdata);
+                promise.then(function (data) {
+                    console.log(data);
+                    AlertService.success("注册成功!");
+                    console.log(data);
+                    $cookieStore.put('currentAccount', data.id);
 
+                    $state.go('home');
+                }, function (reason) {
+                    console.log(reason);
+                    flag = 0;
+                    AlertService.error(reason);
+                })
             } else {
                 AlertService.error('error!');
             }

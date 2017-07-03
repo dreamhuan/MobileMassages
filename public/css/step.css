@@ -239,6 +239,9 @@
   font-size: 30px;
   /* W3C */
 }
+.step3 .small-marginTop {
+  margin-top: 0;
+}
 .step3 .content {
   max-width: 300px;
   margin: auto;
@@ -305,7 +308,7 @@
   font-size: 17px;
 }
 .step3 .content .inputGroup .inputItem input {
-  padding-left: 5px;
+  padding-left: 10px;
   width: 100%;
   font-size: 20px;
   height: 40px;

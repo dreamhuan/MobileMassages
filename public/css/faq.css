@@ -7,8 +7,8 @@
   padding-top: 70px;
   width: 30%;
   margin: auto;
-  color: #6fd5a9;
-  font-size: 28px;
+  color: #07d5a1;
+  font-size: 34px;
   text-align: center;
 }
 .faq .faq-title-mobile {
@@ -19,22 +19,23 @@
   letter-spacing: -1px;
   margin: auto;
   margin-top: 80px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   width: 750px;
   display: flex;
   flex-wrap: wrap;
 }
 .faq .faq-content .title {
   color: #64d2a4;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 10px;
+  font-weight: bolder;
 }
 .faq .faq-content .content {
   color: #898a8a;
   margin-top: 10px;
   line-height: 14px;
 }
-@media only screen and (max-width: 963px) {
+@media only screen and (max-width: 1123px) {
   .faq .faq-title {
     font-size: 24px;
   }
