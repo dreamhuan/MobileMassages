@@ -5,8 +5,8 @@ const desUtils = require('../util/desUtil');
 const async = require('async');
 const pool = require('../config/config');
 const userSQL = require('../sql/userSQL');
-
-
+const sendmail = require('./sendmail');
+// sendmail('fu_kaiqi@qq.com','testEmail','这是来自nodemailer发送的邮件！');
 
 /**
  * 注册

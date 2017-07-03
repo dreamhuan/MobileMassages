@@ -21,3 +21,16 @@ npm start
 ```text
 gulp
 ```
+
+### 邮件服务
+修改`node_modeules/nodemailer/lib/wellknown.js`在后面加上
+```text
+"163":{
+    transport: "SMTP",
+    host: "smtp.163.com",
+    port:465,
+    secureConnection: true,
+    requiresAuth: true,
+    domains: ["163.com"]
+ }
+```
