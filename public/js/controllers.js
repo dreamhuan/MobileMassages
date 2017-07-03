@@ -187,7 +187,18 @@ angular.module('app.controllers', [])
         }, 0);
 
         $scope.booking = function () {
-            $state.go('booking.step1');
+            let date = $('#datepicker').val();
+            if (!date) date = new Date().Format("yyyy-MM-dd");
+            let time = $('#timepicker').val();
+            console.log(date);
+            console.log(time);
+            console.log(time.length);
+            let step1 = {
+                date: date,
+                time: time
+            };
+            $cookieStore.put('step1', step1);
+            $state.go('booking.step2');
         };
 
 
@@ -399,7 +410,10 @@ angular.module('app.controllers', [])
 
     .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, UserService, AlertService) {
         $scope.setCurrentBookingStep(3);
-
+        if ($cookieStore.get('currentAccount')) {
+            AlertService.success("您已登陆!");
+            $state.go('booking.step4');
+        }
         $scope.forgetPwd = function () {
             $state.go('forgetpassword');
         };
@@ -432,7 +446,6 @@ angular.module('app.controllers', [])
                     AlertService.success("注册成功!");
                     console.log(data);
                     $cookieStore.put('currentAccount', data.id);
-
                     $state.go('booking.step4');
                 }, function (reason) {
                     console.log(reason);
@@ -492,10 +505,6 @@ angular.module('app.controllers', [])
         let step4 = {};
         $scope.book = function () {
             if ($scope.step4 === 0) {
-                if ($scope.streetAddress !== $scope.streetAddress2) {
-                    AlertService.error('地址不一致!');
-                    return
-                }
                 step4 = {
                     streetAddress: $scope.streetAddress,
                     streetAddress2: $scope.streetAddress2,
@@ -517,7 +526,7 @@ angular.module('app.controllers', [])
 
             let step1 = $cookieStore.get('step1');
             let step2 = $cookieStore.get('step2');
-            let step3 = $cookieStore.get('step3');
+            let step3 = $cookieStore.get('currentAccount');
             if (!(step1 && step2 && step3 && step4)) {
                 AlertService.error('请完成前面步骤！');
                 return;
@@ -536,11 +545,11 @@ angular.module('app.controllers', [])
             console.log(data);
             let promise = BookingService.booking(data);
             promise.then(function (data) {
-                AlertService.success('提交订单成功！');
                 $cookieStore.remove('step1');
                 $cookieStore.remove('step2');
                 $cookieStore.remove('step3');
                 $cookieStore.remove('step4');
+                $state.go("successfulBooking");
             }, function (data) {
                 AlertService.error(data);
             }).catch(function (err) {
@@ -742,5 +751,12 @@ angular.module('app.controllers', [])
                 console.log(resdata);
                 $scope.items = resdata.data;
             });
+    })
+    .controller('forgetPasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
+    })
+    .controller('successfulBookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
+        $timeout(function () {
+            $state.go('home');
+        }, 1000);
     })
 ;

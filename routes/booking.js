@@ -17,29 +17,24 @@ router.post('/booking', function (req, res, next) {
         let param = req.body; //post请求
         console.log(param);
         // 建立连接 增加一个用户信息
-       for(let i in param.therapists)
-       {
-           connection.query(bookingSQL.findTherapistByName,param.therapists[i].name,function (err,doc) {
-               if (err) {
-                   console.log(err);
-                   res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
-                   return;
-               }
-               let therapistId=doc[0].id;
-               connection.query(bookingSQL.addOrder,[param.userId,therapistId,param.date,param.time,param.style,param.massageLength,param.address,param.creditCardNumber],function (err,doc) {
-                   if (err) {
-                       console.log(err);
-                       res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
-                       return;
-                   }
-                   let result = {
-                       content:param
-                   };
-                   res.success(result);
-
-               })
-           })
-       }
+        for (let i in param.therapists) {
+            connection.query(bookingSQL.findTherapistByName, param.therapists[i].name, function (err, doc) {
+                if (err) {
+                    console.log(err);
+                    res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
+                    return;
+                }
+                let therapistId = doc[0].id;
+                connection.query(bookingSQL.addOrder, [param.userId, therapistId, param.date, param.time, param.style, param.massageLength, param.address, param.creditCardNumber], function (err, doc) {
+                    if (err) {
+                        console.log(err);
+                        res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, RestResult.SERVER_EXCEPTION_ERROR_DESCRIPTION);
+                        return;
+                    }
+                })
+            })
+        }
+        res.success("添加成功");
     });
 });
 module.exports = router;
