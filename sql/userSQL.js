@@ -64,9 +64,10 @@ const userSQL = {
 
     /**
      * param:
-     *
+     *  Newpassword,emailAddress
      *
      */
-    getAllOrder:''//用于时间冲突的判断
+   alterPasswordByEmaill:'UPDATE mobilemassages.user SET password=? WHERE  emailAddress=?'//重置密码
+
 };
 module.exports = userSQL;

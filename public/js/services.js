@@ -204,6 +204,13 @@ angular.module('app.services', [])
             console.log(param);
             return SystemService.post('web/user/login', param);
         };
+        this.resetPassword = function (content) {
+            let param = {
+                emailAddress: content.emailAddress,
+            };
+            console.log(param);
+            return SystemService.post('web/user/resetPassword', param);
+        };
     })
 
     .service('BookingService', function ($q, $http, SystemService) {

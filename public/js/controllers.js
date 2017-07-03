@@ -896,7 +896,20 @@ angular.module('app.controllers', [])
                 $scope.items = resdata.data;
             });
     })
-    .controller('forgetPasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
+    .controller('forgetpasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http,UserService,AlertService) {
+        $scope.resetPassword=function () {
+            let param={
+                emailAddress:$scope.emailAddress
+            };
+            let promise =UserService.resetPassword(param);
+            promise.then(function (data) {
+                AlertService.success("邮件已发送到您的邮箱");
+                $state.go('home');
+            }, function (reason) {
+                console.log(reason);
+                AlertService.error(reason);
+            })
+        }
     })
     .controller('successfulBookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
         $timeout(function () {
