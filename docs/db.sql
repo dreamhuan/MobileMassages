@@ -27,8 +27,8 @@ USE `mobilemassages`;
 DROP TABLE IF EXISTS `mobilemassages`.`todo`;
 
 CREATE TABLE todo (
-  'id'      INT         NOT NULL AUTO_INCREMENT,
-  'content' VARCHAR(30) NOT NULL,
+  `id`      INT         NOT NULL AUTO_INCREMENT,
+  `content` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`id`)
 )
   ENGINE = InnoDB;

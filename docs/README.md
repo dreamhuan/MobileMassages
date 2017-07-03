@@ -1,6 +1,10 @@
 确保已安装node,npm,bower,gulp  
-其中npm是后端包管理器,bower是前端包管理器gulp是自动构建工具  
-若没有则先安装node  
+- node是运行环境
+- npm是后端包管理器
+- bower是前端包管理器
+- gulp是自动构建工具
+
+若没有则先安装node(同时完成npm的安装)  
 安装bower：
 ```text
 npm install -g bower
@@ -34,3 +38,4 @@ gulp
     domains: ["163.com"]
  }
 ```
+邮件配置见util/mailUtil.js

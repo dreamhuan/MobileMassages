@@ -33,13 +33,13 @@
   justify-content: center;
   padding-top: 50px;
 }
-.home .date-booking .firsttitle {
+.home .date-booking .first-title {
   font-family: Gotham Rounded Book;
   color: #6fd5a9;
   font-size: 32px;
   letter-spacing: -2px;
 }
-.home .date-booking .secondtitle {
+.home .date-booking .second-title {
   font-family: Gotham Rounded Book;
   color: #424242;
   font-size: 18px;
@@ -69,10 +69,10 @@
   margin-top: 10px;
 }
 @media only screen and (max-width: 1046px) {
-  .home .date-booking .firsttitle {
+  .home .date-booking .first-title {
     font-size: 28px;
   }
-  .home .date-booking .secondtitle {
+  .home .date-booking .second-title {
     font-size: 16px;
   }
   .home .home-title img {
@@ -80,10 +80,10 @@
   }
 }
 @media only screen and (max-width: 900px) {
-  .home .date-booking .firsttitle {
+  .home .date-booking .first-title {
     font-size: 24px;
   }
-  .home .date-booking .secondtitle {
+  .home .date-booking .second-title {
     font-size: 14px;
   }
   .home .home-title img {
@@ -91,10 +91,10 @@
   }
 }
 @media only screen and (max-width: 757px) {
-  .home .date-booking .firsttitle {
+  .home .date-booking .first-title {
     font-size: 20px;
   }
-  .home .date-booking .secondtitle {
+  .home .date-booking .second-title {
     font-size: 12px;
   }
 }
@@ -102,10 +102,10 @@
   .home .date-booking {
     width: 80%;
   }
-  .home .date-booking .firsttitle {
+  .home .date-booking .first-title {
     font-size: 18px;
   }
-  .home .date-booking .secondtitle {
+  .home .date-booking .second-title {
     font-size: 12px;
   }
   .home .home-title img {
@@ -116,11 +116,11 @@
   .home .date-booking {
     width: 100%;
   }
-  .home .date-booking .firsttitle {
+  .home .date-booking .first-title {
     font-size: 20px;
     letter-spacing: -1px;
   }
-  .home .date-booking .secondtitle {
+  .home .date-booking .second-title {
     font-size: 12px;
   }
   .home .home-title img {
