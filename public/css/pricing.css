@@ -1,1 +1,126 @@
-@media screen and (max-width:400px){.pricing .title{height:180px}.pricing .font-lx{font-size:30px}.pricing .content .tit{font-size:24px;height:50px}.pricing .content .item{height:110px}.pricing .content .item .frontNum{color:#63d2a3;font-weight:600}.pricing .content .item .text{height:100%;width:240px;border-bottom:solid 1px #63d2a3;font-size:20px}}@media screen and (min-width:400px) and (max-width:500px){.pricing .title{height:180px}.pricing .font-lx{font-size:30px}.pricing .content .tit{font-size:26px;height:50px}.pricing .content .item{height:120px}.pricing .content .item .frontNum{color:#63d2a3;font-weight:600}.pricing .content .item .text{height:100%;width:300px;border-bottom:solid 1px #63d2a3;font-size:26px}}@media screen and (min-width:500px){.pricing .title{height:260px}.pricing .font-lx{font-size:40px}.pricing .content .tit{font-size:32px}.pricing .content .item{height:120px}.pricing .content .item .frontNum{color:#63d2a3;font-weight:600}.pricing .content .item .text{height:100%;width:500px;border-bottom:solid 1px #d9faeb;font-size:30px}}.pricing .button{width:100%;margin-bottom:60px}.pricing .button .booking-btn{width:250px;height:50px;background-color:#00d6a0;color:#ffffff;border:none;margin-top:60px;font-size:16px;outline:none}.pricing .centerBox{display:flex;align-items:center;justify-content:center}.pricing .font-bold{font-weight:200}.pricing .font-bolder{font-weight:400}.pricing .font-bolderest{font-weight:500}.pricing .font-xxbolderest{font-weight:700}.pricing .centerContent{text-align:center}.pricing .font-sm{font-size:20px}.pricing .font-gothem{font-family:gothem;transform:scale(1, .88);letter-spacing:-0.04em;text-align:center}.pricing .grey{color:#999}.pricing .green{color:#63d2a3}.pricing .mar-xxtop{margin-top:20px}
+@media screen and (max-width: 400px) {
+  .pricing .title {
+    height: 180px;
+  }
+  .pricing .font-lx {
+    font-size: 30px;
+  }
+  .pricing .content .tit {
+    font-size: 24px;
+    height: 50px;
+  }
+  .pricing .content .item {
+    height: 110px;
+  }
+  .pricing .content .item .frontNum {
+    color: #63d2a3;
+    font-weight: 600;
+  }
+  .pricing .content .item .text {
+    height: 100%;
+    width: 240px;
+    border-bottom: solid 1px #63d2a3;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .pricing .title {
+    height: 180px;
+  }
+  .pricing .font-lx {
+    font-size: 30px;
+  }
+  .pricing .content .tit {
+    font-size: 26px;
+    height: 50px;
+  }
+  .pricing .content .item {
+    height: 120px;
+  }
+  .pricing .content .item .frontNum {
+    color: #63d2a3;
+    font-weight: 600;
+  }
+  .pricing .content .item .text {
+    height: 100%;
+    width: 300px;
+    border-bottom: solid 1px #63d2a3;
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .pricing .title {
+    height: 260px;
+  }
+  .pricing .font-lx {
+    font-size: 40px;
+  }
+  .pricing .content .tit {
+    font-size: 32px;
+  }
+  .pricing .content .item {
+    height: 120px;
+  }
+  .pricing .content .item .frontNum {
+    color: #63d2a3;
+    font-weight: 600;
+  }
+  .pricing .content .item .text {
+    height: 100%;
+    width: 500px;
+    border-bottom: solid 1px #d9faeb;
+    font-size: 30px;
+  }
+}
+.pricing .button {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.pricing .button .booking-btn {
+  width: 250px;
+  height: 50px;
+  background-color: #00d6a0;
+  color: #ffffff;
+  border: none;
+  margin-top: 60px;
+  font-size: 16px;
+  outline: none;
+}
+.pricing .centerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pricing .font-bold {
+  font-weight: 200;
+}
+.pricing .font-bolder {
+  font-weight: 400;
+}
+.pricing .font-bolderest {
+  font-weight: 500;
+}
+.pricing .font-xxbolderest {
+  font-weight: 700;
+}
+.pricing .centerContent {
+  text-align: center;
+}
+.pricing .font-sm {
+  font-size: 20px;
+}
+.pricing .font-gothem {
+  font-family: Gotham Rounded Book;
+  transform: scale(1, 1);
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+.pricing .grey {
+  color: #999;
+}
+.pricing .green {
+  color: #63d2a3;
+}
+.pricing .mar-xxtop {
+  margin-top: 20px;
+}
