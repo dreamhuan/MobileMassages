@@ -134,7 +134,7 @@ angular.module('app.services', [])
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: '确认删除',
+                confirmButtonText: '确认',
                 cancelButtonText: '取消'
             }).then(callback, function (dismiss) {
                 if (dismiss === 'cancel') {
@@ -152,7 +152,7 @@ angular.module('app.services', [])
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: '确认删除',
+                confirmButtonText: '确认',
                 cancelButtonText: '取消'
             }).then(callback, function (dismiss) { //callback是确定的会掉，后面是其他的回调
                 if (dismiss === 'cancel') {

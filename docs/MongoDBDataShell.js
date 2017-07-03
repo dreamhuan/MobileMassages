@@ -6,9 +6,7 @@ db.bookingstep.insert({
     "id": "chooseSessionMenu",
     "options": [
         "Single -1 therapist",
-        "normal -2 therapists",
-        "wonderful -3 therapists",
-        "fantastic -4 therapists"
+        "Normal -2 therapists",
     ]
 });
 
@@ -173,6 +171,7 @@ db.massagetype.insert({
 
 db.price.insert({
     "_id": ObjectId("5957b4aa4ad27643ec9ef05a"),
+    "title":"Single -1 therapist",
     "therapistNumber": 1.0,
     "priceList": [
         {
@@ -192,6 +191,7 @@ db.price.insert({
 
 db.price.insert({
     "_id": ObjectId("5957b4aa4ad27643ec9ef05b"),
+    "title":"Normal -2 therapists",
     "therapistNumber": 2.0,
     "priceList": [
         {

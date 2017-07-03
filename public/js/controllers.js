@@ -101,7 +101,7 @@ angular.module('app.controllers', [])
 
     })
     .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
-
+        //TODO 逻辑二选一
         // $http.get('../data/faq.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
@@ -119,6 +119,7 @@ angular.module('app.controllers', [])
             .catch(function (restResult, status, headers, config) {
                 console.log(restResult.data.errorReason);
             });
+        //TODO 逻辑二选一
         // $http.get('../data/home-massage-type.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
@@ -136,6 +137,7 @@ angular.module('app.controllers', [])
             .catch(function (restResult, status, headers, config) {
                 console.log(restResult.data.errorReason);
             });
+        //TODO 逻辑二选一
         // $http.get('../data/price.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
@@ -264,7 +266,7 @@ angular.module('app.controllers', [])
 
         //count是当前已选的计数，$scope.count是选项中的人数
         let count = $scope.count = 0;
-
+        //TODO 逻辑三选一
         // $http.get('../data/bookingstep2.json')
         //     .then(function (resdata) {
         //         // console.log(resdata);
@@ -280,21 +282,83 @@ angular.module('app.controllers', [])
         //         //选中'-'后面的数字
         //         $scope.count = str.substr(str.indexOf('-') + 1, 1);
         //     });
+        // $http.post('http://localhost:4000/web/FrontEndData/bookingstep2')
+        //     .then(function (restResult, status, headers, config) {
+        //         let data = restResult.data;
+        //         if (data.code == 0) {
+        //             $scope.chooses = data.returnValue;
+        //
+        //             //每个选项的默认选项是第一个
+        //             for (let i = 0; i < $scope.chooses.length; i++) {
+        //                 $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+        //             }
+        //
+        //             //选中的人数是第一个选择的内容
+        //             let str = $scope.chooses[0].chooseoption;
+        //             //选中'-'后面的数字
+        //             $scope.count = str.substr(str.indexOf('-') + 1, 1);
+        //
+        //         } else {
+        //             console.log(data.errorReason);
+        //         }
+        //     })
+        //     .catch(function (restResult, status, headers, config) {
+        //         console.log(restResult.data.errorReason);
+        //     });
+
+        let price, massageType;
         $http.post('http://localhost:4000/web/FrontEndData/bookingstep2')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
                     $scope.chooses = data.returnValue;
 
-                    //每个选项的默认选项是第一个
-                    for (let i = 0; i < $scope.chooses.length; i++) {
-                        $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
-                    }
 
-                    //选中的人数是第一个选择的内容
-                    let str = $scope.chooses[0].chooseoption;
-                    //选中'-'后面的数字
-                    $scope.count = str.substr(str.indexOf('-') + 1, 1);
+                    $http.post('http://localhost:4000/web/FrontEndData/price')
+                        .then(function (restResult) {
+                            price = restResult.data.returnValue;
+
+                            $http.post('http://localhost:4000/web/FrontEndData/home-massage-type')
+                                .then(function (restResult) {
+                                    massageType = restResult.data.returnValue;
+
+                                    $scope.chooses[0].options = [];
+                                    $scope.chooses[1].options = [];
+                                    $scope.chooses[2].options = [];
+                                    for (let i = 0; i < price.length; i++) {
+                                        $scope.chooses[0].options.push(price[i].title);
+                                    }
+                                    for (let i = 0; i < price[0].priceList.length; i++) {
+                                        $scope.chooses[1].options.push(price[0].priceList[i].time + " minutes - £" + price[0].priceList[i].price);
+                                    }
+                                    for (let i = 0; i < massageType.length; i++) {
+                                        let str = massageType[i].title;
+                                        if (str.indexOf("Massage") < 0) {
+                                            str += " Massage";
+                                        }
+                                        $scope.chooses[2].options.push(str);
+                                    }
+
+                                    //每个选项的默认选项是第一个
+                                    for (let i = 0; i < $scope.chooses.length; i++) {
+                                        $scope.chooses[i].chooseoption = $scope.chooses[i].options[0];
+                                    }
+
+                                    //选中的人数是第一个选择的内容
+                                    let str = $scope.chooses[0].chooseoption;
+                                    //选中'-'后面的数字
+                                    $scope.count = str.substr(str.indexOf('-') + 1, 1);
+
+
+                                })
+                                .catch(function (restResult, status, headers, config) {
+                                    console.log(restResult.data.errorReason);
+                                });
+
+                        })
+                        .catch(function (restResult, status, headers, config) {
+                            console.log(restResult.data.errorReason);
+                        });
                 } else {
                     console.log(data.errorReason);
                 }
@@ -306,7 +370,18 @@ angular.module('app.controllers', [])
         $scope.changeChoose = function (choose, option) {
             choose.chooseoption = option;
 
+            //TODO 逻辑二选一随上面选择而变，若上面为1、2，则为1，上面为3则为2
             //每次修改第一个的选项后重置下面人物选择部分内容
+            // if (choose === $scope.chooses[0]) {
+            //     count = 0;
+            //     let str = $scope.chooses[0].chooseoption;
+            //     $scope.count = str.substr(str.indexOf('-') + 1, 1);
+            //     $scope.chooseTherapist = [];
+            //     for (let i = 0; i < $scope.therapists.length; i++) {
+            //         angular.element('#' + $scope.therapists[i].name).removeClass('img-active');
+            //     }
+            // }
+            //每次修改第一个的选项后重置下面人物选择部分内容并修改第二个选项的价格
             if (choose === $scope.chooses[0]) {
                 count = 0;
                 let str = $scope.chooses[0].chooseoption;
@@ -315,9 +390,18 @@ angular.module('app.controllers', [])
                 for (let i = 0; i < $scope.therapists.length; i++) {
                     angular.element('#' + $scope.therapists[i].name).removeClass('img-active');
                 }
+
+                $scope.chooses[1].options = [];
+                let priceList = price[$scope.count - 1].priceList;
+                for (let i = 0; i < priceList.length; i++) {
+                    $scope.chooses[1].options.push(priceList[i].time + " minutes - £" + priceList[i].price);
+                }
+                //默认选项是第一个
+                $scope.chooses[1].chooseoption = $scope.chooses[1].options[0];
+
             }
         };
-
+        //TODO 逻辑二选一
         // $http.get('../data/massage-therapists.json')
         //     .then(function (resdata) {
         //         // console.log(resdata);
@@ -369,9 +453,16 @@ angular.module('app.controllers', [])
         $scope.continue = function () {
             //一个是string一个是number,+string是吧string转为number
             if (count !== +$scope.count) {
-                AlertService.error('请选择Therapist！');
-                return;
+                AlertService.question('未选择Therapist', '任意Therapist?', function () {
+                    $scope.chooseTherapist = [{
+                        name: 'Either Therapist'
+                    }];
+                    nextstep();
+                });
             }
+            nextstep();
+        };
+        function nextstep() {
             let choise = [];
             for (let i = 0; i < $scope.chooses.length; i++) {
                 let item = {
@@ -387,7 +478,7 @@ angular.module('app.controllers', [])
             console.log(choise);
             $cookieStore.put('step2', choise);
             $state.go('booking.step3');
-        };
+        }
 
         $scope.back = function () {
             $state.go('booking.step1');
@@ -498,9 +589,57 @@ angular.module('app.controllers', [])
                     streetAddress2: $scope.streetAddress2,
                     stateProvince: $scope.stateProvince,
                     postCode: $scope.postCode,
-                    parkingInstructions: $scope.parkingInstructions
+                    parkingInstructions: $scope.parkingInstructions || ''  //如果是undefined就改为空字符串
                 };
                 $scope.step4 = 1;
+
+
+                $scope.showOrderSummary = false;
+                let step1 = $cookieStore.get('step1');
+                let step2 = $cookieStore.get('step2');
+                let step3 = $cookieStore.get('step3');
+                console.log('step1');
+                console.log(step1);
+                console.log('step2');
+                console.log(step2);
+                console.log('step3');
+                console.log(step3);
+                console.log('step4');
+                console.log(step4);
+                let date = step1.date.split('-').reverse();
+                [date[0], date[1]] = [date[1], date[0]];
+                let datetime = date.join('/') + ' ' + step1.time.replace(' : ', ':');
+                console.log(datetime);
+
+                let session = step2[0].option.substring(0, step2[0].option.indexOf('-') - 1);
+                console.log(session);
+
+                let therapist = step2[3].option[0].name;
+                for (let i = 1; i < step2[3].option.length; i++) {
+                    therapist += ',' + step2[3].option[i].name;
+                }
+                let detail = step2[2].option.substring(0, step2[2].option.indexOf('Massage') - 1) + '/' +
+                    step2[1].option.substring(0, step2[1].option.indexOf(' ') + 4) + '/' + therapist;
+                console.log(detail);
+
+                let address = step4.streetAddress.length > 10 ? step4.streetAddress.substr(0, 10) + '...' : step4.streetAddress + ', ' + step4.postCode;
+                console.log(address);
+
+                let money = step2[1].option.substring(step2[1].option.indexOf('-') + 3, step2[1].option.length);
+                console.log(money);
+
+                if (step1 && step2 && step3) {
+                    $scope.orderSummary = {
+                        datetime: datetime,
+                        session: session + ' Session',
+                        detail: detail,
+                        address: address,
+                        money: money
+                    };
+                    $scope.showOrderSummary = true;
+                }
+
+
                 return;
             }
             step4.cardName = $scope.cardName;
@@ -512,9 +651,6 @@ angular.module('app.controllers', [])
 
             $cookieStore.put('step4', step4);
 
-            let step1 = $cookieStore.get('step1');
-            let step2 = $cookieStore.get('step2');
-            let step3 = $cookieStore.get('step3');
             if (!(step1 && step2 && step3 && step4)) {
                 AlertService.error('请完成前面步骤！');
                 return;
@@ -555,6 +691,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+        //TODO 逻辑二选一
         // $http.get('../data/massage-therapists.json')
         //     .then(function (resdata) {
         //         // console.log(resdata.data);
@@ -583,6 +720,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+        //TODO 逻辑二选一
         // $http.get('../data/home-massage-type.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
@@ -610,6 +748,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+        //TODO 逻辑二选一
         // $http.get('../data/price.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
@@ -642,6 +781,7 @@ angular.module('app.controllers', [])
     })
 
     .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+        //TODO 逻辑二选一
         // $http.get('../data/faq.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
