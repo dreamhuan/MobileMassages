@@ -159,6 +159,7 @@ INSERT INTO mobilemassages.user (id, firstName, lastName, emailAddress, mobileNu
 INSERT INTO mobilemassages.user (id, firstName, lastName, emailAddress, mobileNumber, passWord) VALUES (8, 'Mercer', 'Alex', 'aleixy@yahoo.com', 15388652247, 123);
 INSERT INTO mobilemassages.user (id, firstName, lastName, emailAddress, mobileNumber, passWord) VALUES (9, 'Wang', 'Ada', '885262137@qq.com', 15322356543, 123);
 INSERT INTO mobilemassages.user (id, firstName, lastName, emailAddress, mobileNumber, passWord) VALUES (10, 'Chu', 'Xuan', '1326578884@qq.com', 15315832556, 123);
+INSERT INTO mobilemassages.user (id, firstName, lastName, emailAddress, mobileNumber, passWord) VALUES (11, 'Fu', 'Kaiqi', '714061720@qq.com', 123, 123);
 
 
 INSERT INTO mobilemassages.therapist (id, name, introduction) VALUES (1, 'Rose', 'Rose immediately puts you at ease with her cheerful smile,calm approach & friendly personality. With over 3 years  of experience from Latvia where she focused on both beauty and massage treatments, she is now massaging London better with us as she loves London and always enjoyed doing massages more than beauty treatments. When you just fancy melting away from the rest of the world for a blissful, no fuss, real pampering treat from head to toe, we recommend you book a session with Rose!!');

@@ -121,10 +121,10 @@ angular.module('app.services', [])
 
     .service('AlertService', function () {
         this.success = function (message) {
-            swal('成功!', message, 'success');
+            swal('success!', message, 'success');
         };
         this.error = function (message) {
-            swal('出错了!', message, 'error');
+            swal('error!', message, 'error');
         };
         this.warning = function (title, message, callback) {
             swal({
@@ -134,8 +134,8 @@ angular.module('app.services', [])
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: '确认',
-                cancelButtonText: '取消'
+                confirmButtonText: 'confirm',
+                cancelButtonText: 'cancel'
             }).then(callback, function (dismiss) {
                 if (dismiss === 'cancel') {
                     // ignore
@@ -152,8 +152,8 @@ angular.module('app.services', [])
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: '确认',
-                cancelButtonText: '取消'
+                confirmButtonText: 'confirm',
+                cancelButtonText: 'cancel'
             }).then(callback, function (dismiss) { //callback是确定的会掉，后面是其他的回调
                 if (dismiss === 'cancel') {
                     // ignore
@@ -169,8 +169,8 @@ angular.module('app.services', [])
                 type: 'info',
                 input: 'text',
                 showCancelButton: true,
-                confirmButtonText: '确认',
-                cancelButtonText: '取消'
+                confirmButtonText: 'confirm',
+                cancelButtonText: 'cancel'
             }).then(function (inputValue) {
                 callback(inputValue);
             }, function (dismiss) {

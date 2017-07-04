@@ -27,7 +27,7 @@ router.post('/register', function (req, res, next) {
             }
             console.log(doc);
             if (doc.length) {
-                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "邮箱已被使用");
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, 'The email has been used');
                 return;
             }
             connection.query(userSQL.register, [param.firstName, param.lastName, param.emailAddress, param.mobileNumber, desUtils.encrypt(param.password)], function (err, doc) {
@@ -74,12 +74,12 @@ router.post('/login', function (req, res, next) {
                 return;
             }
             if (doc.length === 0) {
-                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "用户不存在!");
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, 'The user doesn\'t exist');
                 return;
             }
             console.log(doc[0]);
             if (doc[0].password !== desUtils.encrypt(param.password)) {
-                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "密码错误!");
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, 'Wrong Password!');
                 return;
             }
             let result = {
@@ -99,20 +99,20 @@ router.post('/resetPassword', function (req, res, next) {
     // 从连接池获取连接
     pool.getConnection(function (err, connection) {
         let random = parseInt(Math.random() * 1000000) + ''; //6位随机数
-        let pwd = desUtils.encrypt(random);  //三重DES加密作为密码
+        let pwd = desUtils.encrypt(random);  //密文保存
         let param = req.body; //post请求
         connection.query(userSQL.alterPasswordByEmaill, [pwd, param.emailAddress], function (err, doc) {
             if (err) {
                 console.log(err);
-                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "恭喜 数据库炸了 boom");
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, 'Congratulations,the database is boom!');
                 return;
             }
             if (!doc.changedRows) {
-                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, "邮箱不存在!");
+                res.error(RestResult.SERVER_EXCEPTION_ERROR_CODE, 'The email doesn\'t exist!');
                 return;
             }
             sendmail(param.emailAddress, "To confirm your password reset in mobile massages", "Dear customer: " + param.emailAddress + "\n" + "We have received your request of resetting your password,and here is your new password:" + random);
-            res.success("发送成功");
+            res.success('Send Successful!');
         });
 
 

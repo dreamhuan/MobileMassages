@@ -21,7 +21,7 @@ router.post('/bookingstep2', function (req, res, next) {
         if (docs) {
             res.success(docs);
         } else {
-            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, '无内容');
+            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, 'No Content!');
         }
     })
 });
@@ -36,7 +36,7 @@ router.post('/faq', function (req, res, next) {
         if (docs) {
             res.success(docs);
         } else {
-            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, '无内容');
+            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, 'No Content!');
         }
     })
 });
@@ -51,7 +51,7 @@ router.post('/home-massage-type', function (req, res, next) {
         if (docs) {
             res.success(docs);
         } else {
-            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, '无内容');
+            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, 'No Content!');
         }
     })
 });
@@ -66,7 +66,7 @@ router.post('/price', function (req, res, next) {
         if (docs) {
             res.success(docs);
         } else {
-            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, '无内容');
+            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, 'No Content!');
         }
     })
 });
@@ -81,7 +81,7 @@ router.post('/massage-therapists', function (req, res, next) {
         if (docs) {
             res.success(docs);
         } else {
-            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, '无内容');
+            res.error(RestResult.TARGET_NOT_EXIT_ERROR_CODE, 'No Content!');
         }
     })
 });

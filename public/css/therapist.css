@@ -1,1 +1,315 @@
-@media screen and (max-width:400px){.massageTherapist .font .theme .font-sx{font-size:12px}.massageTherapist .font .theme .font-lx{font-size:26px}.massageTherapist .intro .item{transform:scale(.9);width:360px}.massageTherapist .intro .item .picBox{height:160px;width:130px}.massageTherapist .intro .item .picBox .pic{height:150px;width:120px;border:solid 1px gainsboro}.massageTherapist .intro .item .contentBox{transform:scale(.95);width:220px}.massageTherapist .intro .item .contentBox .content{line-height:11px;padding:5px;padding-top:25px}.massageTherapist .fontLg{font-size:16px}.massageTherapist .fontSm{font-size:5px}}@media screen and (min-width:400px) and (max-width:600px){.massageTherapist .font .theme .font-sx{font-size:12px}.massageTherapist .font .theme .font-lx{font-size:26px}.massageTherapist .intro .item{width:530px}.massageTherapist .intro .item .picBox{height:170px;width:140px}.massageTherapist .intro .item .picBox .pic{height:150px;width:130px;border:solid 1px gainsboro}.massageTherapist .intro .item .contentBox{width:230px}.massageTherapist .intro .item .contentBox .content{padding:5px;line-height:13px}.massageTherapist .fontLg{font-size:16px}.massageTherapist .fontSm{font-size:6px}}@media screen and (min-width:600px) and (max-width:700px){.massageTherapist .font .theme .font-sx{font-size:12px}.massageTherapist .font .theme .font-lx{font-size:26px}.massageTherapist .intro .item{transform:scale(.8);width:310px}.massageTherapist .intro .item .picBox{height:170px;width:140px}.massageTherapist .intro .item .picBox .pic{height:150px;width:120px;border:solid 1px gainsboro}.massageTherapist .intro .item .contentBox{width:230px}.massageTherapist .intro .item .contentBox .content{padding:5px;line-height:11px}.massageTherapist .fontLg{font-size:16px}.massageTherapist .fontSm{font-size:6px}}@media screen and (min-width:700px) and (max-width:900px){.massageTherapist .font .theme .font-sx{font-size:15px}.massageTherapist .font .theme .font-lx{font-size:34px}.massageTherapist .intro .item{transform:scale(.8);width:340px}.massageTherapist .intro .item .picBox{height:120px;width:105px}.massageTherapist .intro .item .picBox .pic{height:140px;width:120px;border:solid 1px gainsboro}.massageTherapist .intro .item .contentBox{width:240px}.massageTherapist .intro .item .contentBox .content{transform:scale(1, .9);padding:5px;line-height:12px;padding-top:20px}.massageTherapist .fontLg{font-size:18px}.massageTherapist .fontSm{font-size:4px}}@media screen and (min-width:900px) and (max-width:1100px){.massageTherapist .font .theme .font-sx{font-size:20px}.massageTherapist .font .theme .font-lx{font-size:34px}.massageTherapist .intro .item{width:480px}.massageTherapist .intro .item .picBox{height:120px;width:105px}.massageTherapist .intro .item .picBox .pic{height:140px;width:120px;border:solid 1px gainsboro}.massageTherapist .intro .item .contentBox{width:240px}.massageTherapist .intro .item .contentBox .content{padding:5px;line-height:11px;padding-top:20px}.massageTherapist .fontLg{font-size:20px}.massageTherapist .fontSm{font-size:4px}}@media screen and (min-width:1100px){.massageTherapist .font .theme .font-sx{font-size:20px}.massageTherapist .font .theme .font-lx{font-size:40px}.massageTherapist .intro .item{width:530px}.massageTherapist .intro .item .picBox{height:190px;width:160px}.massageTherapist .intro .item .picBox .pic{height:170px;width:150px;border:solid 1px gainsboro}.massageTherapist .intro .item .contentBox{width:270px}.massageTherapist .intro .item .contentBox .content{padding:5px;line-height:13px}.massageTherapist .fontLg{font-size:20px}.massageTherapist .fontSm{font-size:11px}}.massageTherapist .font{display:flex;width:95%;margin:auto;flex-direction:column}.massageTherapist .font .theme{width:100%;height:200px;flex-direction:column}.massageTherapist .intro{display:flex;width:100%;flex-direction:row;flex-wrap:wrap}.massageTherapist .intro .item{height:195px}.massageTherapist .intro .item .contentBox{height:190px}.massageTherapist .intro .item .contentBox .content{height:100%;width:100%;word-wrap:break-word;text-align:justify;text-justify:distribute;word-break:break-all}.massageTherapist .intro .bgBlack{background-color:#0f0f0f}.massageTherapist .intro .bgWhite{background-color:#9acfea}.massageTherapist .centerBox{display:flex;align-items:center;justify-content:center}.massageTherapist .font-italic{font-style:italic}.massageTherapist .font-gothem{font-family:Gotham Rounded Book;transform:scale(1, 1);letter-spacing:-0.02em;text-align:center}.massageTherapist .font-thin{font-weight:lighter}.massageTherapist .flexRow{display:flex;flex-direction:row}.massageTherapist .flexResRow{display:flex;flex-direction:row-reverse}.massageTherapist .font-bold{font-weight:200}.massageTherapist .font-bolder{font-weight:400}.massageTherapist .font-bolderest{font-weight:500}.massageTherapist .font-xxbolderest{font-weight:700}.massageTherapist .centerContent{text-align:center}.massageTherapist .grey{color:#999}.massageTherapist .green{color:#63d2a3}.massageTherapist .height{height:540px}.massageTherapist .mar-xxtop{margin-top:20px}.massageTherapist .marXXBottom{margin-bottom:10px}.massageTherapist .booking-btn{width:250px;height:50px;background-color:#00d6a0;color:#ffffff;border:none;margin-top:60px;font-size:16px;outline:none}.massageTherapist .button{width:100%;margin-bottom:60px}.massageTherapist .inline{line-height:40px}
+@media screen and (max-width: 400px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 12px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 26px;
+  }
+  .massageTherapist .intro .item {
+    transform: scale(0.9);
+    width: 360px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 160px;
+    width: 130px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 150px;
+    width: 120px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    transform: scale(0.95);
+    width: 220px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    line-height: 11px;
+    padding: 5px;
+    padding-top: 25px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 16px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 5px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 12px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 26px;
+  }
+  .massageTherapist .intro .item {
+    width: 530px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 170px;
+    width: 140px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 150px;
+    width: 130px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 230px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 13px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 16px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 6px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 12px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 26px;
+  }
+  .massageTherapist .intro .item {
+    transform: scale(0.8);
+    width: 310px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 170px;
+    width: 140px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 150px;
+    width: 120px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 230px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 11px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 16px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 6px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 15px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 34px;
+  }
+  .massageTherapist .intro .item {
+    transform: scale(0.8);
+    width: 340px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 120px;
+    width: 105px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 140px;
+    width: 120px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 240px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    transform: scale(1, 0.9);
+    padding: 5px;
+    line-height: 12px;
+    padding-top: 20px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 18px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 4px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 20px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 34px;
+  }
+  .massageTherapist .intro .item {
+    width: 480px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 120px;
+    width: 105px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 140px;
+    width: 120px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 240px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 11px;
+    padding-top: 20px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 20px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 4px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .massageTherapist .font .theme .font-sx {
+    font-size: 20px;
+  }
+  .massageTherapist .font .theme .font-lx {
+    font-size: 40px;
+  }
+  .massageTherapist .intro .item {
+    width: 530px;
+  }
+  .massageTherapist .intro .item .picBox {
+    height: 190px;
+    width: 160px;
+  }
+  .massageTherapist .intro .item .picBox .pic {
+    height: 170px;
+    width: 150px;
+    border: solid 1px gainsboro;
+  }
+  .massageTherapist .intro .item .contentBox {
+    width: 270px;
+  }
+  .massageTherapist .intro .item .contentBox .content {
+    padding: 5px;
+    line-height: 13px;
+  }
+  .massageTherapist .fontLg {
+    font-size: 20px;
+  }
+  .massageTherapist .fontSm {
+    font-size: 11px;
+  }
+}
+.massageTherapist .font {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  flex-direction: column;
+}
+.massageTherapist .font .theme {
+  width: 100%;
+  height: 200px;
+  flex-direction: column;
+}
+.massageTherapist .intro {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.massageTherapist .intro .item {
+  height: 195px;
+}
+.massageTherapist .intro .item .contentBox {
+  height: 190px;
+}
+.massageTherapist .intro .item .contentBox .content {
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: distribute;
+  word-break: break-all;
+}
+.massageTherapist .intro .bgBlack {
+  background-color: #0f0f0f;
+}
+.massageTherapist .intro .bgWhite {
+  background-color: #9acfea;
+}
+.massageTherapist .centerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.massageTherapist .font-italic {
+  font-style: italic;
+}
+.massageTherapist .font-gothem {
+  font-family: Gotham Rounded Book;
+  transform: scale(1, 1);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.massageTherapist .font-thin {
+  font-weight: lighter;
+}
+.massageTherapist .flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.massageTherapist .flexResRow {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.massageTherapist .font-bold {
+  font-weight: 200;
+}
+.massageTherapist .font-bolder {
+  font-weight: 400;
+}
+.massageTherapist .font-bolderest {
+  font-weight: 500;
+}
+.massageTherapist .font-xxbolderest {
+  font-weight: 700;
+}
+.massageTherapist .centerContent {
+  text-align: center;
+}
+.massageTherapist .grey {
+  color: #999;
+}
+.massageTherapist .green {
+  color: #63d2a3;
+}
+.massageTherapist .height {
+  height: 540px;
+}
+.massageTherapist .mar-xxtop {
+  margin-top: 20px;
+}
+.massageTherapist .marXXBottom {
+  margin-bottom: 10px;
+}
+.massageTherapist .booking-btn {
+  width: 250px;
+  height: 50px;
+  background-color: #00d6a0;
+  color: #ffffff;
+  border: none;
+  margin-top: 60px;
+  font-size: 16px;
+  outline: none;
+}
+.massageTherapist .button {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.massageTherapist .inline {
+  line-height: 40px;
+}

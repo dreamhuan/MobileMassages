@@ -56,7 +56,7 @@ router.post('/delete', function (req, res, next) {
                 console.log(doc);
                 res.success(doc);
             } else {
-                res.error(RestResult.ILLEGAL_ARGUMENT_ERROR_CODE, "无内容");
+                res.error(RestResult.ILLEGAL_ARGUMENT_ERROR_CODE, 'No Content!');
             }
             connection.release();
         });
@@ -81,7 +81,7 @@ router.post('/update', function (req, res, next) {
                 console.log(doc);
                 res.success(doc);
             } else {
-                res.error(RestResult.ILLEGAL_ARGUMENT_ERROR_CODE, "无内容");
+                res.error(RestResult.ILLEGAL_ARGUMENT_ERROR_CODE, 'No Content!');
             }
             connection.release();
         });
@@ -103,7 +103,7 @@ router.post('/getalltodo', function (req, res, next) {
                 // console.log(doc);
                 res.success(doc);
             } else {
-                res.error(RestResult.ILLEGAL_ARGUMENT_ERROR_CODE, "无内容");
+                res.error(RestResult.ILLEGAL_ARGUMENT_ERROR_CODE, 'No Content!');
             }
 
             connection.release();

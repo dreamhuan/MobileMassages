@@ -465,7 +465,7 @@ angular.module('app.controllers', [])
                 // console.log($scope.count);
                 // console.log(count > $scope.count);
                 if (count > $scope.count) {
-                    AlertService.error('人数已满！');
+                    AlertService.error('The number of therapist has reached the limit!');
                     count--;
                     return;
                 }
@@ -479,7 +479,7 @@ angular.module('app.controllers', [])
             console.log(count);
             console.log($scope.count);
             if (count !== +$scope.count) {
-                AlertService.question('未选择Therapist', '任意Therapist?',
+                AlertService.question('Haven\'t choose the Therapist', 'Either therapist?',
                     function () {
                         $scope.chooseTherapist = [{
                             name: 'Either Therapist'
@@ -517,7 +517,7 @@ angular.module('app.controllers', [])
     .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, UserService, AlertService) {
         $scope.setCurrentBookingStep(3);
         if ($cookieStore.get('currentAccount')) {
-            AlertService.success("您已登陆!");
+            AlertService.success("Already Login");
             $state.go('booking.step4');
         }
         $scope.forgetPwd = function () {
@@ -549,7 +549,7 @@ angular.module('app.controllers', [])
                 let promise = UserService.register(step3);
                 promise.then(function (data) {
                     console.log(data);
-                    AlertService.success("注册成功!");
+                    AlertService.success("Register Successful");
                     console.log(data);
                     $cookieStore.put('currentAccount', data.id);
                     $state.go('booking.step4');
@@ -563,7 +563,7 @@ angular.module('app.controllers', [])
                 let promise = UserService.login(step3);
                 promise.then(function (data) {
                     console.log(data);
-                    AlertService.success("登录成功!");
+                    AlertService.success("Login Successful");
                     console.log(data);
                     $cookieStore.put('currentAccount', data.id);
                     $state.go('booking.step4');
@@ -602,9 +602,9 @@ angular.module('app.controllers', [])
                 && $scope.cardExpirationDate
                 && $scope.cardSecurityCode
                 && $scope.billingPostalCode) {
-                AlertService.success('验证成功!');
+                AlertService.success('Check Successful');
             } else {
-                AlertService.error('请填写前面的内容!');
+                AlertService.error('Haven\'t filled the former content');
             }
         };
 
@@ -682,7 +682,7 @@ angular.module('app.controllers', [])
             let step2 = $cookieStore.get('step2');
             let step3 = $cookieStore.get('currentAccount');
             if (!(step1 && step2 && step3 && step4)) {
-                AlertService.error('请完成前面步骤！');
+                AlertService.error('Haven\'t filled the former content');
                 return;
             }
 
@@ -859,7 +859,7 @@ angular.module('app.controllers', [])
             let promise = UserService.login(content);
             promise.then(function (data) {
                 console.log(data);
-                AlertService.success("登录成功!");
+                AlertService.success("Login Successful!");
                 console.log(data);
                 $cookieStore.put('currentAccount', data.id);
                 $state.go('home');
@@ -887,7 +887,7 @@ angular.module('app.controllers', [])
                 let promise = UserService.register(signupdata);
                 promise.then(function (data) {
                     console.log(data);
-                    AlertService.success("注册成功!");
+                    AlertService.success("Register Successful!");
                     console.log(data);
                     $cookieStore.put('currentAccount', data.id);
 
@@ -898,7 +898,7 @@ angular.module('app.controllers', [])
                     AlertService.error(reason);
                 })
             } else {
-                AlertService.error('error!');
+                AlertService.error('Error!');
             }
 
         }
@@ -917,7 +917,7 @@ angular.module('app.controllers', [])
             };
             let promise = UserService.resetPassword(param);
             promise.then(function (data) {
-                AlertService.success("邮件已发送到您的邮箱");
+                AlertService.success("Email has been sent already");
                 $state.go('home');
             }, function (reason) {
                 console.log(reason);

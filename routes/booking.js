@@ -34,7 +34,7 @@ router.post('/booking', function (req, res, next) {
                 })
             })
         }
-        res.success("添加成功");
+        res.success("Add Successful!");
     });
 });
 module.exports = router;
