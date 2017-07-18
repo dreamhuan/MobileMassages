@@ -28,6 +28,9 @@ files: /css/style.css
 [slide]
 # 架构图
 ![](./img/架构.jpg)
+[slide data-transition="zoomin"]
+BCNF数据库设计  
+![](./img/db.png)
 
 
 [slide]

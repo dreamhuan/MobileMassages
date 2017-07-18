@@ -32,6 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'publicAngular/dist')));
 
 
 
