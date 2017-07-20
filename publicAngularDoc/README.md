@@ -13,6 +13,7 @@ npm install -g @angular/cli
 新建项目
 ```text
 ng new publicAngular --skip-install
+(附加命令ng new publicAngular --skip-install --skip-git --style 'scss' --routing)
 ```
 安装依赖
 ```text

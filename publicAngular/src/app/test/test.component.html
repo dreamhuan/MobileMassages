@@ -1,12 +1,25 @@
 <p>
   test works!
 </p>
-<h1>test bootstrap grid system</h1>
+<h3>test bootstrap grid system</h3>
+<h3>click umber and watch console to show jquery test</h3>
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-3">1</div>
     <div class="col-xs-3">2</div>
     <div class="col-xs-3">3</div>
     <div class="col-xs-3">4</div>
+  </div>
+</div>
+<button (click)="sweeralert2()">test sweeralert2</button>
+<h3>test font-awesome</h3>
+<i class="fa fa-align-right fa-2x" aria-hidden="true"> </i>
+<h3>test assets img</h3>
+<img src="/assets/img/check.PNG">
+<h3>test assets data</h3>
+<div *ngFor="let price of prices">
+  <div>{{price.title}}</div>
+  <div *ngFor="let item of price.priceList">
+    <span>{{item.time}}mins</span>:<span>${{item.price}}</span>
   </div>
 </div>

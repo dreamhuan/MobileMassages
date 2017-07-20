@@ -1,4 +1,5 @@
-# ng2引入bootstrap、jquery
+# ng2引入第三方库(bootstrap,font-awesome...)
+## jquery,bootstrap
 ```text
 npm install ng2-bootstrap bootstrap --save
 npm install jquery --save
@@ -14,16 +15,48 @@ npm install jquery --save
     "../node_modules/bootstrap/dist/js/bootstrap.min.js"
  ]
 ```
-在typings.d.ts改为
+### 以下方式二选一
+在typings.d.ts加入(会吧$,jQuery,JQuery加入全局作用域)  
 ```text
-/* SystemJS module definition */
-declare var module: NodeModule;
 declare var JQuery: any;
 declare var jQuery: any;
 declare var $: any;
-interface NodeModule {
-  id: string;
-}
+```
+也可以自己下载申明文件后在相应地方引入作为局部作用域  
+```text
+npm install @types/jquery --save-dev
+import 'jquery'
+```
 
+## sweetalert2：
+```text
+npm install sweetalert2 --save
+```
+在.angular-cli.json里引入
+```text
+"styles": [
+    "../node_modules/sweetalert2/dist/sweetalert2.css"
+  ],
+ "scripts": [
+    "../node_modules/sweetalert2/dist/sweetalert2.js"
+ ]
+```
+使用：  
+```text
+import swal from 'sweetalert2';
+```
+
+## font-awesome：
+```text
+npm install font-awesome --save
+```
+在.angular-cli.json里引入
+```text
+"styles": [
+    "../node_modules/sweetalert2/dist/sweetalert2.css"
+  ],
+ "scripts": [
+    "../node_modules/sweetalert2/dist/sweetalert2.js"
+ ]
 ```
 

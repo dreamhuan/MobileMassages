@@ -1,0 +1,33 @@
+[
+  {
+    "type": "Choose a session",
+    "id": "chooseSessionMenu",
+    "options": [
+      "Single -1 therapist",
+      "normal -2 therapists",
+      "wonderful -3 therapists",
+      "fantastic -4 therapists"
+    ]
+  },
+  {
+    "type": "Massage length",
+    "id": "chooseLengthMenu",
+    "options": [
+      "60 minutes - £99",
+      "90 minutes - £120",
+      "120 minutes - £150",
+      "180 minutes - £240"
+    ]
+  },
+  {
+    "type": "Massage type",
+    "id": "chooseTypeMenu",
+    "options": [
+      "Swedish Massage",
+      "Deep Tissue Massage",
+      "Hot Stone Massage",
+      "Ayurvedic Massage",
+      "Thai Massage"
+    ]
+  }
+]

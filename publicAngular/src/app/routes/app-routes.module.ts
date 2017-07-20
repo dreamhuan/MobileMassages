@@ -8,12 +8,10 @@ import { PagesModule } from './pages/pages.module';
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }),
     PagesModule
   ],
-  declarations: [
-
-  ],
+  declarations: [],
   exports: [
     RouterModule
   ]
