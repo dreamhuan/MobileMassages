@@ -10,6 +10,10 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent]
+  declarations: [
+    LayoutComponent,
+    HeaderComponent,
+    FooterComponent
+  ]
 })
-export class LayoutModule { }
+export class LayoutModule {}

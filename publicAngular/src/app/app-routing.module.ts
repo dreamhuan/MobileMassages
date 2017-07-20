@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '404', component: Error404Component },
   { path: '500', component: Error500Component },
   // Not found
-  { path: '**', redirectTo: '404' }
+  // { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
