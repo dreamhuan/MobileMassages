@@ -5,6 +5,7 @@ import { Error500Component } from './routes/pages/error500/error500.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
+
   { path: 'test', component: TestComponent },
   { path: '404', component: Error404Component },
   { path: '500', component: Error500Component },
