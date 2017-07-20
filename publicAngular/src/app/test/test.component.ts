@@ -13,7 +13,7 @@ export class TestComponent implements OnInit {
 
   private api_url = '/assets/data/price.json';
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private prices;
+  public prices;
 
   constructor(private http: Http) { }
   ngOnInit() {
@@ -40,7 +40,7 @@ export class TestComponent implements OnInit {
     return Promise.reject(error.message || error);
   }
 
-  private sweeralert2(){
+  sweeralert2(){
     swal('测试SweetAlert2', 'Hello world!', 'success');
   }
 }

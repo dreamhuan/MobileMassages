@@ -1,3 +1,202 @@
-<p>
-  home works!
-</p>
+<div class="home">
+  <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item home-title active">
+        <img src="/assets/img/hometitle.jpg">
+      </div>
+      <div class="item home-title">
+        <img src="/assets/img/hometitle2.jpg">
+      </div>
+      <div class="item home-title">
+        <img src="/assets/img/hometitle3.jpg">
+      </div>
+    </div>
+    <!--&lsaquo;&rsaquo;是左右尖括号的转义-->
+    <a class="carousel-control left" href="#myCarousel"
+       data-slide="prev">&lsaquo;
+    </a>
+    <a class="carousel-control right" href="#myCarousel"
+       data-slide="next">&rsaquo;
+    </a>
+
+  </div>
+
+  <div class="date-booking">
+    <div class="first-title">LONDON MOBILE MASSAGE</div>
+    <div class="second-title">Book a spa quality massage to your door</div>
+    <div class="date-choose">
+      <input type="text" id="datepicker" value="" placeholder="Today">
+      <input type="text" id="timepicker" value="" class="choose-time">
+    </div>
+    <button class="booking-btn" (click)="booking()">BOOK A MASSAGE</button>
+  </div>
+
+  <div class="date-message">
+    <div class="location">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <div class="information">Massage delivered to your home,office,or hotel</div>
+    </div>
+    <div class="available">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <div class="information">Available 7 days a week .8am to midnight.Including holidays</div>
+    </div>
+    <div class="time">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <div class="information">We can be there in 1 hour or schedule in advance</div>
+    </div>
+  </div>
+
+  <div class="date-message-mobile">
+    <div class="location">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <div class="information">MASSAGE DELIVERED TO YOUR HOME,OFFICE,OR HOTEL</div>
+    </div>
+    <div class="available">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <div class="information">AVAILABLE 7 DAYS A WEEK.8AM TO MIDNIGHT.INCLUDING HOLIDAYS</div>
+    </div>
+    <div class="time">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <div class="information">WE CAN BE THERE IN 1 HOUR OR SCHEDULE IN ADVANCE</div>
+    </div>
+  </div>
+
+  <div class="date-therapists">
+    <div class="title">PROFESSIONAL MOBILE MASSAGE THERAPISTS</div>
+    <div class="therapists-img">
+      <div class="image"><img src="/assets/img/face/Rose.jpg"></div>
+      <div class="image"><img src="/assets/img/face/Anne.jpg"></div>
+      <div class="image"><img src="/assets/img/face/Carol.jpg"></div>
+      <div class="image"><img src="/assets/img/face/Josie.jpg"></div>
+    </div>
+    <button class="booking-btn" (click)="booking()">BOOK MY MASSAGE</button>
+  </div>
+
+  <div class="massage-type">
+    <div class="type-title">CHOOSE YOUR MASSAGE TYPE</div>
+    <div class="type-content">
+      <div *ngFor="let item of datas" class="content-repeat">
+        <div class="image"><img src="{{item.img}}"></div>
+        <div class="description">
+          <div class="title">{{item.title}}</div>
+          <div class="content">{{item.content}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="center-location">
+      <button class="booking-btn" ng-click="booking()">BOOK NOW</button>
+    </div>
+  </div>
+
+  <div class="massage-type-mobile">
+    <div class="type-title">CHOOSE YOUR MASSAGE TYPE</div>
+    <div class="type-content">
+      <div class="content-repeat">
+        <div class="image"><img src="/assets/img/home-massage-type-icons/Swedish.ico"></div>
+        <div class="title">Swedish</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon">
+                    <span class="icomoon-water">
+                            <span class="path1"></span><span class="path2"></span>
+                    </span>
+        </div>
+        <div class="title">Deep tissue</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon"><span class="icomoon-fatman"></span></div>
+        <div class="title">Pre-natal</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon different-height">
+                    <span class="icomoon-sport">
+                            <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                    </span>
+        </div>
+        <div class="title">Sports</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon"><span class="icomoon-circle"></span></div>
+        <div class="title">Couples</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon"><span class="icomoon-flower"></span></div>
+        <div class="title">Thai</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon">
+                    <span class="icomoon-face">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span
+                      class="path4"></span><span class="path5"></span><span class="path6"></span><span
+                      class="path7"></span><span class="path8"></span><span class="path9"></span><span
+                      class="path10"></span>
+                    </span>
+        </div>
+        <div class="title">Relaxing</div>
+      </div>
+      <div class="content-repeat">
+        <div class="type-icon"><span class="icomoon-com"></span></div>
+        <div class="title">At work</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="simple-pricing">
+    <div class="eg-title">SIMPLE PRICING</div>
+    <div class="eg-pricing-list">
+      <div *ngFor="let item of prices" class="eg-pricing">
+        <div class="eg-time">{{item.time}}</div>
+        <div class="eg-mnt">minutes</div>
+        <div class="eg-price">￡{{item.price}}</div>
+      </div>
+    </div>
+    <button class="booking-btn" ng-click="booking()">BOOK NOW</button>
+  </div>
+
+  <div class="faq">
+    <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
+    <div class="faq-content">
+      <div *ngFor="let item of items">
+        <div class="title">{{item.title}}</div>
+        <div class="content" ng-bind-html="item.content | to_trusted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-mobile">
+    <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
+    <div class="faq-content">
+      <div *ngFor="let item of items" class="faq-questions">
+        <div class="faq-circle">
+          <div class="faq-bigcircle">
+            <div class="faq-smallcircle"></div>
+          </div>
+        </div>
+        <div class="title">{{item.title}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="contact-title">CONTACT US</div>
+    <div class="contact-message">
+      <div class="message1">We're just one phone call or click away from you.</div>
+      <div class="message2">Call us or contact us using the form below.</div>
+    </div>
+    <div class="phonenum">
+      <div class="phonenum-deepcolor">Phone:</div>
+      <div class="phonenum-shallowcolor">11111 111 1111</div>
+    </div>
+    <div class="contact-form">
+      <input class="form-name" type="text" placeholder="Your Name">
+      <input class="form-email" type="text" placeholder="Your Email">
+      <textarea class="form-content" placeholder="Your Message"></textarea>
+    </div>
+    <button class="booking-btn">SEND</button>
+  </div>
+</div>

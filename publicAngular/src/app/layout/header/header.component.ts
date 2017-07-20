@@ -14,12 +14,12 @@ export class HeaderComponent implements OnInit {
     console.log("test");
     NavSetting.navInit(0);
     setTimeout(() => {
-      console.log($(".rightSlideMenu .filter"));
+      // console.log($(".rightSlideMenu .filter"));
       $(".rightSlideMenu .filter").click(() => { this.closeMenu(); })
     }, 0);
   }
 
-  private closeMenu() {
+  closeMenu() {
     console.log("test");
     $(".menu").animate({ right: '-100%' }, 300, () => {
       $(".filter").animate({ opacity: '0' }, 300, () => {
@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  private openMenu() {
+  openMenu() {
     $(".rightSlideMenu").css('display', 'block');
     $("body").css({ overflow: "hidden" });
   }

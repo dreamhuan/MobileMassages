@@ -1,0 +1,1131 @@
+.home {
+
+  width: 100%;
+
+  .home-title {
+    margin-top: -1px;
+    //position: relative;
+    img {
+      width: 100%;
+      height:450px;
+
+    }
+
+  }
+
+  .booking-btn {
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    background-color: #00d6a0;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    outline: none;
+  }
+
+  @media only screen and (max-width: 414px) {
+
+    .booking-btn {
+      margin-top: 30px;
+    }
+  }
+
+  .date-booking {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    .first-title {
+      font-family: Gotham Rounded Book;
+      color: #6fd5a9;
+      font-size: 32px;
+      letter-spacing: -2px;
+    }
+
+    .second-title {
+      font-family: Gotham Rounded Book;
+      color: #424242;
+      font-size: 18px;
+    }
+
+    .date-choose {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10%;
+      color: rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      input {
+        width: 250px;
+        height: 35px;
+        margin-top: -5px;
+        border: 1px solid #b3b0ac;
+        padding-left: 15px;
+        &::-webkit-input-placeholder {
+          color: rgba(0, 0, 0, 0.2);
+          font-weight: bold;
+        }
+      }
+
+      .choose-time {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1046px) {
+    .date-booking {
+      .first-title {
+        font-size: 28px;
+      }
+      .second-title {
+        font-size: 16px;
+      }
+    }
+    .home-title {
+
+      //position: relative;
+      img {
+        height:400px;
+
+      }
+
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .date-booking {
+      .first-title {
+        font-size: 24px;
+      }
+      .second-title {
+        font-size: 14px;
+      }
+    }
+    .home-title {
+
+      //position: relative;
+      img {
+        height:350px;
+
+      }
+
+    }
+  }
+
+  @media only screen and (max-width: 757px) {
+    .date-booking {
+      .first-title {
+        font-size: 20px;
+      }
+      .second-title {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 568px) {
+    .date-booking {
+      width: 80%;
+      .first-title {
+        font-size: 18px;
+      }
+      .second-title {
+        font-size: 12px;
+      }
+    }
+    .home-title {
+
+      //position: relative;
+      img {
+        height:175px;
+
+      }
+
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .date-booking {
+      width: 100%;
+      .first-title {
+        font-size: 20px;
+        letter-spacing: -1px;
+      }
+      .second-title {
+        font-size: 12px;
+      }
+    }
+    .home-title {
+
+      //position: relative;
+      img {
+        height:175px;
+
+      }
+
+    }
+  }
+
+  .date-message {
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+    background-color: #d2fcea;
+    display: flex;
+    justify-content: space-around;
+
+    .location, .available, .time {
+      display: flex;
+      align-items: center;
+      .fa-home, .fa-calendar, .fa-clock-o {
+        color: #00d5a1;
+        font-size: 50px !important;
+      }
+      .information {
+        font-family: Gotham Rounded Book;
+        width: 200px;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 13px;
+        color: #849187;
+      }
+    }
+
+  }
+
+  .date-message-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 667px) {
+    .date-message {
+      .location, .available, .time {
+        .fa-home, .fa-calendar, .fa-clock-o {
+          color: #00d5a1;
+          font-size: 36px !important;
+        }
+
+        .information {
+          width: 170px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 568px) {
+    .date-message {
+      .location, .available, .time {
+        .fa-home, .fa-calendar, .fa-clock-o {
+          color: #00d5a1;
+          font-size: 36px !important;
+        }
+
+        .information {
+          width: 130px;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .date-message {
+      display: none;
+    }
+
+    .date-message-mobile {
+      display: block;
+      width: 100%;
+      margin-top: 50px;
+
+      .location, .available, .time {
+        width: 250px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        .fa-home, .fa-calendar, .fa-clock-o {
+          color: #00d5a1;
+          font-size: 40px !important;
+        }
+        .information {
+          font-size: 12px;
+          color: #b1aeaa;
+          margin-left: 10px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .date-therapists {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .title {
+      font-family: Gotham Rounded Book;
+      color: #6fd5a9;
+      font-size: 32px;
+      letter-spacing: -2px;
+    }
+
+    .therapists-img {
+      width: 100%;
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 130px;
+        height: 130px;
+        border: 1px solid #d2fae8;
+        border-radius: 50%;
+        margin: 20px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 892px) {
+    .date-therapists {
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 832px) {
+    .date-therapists {
+      .title {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 774px) {
+    .date-therapists {
+      .title {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 745px) {
+    .date-therapists {
+      .title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    .date-therapists {
+      .title {
+        font-size: 21px;
+      }
+
+      .therapists-img {
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .date-therapists {
+      width: 100%;
+      height: 500px;
+      background-color: #f0fdf7;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .title {
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+        text-align: center;
+        font-family: Gotham Rounded Book;
+        color: #6fd5a9;
+        font-size: 20px;
+        letter-spacing: -2px;
+      }
+
+      .therapists-img {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        img {
+          width: 100px;
+          height: 100px;
+          border: 1px solid #d2fae8;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .massage-type {
+    width: 100%;
+    height: 1300px;
+    margin-top: 50px;
+    background-color: #f0fdf7;
+
+    .type-title {
+      font-family: Gotham Rounded Book;
+      letter-spacing: -2px;
+      padding-top: 50px;
+      width: 60%;
+      margin: auto;
+      color: #6fd5a9;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .type-content {
+      width: 700px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .content-repeat {
+        margin-top: 100px;
+        width: 300px;
+        display: flex;
+        img {
+          width: 50px;
+          height: 50px;
+          margin-left: 20px;
+        }
+
+        .description {
+          font-family: Gotham Rounded Book;
+          width: 250px;
+          margin-left: 20px;
+          .title {
+            color: #63d2a3;
+            font-size: 18px;
+            font-weight: bolder;
+          }
+
+          .content {
+            color: #aaacab;
+          }
+        }
+      }
+    }
+
+    .center-location {
+      width: 200px;
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+
+  .massage-type-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 788px) {
+    .massage-type {
+      .type-title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 731px) {
+    .massage-type {
+      .type-title {
+        font-size: 28px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 679px) {
+    .massage-type {
+      .type-title {
+        font-size: 26px;
+      }
+
+      .type-content {
+        width: 600px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .massage-type {
+      .type-content {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 568px) {
+    .massage-type {
+      width: 100%;
+      .type-title {
+        font-size: 24px;
+      }
+
+      .type-content {
+        width: 100%;
+        .content-repeat {
+          margin-top: 100px;
+          width: 280px;
+          display: flex;
+          img {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+          }
+
+          .description {
+            font-family: Gotham Rounded Book;
+            width: 200px;
+            margin-left: 10px;
+            .title {
+              color: #63d2a3;
+              font-size: 18px;
+            }
+
+            .content {
+              color: #aaacab;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .massage-type {
+      display: none;
+    }
+
+    .massage-type-mobile {
+      display: block;
+
+      .type-title {
+        font-family: Gotham Rounded Book;
+        letter-spacing: -2px;
+        padding-top: 50px;
+        width: 60%;
+        margin: auto;
+        color: #6fd5a9;
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .type-content {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 50px;
+
+        .content-repeat {
+          width: 180px;
+          height: 180px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10px;
+
+          &:nth-child(1),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(8) {
+            background-color: #d2fcea;
+            color: #00d6a0;
+          }
+
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(6),
+          &:nth-child(7) {
+            background-color: #00d6a0;
+            color: #d2fcea;
+          }
+
+          img {
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            margin-top: 20px;
+          }
+
+          .type-icon {
+            width: 180px;
+            text-align: center;
+          }
+
+          .different-height {
+            height: 80px;
+          }
+
+          .title {
+            font-family: Gotham Rounded Book;
+            font-size: 22px;
+          }
+
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .massage-type-mobile {
+      .type-content {
+        .content-repeat {
+          width: 160px;
+          height: 160px;
+          .type-icon {
+            width: 160px;
+            text-align: center;
+            .icomoon-circle,
+            .icomoon-com,
+            .icomoon-face,
+            .icomoon-fatman,
+            .icomoon-flower,
+            .icomoon-massa,
+            .icomoon-sport,
+            .icomoon-water {
+              font-size: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .massage-type-mobile {
+      .type-content {
+        .content-repeat {
+          width: 140px;
+          height: 140px;
+
+          .type-icon {
+            width: 140px;
+            text-align: center;
+            .icomoon-circle,
+            .icomoon-com,
+            .icomoon-face,
+            .icomoon-fatman,
+            .icomoon-flower,
+            .icomoon-massa,
+            .icomoon-sport,
+            .icomoon-water {
+              font-size: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .simple-pricing {
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .eg-title {
+      font-family: Gotham Rounded Book;
+      letter-spacing: -2px;
+      padding-top: 70px;
+      color: #6fd5a9;
+      font-size: 28px;
+    }
+
+    .eg-pricing-list {
+      width: 350px;
+      height: 130px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10%;
+
+      .eg-pricing {
+        display: flex;
+        width: 350px;
+        height: 40px;
+        border-bottom: 1px solid #d2fcea;
+        padding-top: 10px;
+        .eg-time {
+          width: 50px;
+          text-align: right;
+          color: #00d6a1;
+          font-size: 20px;
+          font-weight: bolder;
+          margin-left: 5%;
+        }
+
+        .eg-mnt {
+          color: #9a9691;
+          font-size: 16px;
+          margin-left: 5px;
+        }
+
+        .eg-price {
+          color: #9a9691;
+          font-size: 18px;
+          margin-left: 40%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .simple-pricing {
+      width: 100%;
+
+      .eg-pricing-list {
+        width: 100%;
+
+        .eg-pricing {
+          width: 100%;
+          height: 40px;
+          margin-bottom: 15px;
+          background-color: #d2fcea;
+
+          .eg-time, .eg-mnt {
+            color: #9a9691;
+            font-weight: bolder;
+          }
+
+          .eg-price {
+            color: #a8b1a8;
+            margin-left: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    width: 100%;
+    padding-bottom: 100px;
+    background-color: #f0fdf7;
+    .faq-title {
+      font-family: Gotham Rounded Book;
+      letter-spacing: -2px;
+      padding-top: 70px;
+      width: 30%;
+      margin: auto;
+      color: #6fd5a9;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .faq-content {
+      font-family: Gotham Rounded Book;
+      letter-spacing: -1px;
+      margin: auto;
+      margin-top: 80px;
+      width: 750px;
+      display: flex;
+      flex-wrap: wrap;
+      .title {
+        color: #64d2a4;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      .content {
+        color: #898a8a;
+        margin-top: 10px;
+        line-height: 14px;
+      }
+    }
+  }
+
+  .faq-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 963px) {
+    .faq {
+      .faq-title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 825px) {
+    .faq {
+      .faq-title {
+        font-size: 22px;
+      }
+      .faq-content {
+        width: 600px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 692px) {
+    .faq {
+      .faq-title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .faq {
+      .faq-title {
+        font-size: 18px;
+      }
+
+      .faq-content {
+        width: 90%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .faq {
+      display: none;
+    }
+
+    .faq-mobile {
+      display: block;
+
+      .faq-title {
+        font-family: Gotham Rounded Book;
+        letter-spacing: -2px;
+        padding-top: 40px;
+        margin: auto;
+        color: #6fd5a9;
+        text-align: center;
+        width: 80%;
+        font-size: 24px;
+      }
+
+      .faq-content {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        .faq-questions {
+          width: 90%;
+          display: flex;
+          margin: auto;
+          margin-top: 10px;
+          .faq-circle {
+            width: 18px;
+            height: 18px;
+            .faq-bigcircle {
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              border: 1px solid #00d6a0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .faq-smallcircle {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #00d6a0;
+
+              }
+            }
+          }
+          .title {
+            font-family: Gotham Rounded Book;
+            font-size: 16px;
+            color: #9a9590;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    width: 400px;
+    height: 900px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .contact-title {
+      font-family: Gotham Rounded Book;
+      letter-spacing: -2px;
+      padding-top: 10%;
+      color: #6fd5a9;
+      font-size: 28px;
+    }
+
+    .contact-message {
+      font-family: Gotham Rounded Book;
+      color: #838383;
+      width: 400px;
+      margin-top: -10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 16px;
+      .message2 {
+        margin-top: -20px;
+      }
+    }
+
+    .phonenum {
+      display: flex;
+      font-size: 14px;
+      .phonenum-deepcolor {
+        font-weight: bolder;
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 400px;
+
+      input::-webkit-input-placeholder {
+        color: #d4d4d4;
+        font-style: italic;
+        padding-left: 10px;
+      }
+
+      textarea::-webkit-input-placeholder {
+        color: #d4d4d4;
+        font-style: italic;
+        padding-left: 10px;
+      }
+
+      .form-name, .form-email {
+        width: 350px;
+        height: 30px;
+        color: #e7e5e2;
+        border: 1px solid #b3b0ac;
+      }
+
+      .form-content {
+        width: 350px;
+        height: 400px;
+        border: 1px solid #b3b0ac;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .contact {
+      margin-top: 50px;
+      width: 100%;
+      height: 900px;
+      background-color: #f0fdf7;
+      .contact-title {
+        font-size: 24px;
+      }
+
+      .contact-message {
+        margin-top: -40px;
+        font-size: 14px;
+        letter-spacing: -1px;
+        .message2 {
+          margin-top: -40px;
+        }
+      }
+
+      .phonenum {
+        color: #6a6964;
+        font-size: 16px;
+        letter-spacing: -1px;
+        margin-top: -20px;
+      }
+
+      .contact-form {
+        .form-name, .form-email {
+          width: 300px;
+          height: 50px;
+        }
+
+        .form-content {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .contact {
+      .contact-title {
+        font-size: 22px;
+      }
+
+      .contact-message {
+        font-size: 12px;
+      }
+
+      .contact-form {
+        .form-name, .form-email {
+          width: 280px;
+          height: 40px;
+        }
+
+        .form-content {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+$icomoon-circle-color: #00ac87;
+$icomoon-com-color: #00ac87;
+$icomoon-face-color: #d2fcea;
+$icomoon-facebg-color: #00d6a0;
+$icomoon-fatman-color: #d2fcea;
+$icomoon-flower-color: #d2fcea;
+$icomoon-massa-color: #00ac87;
+$icomoon-sport-color: #00ac87;
+$icomoon-sportbg-color: #d2fcea;
+$icomoon-water-color: #d2fcea;
+$icomoon-waterbg-color: #00d6a0;
+
+.icomoon-circle,
+.icomoon-com,
+.icomoon-face,
+.icomoon-fatman,
+.icomoon-flower,
+.icomoon-massa,
+.icomoon-sport,
+.icomoon-water {
+  font-size: 140px;
+}
+
+.icomoon-circle:before {
+  content: "\e900";
+  color: $icomoon-circle-color;
+}
+
+.icomoon-com:before {
+  content: "\e901";
+  color: $icomoon-com-color;
+}
+
+.icomoon-face .path1:before {
+  content: "\e902";
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path2:before {
+  content: "\e903";
+  margin-left: -0.748046875em;
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path3:before {
+  content: "\e904";
+  margin-left: -0.748046875em;
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path4:before {
+  content: "\e905";
+  margin-left: -0.748046875em;
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path5:before {
+  content: "\e906";
+  margin-left: -0.748046875em;
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path6:before {
+  content: "\e907";
+  margin-left: -0.748046875em;
+  color: $icomoon-facebg-color;
+}
+
+.icomoon-face .path7:before {
+  content: "\e908";
+  margin-left: -0.748046875em;
+  color: $icomoon-facebg-color;
+}
+
+.icomoon-face .path8:before {
+  content: "\e909";
+  margin-left: -0.748046875em;
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path9:before {
+  content: "\e90a";
+  margin-left: -0.748046875em;
+  color: $icomoon-face-color;
+}
+
+.icomoon-face .path10:before {
+  content: "\e90b";
+  margin-left: -0.748046875em;
+  color: $icomoon-facebg-color;
+}
+
+.icomoon-fatman:before {
+  content: "\e90c";
+  color: $icomoon-fatman-color;
+}
+
+.icomoon-flower:before {
+  content: "\e90d";
+  color: $icomoon-flower-color;
+}
+
+.icomoon-massa:before {
+  content: "\e90e";
+  color: $icomoon-massa-color;
+}
+
+.icomoon-sport .path1:before {
+  content: "\e90f";
+  color: $icomoon-sport-color;
+}
+
+.icomoon-sport .path2:before {
+  content: "\e910";
+  margin-left: -0.693359375em;
+  color: $icomoon-sport-color;
+}
+
+.icomoon-sport .path3:before {
+  content: "\e911";
+  margin-left: -0.693359375em;
+  color: $icomoon-sportbg-color;
+}
+
+.icomoon-water .path1:before {
+  content: "\e912";
+  color: $icomoon-water-color;
+}
+
+.icomoon-water .path2:before {
+  content: "\e913";
+  margin-left: -0.572265625em;
+  color: $icomoon-waterbg-color;
+}
