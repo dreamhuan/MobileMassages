@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import 'jquery';
+
+declare var $: any;
+
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { NavSetting } from '../../shared/nav.setting';
 import { DateUtil } from '../../shared/date.util';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -20,11 +23,13 @@ export class HomeComponent implements OnInit {
     time: new Date().toLocaleTimeString()
   };
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
-  //TODO bs图片轮播，bs的日期选择器，lib库的引入,cookie
+  //TODO 日期时间选择器的样式
   ngOnInit() {
-    // $('#myCarousel').carousel({ interval: 3500 });//每隔5秒自动轮播
+    // console.log($.fn);
+
+    $('#myCarousel').carousel({ interval: 3500 });//每隔5秒自动轮播
 
     this.http.get('/assets/data/faq.json')
       .toPromise()
@@ -50,21 +55,15 @@ export class HomeComponent implements OnInit {
         this.prices = body[ 0 ].priceList;
       });
 
-    // $('#datepicker').datetimepicker({
-    //   format: 'yyyy-mm-dd',
-    //   language: 'en',
-    //   weekStart: 1,
-    //   todayBtn: 1,
-    //   autoclose: 1,
-    //   todayHighlight: 1,
-    //   startView: 2,
-    //   minView: 2,
-    //   forceParse: 0
-    // });
+    $('#datepicker').datetimepicker({
+      format: 'YYYY-MM-DD',
+    });
 
-    // $('#timepicker').wickedpicker();
+    $('#timepicker').datetimepicker({
+      format: 'LT'
+    });
 
-    setTimeout(function () {
+    setTimeout(() => {
       NavSetting.navInit(0);
     }, 0);
   }
@@ -80,18 +79,17 @@ export class HomeComponent implements OnInit {
 
 
   booking() {
-    // let date = $('#datepicker').val();
-    // if (!date) date = new Date().Format("yyyy-MM-dd");
-    // let time = $('#timepicker').val();
-    // console.log(date);
-    // console.log(time);
-    // console.log(time.length);
-    // let step1 = {
-    //   date: date,
-    //   time: time
-    // };
-    // $cookieStore.put('step1', step1);
-    // $state.go('booking.step2');
+    let date = $('#datepicker').val();
+    if (!date) date = DateUtil.Format(new Date(), 'yyyy-MM-dd');
+    let time = $('#timepicker').val();
+    console.log(date);
+    console.log(time);
+    console.log(time.length);
+    let step1 = {
+      date: date,
+      time: time
+    };
+    sessionStorage.put('step1', JSON.stringify(step1));
+    this.router.navigate([ '/booking/step2' ]);
   };
-
 }

@@ -16,13 +16,15 @@ npm install jquery --save
  ]
 ```
 ### 以下方式二选一
+#### 注意！！！第二种方法不便于扩展(比如一些三方插件依赖jq但是安装的.d.ts文件没有这个申明就会出错)
 在typings.d.ts加入(会吧$,jQuery,JQuery加入全局作用域)  
+也可以在相应文件加入申明变成局部作用域  
 ```text
 declare var JQuery: any;
 declare var jQuery: any;
 declare var $: any;
 ```
-也可以自己下载申明文件后在相应地方引入作为局部作用域  
+也可以自己下载申明文件后在相应地方引入(不建议，除非有自己写.d.ts文件的能力)  
 ```text
 npm install @types/jquery --save-dev
 import 'jquery'

@@ -3,7 +3,7 @@ import swal from 'sweetalert2';
 import 'jquery'
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-
+declare var $:any;
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',

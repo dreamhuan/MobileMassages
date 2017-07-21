@@ -1,3 +1,4 @@
+declare var $:any;
 export class NavSetting {
 
   //放在每个主要页面的controller开头

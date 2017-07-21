@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavSetting } from '../../shared/nav.setting';
-
+declare var $:any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
