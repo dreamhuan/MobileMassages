@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
       date: date,
       time: time
     };
-    sessionStorage.put('step1', JSON.stringify(step1));
+    sessionStorage.step1 = JSON.stringify(step1);
     this.router.navigate([ '/booking/step2' ]);
   };
 }

@@ -1,0 +1,40 @@
+.booking {
+  width: 100%;
+  margin-top: 40px;
+  .option {
+    width: 420px;
+    height: 70px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-top: 2px solid #d8fae9;
+    border-bottom: 2px solid #d8fae9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .number {
+      width: 30px;
+      font-family: GothamNarrow-Bold;
+      font-size: 26px;
+      color: rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .number-active {
+      font-size: 40px;
+      color: rgba(0, 0, 0, 0.6);
+      margin-top: -10px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .option {
+      width: 100%;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  }
+  .content {
+    margin: auto;
+    min-height: 500px;
+  }
+}

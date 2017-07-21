@@ -1,0 +1,13 @@
+<div class="booking">
+  <div class="option">
+    <div *ngFor="let i of bookingStepOption"
+         class="number"
+         [ngClass]="{'number-active':i.cls}"
+         (click)="changeOption(i)">
+      {{i.opt}}
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

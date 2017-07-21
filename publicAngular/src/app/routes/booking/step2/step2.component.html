@@ -1,0 +1,50 @@
+<div class="step2">
+  <div class="step-title">Customize my massage</div>
+  <div class="choose">
+    <div *ngFor="let choose of chooses">
+      <span class="step-tips">{{choose.type}}</span>
+      <div class="dropdown">
+        <!--TODO:这里bs的属性绑定需要修改-->
+        <button class="btn btn-default dropdown-toggle choose-select"
+                type="button" id="{{choose.id}}"
+                [data-toggle]="dropdown"
+                [aria-haspopup]="true" [aria-expanded]="true">
+                    <span class="choose-item">
+                        <span id="chooseLength">{{choose.chooseoption}}</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </span>
+        </button>
+        <ul class="dropdown-menu choose-option" aria-labelledby="{{choose.id}}">
+          <li *ngFor="let option of choose.options" (click)="changeChoose(choose,option)">
+            <a href="">{{option}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="therapist">
+    <div class="title">Choose your therapist</div>
+    <div class="available">Available:</div>
+    <div class="people">
+      <div *ngFor="let therapist of therapists">
+        <img class="img" src="{{therapist.img}}" alt="{{therapist.name+'\'s image'}}"
+             (click)="toggleTherapist(therapist)" id="{{therapist.name}}">
+        <div class="name">{{therapist.name}}</div>
+      </div>
+    </div>
+    <div class="intro" *ngFor="let therapist of chooseTherapist">
+      <div class="intro-name">{{therapist.name}}</div>
+      <div class="intro-content">{{therapist.intro}}</div>
+    </div>
+  </div>
+  <button class="step-btn" (click)="continue()">CONTINUE</button>
+  <div class="tip">
+    By clicking "Continue" above, you are agreeing to our Terms of Service agreement.
+  </div>
+  <div class="step-back">
+    <i class="fa fa-angle-left left-icon"></i>
+    <span class="right-font" (click)="back()">back</span>
+  </div>
+</div>
+
+
