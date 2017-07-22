@@ -3,23 +3,21 @@
   <div class="choose">
     <div *ngFor="let choose of chooses">
       <span class="step-tips">{{choose.type}}</span>
-      <div class="dropdown">
-        <!--TODO:这里bs的属性绑定需要修改-->
-        <button class="btn btn-default dropdown-toggle choose-select"
-                type="button" id="{{choose.id}}"
-                [data-toggle]="dropdown"
-                [aria-haspopup]="true" [aria-expanded]="true">
-                    <span class="choose-item">
-                        <span id="chooseLength">{{choose.chooseoption}}</span>
-                        <i class="fa fa-chevron-down"></i>
-                    </span>
+
+      <div class="dropdown" dropdown>
+        <button id="{{choose.id}}" dropdownToggle type="button" class="btn btn-default dropdown-toggle choose-select">
+          <span class="choose-item">
+            <span id="chooseLength">{{choose.chooseoption}}</span>
+            <i class="fa fa-chevron-down"></i>
+          </span>
         </button>
-        <ul class="dropdown-menu choose-option" aria-labelledby="{{choose.id}}">
-          <li *ngFor="let option of choose.options" (click)="changeChoose(choose,option)">
-            <a href="">{{option}}</a>
+        <ul *dropdownMenu class="dropdown-menu choose-option" role="menu">
+          <li role="menuitem" *ngFor="let option of choose.options" (click)="changeChoose(choose,option)">
+            <a class="dropdown-item">{{option}}</a>
           </li>
         </ul>
       </div>
+
     </div>
   </div>
   <div class="therapist">

@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     CoreModule,
+    BsDropdownModule.forRoot(),
     LayoutModule,
     SharedModule.forRoot(),
     AppRoutesModule,

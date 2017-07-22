@@ -15,7 +15,7 @@ import { TherapistModule } from './therapist/therapist.module';
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forRoot(routes, { useHash: true }),
+    RouterModule.forRoot(routes),
     BookingModule,
     ContactusModule,
     FaqModule,
