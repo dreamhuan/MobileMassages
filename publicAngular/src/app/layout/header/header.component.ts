@@ -11,7 +11,6 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("test");
     NavSetting.navInit(0);
     setTimeout(() => {
       // console.log($(".rightSlideMenu .filter"));

@@ -1,3 +1,88 @@
-<p>
-  step3 works!
-</p>
+<div class="step3 container-fluid center-block">
+
+  <div class="row title flex-center">Create your account or sign in</div>
+  <div class="row title flex-center small-marginTop">to your existing account to continue</div>
+  <div class="content">
+    <div class="radioInputGroup  row">
+      <div class="row flex-verticalAlign radioInputItem">
+        <input type="radio"  name="choose" (click)="showType=0" id="new" checked>
+        <label for="new">I'm a new customer</label>
+      </div>
+      <div class="row flex-verticalAlign radioInputItem">
+        <input type="radio" name="choose" (click)="showType=1" id="registered">
+        <label for="registered">I have an account</label>
+      </div>
+    </div>
+    <div class="faceBookBtn flex-center">
+      <span class="fa fa-facebook"></span>
+      Sign in with Facebook
+    </div>
+    <div class="divide flex-center">
+      <div class="line">—————————————</div>
+      <div class="describe">or</div>
+      <div class="line">—————————————</div>
+    </div>
+    <div [hidden]="showType===1">
+      <form name="signUpForm" novalidate #signUpForm="ngForm">
+        <div class="row inputGroup center-block">
+          <div class="inputItem col-xs-12">
+            <div class="describe">First name</div>
+            <input type="text" [(ngModel)]="firstName" name="firstName" required>
+          </div>
+          <div class="inputItem col-xs-12">
+            <div class="describe">Last name</div>
+            <input type="text" [(ngModel)]="lastName" name="lastName" required>
+          </div>
+          <div class="inputItem col-xs-12">
+            <div class="describe">Email address</div>
+            <input type="email" [(ngModel)]="emailAddress" name="emailAddress" required>
+          </div>
+          <div class="inputItem col-xs-12">
+            <div class="describe">Mobile number</div>
+            <input type="text" [(ngModel)]="mobileNumber" name="mobileNumber" required>
+          </div>
+          <div class="inputItem col-xs-12">
+            <div class="describe">Choose a password</div>
+            <input type="password" [(ngModel)]="password" name="password" required>
+          </div>
+
+        </div>
+        <button type="submit" (click)="continue()"
+                class="step-btn signUp flex-center"
+                [ngClass]="{'button-disable':!signUpForm.form.valid}"
+                [disabled]="!signUpForm.form.valid">CONTINUE
+        </button>
+        <div class="flex-center itemAgreement">
+          By clicking "continue" above, you are agreeing to our terms of service agreement.
+        </div>
+      </form>
+    </div>
+    <div [hidden]="showType===0">
+      <form name="signInForm" novalidate #signInForm="ngForm">
+        <div class="row inputGroup center-block">
+          <div class="inputItem col-xs-12">
+            <div class="describe">Email address</div>
+            <input type="email" [(ngModel)]="emailAddress" name="emailAddress" required>
+          </div>
+          <div class="inputItem col-xs-12">
+            <div class="describe">Password</div>
+            <input type="password" [(ngModel)]="password" name="password" required>
+          </div>
+        </div>
+        <div class="hint flex-center">
+          <div class="text" (click)="forgetPwd()">Forget Password?</div>
+        </div>
+        <button type="submit" (click)="continue()"
+                class="step-btn flex-center"
+                [ngClass]="{'button-disable':!signInForm.form.valid}"
+                [disabled]="!signInForm.form.valid">CONTINUE
+        </button>
+      </form>
+    </div>
+    <div class="step-back">
+      <i class="fa fa-angle-left left-icon"></i>
+      <span class="right-font" (lick)="back()">Back</span>
+    </div>
+  </div>
+
+</div>
