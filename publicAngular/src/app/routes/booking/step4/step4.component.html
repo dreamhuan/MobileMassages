@@ -1,3 +1,99 @@
-<p>
-  step4 works!
-</p>
+<div class="step4">
+  <!--理论上下面的代码应该用*ngIf但是datetimepicker插件会失效，所以改用了ng-show-->
+  <div [hidden]="step4 === 1" class="location">
+    <form name="locationForm" novalidate #locationForm="ngForm">
+      <div class="step-title">Location</div>
+      <div class="address">
+        <span class="step-tips">Street address</span>
+        <input type="text" [(ngModel)]="streetAddress" name="streetAddress" required>
+      </div>
+      <div class="address2">
+        <span class="step-tips">Street address 2</span>
+        <input type="text" placeholder="Apt/Floor/Sulte" [(ngModel)]="streetAddress2" name="streetAddress2" required>
+      </div>
+      <div class="state-zip">
+        <div class="state">
+          <span class="step-tips">State/Province</span>
+          <input type="text" [(ngModel)]="stateProvince" name="stateProvince" required>
+        </div>
+        <div class="zip">
+          <span class="step-tips">Zip/Post code</span>
+          <input type="text" [(ngModel)]="postCode" name="postCode" required>
+        </div>
+      </div>
+      <div class="address2">
+        <span class="step-tips">Parking instructions</span>
+        <textarea [(ngModel)]="parkingInstructions" name="parkingInstructions"></textarea>
+      </div>
+    </form>
+  </div>
+
+  <div [hidden]="step4 === 0" class="check-out">
+    <form name="checkOutForm" novalidate #checkOutForm="ngForm">
+      <div class="step-title">Check out</div>
+      <div class="card-name">
+        <span class="step-tips">Name on card</span>
+        <input type="text" [(ngModel)]="cardName" name="cardName" required>
+      </div>
+      <div class="card-number">
+        <span class="step-tips">Credit card number</span>
+        <!--<input type="text" placeholder="Apt/Floor/Sulte">-->
+        <input type="text" [(ngModel)]="cardNumber" name="cardNumber" required>
+      </div>
+      <div class="date-code">
+        <div class="expiration-date">
+          <span class="step-tips">Expiration date</span>
+          <!--<input type="text" id="datepicker" value="" placeholder="MM/YY">-->
+          <input type="text" id="datepicker" value="" placeholder="YYYY-MM-DD" [(ngModel)]="cardExpirationDate" name="cardExpirationDate">
+        </div>
+        <div class="security-code">
+          <span class="step-tips">Security code</span>
+          <input type="text" [(ngModel)]="cardSecurityCode" name="cardSecurityCode" required>
+        </div>
+      </div>
+      <div class="billing">
+        <span class="step-tips">Billing Zip/Postal code</span>
+        <input type="text" [(ngModel)]="billingPostalCode" name="billingPostalCode" required>
+      </div>
+      <div class="gift-apply">
+        <div class="gift">
+          <span class="step-tips">Gift/Promo code</span>
+          <input type="text" [(ngModel)]="giftCode" name="giftCode">
+        </div>
+        <button class="apply" (click)="apply()">APPLY</button>
+      </div>
+
+      <div class="order-summary" *ngIf="showOrderSummary">
+        <span class="step-tips">Order Summary</span>
+        <div class="summary">
+          <div class="order">{{orderSummary.datetime}}</div>
+          <div class="order">{{orderSummary.session}}</div>
+          <div class="order">{{orderSummary.detail}}</div>
+          <div class="order">{{orderSummary.address}}</div>
+          <div class="total">
+            <span>Total</span>
+            <span>£{{orderSummary.money}}</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button *ngIf="step4===0"
+          (click)="book()"
+          class="step-btn"
+          [ngClass]="{'button-disable':!locationForm.form.valid}"
+          [disabled]="!locationForm.form.valid">BOOK MY MASSAGE
+  </button>
+  <button *ngIf="step4===1"
+          (click)="book()"
+          class="step-btn"
+          [ngClass]="{'button-disable':!checkOutForm.form.valid}"
+          [disabled]="!checkOutForm.form.valid">BOOK MY MASSAGE
+  </button>
+  <div class="step-back">
+    <i class="fa fa-angle-left left-icon"></i>
+    <span class="right-font" (click)="back()">Back</span>
+  </div>
+</div>
+

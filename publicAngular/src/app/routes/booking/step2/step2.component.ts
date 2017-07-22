@@ -193,7 +193,7 @@ export class Step2Component implements OnInit {
       option: this.chooseTherapist
     });
     console.log(choise);
-    sessionStorage.step2 = choise;
+    sessionStorage.step2 = JSON.stringify(choise);
     this.router.navigate([ '/booking/step3' ]);
   }
 
