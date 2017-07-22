@@ -1,0 +1,101 @@
+.faq {
+  width: 100%;
+
+  .faq-title {
+    font-family: Gotham Rounded Book;
+    letter-spacing: -2px;
+    padding-top: 70px;
+    width: 30%;
+    margin: auto;
+    color: #07d5a1;
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .faq-title-mobile {
+    display: none;
+  }
+
+  .faq-content {
+    font-family: Gotham Rounded Book;
+    letter-spacing: -1px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    .title {
+      color: #64d2a4;
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bolder;
+    }
+    .content {
+      color: #898a8a;
+      margin-top: 10px;
+      line-height: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1123px) {
+  .faq {
+    .faq-title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 984px) {
+  .faq {
+    .faq-title {
+      font-size: 26px;
+    }
+    .faq-content {
+      width: 600px;
+    }
+  }
+}
+
+@media only screen and (max-width: 835px) {
+  .faq {
+    .faq-title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .faq {
+    .faq-title {
+      display: none;
+    }
+    .faq-title-mobile {
+      display: block;
+      font-family: Gotham Rounded Book;
+      padding-top: 40px;
+      margin: auto;
+      color: #bcb9b5;
+      text-align: center;
+      width: 80%;
+      font-size: 20px;
+    }
+
+    .faq-content {
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      .title {
+        color: #04d6a1;
+        font-weight: bolder;
+      }
+
+      .content {
+        color: #3c3c3b;
+        font-weight: bolder;
+      }
+    }
+  }
+}

@@ -1,0 +1,369 @@
+.massageTherapist{
+  @media screen and (max-width: 400px){
+    .font{
+
+      .theme{
+
+        .font-sx{
+          font-size: 12px;
+        }
+        .font-lx{
+          font-size: 26px;
+        }
+      }
+    }
+    .intro{
+      .item{
+        transform:scale(0.9);
+        width: 360px;
+        .picBox{
+          height:160px;
+          width:130px;
+          .pic{
+            height: 150px;
+            width: 120px;
+            border: solid 1px gainsboro;
+          }
+        }
+        .contentBox{
+          transform:scale(0.95);
+          width: 220px;
+          .content{
+            line-height:11px;
+            padding: 5px;
+            padding-top: 25px;
+          }
+        }
+      }
+    }
+    .fontLg{
+      font-size: 16px;
+    }
+    .fontSm{
+      font-size: 5px;
+    }
+  }
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+    .font{
+
+      .theme{
+
+        .font-sx{
+          font-size: 12px;
+        }
+        .font-lx{
+          font-size: 26px;
+        }
+      }
+    }
+    .intro{
+      .item{
+        width: 530px;
+        .picBox{
+          height:170px;
+          width:140px;
+          .pic{
+            height: 150px;
+            width: 130px;
+            border: solid 1px gainsboro;
+          }
+        }
+        .contentBox{
+          width: 230px;
+          .content{
+            padding:5px;
+            line-height:13px;
+          }
+        }
+      }
+    }
+    .fontLg{
+      font-size: 16px;
+    }
+    .fontSm{
+      font-size: 6px;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 700px) {
+    .font{
+
+      .theme{
+
+        .font-sx{
+          font-size: 12px;
+        }
+        .font-lx{
+          font-size: 26px;
+        }
+      }
+    }
+    .intro{
+      .item{
+        transform:scale(0.8);
+        width: 310px;
+        .picBox{
+          height:170px;
+          width:140px;
+          .pic{
+            height: 150px;
+            width: 120px;
+            border: solid 1px gainsboro;
+          }
+        }
+        .contentBox{
+          width: 230px;
+          .content{
+            padding:5px;
+            line-height:11px;
+          }
+        }
+      }
+    }
+    .fontLg{
+      font-size: 16px;
+    }
+    .fontSm{
+      font-size: 6px;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 900px){
+    .font{
+
+      .theme{
+
+        .font-sx{
+          font-size: 15px;
+        }
+        .font-lx{
+          font-size: 34px;
+        }
+      }
+    }
+    .intro{
+      .item{
+        transform:scale(0.8);
+        width: 340px;
+        .picBox{
+          height:120px;
+          width:105px;
+          .pic{
+            height: 140px;
+            width: 120px;
+            border: solid 1px gainsboro;
+          }
+        }
+        .contentBox{
+          width: 240px;
+          .content{
+            transform:scale(1,0.9);
+            padding:5px;
+            line-height:12px;
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+    .fontLg{
+      font-size: 18px;
+    }
+    .fontSm{
+      font-size: 4px;
+    }
+  }
+  @media screen and (min-width: 900px) and (max-width: 1100px){
+    .font{
+
+      .theme{
+
+        .font-sx{
+          font-size: 20px;
+        }
+        .font-lx{
+          font-size: 34px;
+        }
+      }
+    }
+    .intro{
+      .item{
+        width: 480px;
+        .picBox{
+          height:120px;
+          width:105px;
+          .pic{
+            height: 140px;
+            width: 120px;
+            border: solid 1px gainsboro;
+          }
+        }
+        .contentBox{
+          width: 240px;
+          .content{
+            padding:5px;
+            line-height:11px;
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+    .fontLg{
+      font-size: 20px;
+    }
+    .fontSm{
+      font-size: 4px;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    .font{
+
+      .theme{
+
+        .font-sx{
+          font-size: 20px;
+        }
+        .font-lx{
+          font-size: 40px;
+        }
+      }
+    }
+    .intro{
+      .item{
+        width: 530px;
+        .picBox{
+          height:190px;
+          width:160px;
+          .pic{
+            height: 170px;
+            width: 150px;
+            border: solid 1px gainsboro;
+          }
+        }
+        .contentBox{
+          width: 270px;
+          .content{
+            padding:5px;
+            line-height:13px;
+          }
+        }
+      }
+    }
+    .fontLg{
+      font-size: 20px;
+    }
+    .fontSm{
+      font-size: 11px;
+    }
+  }
+  .font{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    flex-direction: column;
+    .theme{
+      width:100%;
+      height:200px;
+      flex-direction: column;
+
+    }
+  }
+  .intro{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .item{
+      height: 195px;
+      .contentBox{
+        height:190px;
+
+        .content{
+
+          height:100%;
+          width:100%;
+
+          word-wrap: break-word;
+          text-align: justify;
+          text-justify: distribute;
+          word-break: break-all;
+        }
+      }
+    }
+    .bgBlack{
+      background-color: #0f0f0f;
+    }
+    .bgWhite{
+      background-color: #9acfea;
+    }
+  }
+  .centerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .font-italic {
+    font-style: italic;
+  }
+  .font-gothem {
+    font-family: Gotham Rounded Book;
+    transform:scale(1,1);
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .font-thin{
+    font-weight: lighter;
+  }
+  .flexRow{
+    display: flex;
+    flex-direction: row;
+  }
+  .flexResRow{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .font-bold{
+    font-weight: 200;
+  }
+  .font-bolder{
+    font-weight: 400;
+  }
+  .font-bolderest{
+    font-weight: 500;
+  }
+  .font-xxbolderest{
+    font-weight: 700;
+  }
+  .centerContent{
+    text-align: center;
+  }
+  .grey{
+    color: #999;
+  }
+  .green{
+    color: #63d2a3;
+  }
+  .height{
+    height: 540px;
+  }
+  .mar-xxtop{
+    margin-top: 20px;
+  }
+  .marXXBottom{
+    margin-bottom: 10px;
+  }
+  .booking-btn {
+    width: 250px;
+    height: 50px;
+    background-color: #00d6a0;
+    color: #ffffff;
+    border: none;
+    margin-top: 60px;
+    font-size: 16px;
+    outline: none;
+  }
+  .button{
+    width:100%;
+    margin-bottom: 60px;
+  }
+  .inline{
+    line-height:40px;
+  }
+}

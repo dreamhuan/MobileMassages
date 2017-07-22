@@ -1,3 +1,20 @@
-<p>
-  pricing works!
-</p>
+<div class="pricing">
+  <div class="title centerBox">
+    <div class="font-bolder font-lx font-gothem green">PRICING</div>
+  </div>
+  <div class="content">
+    <div *ngFor="let price of prices">
+      <div class="tit centerBox">
+        <div class="font-boldererst font-gothem grey tite mar-xxtop">{{price.therapistNumber}} Therapist</div>
+      </div>
+      <div *ngFor="let item of price.priceList" class="item centerBox">
+        <div class="text font-gothem grey centerBox">
+          <div class="frontNum">{{item.time}}</div><div class="mar-right">minutes</div><div class="mar-left">£{{item.price}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="button centerBox">
+      <button class="booking-btn font-xxbolderest" (click)="booking()">BOOK NOW</button>
+    </div>
+  </div>
+</div>

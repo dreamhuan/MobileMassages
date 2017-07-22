@@ -1,3 +1,27 @@
-<p>
-  therapist works!
-</p>
+<div class="massageTherapist">
+  <div class="font">
+    <div class="theme centerBox">
+      <div class="font-thin font-lx font-gothem grey centerContent">MASSAGE THERAPISTS</div>
+      <div class="font-bold font-sx font-gothem green centerContent">
+        Experienced, qualified & insured <br>
+        professional therapists
+      </div>
+    </div>
+    <div class="intro centerBox" >
+      <div class="item flexRow mar-xxtop centerBox" *ngFor="let choose of chooses">
+        <div class="picBox centerBox">
+          <img class="pic" [src]="choose.img" alt="">
+        </div>
+        <div class="contentBox">
+
+          <p class="content font-bolder fontSm font-gothem">
+            <span class="font-bolder green fontLg font-gothem"> {{choose.name}}</span>
+            <br><br>{{choose.intro}} </p>
+        </div>
+      </div>
+    </div>
+    <div class="button centerBox">
+      <button class="booking-btn font-xxbolderest" (click)="booking()">BOOK THERAPIST</button>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,10 @@
-<p>
-  faq works!
-</p>
+<div class="faq">
+  <div class="faq-title">FREQUENTLY ASKED QUESTIONS</div>
+  <div class="faq-title-mobile">Frequently Asked Questions</div>
+  <div class="faq-content">
+    <div *ngFor="let item of items">
+      <div class="title">{{item.title}}</div>
+      <div class="content" [innerHTML]="item.content | safeHtml"></div>
+    </div>
+  </div>
+</div>

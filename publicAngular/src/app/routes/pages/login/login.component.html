@@ -1,3 +1,25 @@
-<p>
-  login works!
-</p>
+<div class="signIn container center-block">
+  <div class="row flex-center title font-gotham-title">Login</div>
+  <div class="row inputGroup center-block">
+    <div class="inputItem col-xs-12">
+      <div class="describe">Email address</div>
+      <input type="text" [(ngModel)]="emailAddress" name="emailAddress">
+    </div>
+    <div class="inputItem col-xs-12">
+      <div class="describe">Password</div>
+      <input type="text" [(ngModel)]="password" name="password">
+    </div>
+  </div>
+  <div class="faceBookBtn flex-center">
+    <span class="fa fa-facebook"></span>
+    Sign in with Facebook
+  </div>
+  <div class="hint flex-center">
+    <div class="text" (click)="forgetPwd()">Forget Password?</div>
+  </div>
+
+  <div class="signInBtn flex-center" (click)="login()">SIGN IN</div>
+  <div class="hint flex-center">
+    <div class="text" ui-sref="signup">new customer?</div>
+  </div>
+</div>

@@ -14,7 +14,7 @@ export class TestComponent implements OnInit {
   private api_url = '/assets/data/price.json';
   private headers = new Headers({ 'Content-Type': 'application/json' });
   public prices;
-
+public testHTML = '<div style="color: red; font-size: 20px">xxxxxxxxx</div>';
   constructor(private http: Http) { }
   ngOnInit() {
     console.log('测试jQuery');

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavSetting } from '../../shared/nav.setting';
 
 @Component({
   selector: 'app-contactus',
@@ -10,6 +11,7 @@ export class ContactusComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      NavSetting.navInit(6)
   }
 
 }
