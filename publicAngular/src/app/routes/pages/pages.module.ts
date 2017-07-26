@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { Error404Component } from './error404/error404.component';
 import { Error500Component } from './error500/error500.component';
+import { ForgetpwdComponent } from './forgetpwd/forgetpwd.component';
 
 @NgModule({
     imports: [
@@ -19,6 +20,7 @@ import { Error500Component } from './error500/error500.component';
         RegisterComponent,
         Error404Component,
         Error500Component,
+        ForgetpwdComponent,
     ],
     exports: [
         RouterModule,

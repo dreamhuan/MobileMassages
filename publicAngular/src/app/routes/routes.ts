@@ -12,6 +12,9 @@ import { Step1Component } from './booking/step1/step1.component';
 import { Step2Component } from './booking/step2/step2.component';
 import { Step3Component } from './booking/step3/step3.component';
 import { Step4Component } from './booking/step4/step4.component';
+import { ForgetpwdComponent } from './pages/forgetpwd/forgetpwd.component';
+import { SuccessfulBookingComponent } from './successful-booking/successful-booking.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 export const routes = [
 
@@ -24,6 +27,9 @@ export const routes = [
       { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'forgetpassword', component: ForgetpwdComponent },
+      { path: 'successfulBooking', component: SuccessfulBookingComponent },
+      { path: 'administration', component: AdministrationComponent },
       {
         path: 'booking',
         component: BookingComponent,

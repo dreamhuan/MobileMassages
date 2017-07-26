@@ -1,3 +1,50 @@
-<p>
-  register works!
-</p>
+<div class="signUp container center-block">
+  <form name="signUpForm" novalidate #signUpForm="ngForm">
+    <div class="row flex-center title font-gotham-title">Sign up</div>
+    <div class="row inputGroup center-block">
+      <div class="inputItem col-xs-12">
+        <div class="describe">First name</div>
+        <input type="text" name="firstName" [(ngModel)]="firstName" required>
+        <!--<p ng-show="signUpForm.firstName.$invalid" class="help-block">You first name is required.</p>-->
+      </div>
+      <div class="inputItem col-xs-12">
+        <div class="describe">Last name</div>
+        <input type="text" name="lastName" [(ngModel)]="lastName" required>
+        <!--<p ng-show="signUpForm.lastName.$invalid" class="help-block">You last name is required.</p>-->
+      </div>
+      <div class="inputItem col-xs-12">
+        <div class="describe">Email address</div>
+        <input type="email" name="emailAddress" [(ngModel)]="emailAddress" required>
+        <!--<p ng-show="signUpForm.emailAddress.$invalid && signUpForm.emailAddress.$pristine" class="help-block">-->
+        <!--You email address is required.</p>-->
+        <!--<p ng-show="signUpForm.emailAddress.$invalid && !signUpForm.emailAddress.$pristine" class="help-block">-->
+        <!--Please input a valid email address.</p>-->
+      </div>
+      <div class="inputItem col-xs-12">
+        <div class="describe">Mobile number</div>
+        <input type="text" name="mobileNumber" [(ngModel)]="mobileNumber" required>
+        <!--<p ng-show="signUpForm.mobileNumber.$invalid" class="help-block">You mobile number is required.</p>-->
+      </div>
+      <div class="inputItem col-xs-12">
+        <div class="describe">Choose a password</div>
+        <input type="password" name="password" [(ngModel)]="password" required>
+        <!--<p ng-show="signUpForm.password.$invalid" class="help-block">You password is required.</p>-->
+      </div>
+    </div>
+    <div class="faceBookBtn flex-center">
+      <span class="fa fa-facebook"></span>
+      Sign up with Facebook
+    </div>
+    <div class="hint flex-center">
+      <div class="text" ui-sref="signin">already have an account?</div>
+    </div>
+    <button type="submit" (click)="signup(signUpForm.form.valid)"
+            class="signUpBtn flex-center"
+            [ngClass]="{'button-disable':!signUpForm.form.valid}"
+            [disabled]="!signUpForm.form.valid">SIGN UP
+    </button>
+    <div class="flex-center itemAgreement">By signing up, I agree to mobile massages'</div>
+    <div class="flex-center itemAgreement agreementMargintop"> terms of use, privacy policy.</div>
+
+  </form>
+</div>

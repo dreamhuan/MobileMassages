@@ -1,0 +1,124 @@
+.signUp {
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 50px;
+  color: #9a9691;
+  //________________________________________defaultSetting___________________________
+  .row {
+    margin: 0px;
+  }
+  //________________________________________禁止bootstrap row的负margin______________
+  .flex {
+    display: flex;
+  }
+
+  .flex-grow {
+    flex-grow: 1;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .flex-rightend {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+  }
+  //________________________________________flex设置______________
+  .title {
+    margin-top: 50px;
+    font-family: gotham;
+    font-weight: lighter;
+    font-size: 50px;
+    /* W3C */
+  }
+  .inputGroup {
+
+    .inputItem {
+      padding: 0px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      .describe {
+        font-size: 17px;
+        font-weight: bold;
+      }
+      input {
+        padding-left: 5px;
+        width: 100%;
+        font-size: 20px;
+        height: 40px;
+        border: solid #edebe9 1px;
+      }
+    }
+  }
+  .faceBookBtn {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+    background: #3d5a94;
+    color: white;
+    font-family: gothem;
+    font-weight: lighter;
+    border-radius: 10px;
+    span {
+      margin-right: 10px;
+    }
+    .fa-facebook {
+      font-size: 17px;
+    }
+
+  }
+  .hint {
+    width: 100%;
+    height: 60px;
+    font-family: "xt-gothamLight";
+    font-weight: bold;
+    .text {
+      cursor: pointer;
+    }
+
+  }
+  .signUpBtn {
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    height: 40px;
+    background: #64d2a3;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .itemAgreement {
+    margin-top: 20px;
+  }
+
+  .agreementMargintop {
+    margin-top: 0;
+  }
+
+  .help-block {
+    color: red;
+  }
+  .button-disable {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .signUp {
+    max-width: 300px;
+    .title {
+      margin-top: 0px;
+      font-size: 30px;
+    }
+    .itemAgreement {
+      font-size: 10px;
+    }
+  }
+
+}

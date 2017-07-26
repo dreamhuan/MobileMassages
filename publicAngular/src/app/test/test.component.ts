@@ -3,7 +3,9 @@ import swal from 'sweetalert2';
 import 'jquery'
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-declare var $:any;
+
+declare var $: any;
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -14,8 +16,10 @@ export class TestComponent implements OnInit {
   private api_url = '/assets/data/price.json';
   private headers = new Headers({ 'Content-Type': 'application/json' });
   public prices;
-public testHTML = '<div style="color: red; font-size: 20px">xxxxxxxxx</div>';
+  public testHTML = '<div style="color: red; font-size: 20px">xxxxxxxxx</div>';
+
   constructor(private http: Http) { }
+
   ngOnInit() {
     console.log('测试jQuery');
     console.log('版本: ' + $.fn.jquery);
@@ -40,7 +44,7 @@ public testHTML = '<div style="color: red; font-size: 20px">xxxxxxxxx</div>';
     return Promise.reject(error.message || error);
   }
 
-  sweeralert2(){
+  sweeralert2() {
     swal('测试SweetAlert2', 'Hello world!', 'success');
   }
 }

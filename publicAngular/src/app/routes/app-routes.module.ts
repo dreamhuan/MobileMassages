@@ -11,6 +11,8 @@ import { FaqModule } from './faq/faq.module';
 import { PricingModule } from './pricing/pricing.module';
 import { StylesModule } from './styles/styles.module';
 import { TherapistModule } from './therapist/therapist.module';
+import { SuccessfulBookingComponent } from './successful-booking/successful-booking.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 @NgModule({
   imports: [
@@ -25,7 +27,7 @@ import { TherapistModule } from './therapist/therapist.module';
     StylesModule,
     TherapistModule
   ],
-  declarations: [],
+  declarations: [SuccessfulBookingComponent, AdministrationComponent],
   exports: [
     RouterModule
   ]
