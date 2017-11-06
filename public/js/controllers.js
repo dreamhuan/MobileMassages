@@ -110,7 +110,7 @@ angular.module('app.controllers', [])
         //         console.log(resdata);
         //         $scope.items = resdata.data;
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/faq')
+        $http.post('http://localhost:3030/web/FrontEndData/faq')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -128,7 +128,7 @@ angular.module('app.controllers', [])
         //         console.log(resdata);
         //         $scope.datas = resdata.data;
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/home-massage-type')
+        $http.post('http://localhost:3030/web/FrontEndData/home-massage-type')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -147,7 +147,7 @@ angular.module('app.controllers', [])
         //         $scope.prices = resdata.data[0].priceList;
         //
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/price')
+        $http.post('http://localhost:3030/web/FrontEndData/price')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -306,7 +306,7 @@ angular.module('app.controllers', [])
         //         //选中'-'后面的数字
         //         $scope.count = str.substr(str.indexOf('-') + 1, 1);
         //     });
-        // $http.post('http://localhost:4000/web/FrontEndData/bookingstep2')
+        // $http.post('http://localhost:3030/web/FrontEndData/bookingstep2')
         //     .then(function (restResult, status, headers, config) {
         //         let data = restResult.data;
         //         if (data.code == 0) {
@@ -331,18 +331,18 @@ angular.module('app.controllers', [])
         //     });
 
         let price, massageType;
-        $http.post('http://localhost:4000/web/FrontEndData/bookingstep2')
+        $http.post('http://localhost:3030/web/FrontEndData/bookingstep2')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
                     $scope.chooses = data.returnValue;
 
 
-                    $http.post('http://localhost:4000/web/FrontEndData/price')
+                    $http.post('http://localhost:3030/web/FrontEndData/price')
                         .then(function (restResult) {
                             price = restResult.data.returnValue;
 
-                            $http.post('http://localhost:4000/web/FrontEndData/home-massage-type')
+                            $http.post('http://localhost:3030/web/FrontEndData/home-massage-type')
                                 .then(function (restResult) {
                                     massageType = restResult.data.returnValue;
 
@@ -431,7 +431,7 @@ angular.module('app.controllers', [])
         //         // console.log(resdata);
         //         $scope.therapists = resdata.data;
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/massage-therapists')
+        $http.post('http://localhost:3030/web/FrontEndData/massage-therapists')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -728,7 +728,7 @@ angular.module('app.controllers', [])
         //         $scope.chooses = resdata.data;
         //
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/massage-therapists')
+        $http.post('http://localhost:3030/web/FrontEndData/massage-therapists')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -756,7 +756,7 @@ angular.module('app.controllers', [])
         //         console.log(resdata);
         //         $scope.datas = resdata.data;
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/home-massage-type')
+        $http.post('http://localhost:3030/web/FrontEndData/home-massage-type')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -785,7 +785,7 @@ angular.module('app.controllers', [])
         //         $scope.prices1 = resdata.data[0].priceList;
         //         $scope.prices2 = resdata.data[1].priceList;
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/price')
+        $http.post('http://localhost:3030/web/FrontEndData/price')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -817,7 +817,7 @@ angular.module('app.controllers', [])
         //         console.log(resdata);
         //         $scope.items = resdata.data;
         //     });
-        $http.post('http://localhost:4000/web/FrontEndData/faq')
+        $http.post('http://localhost:3030/web/FrontEndData/faq')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
