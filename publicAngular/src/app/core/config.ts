@@ -4,8 +4,8 @@
 import { Observable } from "rxjs";
 import { Response } from '@angular/http';
 
-// const Hostip = 'http://123.206.111.244:4000/';
-const Hostip = 'http://localhost:8080/';
+// const Hostip = 'http://123.206.111.244:3030/';
+const Hostip = 'http://localhost:3030/';
 
 const ExtractData = (res: Response | any) => {
   let body = res.json();
