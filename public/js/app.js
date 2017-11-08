@@ -5,8 +5,8 @@ angular.module('app', [
     'ngCookies',   //操作cookie
 ])
 
-    .constant('hostip', 'http://localhost:3030/')  //本地开发环境地址
-    //.constant('hostip', 'http://123.206.111.244:4000/')  //正式环境地址
+    // .constant('hostip', 'http://localhost:3030/')  //本地开发环境地址
+    .constant('hostip', 'http://123.206.111.244:3030/')  //正式环境地址
 
     .filter('to_trusted', ['$sce', function ($sce) {
         return function (text) {

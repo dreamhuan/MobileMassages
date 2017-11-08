@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
 
-    .controller('testCtrl', function ($rootScope, $scope, $state, $cookieStore, AlertService, TestService) {
+    .controller('testCtrl', function ($rootScope, $scope, $state, $cookieStore, AlertService, TestService, hostip) {
         let promise = TestService.getalltodo();
         promise.then(function (data) {
             console.log(data);
@@ -67,7 +67,7 @@ angular.module('app.controllers', [])
             });
         }
     })
-    .controller('navbarCtrl', function ($document, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('navbarCtrl', function ($document, $scope, $state, $cookieStore, $http, $timeout, hostip) {
         console.log("test");
         $scope.closeMenu = function () {
             console.log("test");
@@ -100,7 +100,7 @@ angular.module('app.controllers', [])
 
 
     })
-    .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('homeCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout, hostip) {
 
         $('#myCarousel').carousel({interval: 3500});//每隔5秒自动轮播
 
@@ -110,7 +110,7 @@ angular.module('app.controllers', [])
         //         console.log(resdata);
         //         $scope.items = resdata.data;
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/faq')
+        $http.post(hostip + 'web/FrontEndData/faq')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -128,7 +128,7 @@ angular.module('app.controllers', [])
         //         console.log(resdata);
         //         $scope.datas = resdata.data;
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/home-massage-type')
+        $http.post(hostip + 'web/FrontEndData/home-massage-type')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -147,7 +147,7 @@ angular.module('app.controllers', [])
         //         $scope.prices = resdata.data[0].priceList;
         //
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/price')
+        $http.post(hostip + 'web/FrontEndData/price')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -207,7 +207,7 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+    .controller('bookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, hostip) {
 
         //延迟0表示加到任务队列末尾，确保渲染完页面才执行，防止得到上一个url而出错
         $timeout(function () {
@@ -237,7 +237,7 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+    .controller('step1Ctrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, hostip) {
         $scope.setCurrentBookingStep(1);
 
         //页面渲染完后设置min-height让step1的footer贴底
@@ -281,7 +281,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore, $http, AlertService) {
+    .controller('step2Ctrl', function ($rootScope, $scope, $state, $cookieStore, $http, AlertService, hostip) {
         $scope.setCurrentBookingStep(2);
 
         $scope.chooses = [];
@@ -306,7 +306,7 @@ angular.module('app.controllers', [])
         //         //选中'-'后面的数字
         //         $scope.count = str.substr(str.indexOf('-') + 1, 1);
         //     });
-        // $http.post('http://localhost:3030/web/FrontEndData/bookingstep2')
+        // $http.post(hostip+'web/FrontEndData/bookingstep2')
         //     .then(function (restResult, status, headers, config) {
         //         let data = restResult.data;
         //         if (data.code == 0) {
@@ -331,18 +331,18 @@ angular.module('app.controllers', [])
         //     });
 
         let price, massageType;
-        $http.post('http://localhost:3030/web/FrontEndData/bookingstep2')
+        $http.post(hostip + 'web/FrontEndData/bookingstep2')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
                     $scope.chooses = data.returnValue;
 
 
-                    $http.post('http://localhost:3030/web/FrontEndData/price')
+                    $http.post(hostip + 'web/FrontEndData/price')
                         .then(function (restResult) {
                             price = restResult.data.returnValue;
 
-                            $http.post('http://localhost:3030/web/FrontEndData/home-massage-type')
+                            $http.post(hostip + 'web/FrontEndData/home-massage-type')
                                 .then(function (restResult) {
                                     massageType = restResult.data.returnValue;
 
@@ -431,7 +431,7 @@ angular.module('app.controllers', [])
         //         // console.log(resdata);
         //         $scope.therapists = resdata.data;
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/massage-therapists')
+        $http.post(hostip + 'web/FrontEndData/massage-therapists')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -486,7 +486,7 @@ angular.module('app.controllers', [])
                         }];
                         nextstep();
                     });
-            }else{
+            } else {
                 nextstep();
             }
         };
@@ -514,7 +514,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, UserService, AlertService) {
+    .controller('step3Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, UserService, AlertService, hostip) {
         $scope.setCurrentBookingStep(3);
         if ($cookieStore.get('currentAccount')) {
             AlertService.success("Already Login");
@@ -581,7 +581,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService) {
+    .controller('step4Ctrl', function ($rootScope, $scope, $state, $cookieStore, BookingService, AlertService, hostip) {
         $scope.setCurrentBookingStep(4);
 
         $('#datepicker').datetimepicker({
@@ -720,7 +720,7 @@ angular.module('app.controllers', [])
         };
     })
 
-    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('therapistCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout, hostip) {
         //TODO 逻辑二选一
         // $http.get('../data/massage-therapists.json')
         //     .then(function (resdata) {
@@ -728,7 +728,7 @@ angular.module('app.controllers', [])
         //         $scope.chooses = resdata.data;
         //
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/massage-therapists')
+        $http.post(hostip + 'web/FrontEndData/massage-therapists')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -749,14 +749,14 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('stylesCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout, hostip) {
         //TODO 逻辑二选一
         // $http.get('../data/home-massage-type.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
         //         $scope.datas = resdata.data;
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/home-massage-type')
+        $http.post(hostip + 'web/FrontEndData/home-massage-type')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -777,7 +777,7 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('pricingCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout, hostip) {
         //TODO 逻辑二选一
         // $http.get('../data/price.json')
         //     .then(function (resdata) {
@@ -785,7 +785,7 @@ angular.module('app.controllers', [])
         //         $scope.prices1 = resdata.data[0].priceList;
         //         $scope.prices2 = resdata.data[1].priceList;
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/price')
+        $http.post(hostip + 'web/FrontEndData/price')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -810,14 +810,14 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout) {
+    .controller('faqCtrl', function ($rootScope, $scope, $state, $cookieStore, $http, $timeout, hostip) {
         //TODO 逻辑二选一
         // $http.get('../data/faq.json')
         //     .then(function (resdata) {
         //         console.log(resdata);
         //         $scope.items = resdata.data;
         //     });
-        $http.post('http://localhost:3030/web/FrontEndData/faq')
+        $http.post(hostip + 'web/FrontEndData/faq')
             .then(function (restResult, status, headers, config) {
                 let data = restResult.data;
                 if (data.code == 0) {
@@ -835,14 +835,14 @@ angular.module('app.controllers', [])
 
     })
 
-    .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout) {
+    .controller('contactusCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, hostip) {
         $timeout(function () {
             document.navInit(6)
         }, 0);
 
     })
 
-    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, BookingService, UserService, AlertService) {
+    .controller('signinCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, BookingService, UserService, AlertService, hostip) {
         $timeout(function () {
             document.navInit(7)
         }, 0);
@@ -870,7 +870,7 @@ angular.module('app.controllers', [])
         }
     })
 
-    .controller('signupCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, AlertService, UserService) {
+    .controller('signupCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, AlertService, UserService, hostip) {
 
         $scope.signup = function (isValid) {
 
@@ -903,14 +903,14 @@ angular.module('app.controllers', [])
 
         }
     })
-    .controller('administrationCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
+    .controller('administrationCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http, hostip) {
         $http.get('../data/order.json')
             .then(function (resdata) {
                 console.log(resdata);
                 $scope.items = resdata.data;
             });
     })
-    .controller('forgetpasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http, UserService, AlertService) {
+    .controller('forgetpasswordCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http, UserService, AlertService, hostip) {
         $scope.resetPassword = function () {
             let param = {
                 emailAddress: $scope.emailAddress
@@ -925,7 +925,7 @@ angular.module('app.controllers', [])
             })
         }
     })
-    .controller('successfulBookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http) {
+    .controller('successfulBookingCtrl', function ($rootScope, $scope, $state, $cookieStore, $timeout, $http, hostip) {
         $timeout(function () {
             $state.go('home');
         }, 1000);
